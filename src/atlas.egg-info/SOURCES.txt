@@ -1,0 +1,5 @@
+pyproject.toml
+src/atlas.egg-info/PKG-INFO
+src/atlas.egg-info/SOURCES.txt
+src/atlas.egg-info/dependency_links.txt
+src/atlas.egg-info/top_level.txt

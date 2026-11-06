@@ -1,0 +1,17 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "AI Incident Atlas: an evidence-grounded research atlas of the AI Incident Database"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::SyntaxWarning"]
