@@ -1,0 +1,318 @@
+# AI Incident Atlas taxonomy
+#
+# Multi-label, versioned. Every dimension except `severity`, `intent` and `cause_entity` is multi-label.
+# IDs are stable snake_case; labels are display strings. Change log at the bottom.
+#
+# Design principles
+#  - Separate constructs stay separate: *what the system is* (technology), *where it was used* (sector),
+#    *what went wrong* (failure_mode), *who was hurt and how* (harm_type, affected_population, severity),
+#    and *when in the lifecycle* (lifecycle_stage).
+#  - Severity describes the harm itself, not media attention or report count.
+#  - Expert taxonomies in AIID (MIT AI Risk Repository domains, GMF, CSETv1) are ground truth for evaluation.
+#    The `crosswalk` section maps their vocabularies onto ours; we never overwrite their labels.
+version: "1.0"
+
+dimensions:
+
+  sector:
+    label: Sector / industry
+    multi: true
+    description: The domain in which the AI system was deployed or the harm occurred.
+    terms:
+      - {id: social_media, label: Social media & online platforms, parent: information_media}
+      - {id: search_online_services, label: Search & online services, parent: information_media}
+      - {id: news_publishing, label: News, publishing & media, parent: information_media}
+      - {id: entertainment_arts, label: Entertainment, arts & gaming, parent: information_media}
+      - {id: consumer_tech, label: Consumer apps & devices, parent: information_media}
+      - {id: transportation, label: Transportation & mobility}
+      - {id: law_enforcement, label: Policing & law enforcement, parent: justice_security}
+      - {id: justice_corrections, label: Courts, legal & corrections, parent: justice_security}
+      - {id: military_defense, label: Military & defense, parent: justice_security}
+      - {id: government_services, label: Government & public services, parent: public_sector}
+      - {id: elections_politics, label: Elections & politics, parent: public_sector}
+      - {id: healthcare, label: Healthcare & medicine}
+      - {id: finance, label: Finance, banking & insurance}
+      - {id: education, label: Education}
+      - {id: employment, label: Employment & workplace}
+      - {id: retail_commerce, label: Retail, e-commerce & advertising}
+      - {id: housing_real_estate, label: Housing & real estate}
+      - {id: manufacturing_industry, label: Manufacturing, industry & energy}
+      - {id: science_research, label: Science & research}
+      - {id: general_public, label: Cross-sector / general public}
+    parents:
+      information_media: Information, media & consumer tech
+      justice_security: Justice & security
+      public_sector: Public sector & democracy
+
+  technology:
+    label: AI technology / modality
+    multi: true
+    terms:
+      - {id: llm_chatbot, label: LLM / chatbot / generative text}
+      - {id: image_video_generation, label: Image & video generation (incl. deepfakes)}
+      - {id: voice_synthesis, label: Voice cloning & speech synthesis}
+      - {id: facial_recognition, label: Facial recognition & biometrics}
+      - {id: computer_vision, label: Computer vision & object detection}
+      - {id: speech_recognition, label: Speech recognition & voice assistants}
+      - {id: recommender_ranking, label: Recommender, ranking & search}
+      - {id: content_moderation, label: Content moderation & classification}
+      - {id: predictive_scoring, label: Predictive / risk scoring & automated decisions}
+      - {id: autonomous_vehicle, label: Autonomous & driver-assist vehicles}
+      - {id: robotics_drones, label: Robotics, drones & physical automation}
+      - {id: translation_nlp, label: Translation & other language processing}
+      - {id: ad_targeting_pricing, label: Ad targeting, pricing & optimization}
+      - {id: surveillance_analytics, label: Surveillance & tracking analytics}
+      - {id: agentic_ai, label: AI agents & coding assistants}
+      - {id: other_unspecified, label: Other / unspecified AI}
+
+  failure_mode:
+    label: Failure mode
+    multi: true
+    description: >
+      The mechanism by which the incident happened. `primary_failure_mode` (single) is the most central one.
+    terms:
+      - {id: robustness_failure, label: Robustness / capability failure, description: "Errors from distribution shift, edge cases, sensor or perception errors, or a system that simply cannot do the task reliably."}
+      - {id: bias_discrimination, label: Bias & disparate performance, description: "Systematically worse or unfair outcomes for groups; stereotyped or demeaning outputs."}
+      - {id: hallucination, label: Hallucination & fabrication, description: "Confidently generated false content (fake citations, invented facts, wrong advice)."}
+      - {id: harmful_content, label: Harmful or unsafe output, description: "System produces toxic, sexual, violent, self-harm-encouraging or otherwise unsafe content without being attacked."}
+      - {id: malicious_use, label: Deliberate misuse by people, description: "People intentionally use AI to harm (scams, deepfakes, harassment, disinformation, cyberattacks)."}
+      - {id: adversarial_attack, label: Adversarial attack / jailbreak, description: "Inputs crafted to subvert the system: jailbreaks, prompt injection, adversarial examples, data poisoning."}
+      - {id: privacy_violation, label: Privacy violation & data misuse, description: "Unauthorized collection, inference, leakage or surveillance of personal data."}
+      - {id: security_vulnerability, label: Security vulnerability, description: "Exploitable weakness in the AI system or its integration (excluding pure misuse)."}
+      - {id: misaligned_objective, label: Misaligned objective / specification gaming, description: "The system optimizes a proxy (engagement, cost) at the expense of the intended goal or people."}
+      - {id: human_automation_interaction, label: Human–automation interaction, description: "Over-reliance, automation complacency, mode confusion, unclear interfaces, unsafe use by operators."}
+      - {id: opacity_contestability, label: Opacity & lack of recourse, description: "Decisions that cannot be explained, audited or appealed."}
+      - {id: inadequate_oversight, label: Inadequate testing or oversight, description: "Deployed without adequate testing, safeguards, monitoring or governance."}
+      - {id: ip_consent_violation, label: IP, likeness & consent violation, description: "Use of copyrighted works, voices or likenesses without permission."}
+
+  harm_type:
+    label: Harm type
+    multi: true
+    terms:
+      - {id: physical, label: Physical injury or death}
+      - {id: financial, label: Financial loss}
+      - {id: civil_rights, label: Civil rights & discrimination}
+      - {id: privacy, label: Privacy}
+      - {id: psychological, label: Psychological & emotional}
+      - {id: misinformation, label: Misinformation & information integrity}
+      - {id: reputational, label: Reputation & defamation}
+      - {id: sexual_exploitation, label: Non-consensual sexual content & exploitation}
+      - {id: child_safety, label: Child safety}
+      - {id: democratic, label: Democratic & political processes}
+      - {id: economic_labor, label: Labor & economic opportunity}
+      - {id: intellectual_property, label: Intellectual property}
+      - {id: property_operational, label: Property damage & service disruption}
+      - {id: security_safety, label: Public or national security}
+      - {id: no_harm_near_miss, label: No realized harm (issue or near miss)}
+
+  severity:
+    label: Severity band
+    multi: false
+    description: >
+      Severity of the realized (or narrowly avoided) harm, judged from the reports. Independent of media attention.
+    terms:
+      - {id: s0_none, label: "0 — No realized harm (concern, near miss, demo)", rank: 0}
+      - {id: s1_minor, label: "1 — Minor (embarrassment, small or reversible harm)", rank: 1}
+      - {id: s2_moderate, label: "2 — Moderate (material harm to some people: money, wrongful denial, distress)", rank: 2}
+      - {id: s3_severe, label: "3 — Severe (serious injury, wrongful arrest, large losses, harm to many)", rank: 3}
+      - {id: s4_critical, label: "4 — Critical (death, or severe harm at mass scale)", rank: 4}
+
+  lifecycle_stage:
+    label: Lifecycle stage
+    multi: true
+    terms:
+      - {id: data, label: Data collection & preparation}
+      - {id: design_training, label: Model design & training}
+      - {id: testing, label: Testing & evaluation}
+      - {id: deployment, label: Deployment & integration}
+      - {id: use_misuse, label: Use or misuse in operation}
+      - {id: governance, label: Governance & oversight}
+
+  affected_population:
+    label: Affected population (categories only — never individuals)
+    multi: true
+    terms:
+      - {id: general_public, label: General public}
+      - {id: users_consumers, label: Users & consumers}
+      - {id: children, label: Children & minors}
+      - {id: women_girls, label: Women & girls}
+      - {id: racial_ethnic_minorities, label: Racial & ethnic minorities}
+      - {id: lgbtq, label: LGBTQ+ people}
+      - {id: religious_groups, label: Religious groups}
+      - {id: people_with_disabilities, label: People with disabilities}
+      - {id: older_adults, label: Older adults}
+      - {id: low_income, label: Low-income people & benefit claimants}
+      - {id: migrants, label: Migrants & non-citizens}
+      - {id: workers, label: Workers & job applicants}
+      - {id: students, label: Students}
+      - {id: patients, label: Patients}
+      - {id: road_users, label: Drivers, passengers & pedestrians}
+      - {id: people_in_justice_system, label: People subject to policing or justice decisions}
+      - {id: public_figures, label: Public figures & politicians}
+      - {id: creators, label: Artists, authors & creators}
+      - {id: voters, label: Voters & civic participants}
+      - {id: businesses, label: Businesses & organizations}
+      - {id: governments, label: Governments & public institutions}
+
+  intent:
+    label: Intent
+    multi: false
+    terms:
+      - {id: intentional, label: Intentional (harm was the goal of a human actor)}
+      - {id: unintentional, label: Unintentional}
+      - {id: unclear, label: Unclear}
+
+  cause_entity:
+    label: Primary cause
+    multi: false
+    terms:
+      - {id: ai, label: AI system behavior}
+      - {id: human, label: Human decision or use}
+      - {id: unclear, label: Unclear / both}
+
+# --------------------------------------------------------------------------------------------------
+# Crosswalks to expert taxonomies shipped in the AIID snapshot. Used ONLY for evaluation (Phase 4).
+# --------------------------------------------------------------------------------------------------
+crosswalk:
+
+  # MIT AI Risk Repository domain (single label per incident in AIID).
+  # Our primary_failure_mode -> MIT domain. Where one failure mode can plausibly map to several domains,
+  # a harm_type tiebreak is listed. Rules are applied in order.
+  mit_domain_from_primary_failure:
+    bias_discrimination: "1. Discrimination and Toxicity"
+    harmful_content: "1. Discrimination and Toxicity"
+    privacy_violation: "2. Privacy & Security"
+    security_vulnerability: "2. Privacy & Security"
+    adversarial_attack: "2. Privacy & Security"
+    hallucination: "3. Misinformation"
+    malicious_use: "4. Malicious Actors & Misuse"
+    human_automation_interaction: "5. Human-Computer Interaction"
+    misaligned_objective: "7. AI system safety, failures, and limitations"
+    robustness_failure: "7. AI system safety, failures, and limitations"
+    inadequate_oversight: "7. AI system safety, failures, and limitations"
+    opacity_contestability: "7. AI system safety, failures, and limitations"
+    ip_consent_violation: "6. Socioeconomic & Environmental Harms"
+  mit_intent: {intentional: Intentional, unintentional: Unintentional, unclear: Other}
+  mit_entity: {ai: AI, human: Human, unclear: Other}
+
+  # GMF "Known AI Technical Failure" -> our failure_mode. GMF failures are low-level technical causes;
+  # unmapped GMF values are excluded from evaluation and reported.
+  gmf_failure:
+    Generalization Failure: robustness_failure
+    Context Misidentification: robustness_failure
+    Limited Dataset: robustness_failure
+    Robustness Failure: robustness_failure
+    Covariate Shift: robustness_failure
+    Concept Drift: robustness_failure
+    Domain Adaptation Deficit: robustness_failure
+    Underfitting: robustness_failure
+    Overfitting: robustness_failure
+    Underspecification: robustness_failure
+    Black Swan Event: robustness_failure
+    Hardware Failure: robustness_failure
+    Software Bug: robustness_failure
+    Latency Issues: robustness_failure
+    Scaling Limitations: robustness_failure
+    Input Sensitivity: robustness_failure
+    Task Mismatch: robustness_failure
+    Pose Estimation: robustness_failure
+    Limited Receptive Field: robustness_failure
+    Outdated Ground Truth: robustness_failure
+    Distributional Bias: bias_discrimination
+    Algorithmic Bias: bias_discrimination
+    Dataset Imbalance: bias_discrimination
+    Distributional Artifacts: bias_discrimination
+    Problematic Features: bias_discrimination
+    Misinformation Generation Hazard: hallucination
+    Inadequate Output Filtering: harmful_content
+    Inappropriate Training Content: harmful_content
+    Harmful Application: malicious_use
+    Misuse: malicious_use
+    Malicious Marketing: malicious_use
+    Adversarial Data: adversarial_attack
+    Lack of Adversarial Robustness: adversarial_attack
+    Gaming Vulnerability: adversarial_attack
+    Prompt Injection: adversarial_attack
+    System Manipulation: adversarial_attack
+    Unauthorized Data: privacy_violation
+    Privacy Concerns: privacy_violation
+    Inadequate Anonymization: privacy_violation
+    Unsafe Exposure or Access: privacy_violation
+    Security Vulnerability: security_vulnerability
+    Misaligned Objective: misaligned_objective
+    Overpersonalization: misaligned_objective
+    Human Error: human_automation_interaction
+    Faulty Interface or Instructions: human_automation_interaction
+    Lack of Transparency: opacity_contestability
+    Lack of Explainability: opacity_contestability
+    Lack of Safety Protocols: inadequate_oversight
+    Untested Deployment: inadequate_oversight
+    Inadequate Verification: inadequate_oversight
+    Lack of Capability Control: inadequate_oversight
+    Lack of Corrigibility: inadequate_oversight
+    Lack of Interruptability: inadequate_oversight
+    Inadequate Provenance: ip_consent_violation
+    Lack of Authenticity Assurance: ip_consent_violation
+
+  # CSETv1 "Sector of Deployment" -> our sector(s). Comparison is at the level of these CSET buckets.
+  cset_sector:
+    information and communication: [social_media, search_online_services, news_publishing, consumer_tech]
+    Arts, entertainment and recreation: [entertainment_arts]
+    transportation and storage: [transportation]
+    wholesale and retail trade: [retail_commerce]
+    law enforcement: [law_enforcement]
+    human health and social work activities: [healthcare]
+    Education: [education]
+    public administration: [government_services, elections_politics, justice_corrections]
+    administrative and support service activities: [employment]
+    professional, scientific and technical activities: [science_research]
+    financial and insurance activities: [finance]
+    accommodation and food service activities: [retail_commerce]
+    manufacturing: [manufacturing_industry]
+    real estate activities: [housing_real_estate]
+    defense: [military_defense]
+
+  # CSETv1 tangible-harm level -> our severity, as an ordinal check (coarse: CSET does not grade magnitude).
+  cset_tangible_harm:
+    "no tangible harm, near-miss, or issue": low      # expected s0..s2 (intangible harms may still be moderate)
+    "non-imminent risk of tangible harm (an issue) occurred": low
+    "imminent risk of tangible harm (near miss) did occur": low
+    "tangible harm definitively occurred": high       # expected s1..s4 with physical/financial/property harm
+
+  # GMF "Known AI Goal" -> our technology (only unambiguous goals are mapped).
+  gmf_goal_technology:
+    Autonomous Driving: autonomous_vehicle
+    Face Recognition: facial_recognition
+    Chatbot: llm_chatbot
+    Content Recommendation: recommender_ranking
+    Automated Content Curation: recommender_ranking
+    Content Search: recommender_ranking
+    Product Recommendation: recommender_ranking
+    Autonomous Drones: robotics_drones
+    Robotic Manipulation: robotics_drones
+    Deepfake Video Generation: image_video_generation
+    Deepfake Image Generation: image_video_generation
+    Image Generation: image_video_generation
+    Visual Art Generation: image_video_generation
+    Voice Generation: voice_synthesis
+    AI Voice Assistant: speech_recognition
+    Hate Speech Detection: content_moderation
+    NSFW Content Detection: content_moderation
+    Predictive Policing: predictive_scoring
+    Recidivism Prediction: predictive_scoring
+    Application Evaluation: predictive_scoring
+    Underwriting: predictive_scoring
+    Automatic Skill Assessment: predictive_scoring
+    Translation: translation_nlp
+    Ad Delivery: ad_targeting_pricing
+    Personalized Pricing: ad_targeting_pricing
+    License Plate Recognition: computer_vision
+    Gunshot Detection: surveillance_analytics
+    Smart Surveillance: surveillance_analytics
+    Workforce Monitoring and Evaluation: surveillance_analytics
+    Question Answering: llm_chatbot
+    Social Media Content Generation: llm_chatbot
+
+changelog:
+  - version: "1.0"
+    note: Initial design from AIID vocabularies (MIT, GMF, CSETv1) and the atlas research questions.
