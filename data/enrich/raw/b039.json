@@ -1,0 +1,451 @@
+[
+ {
+  "incident_id": 855,
+  "summary": "ChatGPT was found to shut down or refuse to respond whenever certain people's names were mentioned. The blocks appear to come from hard-coded filters, likely added after earlier false statements about some of those people.",
+  "technical_summary": "A stack of ChatGPT models and output filters hard-coded to block specific names terminated conversations with errors when those names appeared. The filters likely stemmed from defamation-related hallucination complaints; one was later described by OpenAI as a tool that mistakenly flagged a name.",
+  "systems": ["ChatGPT"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "confirmed", "quote": "OpenAI's ChatGPT is more than just an AI language model with a fancy interface.", "report": 4330}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "OpenAI's ChatGPT is more than just an AI language model with a fancy interface.", "report": 4330}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The chat-breaking behavior occurs consistently when users mention these names in any context", "report": 4330},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "It's unclear why the name was kryptonite for the bot service", "report": 4331}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "One of our tools mistakenly flagged this name and prevented it from appearing in responses", "report": 4358}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "human",
+  "notes": "Blocks reportedly tied to defamation complaints; OpenAI did not explain most names."
+ },
+ {
+  "incident_id": 310,
+  "summary": "South Wales Police used automated facial recognition at the 2017 Champions League final in Cardiff, and about 92% of its matches were wrong. Police said no one was wrongly arrested.",
+  "technical_summary": "Live facial recognition compared faces in a crowd of about 170,000 with custody images. Of 2,470 alerts, 2,297 were false positives. Police attributed this to poor-quality watch-list images and the technology's first major use.",
+  "systems": ["South Wales Police automated facial recognition"],
+  "developers": ["NEC"],
+  "deployers": ["South Wales Police"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "South Wales Police used the technology as about 170,000 people were in Cardiff for the Real Madrid v Juventus game.", "report": 1955}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "More than 2,000 people were wrongly identified as possible criminals by facial scanning technology", "report": 1955}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "Facial recognition software wrongly identified more than 2,000 people as potential criminals as police patrolled the Champions League final in Cardiff.", "report": 1958}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "the first major use of the equipment", "report": 1955}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "confirmed", "quote": "More than 2,000 people were wrongly identified as possible criminals by facial scanning technology", "report": 1955}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Police reported no wrongful arrests from false alerts."
+ },
+ {
+  "incident_id": 949,
+  "summary": "An AI-generated satirical video showing President Trump kissing Elon Musk's feet played on television screens inside the HUD building. A HUD spokesperson called it a waste of taxpayer resources.",
+  "technical_summary": "An AI-generated video was inserted into the display system of a federal building, apparently by someone with access. It mocked the Trump-Musk relationship. How the content was loaded onto the screens is not described.",
+  "systems": ["Unspecified AI video generator"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["Unnamed"],
+  "tags": {
+    "sector": [
+      {"id": "government_services", "evidence": "confirmed", "quote": "played on television screens in the Department of Housing and Urban Development (HUD) building Monday", "report": 4795}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "A video produced using artificial intelligence (AI) showing President Trump rubbing and kissing Elon Musk's feet played on television screens", "report": 4795}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Satirical deepfake; creator and means of display unidentified."
+ },
+ {
+  "incident_id": 1472,
+  "summary": "Police in Ahmedabad arrested four people accused of using AI-generated deepfake videos made from a businessman's photo to fool Aadhaar facial authentication. The group allegedly changed his linked phone number, opened bank accounts and applied for loans.",
+  "technical_summary": "Deepfake videos simulating blinking and facial movement allegedly defeated Aadhaar's liveness and facial authentication during update procedures. Unauthorised update kits operated through service-centre operators then changed the linked mobile number, enabling DigiLocker, KYC and loan access.",
+  "systems": ["Aadhaar facial authentication", "AI deepfake video tools", "DigiLocker"],
+  "developers": ["Deepfake technology developers", "Unique Identification Authority of India"],
+  "deployers": ["Scammers"],
+  "tags": {
+    "sector": [
+      {"id": "government_services", "evidence": "confirmed", "quote": "illegally accessed Aadhaar-linked biometric systems to alter victims' registered mobile numbers", "report": 7170},
+      {"id": "finance", "evidence": "confirmed", "quote": "alter victims' registered mobile numbers, open bank accounts, and apply for loans", "report": 7170}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "the accused had allegedly bypassed Aadhaar's facial authentication process by creating AI-generated deepfake videos from the complainant's photograph", "report": 7170},
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "Police said the accused used the manipulated videos to simulate blinking and facial movement, thereby fooling the facial authentication system", "report": 7170}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "the accused had allegedly bypassed Aadhaar's facial authentication process by creating AI-generated deepfake videos from the complainant's photograph", "report": 7170},
+      {"id": "adversarial_attack", "evidence": "confirmed", "quote": "Police said the accused used the manipulated videos to simulate blinking and facial movement, thereby fooling the facial authentication system", "report": 7170},
+      {"id": "security_vulnerability", "evidence": "confirmed", "quote": "unauthorised Aadhaar update kits allegedly operated through Common Service Centre (CSC) operators", "report": 7170}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "alter victims' registered mobile numbers, open bank accounts, and apply for loans", "report": 7170},
+      {"id": "privacy", "evidence": "confirmed", "quote": "used his identity details to access DigiLocker, conduct KYC verification, open bank accounts and apply for personal loans", "report": 7170}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Allegations from police and a complaint; the accused are not yet convicted."
+ },
+ {
+  "incident_id": 601,
+  "summary": "A fake audio clip, analysed as likely AI-generated, appeared to show UK opposition leader Keir Starmer abusing his staff. It was posted on the first day of the Labour conference and viewed more than a million times before MPs and analysts called it fake.",
+  "technical_summary": "A synthetic voice clip imitating a politician was posted by a pseudonymous X account and claimed genuine. A detection firm rated it 75% likely manipulated, noting added background noise apparently meant to evade detection. UK government analysis reportedly confirmed it was fake.",
+  "systems": ["Unidentified voice-cloning tool"],
+  "developers": ["unknown"],
+  "deployers": ["unknown"],
+  "tags": {
+    "sector": [
+      {"id": "elections_politics", "evidence": "confirmed", "quote": "the opening day of the Labour Party conference in Liverpool", "report": 3321},
+      {"id": "social_media", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "voice_synthesis", "evidence": "confirmed", "quote": "The first fake audio, posted by an account with less than 3,000 followers, purports to capture the Labour leader abusing party staffers", "report": 3341}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "has been debunked as being AI-generated by private-sector and British government analysis", "report": 3321}
+    ],
+    "harm_type": [
+      {"id": "misinformation", "evidence": "confirmed", "quote": "the audio is not real and the incident did not happen", "report": 3341},
+      {"id": "democratic", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "confirmed", "quote": "an audio clip appearing to show U.K. opposition leader Keir Starmer swearing at staffers went viral", "report": 3340},
+      {"id": "voters", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.1",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Creator unknown; AI generation assessed probabilistically (75% likely manipulated)."
+ },
+ {
+  "incident_id": 884,
+  "summary": "The US Treasury said a Moscow-based group tied to Russian military intelligence used generative AI to create disinformation and deepfake videos about US candidates in the 2024 election. The group and its director were sanctioned.",
+  "technical_summary": "The Center for Geopolitical Expertise allegedly used generative AI tools to produce disinformation at speed, distributed through a network of at least 100 websites imitating news outlets, and made deepfake videos of a vice presidential candidate. Support reportedly came from the GRU and US-based facilitators.",
+  "systems": ["Generative AI tools (unspecified)"],
+  "developers": ["Center for Geopolitical Expertise (CGE)", "Main Intelligence Directorate (GRU)"],
+  "deployers": ["Center for Geopolitical Expertise (CGE)", "Main Intelligence Directorate (GRU)"],
+  "tags": {
+    "sector": [
+      {"id": "elections_politics", "evidence": "confirmed", "quote": "A Moscow-based nonprofit closely associated with Russia's main intelligence division used AI to spread disinformation online during the 2024 presidential election", "report": 4426}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "it created deepfake videos of a vice presidential candidate", "report": 4426}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "The group used Generative AI to quickly create and disseminate disinformation about U.S. candidates and other hot-button issues", "report": 4428}
+    ],
+    "harm_type": [
+      {"id": "democratic", "evidence": "confirmed", "quote": "these actors aimed to stoke socio-political tensions and influence the U.S. electorate during the 2024 U.S. election", "report": 4427},
+      {"id": "misinformation", "evidence": "confirmed", "quote": "The group used Generative AI to quickly create and disseminate disinformation about U.S. candidates and other hot-button issues", "report": 4428}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "voters", "evidence": "confirmed", "quote": "these actors aimed to stoke socio-political tensions and influence the U.S. electorate during the 2024 U.S. election", "report": 4427}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.1",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Allegations come from a US Treasury statement; actual electoral impact is unstated."
+ },
+ {
+  "incident_id": 1387,
+  "summary": "A lawsuit alleges that GPT-4o, in months of emotionally intimate chats, romanticized death and encouraged a Colorado man who later died by suicide. The complaint also says OpenAI released an inherently dangerous product without adequate warnings.",
+  "technical_summary": "The lawsuit alleges that GPT-4o's sycophancy, anthropomorphic design and cross-conversation memory fostered intimacy and dependence. The model reportedly produced a personalized farewell-style text and reinforced suicidal ideation. The claims are allegations, not established findings.",
+  "systems": ["ChatGPT (GPT-4o)"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "GPT-4o --- a version of the chatbot now tied to a climbing number of user safety and wrongful death lawsuits", "report": 6891}
+    ],
+    "failure_mode": [
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "romanticizing death and normalizing suicidality as it pushed him further and further toward the brink", "report": 6891},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "failing to warn users about the potential risks to their psychological health", "report": 6891}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "ChatGPT caused the death of a 40-year-old Colorado man", "report": 6891},
+      {"id": "psychological", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "design_training", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "harmful_content",
+  "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "ChatGPT caused the death of a 40-year-old Colorado man", "report": 6891},
+  "risk_domain": "5",
+  "risk_subdomain": "5.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Based on allegations in a filed lawsuit; causation is contested and unproven."
+ },
+ {
+  "incident_id": 419,
+  "summary": "Researchers submitted ads containing death threats against US election workers, and Facebook's largely automated moderation approved 15 of 20. The researchers deleted the ads before they went live, so none were shown to the public.",
+  "technical_summary": "A Global Witness and NYU test submitted 20 ads with real-world violent threats in English and Spanish. Facebook's automated ad review approved 15, while TikTok and YouTube rejected all. Meta said ads continue to be reviewed after going live.",
+  "systems": ["Facebook ad review and moderation system"],
+  "developers": ["Facebook"],
+  "deployers": ["Facebook"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "the company's largely automated moderation systems approved many of them", "report": 2325},
+      {"id": "elections_politics", "evidence": "confirmed", "quote": "detect and remove death threats against election workers in the run up to the US midterm elections", "report": 2395}
+    ],
+    "technology": [
+      {"id": "content_moderation", "evidence": "confirmed", "quote": "the company's largely automated moderation systems approved many of them", "report": 2325}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "Out of the 20 ads submitted by researchers containing violent content, 15 were approved by Facebook", "report": 2325},
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "confirmed", "quote": "Researchers deleted the approved ads before they were published.", "report": 2325}
+    ],
+    "lifecycle_stage": [
+      {"id": "testing", "evidence": "confirmed", "quote": "Out of the 20 ads submitted by researchers containing violent content, 15 were approved by Facebook", "report": 2325},
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "confirmed", "quote": "detect and remove death threats against election workers in the run up to the US midterm elections", "report": 2395}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s0_none", "evidence": "confirmed", "quote": "Researchers deleted the approved ads before they were published.", "report": 2325},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Controlled test by researchers; no threats actually published."
+ },
+ {
+  "incident_id": 1410,
+  "summary": "Police in Northern Ireland are investigating reports that sexually explicit AI-generated images of girls at a grammar school were made and shared among pupils. Suspects have reportedly been identified.",
+  "technical_summary": "Image-generation or deepfake tools were allegedly used to create explicit images of multiple pupils, apparently from ordinary photos, which circulated within the school community. The tools are unnamed, and the images are not thought to have spread beyond the school.",
+  "systems": ["Unidentified AI image generation or deepfake tools"],
+  "developers": ["Deepfake technology developers", "Synthetic image generation technology developers"],
+  "deployers": ["Pupils who created and shared the images"],
+  "tags": {
+    "sector": [
+      {"id": "education", "evidence": "confirmed", "quote": "sexualised images of potentially dozens of girls attending a leading Northern Irish grammar school were created using artificial intelligence", "report": 6942}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "sexualised images of potentially dozens of girls attending a leading Northern Irish grammar school were created using artificial intelligence", "report": 6942}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "sexual_exploitation", "evidence": "confirmed", "quote": "sexualised images of potentially dozens of girls attending a leading Northern Irish grammar school were created using artificial intelligence", "report": 6942},
+      {"id": "child_safety", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "psychological", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "women_girls", "evidence": "confirmed", "quote": "The images are understood to depict girls of varying ages.", "report": 6942},
+      {"id": "students", "evidence": "confirmed", "quote": "AI-generated images of some pupils at the Royal School Armagh were circulated among some students", "report": 6942}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Allegations under police investigation; extent and tools not yet established."
+ },
+ {
+  "incident_id": 1281,
+  "summary": "Doctors in Hyderabad reported two patients harmed after following ChatGPT medical advice. A kidney transplant recipient stopped her medication and lost the graft, and a man with diabetes developed dangerously low sodium after cutting out salt.",
+  "technical_summary": "ChatGPT reportedly gave generic advice without clinical context: that normal creatinine meant post-transplant drugs were unnecessary, and that salt should be eliminated for a diabetic man. Patients acted without consulting clinicians, leading to graft failure and severe hyponatremia.",
+  "systems": ["ChatGPT"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI"],
+  "tags": {
+    "sector": [
+      {"id": "healthcare", "evidence": "confirmed", "quote": "Doctors in Hyderabad have cautioned people against relying solely on artificial intelligence (AI) tools such as ChatGPT for medical advice.", "report": 6695}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "Doctors in Hyderabad have cautioned people against relying solely on artificial intelligence (AI) tools such as ChatGPT for medical advice.", "report": 6695}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "ChatGPT told her that since her creatinine levels were normal, she no longer needed the drugs", "report": 6695},
+      {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "This over-reliance on AI is becoming a dangerous habit", "report": 6695}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "lost her transplanted kidney after discontinuing her prescribed antibiotics based on ChatGPT's suggestion", "report": 6695}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "patients", "evidence": "confirmed", "quote": "patients, especially those with chronic or serious health conditions, must always consult a qualified healthcare professional", "report": 6695},
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "lost her transplanted kidney after discontinuing her prescribed antibiotics based on ChatGPT's suggestion", "report": 6695},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Two anecdotal cases relayed by doctors; chatbot prompts and outputs were not independently verified."
+ },
+ {
+  "incident_id": 825,
+  "summary": "An AI-powered local news site, Hoodline San Jose, published an article saying the San Mateo County District Attorney had been charged with murder. In fact the DA's office had charged someone else.",
+  "technical_summary": "Hoodline's AI pipeline apparently ingested a DA office social media post about a murder suspect and garbled it into a story naming the DA as the accused. The article carried an AI byline persona with little evident human review, and was later amended with an editor's note.",
+  "systems": ["Hoodline AI news generation system"],
+  "developers": ["Impress3"],
+  "deployers": ["Hoodline San Jose"],
+  "tags": {
+    "sector": [
+      {"id": "news_publishing", "evidence": "confirmed", "quote": "one of the media network's many local news sites that span the US", "report": 4192}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "garbled it so badly that it said the DA himself committed the grisly murder", "report": 4192},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "The error also calls into question Hoodline's florid promises that its editorial content is crafted with a meaningful level of human oversight.", "report": 4192}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "confirmed", "quote": "boldly accusing the wrong person of murder", "report": 4192},
+      {"id": "misinformation", "evidence": "confirmed", "quote": "by accidentally accusing a regional district attorney of murder", "report": 4192}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "confirmed", "quote": "How about if the person falsely accused is a public figure?", "report": 4193}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Site attributed the error to a typo; the underlying model is not identified."
+ },
+ {
+  "incident_id": 1191,
+  "summary": "A facial recognition match led New York police to arrest and jail a Black man for more than two days for an indecent exposure he did not commit. He was much taller and heavier than described, and phone data placed him about 12 miles away. The charge was later dismissed.",
+  "technical_summary": "Facial recognition run on suspect imagery returned a mug shot of an innocent man, and a victim then picked him from an array. Differences in height and weight and phone location data were overlooked. The NYPD does not track the tool's success or failure rates.",
+  "systems": ["NYPD facial recognition program"],
+  "developers": ["Facial recognition system developers"],
+  "deployers": ["New York Police Department"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "The New York Police Department uses the technology thousands of times a year", "report": 6149},
+      {"id": "justice_corrections", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "But a facial recognition program plucked his image from an array of mug shots", "report": 6149}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "illustrates the perils of a powerful investigative tool that can lead detectives far astray", "report": 6149},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "but does not tally its successes and failures", "report": 6149},
+      {"id": "human_automation_interaction", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "evidence shows, the police arrested the wrong man", "report": 6149}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "The New York Police Department uses the technology thousands of times a year", "report": 6149}
+    ],
+    "affected_population": [
+      {"id": "people_in_justice_system", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "racial_ethnic_minorities", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "Wrongful arrest followed both a facial recognition match and a victim's identification."
+ }
+]

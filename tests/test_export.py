@@ -9,6 +9,7 @@ from atlas import paths
 
 DATA = paths.APP_DATA
 needs_bundle = pytest.mark.skipif(not (DATA / "nodes.json").exists(), reason="bundle not exported")
+needs_db = pytest.mark.skipif(not paths.DB_PATH.exists(), reason="data/atlas.sqlite not built")
 PLACEHOLDER = re.compile(r'"(nan|NaN|None|null|unknown|Unknown|)"')
 
 
@@ -48,6 +49,7 @@ def test_no_raw_placeholders_in_nodes():
 
 
 @needs_bundle
+@needs_db
 def test_private_individuals_not_in_public_entities():
     import sqlite3
 
@@ -61,6 +63,7 @@ def test_private_individuals_not_in_public_entities():
 
 
 @needs_bundle
+@needs_db
 def test_private_names_not_in_summaries():
     import sqlite3
 
