@@ -9,7 +9,7 @@
 - [x] P0 License verified (CC BY-SA 4.0 data; report text excluded)
 - [x] P1 Ingestion → SQLite (data/atlas.sqlite), reports/data_profile.md, tests (5 pass)
 - [x] P2 Taxonomy v1.0 + crosswalks (config/taxonomy.yaml) — revisit after pilot
-- [ ] P2b Entity kinds (8 haiku batches in data/interim/entities/out_*.tsv; B,D done) → merge to data/enrich/entity_kinds.csv
+- [x] P2b Entity kinds: 5934 entities via haiku (1055 private_individual hidden) → data/enrich/entity_kinds.csv (hashed keys)
 - [ ] P3 Pilot extraction (20) → prompt v1.1 → scaled extraction
 - [ ] P4 Evaluation vs expert labels + blind second coding
 - [ ] P5 Embeddings, multi-view graph, clusters, temporal
