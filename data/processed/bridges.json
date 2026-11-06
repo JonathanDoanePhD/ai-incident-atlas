@@ -1,0 +1,251 @@
+[
+ {
+  "incident_id": 561,
+  "betweenness": 0.00108,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "10": 6,
+   "2": 3,
+   "3": 3
+  }
+ },
+ {
+  "incident_id": 1710,
+  "betweenness": 0.00082,
+  "cluster": 3,
+  "neighbor_clusters": {
+   "2": 3,
+   "5": 1,
+   "3": 8,
+   "20": 2,
+   "14": 1
+  }
+ },
+ {
+  "incident_id": 1038,
+  "betweenness": 0.00073,
+  "cluster": 20,
+  "neighbor_clusters": {
+   "20": 4,
+   "18": 2,
+   "3": 1
+  }
+ },
+ {
+  "incident_id": 657,
+  "betweenness": 0.00044,
+  "cluster": 10,
+  "neighbor_clusters": {
+   "10": 10,
+   "2": 3
+  }
+ },
+ {
+  "incident_id": 513,
+  "betweenness": 0.00039,
+  "cluster": 10,
+  "neighbor_clusters": {
+   "2": 4,
+   "10": 8
+  }
+ },
+ {
+  "incident_id": 735,
+  "betweenness": 0.00035,
+  "cluster": 18,
+  "neighbor_clusters": {
+   "18": 2,
+   "19": 2,
+   "20": 1
+  }
+ },
+ {
+  "incident_id": 1580,
+  "betweenness": 0.00029,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "10": 4,
+   "2": 1,
+   "4": 1,
+   "20": 1,
+   "14": 1,
+   "3": 1
+  }
+ },
+ {
+  "incident_id": 1238,
+  "betweenness": 0.00025,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "2": 2,
+   "10": 3,
+   "3": 2
+  }
+ },
+ {
+  "incident_id": 85,
+  "betweenness": 0.00025,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "2": 4,
+   "3": 2
+  }
+ },
+ {
+  "incident_id": 1270,
+  "betweenness": 0.00025,
+  "cluster": 20,
+  "neighbor_clusters": {
+   "20": 4,
+   "2": 1,
+   "3": 1
+  }
+ },
+ {
+  "incident_id": 443,
+  "betweenness": 0.00022,
+  "cluster": 10,
+  "neighbor_clusters": {
+   "10": 9,
+   "2": 4,
+   "14": 1
+  }
+ },
+ {
+  "incident_id": 538,
+  "betweenness": 0.00021,
+  "cluster": 20,
+  "neighbor_clusters": {
+   "10": 3,
+   "20": 3
+  }
+ },
+ {
+  "incident_id": 1415,
+  "betweenness": 0.00011,
+  "cluster": 10,
+  "neighbor_clusters": {
+   "10": 5,
+   "2": 2
+  }
+ },
+ {
+  "incident_id": 701,
+  "betweenness": 0.00011,
+  "cluster": 5,
+  "neighbor_clusters": {
+   "5": 1,
+   "4": 1,
+   "3": 2
+  }
+ },
+ {
+  "incident_id": 1668,
+  "betweenness": 0.0001,
+  "cluster": 3,
+  "neighbor_clusters": {
+   "2": 2,
+   "14": 1,
+   "3": 8
+  }
+ },
+ {
+  "incident_id": 803,
+  "betweenness": 9e-05,
+  "cluster": 9,
+  "neighbor_clusters": {
+   "9": 3,
+   "2": 1,
+   "11": 1
+  }
+ },
+ {
+  "incident_id": 693,
+  "betweenness": 9e-05,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "15": 1,
+   "2": 7,
+   "3": 1,
+   "8": 1
+  }
+ },
+ {
+  "incident_id": 705,
+  "betweenness": 8e-05,
+  "cluster": 20,
+  "neighbor_clusters": {
+   "20": 3,
+   "10": 2
+  }
+ },
+ {
+  "incident_id": 516,
+  "betweenness": 6e-05,
+  "cluster": 10,
+  "neighbor_clusters": {
+   "2": 2,
+   "10": 10
+  }
+ },
+ {
+  "incident_id": 1200,
+  "betweenness": 6e-05,
+  "cluster": 14,
+  "neighbor_clusters": {
+   "14": 13,
+   "9": 2,
+   "3": 1
+  }
+ },
+ {
+  "incident_id": 963,
+  "betweenness": 6e-05,
+  "cluster": 3,
+  "neighbor_clusters": {
+   "2": 4,
+   "15": 1,
+   "3": 2
+  }
+ },
+ {
+  "incident_id": 1278,
+  "betweenness": 6e-05,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "10": 4,
+   "2": 2
+  }
+ },
+ {
+  "incident_id": 75,
+  "betweenness": 4e-05,
+  "cluster": 2,
+  "neighbor_clusters": {
+   "2": 2,
+   "3": 1,
+   "9": 1
+  }
+ },
+ {
+  "incident_id": 885,
+  "betweenness": 4e-05,
+  "cluster": 14,
+  "neighbor_clusters": {
+   "14": 8,
+   "15": 1,
+   "9": 2,
+   "18": 1
+  }
+ },
+ {
+  "incident_id": 712,
+  "betweenness": 3e-05,
+  "cluster": 14,
+  "neighbor_clusters": {
+   "14": 11,
+   "9": 1,
+   "3": 1
+  }
+ }
+]

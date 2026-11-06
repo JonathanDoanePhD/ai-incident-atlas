@@ -1,0 +1,616 @@
+{
+ "n_extracted": 56,
+ "mit": {
+  "domain": {
+   "n": 53,
+   "accuracy": 0.755,
+   "macro_f1": 0.677,
+   "kappa": 0.684,
+   "labels": [
+    "1. Discrimination and Toxicity",
+    "2. Privacy & Security",
+    "3. Misinformation",
+    "4. Malicious Actors & Misuse",
+    "5. Human-Computer Interaction",
+    "6. Socioeconomic & Environmental Harms",
+    "7. AI system safety, failures, and limitations"
+   ],
+   "confusion": [
+    [
+     11,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     1,
+     0,
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     3,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     7,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     0,
+     0,
+     0,
+     2,
+     1,
+     14
+    ]
+   ],
+   "majority_baseline": 0.34
+  },
+  "subdomain_accuracy": 0.623,
+  "subdomain_n": 53,
+  "via_failure_mode_accuracy": 0.66,
+  "intent": {
+   "n": 53,
+   "accuracy": 0.811,
+   "macro_f1": 0.681,
+   "kappa": 0.654,
+   "labels": [
+    "Intentional",
+    "Other",
+    "Unintentional"
+   ],
+   "confusion": [
+    [
+     12,
+     4,
+     3
+    ],
+    [
+     0,
+     2,
+     1
+    ],
+    [
+     0,
+     2,
+     29
+    ]
+   ],
+   "majority_baseline": 0.585
+  },
+  "entity": {
+   "n": 53,
+   "accuracy": 0.547,
+   "macro_f1": 0.465,
+   "kappa": 0.326,
+   "labels": [
+    "AI",
+    "Human",
+    "Other"
+   ],
+   "confusion": [
+    [
+     14,
+     9,
+     12
+    ],
+    [
+     0,
+     14,
+     2
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "majority_baseline": 0.66
+  },
+  "disagreements": [
+   {
+    "incident_id": 17,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "During testing, Google's Gmail Smart Reply feature kept suggesting 'I love you' in inappropriate contexts such as work emails. Google adjusted the system before wide release."
+   },
+   {
+    "incident_id": 42,
+    "expert": "6. Socioeconomic & Environmental Harms",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "A 1990s academic article described the algorithm used to match US medical graduates to residency programs and discussed changes the matching system might need. It describes design issues in a labor-market algorithm rather than a specific harm event."
+   },
+   {
+    "incident_id": 85,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "An op-ed published by The Guardian was written by OpenAI's GPT-3 and included lines about destroying humankind. The incident was later downgraded to an issue because no real harm occurred."
+   },
+   {
+    "incident_id": 153,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A Tesla Model S driving with Autopilot engaged ran a red light in Gardena, California, and struck another car, killing two people. The driver was charged with vehicular manslaughter."
+   },
+   {
+    "incident_id": 178,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A Tesla Model Y summoned remotely by its owner with the Smart Summon feature slowly crashed into a private jet at a Spokane, Washington airport event, pushing it across the tarmac."
+   },
+   {
+    "incident_id": 192,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Three make-up artists lost their jobs at a cosmetics company after a video interview was scored by HireVue's algorithm during redundancies. They said nobody could explain the result, and the company settled out of court."
+   },
+   {
+    "incident_id": 203,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Uber began paying drivers in several US cities using an opaque algorithm called Upfront Fares. Some drivers said they saw lower earnings and that Uber took a bigger cut of fares."
+   },
+   {
+    "incident_id": 270,
+    "expert": "6. Socioeconomic & Environmental Harms",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "After Apple changed the ranking algorithm in its App Store, many Chinese apps, including ones from reputable companies and local startups, fell sharply in the rankings. Apple appeared to be targeting developers who manipulate rankings."
+   },
+   {
+    "incident_id": 410,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "KFC's German app sent a push promotion for cheese chicken that referenced the anniversary of Kristallnacht as a memorial day. The company apologized, saying an automated holiday-detection system produced the message and its human review step was not followed."
+   },
+   {
+    "incident_id": 664,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "A political action committee released an attack ad using an AI-generated likeness of a presidential candidate's deceased father criticising him. The ad was openly presented as AI-made, but commentators called it corrosive to political discourse."
+   },
+   {
+    "incident_id": 807,
+    "expert": "2. Privacy & Security",
+    "ours": "3. Misinformation",
+    "summary": "A child protection worker in Victoria, Australia reportedly used ChatGPT to draft a report for the Children's Court. The report contained inaccurate information that downplayed risks to the child, and sensitive case details were disclosed to OpenAI. The case outcome did not change."
+   },
+   {
+    "incident_id": 1407,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Grammarly's Expert Review feature gave AI-generated editing feedback presented as coming from named journalists, authors and academics who had not consented. A class action was filed, and the company disabled the feature after backlash."
+   },
+   {
+    "incident_id": 1471,
+    "expert": "2. Privacy & Security",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "An internal AI agent at Meta posted inaccurate technical advice to an employee forum without approval. An employee acted on it, and for almost two hours some employees could access company and user data they were not authorized to see. Meta said no user data was mishandled."
+   }
+  ]
+ },
+ "gmf_failure": {
+  "n": 30,
+  "jaccard": 0.367,
+  "any_overlap": 0.6,
+  "micro_f1": 0.488,
+  "macro_f1": 0.336,
+  "per_label": {
+   "adversarial_attack": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 1
+   },
+   "bias_discrimination": {
+    "precision": 0.5,
+    "recall": 0.75,
+    "f1": 0.6,
+    "support": 4
+   },
+   "hallucination": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "inadequate_oversight": {
+    "precision": 0.5,
+    "recall": 0.286,
+    "f1": 0.364,
+    "support": 7
+   },
+   "malicious_use": {
+    "precision": 0.2,
+    "recall": 0.25,
+    "f1": 0.222,
+    "support": 4
+   },
+   "misaligned_objective": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 1
+   },
+   "opacity_contestability": {
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "support": 3
+   },
+   "privacy_violation": {
+    "precision": 1.0,
+    "recall": 0.143,
+    "f1": 0.25,
+    "support": 7
+   },
+   "robustness_failure": {
+    "precision": 0.786,
+    "recall": 0.786,
+    "f1": 0.786,
+    "support": 14
+   }
+  },
+  "unmapped_gmf_values": {
+   "Incomplete Data Attribute Capture": 13,
+   "Data or Labelling Noise": 9,
+   "Problematic Input": 6,
+   "Inadequate Data Augmentation": 6,
+   "Misconfigured Threshold": 3,
+   "Faulty or Inadequate Preprocessing": 3,
+   "Tuning Issues": 2,
+   "Miscoordination": 1,
+   "Multiagent Goal Divergence": 1,
+   "Inadequate Data Sampling": 1
+  },
+  "disagreements": [
+   {
+    "incident_id": 46,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "Nest found in lab tests that a hand-wave feature on its Nest Protect smoke alarm could accidentally silence the alarm during a real fire. It halted sales, disabled the feature by software update and offered refunds. No real-world harm was known."
+   },
+   {
+    "incident_id": 652,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Two teenage boys in Florida were arrested for allegedly using an AI app to create and share nude images of male and female classmates aged 12 and 13 without consent. It was reported as the first such arrests in the US."
+   },
+   {
+    "incident_id": 644,
+    "expert": [
+     "hallucination"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Microsoft and OpenAI reported that hacking groups linked to North Korea, Iran, Russia and China used AI language models to research targets and write phishing content. North Korean groups seek sensitive information and funds."
+   },
+   {
+    "incident_id": 664,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A political action committee released an attack ad using an AI-generated likeness of a presidential candidate's deceased father criticising him. The ad was openly presented as AI-made, but commentators called it corrosive to political discourse."
+   },
+   {
+    "incident_id": 43,
+    "expert": [
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "ours": [
+     "bias_discrimination"
+    ],
+    "summary": "A London medical school used a computer program to screen applicants. It was found to discriminate against women and people with non-European-sounding names, reducing their chances of being interviewed."
+   },
+   {
+    "incident_id": 24,
+    "expert": [
+     "inadequate_oversight",
+     "privacy_violation"
+    ],
+    "ours": [
+     "human_automation_interaction"
+    ],
+    "summary": "A 22-year-old contractor setting up a stationary robot at a Volkswagen plant in Germany was grabbed and crushed against a metal plate and died. The company said initial findings pointed to human error."
+   },
+   {
+    "incident_id": 132,
+    "expert": [
+     "adversarial_attack"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "Videos promoting eating disorders stayed available on TikTok because users got around its hashtag bans with common misspellings. The app's algorithm can also keep showing such content to users."
+   },
+   {
+    "incident_id": 153,
+    "expert": [
+     "inadequate_oversight",
+     "malicious_use",
+     "robustness_failure"
+    ],
+    "ours": [
+     "human_automation_interaction"
+    ],
+    "summary": "A Tesla Model S driving with Autopilot engaged ran a red light in Gardena, California, and struck another car, killing two people. The driver was charged with vehicular manslaughter."
+   },
+   {
+    "incident_id": 205,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Meta removed a small network of fake social media personas using AI-generated profile photos. The network, run from Russia and Ukraine, targeted Ukrainians with anti-Ukraine disinformation after Russia's invasion."
+   },
+   {
+    "incident_id": 207,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "inadequate_oversight"
+    ],
+    "summary": "Honolulu police spent about $150,000 of federal COVID relief funds on a Boston Dynamics robot dog to take temperatures and patrol a homeless quarantine encampment. Advocates and residents criticized it as dehumanizing and wasteful."
+   },
+   {
+    "incident_id": 209,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "Tesla released a driving profile for its Full Self-Driving beta that let cars roll slowly through all-way stop signs without fully stopping. Tesla recalled and disabled the feature; no crashes or injuries were reported."
+   },
+   {
+    "incident_id": 235,
+    "expert": [
+     "malicious_use"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "summary": "Chinese insurer Ping An reportedly used facial recognition to judge customers' truthfulness and profitability and to help set health insurance terms. Critics said the approach would likely make mistakes and discriminate against some groups."
+   }
+  ]
+ },
+ "cset_sector": {
+  "n": 16,
+  "jaccard": 0.812,
+  "any_overlap": 1.0,
+  "micro_f1": 0.842,
+  "macro_f1": 0.85,
+  "per_label": {
+   "Arts, entertainment and recreation": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 3
+   },
+   "Education": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "accommodation and food service activities": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "administrative and support service activities": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "defense": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "financial and insurance activities": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "human health and social work activities": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.667,
+    "support": 2
+   },
+   "information and communication": {
+    "precision": 1.0,
+    "recall": 0.714,
+    "f1": 0.833,
+    "support": 7
+   },
+   "manufacturing": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "transportation and storage": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 4
+   }
+  },
+  "disagreements": []
+ },
+ "gmf_technology": {
+  "n": 30,
+  "jaccard": 0.8,
+  "any_overlap": 0.833,
+  "micro_f1": 0.877,
+  "macro_f1": 0.769,
+  "per_label": {
+   "autonomous_vehicle": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 7
+   },
+   "computer_vision": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 1
+   },
+   "facial_recognition": {
+    "precision": 0.667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "support": 2
+   },
+   "image_video_generation": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.857,
+    "support": 3
+   },
+   "llm_chatbot": {
+    "precision": 1.0,
+    "recall": 0.333,
+    "f1": 0.5,
+    "support": 3
+   },
+   "predictive_scoring": {
+    "precision": 1.0,
+    "recall": 0.833,
+    "f1": 0.909,
+    "support": 6
+   },
+   "recommender_ranking": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.857,
+    "support": 4
+   },
+   "robotics_drones": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "support": 3
+   },
+   "surveillance_analytics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 1
+   }
+  }
+ },
+ "severity": {
+  "by_cset_tangible_harm": {
+   "tangible harm definitively occurred": {
+    "n": 6,
+    "mean_severity": 3.17,
+    "share_s2_plus": 0.83
+   },
+   "no tangible harm, near-miss, or issue": {
+    "n": 8,
+    "mean_severity": 1.0,
+    "share_s2_plus": 0.12
+   },
+   "imminent risk of tangible harm (near miss) did occur": {
+    "n": 2,
+    "mean_severity": 0.5,
+    "share_s2_plus": 0.0
+   },
+   "non-imminent risk of tangible harm (an issue) occurred": {
+    "n": 2,
+    "mean_severity": 0.0,
+    "share_s2_plus": 0.0
+   }
+  },
+  "n": 18,
+  "fatal_incidents_n": 4,
+  "fatal_coded_s4_share": 1.0
+ },
+ "expert_baseline": {
+  "Sector of Deployment": {
+   "pairs": 165,
+   "jaccard": 0.705,
+   "exact_agreement": 0.606
+  },
+  "Tangible Harm": {
+   "pairs": 171,
+   "jaccard": 0.76,
+   "exact_agreement": 0.76
+  },
+  "AI Harm Level": {
+   "pairs": 56,
+   "jaccard": 0.679,
+   "exact_agreement": 0.679
+  },
+  "Harm Distribution Basis": {
+   "pairs": 66,
+   "jaccard": 0.769,
+   "exact_agreement": 0.621
+  }
+ },
+ "second_coder": {
+  "n": 0
+ }
+}
