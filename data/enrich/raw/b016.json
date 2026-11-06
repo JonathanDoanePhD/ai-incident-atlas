@@ -1,0 +1,448 @@
+[
+ {
+  "incident_id": 254,
+  "summary": "A class-action lawsuit alleged Google Photos' face grouping feature scanned people's faces without the written notice and consent required by Illinois biometric law. Google agreed to a 100 million dollar settlement without admitting wrongdoing.",
+  "technical_summary": "Google Photos' face grouping tool automatically identifies and clusters faces in uploaded photos and videos, creating face geometry data. Plaintiffs alleged it was done without notice, informed written consent or a published retention policy, as Illinois BIPA requires. Google later added opt-in consent.",
+  "systems": ["Google Photos face grouping"],
+  "developers": ["Google"],
+  "deployers": ["Google"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "confirmed", "quote": "a class-action lawsuit over one of its facial recognition features in Google Photos", "report": 1804}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "face grouping tool, which automatically identifies your face in photos and videos uploaded to Photos", "report": 1804}
+    ],
+    "failure_mode": [
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "without providing notice, obtaining informed written consent or publishing data retention policies", "report": 1804}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "without providing notice, obtaining informed written consent or publishing data retention policies", "report": 1804}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "governance", "evidence": "confirmed", "quote": "it is required to provide users with a notice about the face grouping feature", "report": 1804}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "Google has agreed to pay $100 million to Illinois residents to settle a class-action lawsuit", "report": 1804}
+    ]
+  },
+  "primary_failure_mode": "privacy_violation",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "2",
+  "risk_subdomain": "2.1",
+  "intent": "other",
+  "cause_entity": "human",
+  "notes": "Allegations only; Google did not admit wrongdoing in the settlement."
+ },
+ {
+  "incident_id": 161,
+  "summary": "Research found Facebook's ad delivery system showed job and housing ads to different groups by gender and race even when advertisers targeted everyone. A later audit found job ads still skewed by gender.",
+  "technical_summary": "Facebook's ad delivery optimization predicts which users will find ads relevant and optimizes for budget and engagement, producing demographic skew in who sees employment and housing ads despite neutral targeting. Audits using paired job ads showed skew not explained by qualifications. The platform does not disclose how delivery works.",
+  "systems": ["Facebook ad delivery system"],
+  "developers": ["Meta"],
+  "deployers": ["Meta"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Facebook’s ad-delivery system shows different job ads to women and men", "report": 2139},
+      {"id": "employment", "evidence": "confirmed", "quote": "Facebook is withholding certain job ads from women because of their gender", "report": 2139},
+      {"id": "housing_real_estate", "evidence": "confirmed", "quote": "ads for employment and housing opportunities despite neutral targeting parameters", "report": 1530}
+    ],
+    "technology": [
+      {"id": "ad_targeting_pricing", "evidence": "confirmed", "quote": "Facebook’s ad-delivery system shows different job ads to women and men even though the jobs require the same qualifications", "report": 2139}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "significant skew in delivery along gender and racial lines", "report": 1530},
+      {"id": "misaligned_objective", "evidence": "confirmed", "quote": "due to market and financial optimization effects as well as the platform's own predictions", "report": 1530},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "because Facebook won’t say how its ad-delivery system works", "report": 2139}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "This is considered sex-based discrimination under US equal employment opportunity law", "report": 2139}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "women_girls", "evidence": "confirmed", "quote": "Facebook is withholding certain job ads from women because of their gender", "report": 2139},
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "significant skew in delivery along gender and racial lines", "report": 1530}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Evidence comes from external audits; Facebook has not disclosed the delivery mechanism."
+ },
+ {
+  "incident_id": 12,
+  "summary": "Researchers showed that widely used word embeddings trained on Google News text encode gender stereotypes, such as linking certain jobs more strongly with women or men. They proposed a method to reduce the bias.",
+  "technical_summary": "Word embeddings used as input in many NLP systems, here trained on Google News, capture gender direction and stereotyped associations in their vector geometry. The study quantified direct and indirect bias and proposed algorithms that remove stereotypes while keeping useful properties. It was a research demonstration, not a deployed harm.",
+  "systems": ["Word embeddings trained on Google News"],
+  "developers": ["Boston University", "Microsoft Research", "Google"],
+  "deployers": [],
+  "tags": {
+    "sector": [
+      {"id": "science_research", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "translation_nlp", "evidence": "confirmed", "quote": "a popular framework to represent text data as vectors which has been used in many machine learning and natural language processing tasks", "report": 42}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "even word embeddings trained on Google News articles exhibit female/male gender stereotypes to a disturbing extent", "report": 42}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "data", "evidence": "confirmed", "quote": "The blind application of machine learning runs the risk of amplifying biases present in data", "report": 42}
+    ],
+    "affected_population": [
+      {"id": "women_girls", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Research finding about potential bias; no specific realized harm is described."
+ },
+ {
+  "incident_id": 202,
+  "summary": "A South Korean presidential candidate's campaign used a deepfake avatar, 'AI Yoon', to answer voter questions in short videos aimed at younger voters. The AIID record notes opponents alleged it was deceptive and a threat to democracy.",
+  "technical_summary": "A local company built a deepfake avatar of the candidate from about 20 hours of recorded audio and video. Campaign staff wrote the avatar's scripted answers to voter questions and posted clips online. The use was official and disclosed as AI, but raised concerns about synthetic media in elections.",
+  "systems": ["AI Yoon deepfake avatar"],
+  "developers": ["Local South Korean deepfake technology company"],
+  "deployers": ["Yoon Suk-yeol's presidential campaign"],
+  "tags": {
+    "sector": [
+      {"id": "elections_politics", "evidence": "confirmed", "quote": "South Korean presidential front-runners court younger voters with avatars", "report": 1655}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "using deepfake technology to try to achieve the near-impossible", "report": 1656}
+    ],
+    "failure_mode": [
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "voters", "evidence": "confirmed", "quote": "in a bid to engage younger voters who get their news online", "report": 1656}
+    ]
+  },
+  "primary_failure_mode": "inadequate_oversight",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.2",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Excerpts show disclosed, satirical campaign use; the alleged fraud and democratic threat come from the AIID description. Failure mode is a weak inference."
+ },
+ {
+  "incident_id": 18,
+  "summary": "A study found Google image search results under-represented women for some jobs, such as CEO. In 2015 the first woman shown for a CEO search was a Barbie doll, several rows down.",
+  "technical_summary": "Google's image search ranking returned results whose gender mix for some occupations differed from real-world data, for instance 11 percent women for CEO versus 27 percent in US labor statistics. The ranking reflects patterns in web content and user behavior. Researchers found the skew can shift people's perceptions of who holds those jobs.",
+  "systems": ["Google Image Search"],
+  "developers": ["Google"],
+  "deployers": ["Google"],
+  "tags": {
+    "sector": [
+      {"id": "search_online_services", "evidence": "confirmed", "quote": "In a few jobs — including CEO — women were significantly underrepresented in Google image search results", "report": 132}
+    ],
+    "technology": [
+      {"id": "recommender_ranking", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "there's a noticeable gender bias in the image search results for some jobs", "report": 130}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "women_girls", "evidence": "confirmed", "quote": "women were slightly underrepresented on average across all jobs the researchers looked at", "report": 130}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Researchers found results on average only slightly under-represented women; effects were largest for a few occupations."
+ },
+ {
+  "incident_id": 461,
+  "summary": "Economists found the IRS audited Black taxpayers at roughly three to five times the rate of other taxpayers. The disparity appears to come from the algorithms that select returns for audit, not from individual agents.",
+  "technical_summary": "IRS automated audit-selection algorithms, designed under budget constraints, disproportionately flag returns with easy-to-detect errors, such as certain credit claims, and avoid costlier business-income audits. Because filing patterns differ by group, race-blind selection produced large racial disparities. The algorithms are not publicly disclosed.",
+  "systems": ["IRS audit selection algorithms"],
+  "developers": ["Internal Revenue Service"],
+  "deployers": ["Internal Revenue Service"],
+  "tags": {
+    "sector": [
+      {"id": "government_services", "evidence": "confirmed", "quote": "Black taxpayers are at least three times as likely to be audited by the Internal Revenue Service as other taxpayers", "report": 2564}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "the findings document discrimination in the computer algorithms the agency uses to determine who is selected for an audit", "report": 2564}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "the findings document discrimination in the computer algorithms the agency uses to determine who is selected for an audit", "report": 2564},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "The I.R.S. does not detail how it selects returns for audit", "report": 2564}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "The result is audit rates of Black Americans that are between three and five times the rate of other taxpayers", "report": 2564}
+    ],
+    "lifecycle_stage": [
+      {"id": "design_training", "evidence": "confirmed", "quote": "Some of that discrimination appears to be rooted in decisions that I.R.S. officials made over the past decade", "report": 2564},
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "Black taxpayers are at least three times as likely to be audited", "report": 2564},
+      {"id": "low_income", "evidence": "confirmed", "quote": "the earned-income tax credit, which supplements low-income workers’ incomes", "report": 2564}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Study did not find intentional targeting; algorithms are secret so the exact mechanism is inferred from modeling."
+ },
+ {
+  "incident_id": 122,
+  "summary": "A class-action lawsuit alleged Facebook's Tag Suggestions feature scanned users' faces and stored biometric data without consent, violating Illinois law. Facebook agreed to pay 550 million dollars to settle.",
+  "technical_summary": "Facebook's Tag Suggestions facial recognition tool scanned faces in uploaded photos to suggest identities, storing biometric templates, reportedly turned on by default. Plaintiffs alleged this lacked the consent required by Illinois BIPA. Facebook later made the feature opt-in and explained it more transparently.",
+  "systems": ["Facebook Tag Suggestions"],
+  "developers": ["Facebook"],
+  "deployers": ["Facebook"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Facebook says it has agreed to pay $550 million to settle a class-action lawsuit regarding its use of facial recognition technology", "report": 1448}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "Facebook says it has agreed to pay $550 million to settle a class-action lawsuit regarding its use of facial recognition technology", "report": 1448}
+    ],
+    "failure_mode": [
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "stored biometric data without user consent, violating the Illinois Biometric Information Privacy Act", "report": 1448}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "stored biometric data without user consent, violating the Illinois Biometric Information Privacy Act", "report": 1448}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "after years of turning it on by default for all users", "report": 1448},
+      {"id": "governance", "evidence": "confirmed", "quote": "Last year, the company decided to make facial recognition on the platform opt-in only", "report": 1448}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "Facebook’s $550 million settlement will be paid out to eligible Illinois users", "report": 1448}
+    ]
+  },
+  "primary_failure_mode": "privacy_violation",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "2",
+  "risk_subdomain": "2.1",
+  "intent": "other",
+  "cause_entity": "human",
+  "notes": "Allegations resolved by settlement."
+ },
+ {
+  "incident_id": 106,
+  "summary": "A Korean chatbot persona, Lee Luda, produced hateful remarks about lesbians, Black people and transgender people and was suspended after about a week. Regulators later fined its maker for using people's private chat messages to train it without consent.",
+  "technical_summary": "Scatter Lab trained Lee Luda, a chatbot persona of a 20-year-old student, on KakaoTalk conversations collected from its other apps. The bot repeated discriminatory and hateful language learned from the data. Regulators found the training data included personal information used without consent.",
+  "systems": ["Lee Luda chatbot"],
+  "developers": ["Scatter Lab"],
+  "deployers": ["Scatter Lab"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "A social media-based chatbot developed by a South Korean startup was shut down on Tuesday", "report": 1416}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "Imitating humans, the Korean chatbot Luda was found to be racist and homophobic", "report": 1416}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "Imitating humans, the Korean chatbot Luda was found to be racist and homophobic", "report": 1416},
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "users complained that it was spewing vulgarities and hate speech", "report": 1416},
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "illegally using personal information of its clients in the development and operation of its artificial intelligence-driven chatbot service", "report": 1417}
+    ],
+    "harm_type": [
+      {"id": "psychological", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "privacy", "evidence": "confirmed", "quote": "Scatter Lab is accused of using about 600,000 people's 9.4 billion KakaoTalk conversations", "report": 1417}
+    ],
+    "lifecycle_stage": [
+      {"id": "data", "evidence": "confirmed", "quote": "Scatter Lab is accused of using about 600,000 people's 9.4 billion KakaoTalk conversations", "report": 1417},
+      {"id": "deployment", "evidence": "confirmed", "quote": "Launched in late December to great fanfare", "report": 1416}
+    ],
+    "affected_population": [
+      {"id": "lgbtq", "evidence": "confirmed", "quote": "in a response to a question about transgender people", "report": 1416},
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "heukhyeong, meaning “black brother,” a racial slur in South Korea", "report": 1416},
+      {"id": "people_with_disabilities", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Two linked issues: toxic outputs and unconsented use of personal chat data."
+ },
+ {
+  "incident_id": 253,
+  "summary": "Cruise driverless cars in San Francisco repeatedly stopped in the road and blocked traffic. On one night nearly 60 vehicles were disabled after losing contact with a Cruise server, and staff had to move cars manually.",
+  "technical_summary": "Cruise robotaxis lost connectivity to the company's servers and halted in lanes and crosswalks. Staff could not see the vehicles' locations or contact riders, and a fallback remote-steering system was unavailable. Cars had to be moved manually, causing traffic blockages across several incidents.",
+  "systems": ["Cruise autonomous vehicles"],
+  "developers": ["Cruise"],
+  "deployers": ["Cruise"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "Cruise’s driverless cars experienced serious issues Tuesday night with as many as 20 of its vehicles standing motionless", "report": 1798}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "nearly 60 vehicles were disabled across the city over a 90-minute period after they lost touch with a Cruise server", "report": 1797}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "nearly 60 vehicles were disabled across the city over a 90-minute period after they lost touch with a Cruise server", "report": 1797},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "the company was unable to access its system which allows remote operators to safely steer stopped vehicles to the side of the road", "report": 1797}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "The incident was only resolved when the robo-cars were manually moved out of the way by Cruise staff", "report": 1798}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "road_users", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": null
+ },
+ {
+  "incident_id": 255,
+  "summary": "Chicago prosecutors charged a man with murder using ShotSpotter gunshot-detection audio. Reporting says an analyst had changed the system's initial classification of the sound from a firework to a gunshot. He spent nearly a year in jail before the case was dismissed.",
+  "technical_summary": "ShotSpotter sensors flagged a loud sound, and its algorithm first classified it as a firework at a location about a mile from the alleged shooting. An analyst manually reclassified it as a gunshot and the company later issued a revised forensic report used as key evidence. The man was jailed until prosecutors dropped the case.",
+  "systems": ["ShotSpotter gunshot detection"],
+  "developers": ["ShotSpotter"],
+  "deployers": ["Chicago Police Department"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "Chicago prosecutors used audio picked up by a network of sensors installed by the gunshot detection company ShotSpotter as critical evidence", "report": 1805},
+      {"id": "justice_corrections", "evidence": "confirmed", "quote": "spent nearly a year in jail, and The Associated Press reported last year that a judge dismissed his case", "report": 1805}
+    ],
+    "technology": [
+      {"id": "surveillance_analytics", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "predictive_scoring", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The company’s algorithms initially classified the sound as a firework", "report": 1431},
+      {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "a ShotSpotter analyst manually overrode the algorithms", "report": 1431},
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "place most of its gunshot-detection sensors in predominantly Black and Latino neighborhoods", "report": 1805}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "dismissed his case at the request of prosecutors, who said they had insufficient evidence", "report": 1805}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "people_in_justice_system", "evidence": "confirmed", "quote": "any Chicago resident who was stopped on the basis of the alerts", "report": 1805},
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "place most of its gunshot-detection sensors in predominantly Black and Latino neighborhoods", "report": 1805}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "spent nearly a year in jail, and The Associated Press reported last year that a judge dismissed his case", "report": 1805},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "Racial siting of sensors is an allegation in a lawsuit; the analyst's reclassification is from a defense motion."
+ },
+ {
+  "incident_id": 223,
+  "summary": "Fourth-graders in China showed that a facial-recognition parcel locker could be opened with just a printed photo of the intended recipient. The company suspended the feature, which it said was in beta.",
+  "technical_summary": "Hive Box smart lockers used camera-based face matching to release parcels without liveness detection, so a printed photo of the recipient's face was accepted. A TV host replicated the finding with a near-perfect success rate. The company suspended the beta feature after the report.",
+  "systems": ["Hive Box facial-recognition smart lockers"],
+  "developers": ["Hive Box"],
+  "deployers": ["Hive Box"],
+  "tags": {
+    "sector": [
+      {"id": "retail_commerce", "evidence": "confirmed", "quote": "Hive Box has installed self-service pickup and drop-off stations across China", "report": 1737}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "Facial-recognition locks used by a company claiming to operate the world’s largest network of express delivery lockers have been hacked", "report": 1737}
+    ],
+    "failure_mode": [
+      {"id": "security_vulnerability", "evidence": "confirmed", "quote": "could be opened using only a printed photo of the intended recipient’s face", "report": 1737},
+      {"id": "adversarial_attack", "evidence": "confirmed", "quote": "could be opened using only a printed photo of the intended recipient’s face", "report": 1737}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "testing", "evidence": "confirmed", "quote": "its facial-recognition feature was still in beta testing and had been suspended", "report": 1737}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "security_vulnerability",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "2",
+  "risk_subdomain": "2.2",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Demonstration by a school science club; no actual theft is reported."
+ },
+ {
+  "incident_id": 94,
+  "summary": "An Italian court ruled that Deliveroo's rider-ranking algorithm discriminated against couriers. It lowered riders' reliability scores for late shift cancellations without considering reasons like illness, reducing their future work. Deliveroo said it no longer used that system.",
+  "technical_summary": "Deliveroo's shift-booking system ranked riders by a 'reliability index' and offered busier time slots to higher-ranked riders. Cancelling a booked shift within 24 hours lowered the index regardless of legitimate reasons such as illness or strike, so affected riders received fewer opportunities. A Bologna court found this indirectly discriminatory.",
+  "systems": ["Deliveroo rider reliability ranking algorithm"],
+  "developers": ["Deliveroo"],
+  "deployers": ["Deliveroo"],
+  "tags": {
+    "sector": [
+      {"id": "employment", "evidence": "confirmed", "quote": "An algorithm used by the popular European food delivery app Deliveroo to rank and offer shifts to riders is discriminatory, an Italian court ruled", "report": 1395}
+    ],
+    "technology": [
+      {"id": "ad_targeting_pricing", "evidence": "confirmed", "quote": "Since riders deemed more reliable by the algorithm were first to be offered shifts in busier timeblocks", "report": 1395}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "failure to take into account the reasons behind a cancellation amounts to discrimation", "report": 1395},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "one of many often secretive algorithms used by gig platforms to micromanage workers", "report": 1395}
+    ],
+    "harm_type": [
+      {"id": "economic_labor", "evidence": "confirmed", "quote": "riders who can’t make their shifts—even if it’s because of a serious emergency or illness—would have fewer job opportunities in the future", "report": 1395},
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "the court determined that even if an algorithm unintentionally discriminates against a protected group a company can still be held liable", "report": 1395}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "confirmed", "quote": "The case was brought by a group of Deliveroo riders backed by CGIL", "report": 1395}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Deliveroo disputed the ruling and said the shift-booking model was no longer in use."
+ }
+]

@@ -11,10 +11,10 @@
 - [x] P2 Taxonomy v1.0 + crosswalks (config/taxonomy.yaml) — revisit after pilot
 - [x] P2b Entity kinds: 5934 entities via haiku (1055 private_individual hidden) → data/enrich/entity_kinds.csv (hashed keys)
 - [x] P3a Pilot (20; haiku vs sonnet; 120/120 quotes grounded) → docs/pilot_review.md, prompt v1.1, taxonomy v1.1
-- [ ] P3b Scaled extraction with Sonnet, 2 batches/agent, 4 concurrent. Done batches = files in data/enrich/raw/. Launch order: pilot_00..01, b000..b148
-- [ ] P4 Evaluation vs expert labels + blind second coding
-- [ ] P5 Embeddings, multi-view graph, clusters, temporal
-- [ ] P6 App (React/Vite/3d-force-graph), Pages workflow, Playwright checks
+- [ ] P3b Scaled extraction with Sonnet, 2 batches/agent, 4 concurrent. Done batches = files in data/enrich/raw/. 3 batches/agent. Dispatched so far: pilot, b000–b041 → next to dispatch: b042. Check gaps: `python -m atlas.extract.status` (fill batches via `status fill`)
+- [~] P4 evaluation module done (src/atlas/analysis/evaluation.py); TODO: blind second coding (haiku, 30 incidents) after extraction; final run
+- [~] P5 modules done (embed, similarity, cluster, insights); rerun after extraction
+- [~] P6 App built (Explore/Catalog/Incident/Insights/About); Playwright verify passes (node objects preserved). TODO: Pages workflow, mobile review, final data
 - [ ] P7 README case study, case_study.md, CI, Makefile
 - [ ] MORNING_REPORT.md, delete check-in
 

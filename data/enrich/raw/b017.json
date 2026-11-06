@@ -1,0 +1,444 @@
+[
+ {
+  "incident_id": 172,
+  "summary": "NarxCare, a proprietary score used to flag overdose and addiction risk, has led some patients to be refused pain medication or dropped by their doctors, with no way to appeal. Critics say it lacks independent validation and may be biased.",
+  "technical_summary": "NarxCare uses state prescription-monitoring data and machine learning to produce opaque risk scores that clinicians and pharmacists consult when prescribing controlled substances. Its inputs and validation are not public. Reported failures include patients losing access to opioids or physician relationships based on a score they could not see or challenge.",
+  "systems": ["NarxCare", "AvertD"],
+  "developers": ["Appriss Health (Bamboo Health)"],
+  "deployers": ["State prescription monitoring programs", "Hospitals", "Pharmacy chains"],
+  "tags": {
+    "sector": [
+      {"id": "healthcare", "evidence": "confirmed", "quote": "Algorithms like NarxCare and a newly approved genetic test for opioid use disorder risk known as AvertD use machine learning techniques", "report": 3859}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "most Americans now have an opaque equivalent of a controlled substance credit score", "report": 3859}
+    ],
+    "failure_mode": [
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "Some people have been expelled from physicians' practices for having high NarxCare scores, with no way of appealing the decision", "report": 3859},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "The use of systems to analyze opioid-prescribing data has sparked questions over whether they have undergone enough independent testing", "report": 3912},
+      {"id": "bias_discrimination", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "Some patients say they have been cut off from needed care", "report": 3912}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "now used by most state prescription monitoring databases, major hospitals and pharmacy chains", "report": 3859}
+    ],
+    "affected_population": [
+      {"id": "patients", "evidence": "confirmed", "quote": "Some patients say they have been cut off from needed care", "report": 3912}
+    ]
+  },
+  "primary_failure_mode": "opacity_contestability",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.4",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Bias against women and Black patients is flagged by critics as a risk; the excerpts do not confirm measured disparities."
+ },
+ {
+  "incident_id": 54,
+  "summary": "Predictive policing software such as PredPol, used by many US police departments, directs patrols to areas it forecasts will have crime. Critics warned it could lead to over-policing of minority neighborhoods and said there was little evidence it works.",
+  "technical_summary": "PredPol takes historical crime reports, by time and type, and outputs small map boxes where crimes are predicted, directing patrols there. Because inputs reflect past policing, critics argue outputs reinforce existing disparities and focus enforcement on minority neighborhoods. Evidence of effectiveness is disputed.",
+  "systems": ["PredPol"],
+  "developers": ["PredPol"],
+  "deployers": ["Oakland Police Department", "Los Angeles Police Department"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "Law enforcement agencies are increasingly trying to forecast where and when crime will occur", "report": 1008}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "spits out predictions about where future crimes are more likely to occur", "report": 1009}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "some worry that police could feel even more empowered to spend time looking for crime in neighborhoods populated by minorities", "report": 1009}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "potential impact on poor and minority communities", "report": 1008}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Excerpts describe concerns about bias rather than documented individual harms."
+ },
+ {
+  "incident_id": 659,
+  "summary": "Israeli military intelligence reportedly ran a mass facial recognition program in Gaza that cataloged Palestinians' faces without consent and sometimes wrongly flagged civilians as militants. One man, a poet, was detained, beaten and interrogated after being flagged.",
+  "technical_summary": "The program combines technology from Corsight with Google Photos search to identify faces from checkpoint cameras and drone footage, building a database of Palestinians. Soldiers said accuracy suffers with grainy footage or obscured faces, and false matches led to wrongful detention and interrogation.",
+  "systems": ["Corsight facial recognition", "Google Photos"],
+  "developers": ["Corsight", "Google"],
+  "deployers": ["Israel Defense Forces", "Unit 8200"],
+  "tags": {
+    "sector": [
+      {"id": "military_defense", "evidence": "confirmed", "quote": "which is run by Israel's military intelligence unit, including the cyber-intelligence division Unit 8200", "report": 3800}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "relies on technology from Corsight, a private Israeli company", "report": 3800},
+      {"id": "surveillance_analytics", "evidence": "confirmed", "quote": "being used to conduct mass surveillance there", "report": 3800}
+    ],
+    "failure_mode": [
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "collecting and cataloging the faces of Palestinians without their knowledge or consent", "report": 3800},
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "At times, the technology wrongly flagged civilians as wanted Hamas militants, one officer said", "report": 3800}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "collecting and cataloging the faces of Palestinians without their knowledge or consent", "report": 3800},
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "where he was beaten and interrogated for two days before being returned to Gaza without an explanation", "report": 3801}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "Israel has deployed a mass facial recognition program in the Gaza Strip", "report": 3801}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "privacy_violation",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "where he was beaten and interrogated for two days before being returned to Gaza without an explanation", "report": 3801},
+  "risk_domain": "4",
+  "risk_subdomain": "4.1",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Based on anonymous officials' accounts reported by the New York Times; the Israeli military declined to comment on Gaza activity."
+ },
+ {
+  "incident_id": 75,
+  "summary": "French anti-racism groups sued Google because its autocomplete suggested the word 'Jewish' after the names of certain public figures. They argued this amounted to an unlawful ethnic file.",
+  "technical_summary": "Google Instant autocomplete predicts queries from other users' searches and indexed web content. For some public figures it appended 'Jewish', which plaintiffs said systematically associated people with a religion or ethnicity and created an unlawful ethnic file under French law. Google applies only narrow removal policies.",
+  "systems": ["Google Instant autocomplete"],
+  "developers": ["Google"],
+  "deployers": ["Google"],
+  "tags": {
+    "sector": [
+      {"id": "search_online_services", "evidence": "confirmed", "quote": "A new lawsuit alleges that Google's search engine has an anti-Semitism problem", "report": 1337}
+    ],
+    "technology": [
+      {"id": "recommender_ranking", "evidence": "confirmed", "quote": "predicts and displays search queries based on other users' search activities and the contents of web pages indexed by Google", "report": 1337}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "suggests the word \"Jewish\" in searches involving certain public figures", "report": 1337},
+      {"id": "privacy_violation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "religious_groups", "evidence": "confirmed", "quote": "suggests the word \"Jewish\" in searches involving certain public figures", "report": 1337},
+      {"id": "public_figures", "evidence": "confirmed", "quote": "certain public figures, including News Corporation chairman Rupert Murdoch and actor Jon Hamm", "report": 1337}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Allegations in a lawsuit; the outcome is not stated in the excerpt."
+ },
+ {
+  "incident_id": 286,
+  "summary": "Parents of two girls aged 8 and 9 sued TikTok, alleging its 'For You' algorithm pushed 'blackout challenge' videos to their children before they died. TikTok said the challenge predates its platform and was never a TikTok trend.",
+  "technical_summary": "TikTok's For You feed selects videos using an algorithm based on a user's demographics, likes and prior activity. The lawsuit alleges it repeatedly served choking-challenge videos to children and that the company failed to act or warn. TikTok disputes that the challenge originated on its platform.",
+  "systems": ["TikTok For You recommendation algorithm"],
+  "developers": ["TikTok"],
+  "deployers": ["TikTok"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "The families of two young girls who allegedly died as a result of a viral TikTok challenge have sued the social media platform", "report": 1889}
+    ],
+    "technology": [
+      {"id": "recommender_ranking", "evidence": "confirmed", "quote": "shows a stream of videos selected by an algorithm developed by TikTok", "report": 2052}
+    ],
+    "failure_mode": [
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "pushed videos of the challenge into the children’s feeds", "report": 1889},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "it failed to take significant action to stop those videos or to warn children and parents about them", "report": 2052}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "The girls were 8 and 9 when they died last year after viewing the challenge", "report": 2052},
+      {"id": "child_safety", "evidence": "confirmed", "quote": "which encouraged users to choke themselves until they passed out", "report": 2052}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "confirmed", "quote": "The girls were 8 and 9 when they died last year after viewing the challenge", "report": 2052}
+    ]
+  },
+  "primary_failure_mode": "harmful_content",
+  "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "The girls were 8 and 9 when they died last year after viewing the challenge", "report": 2052},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "other",
+  "cause_entity": "ai",
+  "notes": "Allegations from a lawsuit; causation is disputed by TikTok."
+ },
+ {
+  "incident_id": 271,
+  "summary": "A Tesla driver using Autopilot hit a motorcycle from behind on a Utah interstate at night, killing the motorcyclist. The driver said they did not see the rider, and federal regulators investigated.",
+  "technical_summary": "A Tesla Model 3 with Autopilot engaged collided with the rear of a motorcycle in the dark on a highway. The driver reported not seeing the rider. Regulators noted a possible hazard that partially automated vehicles may not stop for motorcycles, and added the crash to a special investigation list.",
+  "systems": ["Tesla Autopilot"],
+  "developers": ["Tesla"],
+  "deployers": ["Tesla"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "A motorcyclist in Draper, Utah, was killed early Sunday morning when a Tesla driver using Autopilot slammed into the rear of his bike", "report": 1852}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "The partially automated vehicles may not stop for motorcycles", "report": 1862}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The partially automated vehicles may not stop for motorcycles", "report": 1862},
+      {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "The Tesla driver, who remained at the scene, informed local officials that they did not see the motorcyclist", "report": 1852}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "throwing the motorcyclist to the ground and killing him instantly", "report": 1852}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "road_users", "evidence": "confirmed", "quote": "throwing the motorcyclist to the ground and killing him instantly", "report": 1852}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "throwing the motorcyclist to the ground and killing him instantly", "report": 1852},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "Cause under investigation; Autopilot involvement was reported by authorities."
+ },
+ {
+  "incident_id": 206,
+  "summary": "Consumer groups found Tinder's personalised pricing charged users over 30 about 65 percent more on average than younger users for the same subscription. Tinder does not explain how prices are set.",
+  "technical_summary": "Tinder uses personalised pricing that varies Tinder Plus prices by factors including age and country, using personal data from sign-up. Cross-country testing found age a major determinant. The company discloses little about the pricing algorithm, and some users were quoted many distinct prices for the same service.",
+  "systems": ["Tinder personalised pricing"],
+  "developers": ["Tinder"],
+  "deployers": ["Tinder"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "confirmed", "quote": "Online dating platform Tinder was chosen as the subject of this case study investigation", "report": 1675}
+    ],
+    "technology": [
+      {"id": "ad_targeting_pricing", "evidence": "confirmed", "quote": "Algorithm-based personalised pricing is when a business charges people different prices for the same goods or service", "report": 1676}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "Tinder Plus users over thirty are paying 65 percent more than their younger counterparts on average", "report": 1676},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "without full transparency from Tinder, it's hard to explain the reasoning behind the pricing", "report": 1676}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "Tinder Plus users over thirty are paying 65 percent more than their younger counterparts on average", "report": 1676},
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "market-leading dating app Tinder routinely charges over-30s more for its 'Plus' subscription", "report": 1677}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "intentional",
+  "cause_entity": "ai",
+  "notes": "Whether age-based pricing is unlawful discrimination is a legal question; one report retracted an initial finding about sexual orientation."
+ },
+ {
+  "incident_id": 501,
+  "summary": "An algorithm predicted an elderly woman with a shattered shoulder would recover quickly, and her Medicare Advantage insurer cut off payment for her nursing-home care. A federal judge later called the decision speculative.",
+  "technical_summary": "Insurers use predictive length-of-stay algorithms, here from NaviHealth, to estimate when a patient will be ready to leave post-acute care and to end coverage. The model forecast a recovery date that clinical notes contradicted, and the patient had no practical way to question the calculation before coverage ended.",
+  "systems": ["NaviHealth length-of-stay prediction algorithm"],
+  "developers": ["NaviHealth"],
+  "deployers": ["Security Health Plan", "NaviHealth"],
+  "tags": {
+    "sector": [
+      {"id": "healthcare", "evidence": "confirmed", "quote": "An algorithm, not a doctor, predicted a rapid recovery", "report": 2842},
+      {"id": "finance", "evidence": "confirmed", "quote": "her Medicare Advantage insurer, Security Health Plan, followed the algorithm and cut off payment for her care", "report": 2842}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "insurers are using unregulated predictive algorithms, under the guise of scientific rigor", "report": 2842}
+    ],
+    "failure_mode": [
+      {"id": "misaligned_objective", "evidence": "confirmed", "quote": "to pinpoint the precise moment when they can plausibly cut off payment for an older patient’s treatment", "report": 2842},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "patients who are neither aware of the algorithms, nor able to question their calculations", "report": 2842}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "she had to spend down her life savings and enroll in Medicaid", "report": 2842},
+      {"id": "physical", "evidence": "confirmed", "quote": "often delaying treatment of seriously ill patients who are neither aware of the algorithms", "report": 2842}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "older_adults", "evidence": "confirmed", "quote": "Older people who spent their lives paying into Medicare", "report": 2842},
+      {"id": "patients", "evidence": "confirmed", "quote": "often delaying treatment of seriously ill patients who are neither aware of the algorithms", "report": 2842}
+    ]
+  },
+  "primary_failure_mode": "misaligned_objective",
+  "severity": {"id": "s2_moderate", "evidence": "confirmed", "quote": "she had to spend down her life savings and enroll in Medicaid", "report": 2842},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "other",
+  "cause_entity": "other",
+  "notes": "The excerpt names the patient; her name is omitted here. Cost-driven intent of insurers is the reporter's framing."
+ },
+ {
+  "incident_id": 583,
+  "summary": "An investigation found Instagram's recommendation algorithms connected and promoted accounts that advertise and sell child sexual abuse material, including through recommendations to users viewing such accounts. Meta said it set up a task force to address the problem.",
+  "technical_summary": "Researchers found that hashtag search and Instagram's recommendation system acted as the main discovery mechanism for buyers and sellers of self-generated child sexual abuse material. The recommender suggested these accounts to users viewing similar ones, enabling discovery without keyword searches and weakening platform enforcement.",
+  "systems": ["Instagram recommendation algorithm"],
+  "developers": ["Meta"],
+  "deployers": ["Meta"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Meta's photo-sharing service stands out from other social media platforms", "report": 3249}
+    ],
+    "technology": [
+      {"id": "recommender_ranking", "evidence": "confirmed", "quote": "Instagram's recommendation algorithms have been connecting and promoting accounts that facilitate and sell child sexual abuse content", "report": 3249}
+    ],
+    "failure_mode": [
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "Instagram's recommendation algorithms have been connecting and promoting accounts that facilitate and sell child sexual abuse content", "report": 3249},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "Instagram serves as the key discovery mechanism for this specific community of buyers and sellers", "report": 3249},
+      {"id": "malicious_use", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "sexual_exploitation", "evidence": "confirmed", "quote": "accounts that facilitate and sell child sexual abuse content", "report": 3249},
+      {"id": "child_safety", "evidence": "confirmed", "quote": "Such accounts purport to be operated by minors", "report": 3249}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "confirmed", "quote": "position as the most popular platform for teenagers globally makes it a critical part of this ecosystem", "report": 3249}
+    ]
+  },
+  "primary_failure_mode": "harmful_content",
+  "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "other",
+  "cause_entity": "other",
+  "notes": "Harm arises from the combination of the recommender and deliberate abuse by bad actors."
+ },
+ {
+  "incident_id": 506,
+  "summary": "When asked for legal scholars who had sexually harassed someone, ChatGPT falsely named a law professor and invented a class trip and a newspaper article as the source. He said no such accusation had ever been made.",
+  "technical_summary": "In a research query, ChatGPT generated a list of scholars accused of harassment and fabricated a specific allegation with a nonexistent news citation. Large language models produce plausible, confident falsehoods about real people, and the user had no practical way to have the false statement corrected.",
+  "systems": ["ChatGPT"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "a fellow lawyer in California had asked the AI chatbot ChatGPT to generate a list of legal scholars who had sexually harassed someone", "report": 2869}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "No such article existed. There had never been a class trip to Alaska.", "report": 2869}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "confirmed", "quote": "An allegation of this kind is incredibly harmful", "report": 2869},
+      {"id": "misinformation", "evidence": "confirmed", "quote": "its propensity to generate potentially damaging falsehoods raises concerns about the spread of misinformation", "report": 2869}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Reports show the falsehood reached a researcher and the professor; the extent of wider spread is not documented."
+ },
+ {
+  "incident_id": 393,
+  "summary": "In tests by nonprofit groups, Facebook's ad review approved ads containing violent hate speech in English and Swahili aimed at Kenya. The Swahili ads passed easily and the English ads passed after profanity was removed.",
+  "technical_summary": "Researchers submitted test ads calling for killings and containing hate speech to Facebook's automated and human ad review. Swahili ads were approved immediately, and English ads were first rejected only for profanity and errors, then approved once cleaned up. The moderation system failed to detect hate speech.",
+  "systems": ["Facebook ad review and moderation system"],
+  "developers": ["Facebook"],
+  "deployers": ["Facebook"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Facebook is letting violent hate speech slip through its controls in Kenya", "report": 2247}
+    ],
+    "technology": [
+      {"id": "content_moderation", "evidence": "confirmed", "quote": "Facebook’s ability to detect hateful language — either via artificial intelligence or human moderators", "report": 2247}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The Swahili language ads easily made it through Facebook’s detection systems and were approved for publication", "report": 2247},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "the ads — still calling for killings and containing obvious hate speech — went through without a hitch", "report": 2247}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "testing", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Audit test by researchers; no evidence in the excerpt that the ads were actually shown to the public."
+ },
+ {
+  "incident_id": 230,
+  "summary": "A Tesla Model 3 with Autopilot engaged drove into the side of a tractor-trailer in Florida, killing its driver. Investigators found neither the driver nor Autopilot took evasive action, and the car did not detect his hands on the wheel.",
+  "technical_summary": "Autopilot was engaged about 10 seconds before the Model 3 struck a crossing truck at 68 mph. The system did not perform evasive maneuvers, and the vehicle did not detect the driver's hands on the steering wheel for the final seconds. The NTSB report was preliminary and assigned no blame.",
+  "systems": ["Tesla Autopilot"],
+  "developers": ["Tesla"],
+  "deployers": ["Tesla"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "was active when a Model 3 driven by a 50-year-old Florida man crashed into the side of a tractor-trailer truck", "report": 1748}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "was active when a Model 3 driven by a 50-year-old Florida man crashed into the side of a tractor-trailer truck", "report": 1748}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "found that neither the driver nor Autopilot “executed evasive maneuvers” before striking the truck", "report": 1748},
+      {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "the vehicle did not detect the driver’s hands on the steering wheel", "report": 1748}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "It is at least the fourth fatal crash of a Tesla vehicle involving Autopilot", "report": 1748}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "It is at least the fourth fatal crash of a Tesla vehicle involving Autopilot", "report": 1748},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "NTSB report was preliminary and declined to assign blame."
+ }
+]

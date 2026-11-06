@@ -1,0 +1,447 @@
+[
+ {
+  "incident_id": 116,
+  "summary": "Amazon installed AI-powered cameras in its delivery vans. Drivers said the cameras wrongly flagged them for unsafe driving, such as when other cars cut them off, which hurt their performance scores and bonuses, with no way to contest the flags.",
+  "technical_summary": "Netradyne in-cab camera system detects driving 'events' (following distance, stop signs, distraction) and feeds driver scorecards. Misclassification of normal driving, such as mirror checks or being cut off, produced false penalties that affected pay-linked scores, and no appeal mechanism existed.",
+  "systems": ["Netradyne driver-monitoring cameras"],
+  "developers": ["Netradyne"],
+  "deployers": ["Amazon"],
+  "tags": {
+    "sector": [
+      {"id": "employment", "evidence": "confirmed", "quote": "would be used to evaluate his performance that week and determine whether he got a bonus", "report": 1441},
+      {"id": "transportation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "computer_vision", "evidence": "confirmed", "quote": "Amazon installed AI-powered cameras in the delivery vans at one of its depots in Los Angeles", "report": 1441},
+      {"id": "surveillance_analytics", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "the Netradyne system isn’t very good at deciding when a driver is or isn’t breaking the law", "report": 1803},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "Amazon offers no method for drivers to contest events", "report": 1803}
+    ],
+    "harm_type": [
+      {"id": "economic_labor", "evidence": "confirmed", "quote": "would be used to evaluate his performance that week and determine whether he got a bonus", "report": 1441},
+      {"id": "psychological", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "Amazon installed AI-powered cameras in the delivery vans at one of its depots in Los Angeles", "report": 1441}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "confirmed", "quote": "Motherboard spoke to six Amazon delivery drivers in California, Texas, Kansas, Alabama, and Oklahoma", "report": 1441}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Drivers are mostly employed by Amazon delivery contractors; extent of lost pay varies by account."
+ },
+ {
+  "incident_id": 142,
+  "summary": "Facebook's automated ad review repeatedly rejected ads from small adaptive clothing brands, wrongly treating them as medical products. Sellers had to appeal item by item.",
+  "technical_summary": "Facebook and Instagram's automated ad-review classifier misclassified adaptive fashion items, such as clothing for people with disabilities, as prohibited medical or health care products. Retailers faced repeated rejections and manual item-by-item appeals, which reporting attributes to biases embedded in machine learning classification.",
+  "systems": ["Facebook automated advertising review"],
+  "developers": ["Meta"],
+  "deployers": ["Meta"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "The algorithms that are the gatekeepers to the commercial side of Facebook", "report": 1481},
+      {"id": "retail_commerce", "evidence": "confirmed", "quote": "an adaptive clothing company that makes fashionable gear for people with disabilities", "report": 1481}
+    ],
+    "technology": [
+      {"id": "content_moderation", "evidence": "confirmed", "quote": "routinely misidentify adaptive fashion products and block them from their platforms", "report": 1481}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "the implicit biases embedded in machine learning, and the way they impact marginalized communities", "report": 1481},
+      {"id": "robustness_failure", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "At least six other small adaptive clothing companies have experienced the same problems as Mighty Well", "report": 1481},
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "businesses", "evidence": "confirmed", "quote": "At least six other small adaptive clothing companies have experienced the same problems as Mighty Well", "report": 1481},
+      {"id": "people_with_disabilities", "evidence": "confirmed", "quote": "an adaptive clothing company that makes fashionable gear for people with disabilities", "report": 1481}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Report characterizes the pattern as bias in classification; the specific cause was not confirmed by Facebook in the excerpt."
+ },
+ {
+  "incident_id": 76,
+  "summary": "Buenos Aires used a national fugitive database that includes children to power a live facial recognition system in its subway. The system reportedly led to false arrests, and Human Rights Watch warned it exposed children's data and risked false matches.",
+  "technical_summary": "A live facial recognition system matches subway camera feeds against headshots linked to CONARC, a national fugitive register. The register is exposed as a plain-text file and includes minors. Matches trigger police alerts and arrests; false matches led to wrongful detentions and no handling protocol existed.",
+  "systems": ["Facial Recognition System for Fugitives (SRFP)", "CONARC database"],
+  "developers": ["Danaide S.A.", "NtechLab"],
+  "deployers": ["Buenos Aires city government", "Government of Argentina"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "it alerts to the police to make an arrest", "report": 1339},
+      {"id": "government_services", "evidence": "confirmed", "quote": "a live facial recognition system in Buenos Aires deployed by the city government", "report": 1339}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "a live facial recognition system in Buenos Aires deployed by the city government", "report": 1339},
+      {"id": "surveillance_analytics", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "not only are children regularly added to CONARC", "report": 1339},
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The system has since led to numerous false arrests", "report": 1339},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "Implemented without any public consultation, the system sparked immediate resistance", "report": 1339}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "a plain-text spreadsheet file without password protection, which can be readily found via Google Search", "report": 1339},
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "One man who was mistakenly identified was detained for six days", "report": 1339},
+      {"id": "child_safety", "evidence": "confirmed", "quote": "likely the first known instance of its kind being used to hunt down kids suspected of criminal activity", "report": 1339}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "Buenos Aires first began trialing live facial recognition on April 24, 2019", "report": 1339}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "confirmed", "quote": "not only are children regularly added to CONARC", "report": 1339},
+      {"id": "people_in_justice_system", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "privacy_violation",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "detained for six days and about to be transferred to a maximum security prison", "report": 1339},
+  "risk_domain": "2",
+  "risk_subdomain": "2.1",
+  "intent": "other",
+  "cause_entity": "human",
+  "notes": "Children's inclusion in the database and the system's false arrests are distinct harms reported together."
+ },
+ {
+  "incident_id": 657,
+  "summary": "A ChatGPT user saw other people's chat histories, including login details, in his account. OpenAI said the account had been taken over by someone logging in from another country, not that ChatGPT leaked data.",
+  "technical_summary": "Chat histories from unfamiliar users, some containing credentials, appeared in a ChatGPT account. OpenAI attributed this to account takeover via credentials pooled for shared free access. Reporting notes the service offered no two-factor authentication or login-location tracking for users.",
+  "systems": ["ChatGPT"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "security_vulnerability", "evidence": "confirmed", "quote": "the site provides no mechanism for users", "report": 3796},
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "ChatGPT is leaking private conversations that include login credentials and other personal details of unrelated users", "report": 3796}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "Both contained multiple pairs of usernames and passwords that appeared to be connected to a support system", "report": 3796}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "confirmed", "quote": "The unauthorized logins came from Sri Lanka", "report": 3796}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "security_vulnerability",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "2",
+  "risk_subdomain": "2.2",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Initial reports suggested a ChatGPT leak; OpenAI's account-takeover explanation is the company's account and was not independently confirmed."
+ },
+ {
+  "incident_id": 252,
+  "summary": "Taser maker Axon announced plans for remotely operated stun-gun drones for schools after a mass shooting, despite its AI ethics board's earlier objections. Most of the board resigned and Axon paused the project. No drone was deployed.",
+  "technical_summary": "Axon proposed a remotely piloted drone armed with a taser, intended for use by first responders against intruders in schools. The company announced it without consulting its AI ethics board, which had voted against a police drone concept. The project was paused after resignations, so no operational failure occurred.",
+  "systems": ["Proposed taser-armed drone"],
+  "developers": ["Axon Enterprise"],
+  "deployers": [],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "floated the idea of a new police drone product last year", "report": 1795},
+      {"id": "education", "evidence": "confirmed", "quote": "The company surprised its own ethics board by announcing the proposal to have taser-armed drones in schools", "report": 1795}
+    ],
+    "technology": [
+      {"id": "robotics_drones", "evidence": "confirmed", "quote": "equip drones with stun guns to combat mass shootings", "report": 1795}
+    ],
+    "failure_mode": [
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "The company surprised its own ethics board by announcing the proposal to have taser-armed drones in schools", "report": 1795}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "design_training", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "governance", "evidence": "confirmed", "quote": "The ethics board said it had already voted against a proposal for a taser-armed police drone", "report": 1795}
+    ],
+    "affected_population": [
+      {"id": "students", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "reservations about weaponising drones in over-policed communities of colour", "report": 1795}
+    ]
+  },
+  "primary_failure_mode": "inadequate_oversight",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "6",
+  "risk_subdomain": "6.5",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Proposal-stage concern only; the project was paused and no drone was deployed."
+ },
+ {
+  "incident_id": 574,
+  "summary": "G/O Media published AI-written articles on its sites over staff objections. The first, a chronological list of Star Wars movies, was not in chronological order, and journalists said it damaged their credibility.",
+  "technical_summary": "Articles generated with Google Bard and OpenAI ChatGPT were published under bot bylines with little editorial review. Output contained factual and ordering errors, and the rollout proceeded despite staff objections, raising concerns about accuracy and the publication's credibility.",
+  "systems": ["Google Bard", "ChatGPT"],
+  "developers": ["Google", "OpenAI"],
+  "deployers": ["G/O Media"],
+  "tags": {
+    "sector": [
+      {"id": "news_publishing", "evidence": "confirmed", "quote": "G/O Media, who owns popular tech site Gizmodo along with a slew of other outlets, began publishing AI-generated articles", "report": 3237}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "The Post reports that the articles were written using both Google’s Bard and OpenAI’s ChatGPT", "report": 3237}
+    ],
+    "failure_mode": [
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "despite strong objections from many of the members of its staff", "report": 3237},
+      {"id": "hallucination", "evidence": "confirmed", "quote": "a chronological list of Star Wars movies that wasn’t chronological", "report": 3237}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "confirmed", "quote": "actively hurting our reputations and credibility", "report": 3237}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "began publishing AI-generated articles last week", "report": 3237}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "confirmed", "quote": "there was nothing in their job descriptions", "report": 3237}
+    ]
+  },
+  "primary_failure_mode": "inadequate_oversight",
+  "severity": {"id": "s1_minor", "evidence": "confirmed", "quote": "actively hurting our reputations and credibility", "report": 3237},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "human",
+  "notes": "Harm is largely reputational and internal; the AI errors were relatively minor."
+ },
+ {
+  "incident_id": 647,
+  "summary": "A driverless Waymo taxi collided with a cyclist in San Francisco, causing minor injuries. Waymo said the cyclist was hidden from its sensors by a truck. State regulators reviewed the crash.",
+  "technical_summary": "A Waymo autonomous vehicle proceeded into an intersection after a truck passed. A cyclist following the truck was occluded from its sensors and turned into its path. The vehicle braked heavily when the cyclist became visible but could not avoid contact.",
+  "systems": ["Waymo Driver"],
+  "developers": ["Waymo"],
+  "deployers": ["Waymo"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "A self-driving Waymo robotaxi apparently hit a bicyclist", "report": 3752}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "A driverless Waymo car collided with a cyclist in San Francisco on Tuesday causing minor injuries", "report": 3759}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The cyclist was occluded by the truck and quickly followed behind it", "report": 4318}
+    ],
+    "harm_type": [
+      {"id": "physical", "evidence": "confirmed", "quote": "A driverless Waymo car collided with a cyclist in San Francisco on Tuesday causing minor injuries", "report": 3759}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "road_users", "evidence": "confirmed", "quote": "A driverless Waymo car collided with a cyclist in San Francisco on Tuesday causing minor injuries", "report": 3759}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Waymo's account that the cyclist turned into its path differs from initial reports; cause was under police and DMV review."
+ },
+ {
+  "incident_id": 128,
+  "summary": "A Tesla on Autopilot did not center itself on a curving road and hit a raised center curb, shredding two tires and damaging the rear suspension. The driver was unharmed.",
+  "technical_summary": "A Tesla Model sedan driving with Autopilot engaged near Redmond failed to hold lane center on a curving road. Both driver-side tires struck a raised yellow center curb, and the driver had to retake the wheel. Tesla notes Autopilot is intended for a fully attentive driver.",
+  "systems": ["Tesla Autopilot"],
+  "developers": ["Tesla"],
+  "deployers": ["Tesla"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "activated the Autopilot function of his Tesla sedan", "report": 1459}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "activated the Autopilot function of his Tesla sedan", "report": 1459}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The car didn’t center itself exactly right", "report": 1459}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "the vehicle left the scene on the back of a truck, with its rear suspension damaged", "report": 1459}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "confirmed", "quote": "He was unharmed, but the vehicle left the scene on the back of a truck", "report": 1459},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Incident is described in an article about AI ethics; Autopilot requires driver attentiveness, so human-automation interaction may also contribute."
+ },
+ {
+  "incident_id": 282,
+  "summary": "Facebook's automated moderation removed a Canadian garden center's ad for onion seeds, flagging a photo of onions as sexually suggestive. Facebook restored the ad after review and apologized.",
+  "technical_summary": "Facebook's automated nudity-detection system misclassified a photo of onions in an ad as 'overtly sexual positioning' and took the ad down. The error was reversed after a human review. It is a false-positive failure of image-based content moderation.",
+  "systems": ["Facebook automated nudity detection"],
+  "developers": ["Facebook"],
+  "deployers": ["Facebook"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Facebook on Wednesday told Canada's CBC News the ad had been reinstated after review", "report": 1879},
+      {"id": "retail_commerce", "evidence": "confirmed", "quote": "A garden center in Newfoundland, Canada on Monday received a notice from Facebook about an ad", "report": 1879}
+    ],
+    "technology": [
+      {"id": "content_moderation", "evidence": "confirmed", "quote": "The mistake had been made by its AI moderation tech, which automatically takes down content it thinks contains nudity", "report": 1879}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The mistake had been made by its AI moderation tech, which automatically takes down content it thinks contains nudity", "report": 1879}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "We restored the ad and are sorry for the business' trouble", "report": 1879}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "businesses", "evidence": "confirmed", "quote": "A garden center in Newfoundland, Canada on Monday received a notice from Facebook about an ad", "report": 1879}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": null
+ },
+ {
+  "incident_id": 50,
+  "summary": "An attacker exploited a flaw in The DAO, a crowdfunded investment fund on the Ethereum blockchain, and drained about 3.6 million Ether worth roughly 70 million dollars. The theft led to a controversial blockchain hard fork.",
+  "technical_summary": "The DAO was a smart-contract venture fund. Its code sent Ether before updating the internal balance and did not guard against recursive calls, so an attacker repeatedly withdrew funds before balances updated. Security warnings preceded the launch and were not resolved.",
+  "systems": ["The DAO smart contract"],
+  "developers": ["The DAO"],
+  "deployers": ["The DAO"],
+  "tags": {
+    "sector": [
+      {"id": "finance", "evidence": "confirmed", "quote": "was created to operate like a venture capital fund for decentralized cryptocurrency projects", "report": 878}
+    ],
+    "technology": [
+      {"id": "other_unspecified", "evidence": "confirmed", "quote": "The DAO was built as a smart contract on the Ethereum blockchain", "report": 878}
+    ],
+    "failure_mode": [
+      {"id": "security_vulnerability", "evidence": "confirmed", "quote": "There were two main flaws that allowed this to take place", "report": 878},
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "Around 3.6M Ether worth approximately $70M were drained by a hacker in a few hours", "report": 878},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "however, most of the security issues were not solved", "report": 878}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "Around 3.6M Ether worth approximately $70M were drained by a hacker in a few hours", "report": 878}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "During its early days of operation there were warnings of security issues", "report": 878},
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "security_vulnerability",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "Around 3.6M Ether worth approximately $70M were drained by a hacker in a few hours", "report": 878},
+  "risk_domain": "2",
+  "risk_subdomain": "2.2",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "A smart-contract incident rather than a machine-learning system; funds were largely restored via a hard fork."
+ },
+ {
+  "incident_id": 80,
+  "summary": "An AI-controlled camera used to livestream a Scottish soccer match kept tracking a linesman's bald head instead of the ball. Fans watching online missed the team's only goal.",
+  "technical_summary": "An automatic ball-tracking camera used in place of a camera operator mistook an official's bald head for the ball, repeatedly framing him instead of play. The object-detection error degraded the livestream for fans watching remotely.",
+  "systems": ["AI ball-tracking camera"],
+  "developers": [],
+  "deployers": ["Inverness Caledonian Thistle Football Club"],
+  "tags": {
+    "sector": [
+      {"id": "entertainment_arts", "evidence": "confirmed", "quote": "Scottish team Inverness Caledonian Thistle Football Club had deployed such a camera to live-stream their match against Ayr United", "report": 1380}
+    ],
+    "technology": [
+      {"id": "computer_vision", "evidence": "confirmed", "quote": "the camera’s AI thought a bald linesman’s head was the ball", "report": 1380}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "the camera’s AI thought a bald linesman’s head was the ball", "report": 1380}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "Scottish team Inverness Caledonian Thistle Football Club had deployed such a camera to live-stream their match against Ayr United", "report": 1380}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "they had to even miss the team’s lone goal because of the glitch", "report": 1380}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "confirmed", "quote": "they had to even miss the team’s lone goal because of the glitch", "report": 1380},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Camera provider is not named in the excerpts."
+ },
+ {
+  "incident_id": 175,
+  "summary": "A driverless Cruise taxi in San Francisco was pulled over by police, apparently for having no headlights on. It drove off, then stopped at a safer spot nearby. Cruise said it behaved as intended, and no one was hurt or cited.",
+  "technical_summary": "A Cruise autonomous vehicle operating at night without its headlights on was stopped by police. After the officer walked away it moved to the nearest safe place to stop, as designed. The reporting highlights unresolved questions about the headlight fault and police interaction with driverless vehicles.",
+  "systems": ["Cruise autonomous vehicle"],
+  "developers": ["Cruise"],
+  "deployers": ["Cruise"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "GM’s Cruise vehicles have been operating autonomously in San Francisco at night", "report": 1553},
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "a GM Cruise converted Chevy Bolt without a driver was pulled over by San Francisco Police", "report": 1553}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "a GM Cruise converted Chevy Bolt without a driver was pulled over by San Francisco Police", "report": 1553}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "confirmed that the SFPD pulled over the vehicle for not having its headlights on", "report": 1554}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "confirmed", "quote": "An officer contacted Cruise personnel and no citation was issued", "report": 1553}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "road_users", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Cruise says the vehicle behaved as intended in pulling over; cause of the headlight fault was not established in the excerpts."
+ }
+]

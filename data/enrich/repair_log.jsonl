@@ -1,0 +1,6 @@
+{"batch": "b021", "incident_id": 64, "dimension": "sector", "tag": "retail_commerce", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b021", "incident_id": 64, "dimension": "lifecycle_stage", "tag": "testing", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b023", "incident_id": 505, "dimension": "harm_type", "tag": "physical", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b023", "incident_id": 505, "dimension": "affected_population", "tag": "users_consumers", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b023", "incident_id": 505, "dimension": "severity", "tag": "s4_critical", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b027", "incident_id": 71, "dimension": "lifecycle_stage", "tag": "testing", "action": "downgrade", "reason": "not_found", "old": "The Google AV test driver saw the bus approaching in the left side mirror"}

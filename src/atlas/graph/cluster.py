@@ -125,6 +125,34 @@ def label_clusters(f: Features, labels: np.ndarray, risk_domain: list[str | None
     return out
 
 
+def title_keywords(titles: list[str], labels: np.ndarray, top: int = 4) -> dict[int, list[str]]:
+    """Distinctive words per cluster from AIID titles (class-based TF-IDF), used as a readable subtitle."""
+    from sklearn.feature_extraction.text import CountVectorizer
+
+    docs = [" ".join(t for t, l in zip(titles, labels) if l == c) for c in sorted(set(labels))]
+    cv = CountVectorizer(stop_words="english", min_df=2, token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z-]{2,}\b",
+                         ngram_range=(1, 1))
+    X = cv.fit_transform(docs).toarray().astype(float)
+    tf = X / X.sum(1, keepdims=True).clip(min=1)
+    idf = np.log(1 + X.sum() / X.sum(0).clip(min=1))
+    score = tf * idf
+    vocab = np.array(cv.get_feature_names_out())
+    generic = {"allegedly", "reportedly", "purported", "purportedly", "alleged", "ai", "ai-generated", "used",
+               "using", "incident", "reported", "use", "uses"}
+    out = {}
+    for k, c in enumerate(sorted(set(labels))):
+        words = [w for w in vocab[np.argsort(-score[k])] if w not in generic]
+        out[int(c)] = words[:top]
+    return out
+
+
+def compress_outliers(xyz: np.ndarray, r0: float = 2.5) -> np.ndarray:
+    """Pull far outliers in (radius > r0 σ) logarithmically so the constellation stays compact."""
+    r = np.linalg.norm(xyz, axis=1, keepdims=True)
+    scale = np.where(r > r0, (r0 + np.log1p(r - r0)) / np.maximum(r, 1e-9), 1.0)
+    return xyz * scale
+
+
 def bridges(f: Features, labels: np.ndarray, top: int = 25) -> list[dict]:
     edges = json.loads((paths.PROCESSED / "edges.json").read_text())["blend"]
     G = nx.Graph()
@@ -169,8 +197,14 @@ def build() -> dict:
     labels = ward(Z, k)
     seed_aris = [round(adjusted_rand_score(labels, ward(umap_embed(X, 10, s), k)), 4) for s in (7, 99, 2024)]
     layout = umap_embed(X, 3, SEED, n_neighbors=20, min_dist=0.15)
-    layout = (layout - layout.mean(0)) / layout.std(0)
+    layout = compress_outliers((layout - layout.mean(0)) / layout.std(0))
     clusters = label_clusters(f, labels, risk_domain)
+    titles = dict(con.execute("SELECT incident_id, title FROM incidents").fetchall())
+    kw = title_keywords([titles[int(i)] or "" for i in f.ids], labels)
+    for c in clusters:
+        c["keywords"] = kw[c["cluster"]]
+        if not c["name"]:
+            c["name"] = "Titles: " + ", ".join(kw[c["cluster"]][:3])
     res = {"k": k, "selection": table, "seed_ari": seed_aris,
            "chosen": next(r for r in table if r["k"] == k),
            "params": {"w_emb": W_EMB, "w_tag": W_TAG, "tag_blocks": list(TAG_BLOCKS) + ["risk_domain"],

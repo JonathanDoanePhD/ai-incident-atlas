@@ -16,13 +16,13 @@
    "incidents": 61
   },
   {
-   "id": "facebook",
-   "name": "Facebook",
+   "id": "tesla",
+   "name": "Tesla",
    "incidents": 52
   },
   {
-   "id": "tesla",
-   "name": "Tesla",
+   "id": "facebook",
+   "name": "Facebook",
    "incidents": 52
   },
   {
@@ -61,13 +61,13 @@
    "incidents": 16
   },
   {
-   "id": "youtube",
-   "name": "YouTube",
+   "id": "tiktok",
+   "name": "TikTok",
    "incidents": 14
   },
   {
-   "id": "tiktok",
-   "name": "TikTok",
+   "id": "youtube",
+   "name": "YouTube",
    "incidents": 14
   },
   {
@@ -91,23 +91,23 @@
    "incidents": 11
   },
   {
-   "id": "clearview-ai",
-   "name": "Clearview AI",
-   "incidents": 10
-  },
-  {
    "id": "twitter",
    "name": "Twitter",
    "incidents": 10
   },
   {
-   "id": "chatgpt",
-   "name": "ChatGPT",
+   "id": "clearview-ai",
+   "name": "Clearview AI",
    "incidents": 10
   },
   {
    "id": "uber",
    "name": "Uber",
+   "incidents": 10
+  },
+  {
+   "id": "chatgpt",
+   "name": "ChatGPT",
    "incidents": 10
   },
   {
@@ -121,6 +121,11 @@
    "incidents": 8
   },
   {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "incidents": 7
+  },
+  {
    "id": "storm-1679",
    "name": "Storm-1679",
    "incidents": 7
@@ -131,18 +136,8 @@
    "incidents": 7
   },
   {
-   "id": "matryoshka",
-   "name": "Matryoshka",
-   "incidents": 7
-  },
-  {
    "id": "perplexity",
    "name": "Perplexity",
-   "incidents": 7
-  },
-  {
-   "id": "elevenlabs",
-   "name": "ElevenLabs",
    "incidents": 7
   },
   {
@@ -151,28 +146,18 @@
    "incidents": 7
   },
   {
-   "id": "eleutherai",
-   "name": "EleutherAI",
-   "incidents": 6
-  },
-  {
-   "id": "government-of-russia",
-   "name": "Government of Russia",
-   "incidents": 6
-  },
-  {
-   "id": "russian-government",
-   "name": "Russian government",
-   "incidents": 6
-  },
-  {
-   "id": "quantum-ai",
-   "name": "Quantum AI",
-   "incidents": 6
+   "id": "matryoshka",
+   "name": "Matryoshka",
+   "incidents": 7
   },
   {
    "id": "replika",
    "name": "Replika",
+   "incidents": 6
+  },
+  {
+   "id": "eleutherai",
+   "name": "EleutherAI",
    "incidents": 6
   },
   {
@@ -186,43 +171,28 @@
    "incidents": 6
   },
   {
+   "id": "russian-government",
+   "name": "Russian government",
+   "incidents": 6
+  },
+  {
    "id": "irregular",
    "name": "Irregular",
    "incidents": 6
   },
   {
-   "id": "chicago-police-department",
-   "name": "Chicago Police Department",
-   "incidents": 5
+   "id": "quantum-ai",
+   "name": "Quantum AI",
+   "incidents": 6
   },
   {
-   "id": "new-york-police-department",
-   "name": "New York Police Department",
-   "incidents": 5
-  },
-  {
-   "id": "government-of-north-korea",
-   "name": "Government of North Korea",
-   "incidents": 5
+   "id": "government-of-russia",
+   "name": "Government of Russia",
+   "incidents": 6
   },
   {
    "id": "runway",
    "name": "Runway",
-   "incidents": 5
-  },
-  {
-   "id": "deepseek",
-   "name": "DeepSeek",
-   "incidents": 5
-  },
-  {
-   "id": "perplexity-ai",
-   "name": "Perplexity AI",
-   "incidents": 5
-  },
-  {
-   "id": "compvis-lmu",
-   "name": "CompVis LMU",
    "incidents": 5
   },
   {
@@ -231,33 +201,43 @@
    "incidents": 5
   },
   {
+   "id": "government-of-north-korea",
+   "name": "Government of North Korea",
+   "incidents": 5
+  },
+  {
    "id": "mcdonald's",
    "name": "McDonald's",
    "incidents": 5
   },
   {
-   "id": "chinese-government",
-   "name": "Chinese government",
-   "incidents": 4
+   "id": "compvis-lmu",
+   "name": "CompVis LMU",
+   "incidents": 5
   },
   {
-   "id": "google-deepmind",
-   "name": "Google DeepMind",
-   "incidents": 4
+   "id": "chicago-police-department",
+   "name": "Chicago Police Department",
+   "incidents": 5
   },
   {
-   "id": "huawei",
-   "name": "Huawei",
-   "incidents": 4
+   "id": "perplexity-ai",
+   "name": "Perplexity AI",
+   "incidents": 5
   },
   {
-   "id": "starship-technologies",
-   "name": "Starship Technologies",
-   "incidents": 4
+   "id": "new-york-police-department",
+   "name": "New York Police Department",
+   "incidents": 5
   },
   {
-   "id": "midjourney",
-   "name": "Midjourney",
+   "id": "deepseek",
+   "name": "DeepSeek",
+   "incidents": 5
+  },
+  {
+   "id": "knightscope",
+   "name": "Knightscope",
    "incidents": 4
   },
   {
@@ -266,18 +246,28 @@
    "incidents": 4
   },
   {
+   "id": "united-states-immigration-and-customs-enforcement",
+   "name": "United States Immigration and Customs Enforcement",
+   "incidents": 4
+  },
+  {
+   "id": "huawei",
+   "name": "Huawei",
+   "incidents": 4
+  },
+  {
    "id": "alibaba",
    "name": "Alibaba",
    "incidents": 4
   },
   {
-   "id": "united-states-department-of-homeland-security",
-   "name": "United States Department of Homeland Security",
+   "id": "google-deepmind",
+   "name": "Google DeepMind",
    "incidents": 4
   },
   {
-   "id": "knightscope",
-   "name": "Knightscope",
+   "id": "chinese-government",
+   "name": "Chinese government",
    "incidents": 4
   },
   {
@@ -286,21 +276,31 @@
    "incidents": 4
   },
   {
-   "id": "united-states-immigration-and-customs-enforcement",
-   "name": "United States Immigration and Customs Enforcement",
+   "id": "midjourney",
+   "name": "Midjourney",
+   "incidents": 4
+  },
+  {
+   "id": "united-states-department-of-homeland-security",
+   "name": "United States Department of Homeland Security",
+   "incidents": 4
+  },
+  {
+   "id": "starship-technologies",
+   "name": "Starship Technologies",
    "incidents": 4
   }
  ],
  "links": [
   {
    "entity": "alibaba",
-   "cluster": 3,
-   "incidents": 3
+   "cluster": 15,
+   "incidents": 1
   },
   {
    "entity": "alibaba",
-   "cluster": 6,
-   "incidents": 1
+   "cluster": 18,
+   "incidents": 3
   },
   {
    "entity": "amazon",
@@ -310,176 +310,181 @@
   {
    "entity": "amazon",
    "cluster": 1,
-   "incidents": 13
-  },
-  {
-   "entity": "amazon",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "amazon",
-   "cluster": 3,
-   "incidents": 2
+   "incidents": 4
   },
   {
    "entity": "amazon",
    "cluster": 5,
+   "incidents": 6
+  },
+  {
+   "entity": "amazon",
+   "cluster": 7,
+   "incidents": 2
+  },
+  {
+   "entity": "amazon",
+   "cluster": 9,
    "incidents": 1
   },
   {
    "entity": "amazon",
-   "cluster": 6,
-   "incidents": 1
-  },
-  {
-   "entity": "amazon",
-   "cluster": 15,
+   "cluster": 10,
    "incidents": 3
   },
   {
    "entity": "amazon",
-   "cluster": 19,
-   "incidents": 8
+   "cluster": 12,
+   "incidents": 1
+  },
+  {
+   "entity": "amazon",
+   "cluster": 14,
+   "incidents": 4
+  },
+  {
+   "entity": "amazon",
+   "cluster": 18,
+   "incidents": 3
+  },
+  {
+   "entity": "amazon",
+   "cluster": 20,
+   "incidents": 5
+  },
+  {
+   "entity": "anthropic",
+   "cluster": 1,
+   "incidents": 2
   },
   {
    "entity": "anthropic",
    "cluster": 2,
-   "incidents": 3
+   "incidents": 4
   },
   {
    "entity": "anthropic",
    "cluster": 3,
-   "incidents": 29
+   "incidents": 1
   },
   {
    "entity": "anthropic",
    "cluster": 4,
-   "incidents": 1
+   "incidents": 3
   },
   {
    "entity": "anthropic",
-   "cluster": 5,
+   "cluster": 9,
    "incidents": 2
-  },
-  {
-   "entity": "anthropic",
-   "cluster": 10,
-   "incidents": 2
-  },
-  {
-   "entity": "anthropic",
-   "cluster": 11,
-   "incidents": 1
   },
   {
    "entity": "anthropic",
    "cluster": 13,
-   "incidents": 2
-  },
-  {
-   "entity": "anthropic",
-   "cluster": 14,
-   "incidents": 2
-  },
-  {
-   "entity": "anthropic",
-   "cluster": 20,
    "incidents": 1
   },
   {
    "entity": "anthropic",
-   "cluster": 21,
-   "incidents": 1
+   "cluster": 17,
+   "incidents": 2
+  },
+  {
+   "entity": "anthropic",
+   "cluster": 18,
+   "incidents": 29
   },
   {
    "entity": "apple",
    "cluster": 0,
-   "incidents": 2
+   "incidents": 3
   },
   {
    "entity": "apple",
    "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "apple",
+   "cluster": 2,
+   "incidents": 1
+  },
+  {
+   "entity": "apple",
+   "cluster": 5,
+   "incidents": 3
+  },
+  {
+   "entity": "apple",
+   "cluster": 7,
+   "incidents": 1
+  },
+  {
+   "entity": "apple",
+   "cluster": 14,
    "incidents": 2
   },
   {
    "entity": "apple",
-   "cluster": 6,
-   "incidents": 4
+   "cluster": 15,
+   "incidents": 1
   },
   {
    "entity": "apple",
+   "cluster": 16,
+   "incidents": 2
+  },
+  {
+   "entity": "apple",
+   "cluster": 19,
+   "incidents": 2
+  },
+  {
+   "entity": "character.ai",
+   "cluster": 4,
+   "incidents": 11
+  },
+  {
+   "entity": "character.ai",
    "cluster": 8,
    "incidents": 1
   },
   {
-   "entity": "apple",
-   "cluster": 15,
+   "entity": "chatgpt",
+   "cluster": 1,
    "incidents": 2
   },
   {
-   "entity": "apple",
-   "cluster": 18,
+   "entity": "chatgpt",
+   "cluster": 2,
+   "incidents": 2
+  },
+  {
+   "entity": "chatgpt",
+   "cluster": 4,
+   "incidents": 5
+  },
+  {
+   "entity": "chatgpt",
+   "cluster": 8,
    "incidents": 1
   },
   {
-   "entity": "apple",
-   "cluster": 19,
+   "entity": "chicago-police-department",
+   "cluster": 5,
    "incidents": 3
   },
   {
-   "entity": "apple",
-   "cluster": 20,
-   "incidents": 1
-  },
-  {
-   "entity": "character.ai",
+   "entity": "chicago-police-department",
    "cluster": 14,
-   "incidents": 12
-  },
-  {
-   "entity": "chatgpt",
-   "cluster": 2,
    "incidents": 1
-  },
-  {
-   "entity": "chatgpt",
-   "cluster": 5,
-   "incidents": 1
-  },
-  {
-   "entity": "chatgpt",
-   "cluster": 10,
-   "incidents": 4
-  },
-  {
-   "entity": "chatgpt",
-   "cluster": 13,
-   "incidents": 2
-  },
-  {
-   "entity": "chatgpt",
-   "cluster": 14,
-   "incidents": 2
   },
   {
    "entity": "chicago-police-department",
+   "cluster": 16,
+   "incidents": 1
+  },
+  {
+   "entity": "chinese-communist-party",
    "cluster": 1,
-   "incidents": 1
-  },
-  {
-   "entity": "chicago-police-department",
-   "cluster": 6,
-   "incidents": 4
-  },
-  {
-   "entity": "chinese-communist-party",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "chinese-communist-party",
-   "cluster": 3,
    "incidents": 1
   },
   {
@@ -489,208 +494,248 @@
   },
   {
    "entity": "chinese-communist-party",
-   "cluster": 5,
+   "cluster": 6,
    "incidents": 1
   },
   {
    "entity": "chinese-communist-party",
-   "cluster": 16,
+   "cluster": 9,
+   "incidents": 1
+  },
+  {
+   "entity": "chinese-communist-party",
+   "cluster": 18,
    "incidents": 1
   },
   {
    "entity": "chinese-government",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "chinese-government",
-   "cluster": 3,
-   "incidents": 1
-  },
-  {
-   "entity": "chinese-government",
-   "cluster": 5,
-   "incidents": 1
-  },
-  {
-   "entity": "chinese-government",
-   "cluster": 6,
-   "incidents": 1
-  },
-  {
-   "entity": "clearview-ai",
    "cluster": 1,
    "incidents": 1
   },
   {
-   "entity": "clearview-ai",
-   "cluster": 6,
-   "incidents": 8
-  },
-  {
-   "entity": "clearview-ai",
-   "cluster": 7,
+   "entity": "chinese-government",
+   "cluster": 4,
    "incidents": 1
   },
   {
+   "entity": "chinese-government",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "chinese-government",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "clearview-ai",
+   "cluster": 14,
+   "incidents": 1
+  },
+  {
+   "entity": "clearview-ai",
+   "cluster": 15,
+   "incidents": 2
+  },
+  {
+   "entity": "clearview-ai",
+   "cluster": 16,
+   "incidents": 7
+  },
+  {
    "entity": "compvis-lmu",
-   "cluster": 7,
+   "cluster": 13,
    "incidents": 4
   },
   {
    "entity": "compvis-lmu",
-   "cluster": 15,
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "cruise",
-   "cluster": 0,
-   "incidents": 13
+   "cluster": 5,
+   "incidents": 1
   },
   {
-   "entity": "deepseek",
-   "cluster": 2,
-   "incidents": 1
+   "entity": "cruise",
+   "cluster": 7,
+   "incidents": 4
+  },
+  {
+   "entity": "cruise",
+   "cluster": 12,
+   "incidents": 8
   },
   {
    "entity": "deepseek",
    "cluster": 3,
-   "incidents": 3
+   "incidents": 1
   },
   {
    "entity": "deepseek",
-   "cluster": 11,
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "deepseek",
+   "cluster": 18,
+   "incidents": 3
+  },
+  {
+   "entity": "detroit-police-department",
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "detroit-police-department",
-   "cluster": 6,
-   "incidents": 4
-  },
-  {
-   "entity": "donald-trump",
-   "cluster": 8,
+   "cluster": 16,
    "incidents": 3
   },
   {
    "entity": "donald-trump",
-   "cluster": 16,
-   "incidents": 4
-  },
-  {
-   "entity": "eleutherai",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "eleutherai",
-   "cluster": 7,
-   "incidents": 4
-  },
-  {
-   "entity": "eleutherai",
-   "cluster": 15,
-   "incidents": 1
-  },
-  {
-   "entity": "elevenlabs",
-   "cluster": 5,
-   "incidents": 2
-  },
-  {
-   "entity": "elevenlabs",
-   "cluster": 11,
-   "incidents": 2
-  },
-  {
-   "entity": "elevenlabs",
-   "cluster": 16,
-   "incidents": 1
-  },
-  {
-   "entity": "elevenlabs",
-   "cluster": 19,
-   "incidents": 2
-  },
-  {
-   "entity": "facebook",
-   "cluster": 2,
-   "incidents": 2
-  },
-  {
-   "entity": "facebook",
-   "cluster": 4,
-   "incidents": 2
-  },
-  {
-   "entity": "facebook",
    "cluster": 6,
+   "incidents": 3
+  },
+  {
+   "entity": "donald-trump",
+   "cluster": 8,
    "incidents": 1
   },
   {
-   "entity": "facebook",
-   "cluster": 9,
-   "incidents": 42
+   "entity": "donald-trump",
+   "cluster": 19,
+   "incidents": 3
   },
   {
-   "entity": "facebook",
-   "cluster": 11,
+   "entity": "eleutherai",
+   "cluster": 4,
    "incidents": 1
   },
   {
-   "entity": "facebook",
+   "entity": "eleutherai",
+   "cluster": 13,
+   "incidents": 4
+  },
+  {
+   "entity": "eleutherai",
    "cluster": 14,
    "incidents": 1
   },
   {
-   "entity": "facebook",
-   "cluster": 15,
+   "entity": "elevenlabs",
+   "cluster": 0,
    "incidents": 2
   },
   {
+   "entity": "elevenlabs",
+   "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "elevenlabs",
+   "cluster": 3,
+   "incidents": 2
+  },
+  {
+   "entity": "elevenlabs",
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "elevenlabs",
+   "cluster": 9,
+   "incidents": 1
+  },
+  {
    "entity": "facebook",
-   "cluster": 18,
+   "cluster": 0,
+   "incidents": 1
+  },
+  {
+   "entity": "facebook",
+   "cluster": 1,
+   "incidents": 23
+  },
+  {
+   "entity": "facebook",
+   "cluster": 3,
+   "incidents": 1
+  },
+  {
+   "entity": "facebook",
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "facebook",
+   "cluster": 5,
+   "incidents": 9
+  },
+  {
+   "entity": "facebook",
+   "cluster": 9,
+   "incidents": 3
+  },
+  {
+   "entity": "facebook",
+   "cluster": 14,
+   "incidents": 3
+  },
+  {
+   "entity": "facebook",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "facebook",
+   "cluster": 20,
+   "incidents": 10
+  },
+  {
+   "entity": "flock-safety",
+   "cluster": 5,
    "incidents": 1
   },
   {
    "entity": "flock-safety",
-   "cluster": 12,
-   "incidents": 16
+   "cluster": 11,
+   "incidents": 14
+  },
+  {
+   "entity": "flock-safety",
+   "cluster": 15,
+   "incidents": 1
   },
   {
    "entity": "google",
    "cluster": 0,
-   "incidents": 4
-  },
-  {
-   "entity": "google",
-   "cluster": 1,
    "incidents": 3
   },
   {
    "entity": "google",
-   "cluster": 2,
-   "incidents": 20
+   "cluster": 1,
+   "incidents": 23
   },
   {
    "entity": "google",
-   "cluster": 3,
-   "incidents": 19
+   "cluster": 2,
+   "incidents": 3
   },
   {
    "entity": "google",
    "cluster": 4,
-   "incidents": 5
+   "incidents": 17
   },
   {
    "entity": "google",
    "cluster": 5,
-   "incidents": 4
+   "incidents": 6
   },
   {
    "entity": "google",
    "cluster": 6,
-   "incidents": 2
+   "incidents": 3
   },
   {
    "entity": "google",
@@ -700,12 +745,17 @@
   {
    "entity": "google",
    "cluster": 8,
-   "incidents": 10
+   "incidents": 3
   },
   {
    "entity": "google",
    "cluster": 9,
-   "incidents": 4
+   "incidents": 6
+  },
+  {
+   "entity": "google",
+   "cluster": 12,
+   "incidents": 1
   },
   {
    "entity": "google",
@@ -715,12 +765,12 @@
   {
    "entity": "google",
    "cluster": 14,
-   "incidents": 2
+   "incidents": 13
   },
   {
    "entity": "google",
    "cluster": 15,
-   "incidents": 14
+   "incidents": 2
   },
   {
    "entity": "google",
@@ -730,127 +780,157 @@
   {
    "entity": "google",
    "cluster": 18,
-   "incidents": 2
+   "incidents": 4
   },
   {
    "entity": "google",
    "cluster": 19,
-   "incidents": 2
+   "incidents": 7
   },
   {
    "entity": "google",
    "cluster": 20,
-   "incidents": 1
-  },
-  {
-   "entity": "google",
-   "cluster": 21,
-   "incidents": 1
+   "incidents": 2
   },
   {
    "entity": "google-deepmind",
-   "cluster": 3,
-   "incidents": 3
+   "cluster": 0,
+   "incidents": 2
   },
   {
    "entity": "google-deepmind",
-   "cluster": 18,
-   "incidents": 1
-  },
-  {
-   "entity": "government-of-north-korea",
-   "cluster": 3,
+   "cluster": 4,
    "incidents": 2
   },
   {
    "entity": "government-of-north-korea",
-   "cluster": 18,
+   "cluster": 0,
    "incidents": 3
   },
   {
-   "entity": "government-of-russia",
-   "cluster": 4,
-   "incidents": 5
+   "entity": "government-of-north-korea",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "government-of-north-korea",
+   "cluster": 18,
+   "incidents": 1
   },
   {
    "entity": "government-of-russia",
-   "cluster": 5,
+   "cluster": 6,
+   "incidents": 2
+  },
+  {
+   "entity": "government-of-russia",
+   "cluster": 9,
+   "incidents": 4
+  },
+  {
+   "entity": "huawei",
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "huawei",
-   "cluster": 6,
-   "incidents": 4
-  },
-  {
-   "entity": "instagram",
-   "cluster": 9,
-   "incidents": 9
-  },
-  {
-   "entity": "instagram",
-   "cluster": 14,
-   "incidents": 2
-  },
-  {
-   "entity": "instagram",
    "cluster": 15,
    "incidents": 1
   },
   {
+   "entity": "huawei",
+   "cluster": 16,
+   "incidents": 2
+  },
+  {
    "entity": "instagram",
-   "cluster": 18,
+   "cluster": 1,
+   "incidents": 6
+  },
+  {
+   "entity": "instagram",
+   "cluster": 3,
+   "incidents": 1
+  },
+  {
+   "entity": "instagram",
+   "cluster": 4,
+   "incidents": 2
+  },
+  {
+   "entity": "instagram",
+   "cluster": 9,
+   "incidents": 1
+  },
+  {
+   "entity": "instagram",
+   "cluster": 20,
+   "incidents": 3
+  },
+  {
+   "entity": "irregular",
+   "cluster": 4,
    "incidents": 1
   },
   {
    "entity": "irregular",
-   "cluster": 3,
-   "incidents": 6
+   "cluster": 18,
+   "incidents": 5
   },
   {
    "entity": "knightscope",
-   "cluster": 0,
-   "incidents": 4
+   "cluster": 7,
+   "incidents": 3
+  },
+  {
+   "entity": "knightscope",
+   "cluster": 20,
+   "incidents": 1
   },
   {
    "entity": "laion",
-   "cluster": 7,
+   "cluster": 13,
    "incidents": 6
   },
   {
    "entity": "laion",
-   "cluster": 15,
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "matryoshka",
-   "cluster": 4,
+   "cluster": 3,
+   "incidents": 1
+  },
+  {
+   "entity": "matryoshka",
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "matryoshka",
+   "cluster": 9,
    "incidents": 5
-  },
-  {
-   "entity": "matryoshka",
-   "cluster": 11,
-   "incidents": 1
-  },
-  {
-   "entity": "matryoshka",
-   "cluster": 16,
-   "incidents": 1
   },
   {
    "entity": "mcdonald's",
-   "cluster": 1,
-   "incidents": 5
+   "cluster": 10,
+   "incidents": 4
   },
   {
-   "entity": "meta",
-   "cluster": 1,
+   "entity": "mcdonald's",
+   "cluster": 15,
    "incidents": 1
   },
   {
    "entity": "meta",
-   "cluster": 2,
-   "incidents": 6
+   "cluster": 0,
+   "incidents": 2
+  },
+  {
+   "entity": "meta",
+   "cluster": 1,
+   "incidents": 15
   },
   {
    "entity": "meta",
@@ -860,12 +940,7 @@
   {
    "entity": "meta",
    "cluster": 4,
-   "incidents": 3
-  },
-  {
-   "entity": "meta",
-   "cluster": 5,
-   "incidents": 3
+   "incidents": 22
   },
   {
    "entity": "meta",
@@ -874,483 +949,608 @@
   },
   {
    "entity": "meta",
+   "cluster": 8,
+   "incidents": 2
+  },
+  {
+   "entity": "meta",
    "cluster": 9,
-   "incidents": 14
-  },
-  {
-   "entity": "meta",
-   "cluster": 11,
-   "incidents": 3
-  },
-  {
-   "entity": "meta",
-   "cluster": 14,
-   "incidents": 21
-  },
-  {
-   "entity": "meta",
-   "cluster": 15,
    "incidents": 4
   },
   {
    "entity": "meta",
-   "cluster": 18,
-   "incidents": 2
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 1,
-   "incidents": 3
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 2,
-   "incidents": 7
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 3,
-   "incidents": 6
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 5,
-   "incidents": 6
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 10,
-   "incidents": 9
-  },
-  {
-   "entity": "microsoft",
    "cluster": 14,
-   "incidents": 5
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 15,
-   "incidents": 3
-  },
-  {
-   "entity": "microsoft",
-   "cluster": 18,
    "incidents": 1
   },
   {
-   "entity": "microsoft",
-   "cluster": 19,
-   "incidents": 1
-  },
-  {
-   "entity": "midjourney",
-   "cluster": 7,
-   "incidents": 1
-  },
-  {
-   "entity": "midjourney",
-   "cluster": 8,
-   "incidents": 3
-  },
-  {
-   "entity": "mistral",
-   "cluster": 3,
-   "incidents": 1
-  },
-  {
-   "entity": "mistral",
-   "cluster": 4,
-   "incidents": 1
-  },
-  {
-   "entity": "mistral",
-   "cluster": 5,
-   "incidents": 2
-  },
-  {
-   "entity": "new-york-police-department",
-   "cluster": 6,
-   "incidents": 5
-  },
-  {
-   "entity": "openai",
-   "cluster": 2,
-   "incidents": 35
-  },
-  {
-   "entity": "openai",
-   "cluster": 3,
-   "incidents": 17
-  },
-  {
-   "entity": "openai",
-   "cluster": 4,
-   "incidents": 5
-  },
-  {
-   "entity": "openai",
-   "cluster": 5,
-   "incidents": 8
-  },
-  {
-   "entity": "openai",
-   "cluster": 8,
-   "incidents": 6
-  },
-  {
-   "entity": "openai",
-   "cluster": 9,
-   "incidents": 1
-  },
-  {
-   "entity": "openai",
-   "cluster": 10,
-   "incidents": 82
-  },
-  {
-   "entity": "openai",
-   "cluster": 11,
-   "incidents": 1
-  },
-  {
-   "entity": "openai",
-   "cluster": 13,
-   "incidents": 7
-  },
-  {
-   "entity": "openai",
-   "cluster": 14,
-   "incidents": 8
-  },
-  {
-   "entity": "openai",
-   "cluster": 15,
-   "incidents": 4
-  },
-  {
-   "entity": "openai",
+   "entity": "meta",
    "cluster": 16,
-   "incidents": 2
+   "incidents": 1
   },
   {
-   "entity": "openai",
+   "entity": "meta",
    "cluster": 18,
+   "incidents": 4
+  },
+  {
+   "entity": "meta",
+   "cluster": 20,
    "incidents": 6
   },
   {
-   "entity": "openai",
-   "cluster": 19,
+   "entity": "microsoft",
+   "cluster": 1,
+   "incidents": 7
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 4,
+   "incidents": 12
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 5,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 9,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 10,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 14,
    "incidents": 3
   },
   {
-   "entity": "openai",
-   "cluster": 20,
+   "entity": "microsoft",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 17,
+   "incidents": 1
+  },
+  {
+   "entity": "microsoft",
+   "cluster": 18,
    "incidents": 10
   },
   {
-   "entity": "operation-overload",
-   "cluster": 4,
-   "incidents": 4
-  },
-  {
-   "entity": "operation-overload",
-   "cluster": 11,
-   "incidents": 1
-  },
-  {
-   "entity": "operation-overload",
-   "cluster": 16,
-   "incidents": 1
-  },
-  {
-   "entity": "perplexity",
-   "cluster": 5,
-   "incidents": 6
-  },
-  {
-   "entity": "perplexity",
+   "entity": "microsoft",
    "cluster": 20,
+   "incidents": 3
+  },
+  {
+   "entity": "midjourney",
+   "cluster": 8,
    "incidents": 1
   },
   {
-   "entity": "perplexity-ai",
-   "cluster": 2,
-   "incidents": 2
-  },
-  {
-   "entity": "perplexity-ai",
+   "entity": "midjourney",
    "cluster": 13,
-   "incidents": 2
-  },
-  {
-   "entity": "perplexity-ai",
-   "cluster": 14,
    "incidents": 1
   },
   {
-   "entity": "quantum-ai",
-   "cluster": 11,
-   "incidents": 5
+   "entity": "midjourney",
+   "cluster": 19,
+   "incidents": 2
   },
   {
-   "entity": "quantum-ai",
+   "entity": "mistral",
+   "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "mistral",
+   "cluster": 9,
+   "incidents": 2
+  },
+  {
+   "entity": "mistral",
    "cluster": 18,
    "incidents": 1
   },
   {
-   "entity": "replika",
-   "cluster": 10,
+   "entity": "new-york-police-department",
+   "cluster": 5,
    "incidents": 1
   },
   {
-   "entity": "replika",
-   "cluster": 14,
-   "incidents": 5
-  },
-  {
-   "entity": "runway",
-   "cluster": 7,
+   "entity": "new-york-police-department",
+   "cluster": 16,
    "incidents": 4
   },
   {
-   "entity": "runway",
+   "entity": "openai",
+   "cluster": 0,
+   "incidents": 8
+  },
+  {
+   "entity": "openai",
+   "cluster": 1,
+   "incidents": 14
+  },
+  {
+   "entity": "openai",
+   "cluster": 2,
+   "incidents": 27
+  },
+  {
+   "entity": "openai",
+   "cluster": 3,
+   "incidents": 1
+  },
+  {
+   "entity": "openai",
+   "cluster": 4,
+   "incidents": 48
+  },
+  {
+   "entity": "openai",
+   "cluster": 5,
+   "incidents": 3
+  },
+  {
+   "entity": "openai",
+   "cluster": 6,
+   "incidents": 4
+  },
+  {
+   "entity": "openai",
+   "cluster": 8,
+   "incidents": 9
+  },
+  {
+   "entity": "openai",
+   "cluster": 9,
+   "incidents": 7
+  },
+  {
+   "entity": "openai",
+   "cluster": 10,
+   "incidents": 3
+  },
+  {
+   "entity": "openai",
+   "cluster": 14,
+   "incidents": 2
+  },
+  {
+   "entity": "openai",
    "cluster": 15,
    "incidents": 1
   },
   {
-   "entity": "russian-government",
+   "entity": "openai",
+   "cluster": 17,
+   "incidents": 44
+  },
+  {
+   "entity": "openai",
+   "cluster": 18,
+   "incidents": 16
+  },
+  {
+   "entity": "openai",
+   "cluster": 19,
+   "incidents": 5
+  },
+  {
+   "entity": "openai",
+   "cluster": 20,
+   "incidents": 3
+  },
+  {
+   "entity": "operation-overload",
+   "cluster": 3,
+   "incidents": 1
+  },
+  {
+   "entity": "operation-overload",
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "operation-overload",
+   "cluster": 9,
+   "incidents": 4
+  },
+  {
+   "entity": "perplexity",
+   "cluster": 1,
+   "incidents": 2
+  },
+  {
+   "entity": "perplexity",
    "cluster": 2,
    "incidents": 1
   },
   {
-   "entity": "russian-government",
+   "entity": "perplexity",
+   "cluster": 9,
+   "incidents": 4
+  },
+  {
+   "entity": "perplexity-ai",
+   "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "perplexity-ai",
+   "cluster": 2,
+   "incidents": 2
+  },
+  {
+   "entity": "perplexity-ai",
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "perplexity-ai",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "quantum-ai",
+   "cluster": 0,
+   "incidents": 1
+  },
+  {
+   "entity": "quantum-ai",
    "cluster": 3,
+   "incidents": 5
+  },
+  {
+   "entity": "replika",
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "replika",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "replika",
+   "cluster": 17,
+   "incidents": 1
+  },
+  {
+   "entity": "replika",
+   "cluster": 20,
+   "incidents": 3
+  },
+  {
+   "entity": "runway",
+   "cluster": 13,
+   "incidents": 4
+  },
+  {
+   "entity": "runway",
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "russian-government",
    "cluster": 4,
-   "incidents": 3
+   "incidents": 1
   },
   {
    "entity": "russian-government",
-   "cluster": 16,
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "russian-government",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "russian-government",
+   "cluster": 9,
+   "incidents": 3
+  },
+  {
+   "entity": "shotspotter",
+   "cluster": 5,
+   "incidents": 4
+  },
+  {
+   "entity": "shotspotter",
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "shotspotter",
-   "cluster": 6,
-   "incidents": 6
-  },
-  {
-   "entity": "stability-ai",
-   "cluster": 7,
-   "incidents": 6
-  },
-  {
-   "entity": "stability-ai",
-   "cluster": 9,
+   "cluster": 16,
    "incidents": 1
   },
   {
    "entity": "stability-ai",
-   "cluster": 15,
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "stability-ai",
+   "cluster": 13,
+   "incidents": 6
+  },
+  {
+   "entity": "stability-ai",
+   "cluster": 14,
    "incidents": 1
   },
   {
    "entity": "starship-technologies",
-   "cluster": 0,
-   "incidents": 4
+   "cluster": 7,
+   "incidents": 3
+  },
+  {
+   "entity": "starship-technologies",
+   "cluster": 12,
+   "incidents": 1
   },
   {
    "entity": "storm-1516",
-   "cluster": 4,
-   "incidents": 6
+   "cluster": 1,
+   "incidents": 1
   },
   {
    "entity": "storm-1516",
-   "cluster": 5,
+   "cluster": 6,
    "incidents": 2
   },
   {
    "entity": "storm-1516",
-   "cluster": 16,
+   "cluster": 9,
+   "incidents": 6
+  },
+  {
+   "entity": "storm-1679",
+   "cluster": 3,
    "incidents": 1
   },
   {
    "entity": "storm-1679",
-   "cluster": 4,
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "storm-1679",
+   "cluster": 9,
    "incidents": 5
   },
   {
-   "entity": "storm-1679",
-   "cluster": 11,
-   "incidents": 1
-  },
-  {
-   "entity": "storm-1679",
-   "cluster": 16,
-   "incidents": 1
-  },
-  {
    "entity": "tesla",
-   "cluster": 0,
-   "incidents": 52
-  },
-  {
-   "entity": "tiktok",
-   "cluster": 4,
-   "incidents": 1
-  },
-  {
-   "entity": "tiktok",
-   "cluster": 5,
-   "incidents": 11
-  },
-  {
-   "entity": "tiktok",
-   "cluster": 9,
-   "incidents": 1
-  },
-  {
-   "entity": "tiktok",
-   "cluster": 16,
-   "incidents": 1
-  },
-  {
-   "entity": "twitter",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "twitter",
-   "cluster": 9,
-   "incidents": 7
-  },
-  {
-   "entity": "twitter",
-   "cluster": 15,
-   "incidents": 1
-  },
-  {
-   "entity": "twitter",
-   "cluster": 16,
-   "incidents": 1
-  },
-  {
-   "entity": "uber",
-   "cluster": 0,
-   "incidents": 2
-  },
-  {
-   "entity": "uber",
-   "cluster": 1,
-   "incidents": 6
-  },
-  {
-   "entity": "uber",
-   "cluster": 6,
-   "incidents": 2
-  },
-  {
-   "entity": "united-states-department-of-homeland-security",
-   "cluster": 3,
-   "incidents": 1
-  },
-  {
-   "entity": "united-states-department-of-homeland-security",
-   "cluster": 6,
-   "incidents": 2
-  },
-  {
-   "entity": "united-states-department-of-homeland-security",
-   "cluster": 8,
-   "incidents": 1
-  },
-  {
-   "entity": "united-states-immigration-and-customs-enforcement",
-   "cluster": 1,
-   "incidents": 1
-  },
-  {
-   "entity": "united-states-immigration-and-customs-enforcement",
-   "cluster": 6,
-   "incidents": 2
-  },
-  {
-   "entity": "united-states-immigration-and-customs-enforcement",
-   "cluster": 8,
-   "incidents": 1
-  },
-  {
-   "entity": "waymo",
-   "cluster": 0,
-   "incidents": 19
-  },
-  {
-   "entity": "x-(twitter)",
-   "cluster": 4,
-   "incidents": 1
-  },
-  {
-   "entity": "x-(twitter)",
-   "cluster": 7,
-   "incidents": 1
-  },
-  {
-   "entity": "x-(twitter)",
-   "cluster": 8,
-   "incidents": 1
-  },
-  {
-   "entity": "x-(twitter)",
-   "cluster": 16,
-   "incidents": 2
-  },
-  {
-   "entity": "x-(twitter)",
-   "cluster": 17,
-   "incidents": 6
-  },
-  {
-   "entity": "xai",
-   "cluster": 2,
-   "incidents": 1
-  },
-  {
-   "entity": "xai",
-   "cluster": 3,
-   "incidents": 4
-  },
-  {
-   "entity": "xai",
-   "cluster": 4,
-   "incidents": 1
-  },
-  {
-   "entity": "xai",
    "cluster": 5,
    "incidents": 3
   },
   {
-   "entity": "xai",
-   "cluster": 8,
-   "incidents": 4
+   "entity": "tesla",
+   "cluster": 7,
+   "incidents": 24
   },
   {
-   "entity": "xai",
+   "entity": "tesla",
+   "cluster": 12,
+   "incidents": 25
+  },
+  {
+   "entity": "tiktok",
+   "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "tiktok",
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "tiktok",
+   "cluster": 9,
+   "incidents": 5
+  },
+  {
+   "entity": "tiktok",
+   "cluster": 14,
+   "incidents": 1
+  },
+  {
+   "entity": "tiktok",
+   "cluster": 20,
+   "incidents": 6
+  },
+  {
+   "entity": "twitter",
+   "cluster": 1,
+   "incidents": 2
+  },
+  {
+   "entity": "twitter",
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "twitter",
+   "cluster": 5,
+   "incidents": 2
+  },
+  {
+   "entity": "twitter",
+   "cluster": 6,
+   "incidents": 1
+  },
+  {
+   "entity": "twitter",
+   "cluster": 14,
+   "incidents": 3
+  },
+  {
+   "entity": "twitter",
+   "cluster": 20,
+   "incidents": 1
+  },
+  {
+   "entity": "uber",
+   "cluster": 5,
+   "incidents": 3
+  },
+  {
+   "entity": "uber",
+   "cluster": 7,
+   "incidents": 1
+  },
+  {
+   "entity": "uber",
+   "cluster": 10,
+   "incidents": 2
+  },
+  {
+   "entity": "uber",
+   "cluster": 14,
+   "incidents": 1
+  },
+  {
+   "entity": "uber",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "uber",
    "cluster": 16,
+   "incidents": 2
+  },
+  {
+   "entity": "united-states-department-of-homeland-security",
+   "cluster": 10,
+   "incidents": 1
+  },
+  {
+   "entity": "united-states-department-of-homeland-security",
+   "cluster": 16,
+   "incidents": 2
+  },
+  {
+   "entity": "united-states-department-of-homeland-security",
+   "cluster": 18,
+   "incidents": 1
+  },
+  {
+   "entity": "united-states-immigration-and-customs-enforcement",
+   "cluster": 10,
+   "incidents": 1
+  },
+  {
+   "entity": "united-states-immigration-and-customs-enforcement",
+   "cluster": 16,
+   "incidents": 3
+  },
+  {
+   "entity": "waymo",
+   "cluster": 7,
+   "incidents": 1
+  },
+  {
+   "entity": "waymo",
+   "cluster": 12,
+   "incidents": 18
+  },
+  {
+   "entity": "x-(twitter)",
+   "cluster": 6,
+   "incidents": 2
+  },
+  {
+   "entity": "x-(twitter)",
+   "cluster": 8,
+   "incidents": 1
+  },
+  {
+   "entity": "x-(twitter)",
+   "cluster": 9,
+   "incidents": 6
+  },
+  {
+   "entity": "x-(twitter)",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "x-(twitter)",
+   "cluster": 19,
    "incidents": 1
   },
   {
    "entity": "xai",
-   "cluster": 17,
-   "incidents": 21
+   "cluster": 1,
+   "incidents": 1
+  },
+  {
+   "entity": "xai",
+   "cluster": 4,
+   "incidents": 1
+  },
+  {
+   "entity": "xai",
+   "cluster": 6,
+   "incidents": 2
+  },
+  {
+   "entity": "xai",
+   "cluster": 9,
+   "incidents": 22
+  },
+  {
+   "entity": "xai",
+   "cluster": 15,
+   "incidents": 1
+  },
+  {
+   "entity": "xai",
+   "cluster": 18,
+   "incidents": 4
+  },
+  {
+   "entity": "xai",
+   "cluster": 19,
+   "incidents": 4
+  },
+  {
+   "entity": "youtube",
+   "cluster": 1,
+   "incidents": 3
+  },
+  {
+   "entity": "youtube",
+   "cluster": 5,
+   "incidents": 2
   },
   {
    "entity": "youtube",
    "cluster": 9,
-   "incidents": 14
+   "incidents": 2
+  },
+  {
+   "entity": "youtube",
+   "cluster": 14,
+   "incidents": 1
+  },
+  {
+   "entity": "youtube",
+   "cluster": 20,
+   "incidents": 6
   }
  ]
 }
