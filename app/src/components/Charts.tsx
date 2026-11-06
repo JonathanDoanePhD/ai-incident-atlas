@@ -3,7 +3,7 @@ import { useState, type ReactNode } from 'react';
 /** Small, dependency-free SVG charts following the project's dataviz rules:
  *  one axis per chart, thin marks, recessive grid, hover tooltip on every mark, table fallback nearby. */
 
-const W = 640;
+const W = 880;
 const PAD = { l: 44, r: 12, t: 12, b: 28 };
 
 interface Tip {
@@ -67,7 +67,7 @@ export function BarWithFit({ xs, ys, fit, height = 240, yLabel }: { xs: number[]
   );
 }
 
-export function SmallMultiples({ years, series, labels, height = 110 }: { years: number[]; series: Record<string, number[]>; labels: Record<string, string>; height?: number }) {
+export function SmallMultiples({ years, series, labels, height = 130 }: { years: number[]; series: Record<string, number[]>; labels: Record<string, string>; height?: number }) {
   const keys = Object.keys(series);
   const ymax = Math.max(...keys.flatMap((k) => series[k])) * 1.1 || 1;
   return (
@@ -81,9 +81,9 @@ export function SmallMultiples({ years, series, labels, height = 110 }: { years:
 
 function Spark({ title, years, ys, ymax, height }: { title: string; years: number[]; ys: number[]; ymax: number; height: number }) {
   const { setTip, node } = useTip();
-  const w = W;
+  const w = 360;
   const H = height;
-  const p = { l: 36, r: 10, t: 8, b: 20 };
+  const p = { l: 34, r: 10, t: 8, b: 18 };
   const sx = (i: number) => p.l + (i / Math.max(years.length - 1, 1)) * (w - p.l - p.r);
   const sy = (v: number) => H - p.b - (v / ymax) * (H - p.t - p.b);
   const pts = ys.map((v, i) => `${sx(i)},${sy(v)}`).join(' ');
@@ -97,7 +97,7 @@ function Spark({ title, years, ys, ymax, height }: { title: string; years: numbe
           const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect();
           const x = ((e.clientX - r.left) / r.width) * w;
           const i = Math.max(0, Math.min(last, Math.round(((x - p.l) / (w - p.l - p.r)) * last)));
-          setTip({ x: sx(i), y: sy(ys[i]) - 6, html: <><b>{years[i]}</b>: {(ys[i] * 100).toFixed(1)}%</> });
+          setTip({ x: (sx(i) / w) * W, y: sy(ys[i]) - 6, html: <><b>{years[i]}</b>: {(ys[i] * 100).toFixed(1)}%</> });
         }}>
         {[0, ymax / 2].map((t) => (
           <g key={t}>
@@ -190,8 +190,8 @@ export function ScatterFit({ points, fit, xLabel, yLabel }: { points: [number, n
             onMouseLeave={() => setTip(null)} />
         ))}
         <line x1={sx(0)} x2={sx(xmax)} y1={sy(fit.intercept)} y2={sy(fit.intercept + fit.slope * xmax)} className="fit" />
-        <text x={W - PAD.r} y={H - 8} className="axis" textAnchor="end">{xLabel} (log scale)</text>
       </svg>
+      <p className="axis-title">{xLabel} (log scale) →</p>
       {node}
     </div>
   );

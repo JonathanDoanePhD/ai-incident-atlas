@@ -65,6 +65,7 @@ export default function Constellation(props: Props) {
   const visibleRef = useRef(visible);
   visibleRef.current = visible;
   const joined = useRef<GLink[]>([]);
+  const fitted = useRef(false);
 
   /** Show/hide cached objects in place (never removes them from the scene). */
   const applyVisibility = () => {
@@ -134,6 +135,11 @@ export default function Constellation(props: Props) {
     joined.current = links.map((l) => ({ ...l }));
     graph.current?.graphData({ nodes: gnodes, links: joined.current });
     applyVisibilitySoon();
+    if (!fitted.current && graph.current) {
+      fitted.current = true;
+      const g = graph.current;
+      window.setTimeout(() => g.zoomToFit(0, 20), 60);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gnodes, links]);
 

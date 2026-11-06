@@ -1,0 +1,445 @@
+[
+ {
+  "incident_id": 1666,
+  "summary": "A proposed class action alleges that Oura marketed its smart ring's AI sleep-stage tracking as far more accurate than it is, so buyers overpaid. Oura disputes the claims and says its sleep staging has been validated against clinical studies.",
+  "technical_summary": "The ring estimates sleep stages from peripheral signals such as heart rate, movement and temperature using machine-learning models. The complaint alleges these cannot measure brain activity and perform near chance, contradicting marketed accuracy claims of 95% versus clinical labs. Allegations are unproven and disputed.",
+  "systems": ["Oura Ring sleep staging algorithm"],
+  "developers": ["Oura"],
+  "deployers": ["Oura"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "confirmed", "quote": "A lawsuit has been filed against the well-known smart ring brand Oura", "report": 7864}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "alleges that Oura rings are unable to measure any of the physiological signals needed to assess sleep quality or determine sleep stages", "report": 7868}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "is accusing smart ring maker Oura of deceiving consumers about the accuracy of its sleep tracking features", "report": 7868}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "other",
+  "cause_entity": "other",
+  "notes": "Allegations in a proposed class action; Oura disputes them and cites validation studies."
+ },
+ {
+  "incident_id": 799,
+  "summary": "A male student at a Texas high school allegedly used AI clothes-removal software to create fake nude images of seven female classmates and shared them on social media. The incident helped prompt federal legislation on non-consensual intimate images.",
+  "technical_summary": "A student took photos from a classmate's private Instagram account and used AI-powered clothes-removal software to render believable nude images, then distributed them via anonymous Snapchat accounts. Similar images of six other girls were allegedly created. The images circulated for months.",
+  "systems": ["AI clothes-removal (nudify) software"],
+  "developers": ["Synthetic image generation technology developers"],
+  "deployers": ["A male student at the high school"],
+  "tags": {
+    "sector": [
+      {"id": "education", "evidence": "confirmed", "quote": "the boy shared the photos with other students at Aledo High School", "report": 4092}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "taken at least two photos from her private Instagram account and rendered her naked using artificial-intelligence-powered clothes-removal software", "report": 4092}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "taken at least two photos from her private Instagram account and rendered her naked using artificial-intelligence-powered clothes-removal software", "report": 4092},
+      {"id": "ip_consent_violation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "sexual_exploitation", "evidence": "confirmed", "quote": "he allegedly created and shared fake nudes of six other girls", "report": 4092},
+      {"id": "psychological", "evidence": "confirmed", "quote": "I felt like I had to tell everyone that it wasn't real", "report": 4093},
+      {"id": "child_safety", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "confirmed", "quote": "A sinister cyber exploitation scheme turned Texas 14-year-old", "report": 4093},
+      {"id": "women_girls", "evidence": "confirmed", "quote": "he allegedly created and shared fake nudes of six other girls", "report": 4092},
+      {"id": "students", "evidence": "confirmed", "quote": "the boy shared the photos with other students at Aledo High School", "report": 4092}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Victims are minors; the student is unnamed and the allegations are as reported."
+ },
+ {
+  "incident_id": 834,
+  "summary": "Chinese authorities reported a rise in crimes using AI, including deepfake nude images sold online, face-swap videos used to defeat face verification, romance scams with synthetic photos, and an AI game-cheating tool. Courts and police prosecuted multiple cases.",
+  "technical_summary": "Offenders used generative image tools for fake nudes and face-swapped moving faces to pass face-recognition login checks. Others used synthetic photos in scams and sold AI-based game-cheat software. A court also ruled that an unauthorised AI voice product infringed a person's voice rights.",
+  "systems": ["AI undressing tools", "AI face-swap tools", "Synthetic voice tools", "AI game-cheat software"],
+  "developers": ["Deepfake technology developers", "Synthetic audio generation technology developers"],
+  "deployers": ["AI fraud rings in China", "Scammers", "Deepfake creators"],
+  "tags": {
+    "sector": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "voice_synthesis", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "ip_consent_violation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "sexual_exploitation", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "privacy", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Aggregate roundup of several cases; reports are in Chinese, so tags are inferred."
+ },
+ {
+  "incident_id": 1681,
+  "summary": "A retired Georgia couple lost nearly $800,000, their life savings, in a cryptocurrency scam that began with a WhatsApp message. Police said scammers used an AI-generated fake site to change what the victim saw in his account.",
+  "technical_summary": "Scammers built trust through small early withdrawals on a real trading app, while an AI-generated \"ghost site\" reportedly manipulated the displayed account information. The loss emerged when a larger withdrawal failed. The specific AI tool is not identified.",
+  "systems": ["AI-generated spoof website"],
+  "developers": ["Generative AI developers"],
+  "deployers": ["Cryptocurrency scammers"],
+  "tags": {
+    "sector": [
+      {"id": "finance", "evidence": "confirmed", "quote": "A Georgia couple lost nearly $800,000 in a cryptocurrency scam initiated through a WhatsApp message", "report": 7916}
+    ],
+    "technology": [
+      {"id": "other_unspecified", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "Gwinnett County police explained that while the app he was using was real, the scammers had created an AI-generated", "report": 7916}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "A retired Georgia couple is warning others after losing their entire life savings---nearly $800,000---in an elaborate cryptocurrency scam", "report": 7916}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "older_adults", "evidence": "confirmed", "quote": "The 74-year-old's head was spinning.", "report": 7917}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s3_severe", "evidence": "confirmed", "quote": "A retired Georgia couple is warning others after losing their entire life savings---nearly $800,000---in an elaborate cryptocurrency scam", "report": 7916},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "AI role (ghost site) comes from a police explanation relayed by local media."
+ },
+ {
+  "incident_id": 611,
+  "summary": "Many Bulgarian nationals in the UK had their Universal Credit suspended for months with no explanation after an algorithm-assisted fraud risk review. An MP said they were being targeted by nationality, and some were left destitute or evicted. The DWP says the algorithm does not use nationality.",
+  "technical_summary": "The DWP uses a semi-automated system that flags potential benefit fraud for human review. Cases were flagged as high risk by automated analytics, and claims were suspended without explanation or appeal route. The department won't disclose how the algorithm works; a related Home Office tool flags some nationalities disproportionately.",
+  "systems": ["DWP Integrated Risk and Intelligence Service fraud algorithm", "Home Office sham marriage triage tool"],
+  "developers": ["Department for Work and Pensions", "Home Office"],
+  "deployers": ["Department for Work and Pensions", "Home Office"],
+  "tags": {
+    "sector": [
+      {"id": "government_services", "evidence": "confirmed", "quote": "The DWP has been using AI to help detect benefits fraud since 2021.", "report": 3400}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "a semi-automated system that uses an algorithm to flag up potential benefits fraud before referring those cases to humans", "report": 3400}
+    ],
+    "failure_mode": [
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "The Home Office's algorithm designed to detect fake marriages has disproportionately targeted individuals from specific nationalities.", "report": 3401},
+      {"id": "opacity_contestability", "evidence": "confirmed", "quote": "They were left in destitution for months, with no means of appeal.", "report": 3400}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "Many of them had been forced to use food banks, and some had been made homeless as a result of their rent arrears.", "report": 3399},
+      {"id": "civil_rights", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "migrants", "evidence": "confirmed", "quote": "Dozens of Bulgarian nationals have been tipped into poverty after unexplained benefit suspensions", "report": 3399},
+      {"id": "low_income", "evidence": "confirmed", "quote": "Most of those affected were single mothers working part-time in low-paid jobs, who relied on universal credit to supplement rent payments", "report": 3399}
+    ]
+  },
+  "primary_failure_mode": "bias_discrimination",
+  "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.1",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "DWP says nationality is not an input; the link between the algorithm and the suspensions is alleged."
+ },
+ {
+  "incident_id": 1460,
+  "summary": "Baidu's Apollo Go robotaxis in Wuhan abruptly froze in live traffic, some on busy roads, trapping passengers for up to about 90 minutes. Police attributed it to a likely system malfunction and reported no injuries.",
+  "technical_summary": "An unidentified technical problem, which police called a likely system malfunction and the company reportedly linked to a network issue, caused many driverless vehicles to stop in lanes. Passenger support lines and in-car SOS features reportedly failed, and staff were slow to arrive.",
+  "systems": ["Baidu Apollo Go robotaxi"],
+  "developers": ["Baidu"],
+  "deployers": ["Baidu"],
+  "tags": {
+    "sector": [
+      {"id": "transportation", "evidence": "confirmed", "quote": "Baidu has deployed hundreds of its Apollo Go self-driving taxis", "report": 7149}
+    ],
+    "technology": [
+      {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "Baidu has deployed hundreds of its Apollo Go self-driving taxis", "report": 7149}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "caused a number of robotaxis owned by the Chinese tech giant Baidu to freeze on Tuesday in the middle of traffic", "report": 7149},
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "confirmed", "quote": "caused a number of robotaxis owned by the Chinese tech giant Baidu to freeze on Tuesday in the middle of traffic", "report": 7149},
+      {"id": "security_safety", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "trapping some passengers in the vehicles for more than an hour", "report": 7149},
+      {"id": "road_users", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Root cause still under investigation; police and company accounts differ."
+ },
+ {
+  "incident_id": 959,
+  "summary": "Scammers used deepfake videos of Indonesian President Prabowo Subianto and other officials to promise financial aid and collect small fees, defrauding people across 20 provinces. Police arrested two suspects, but similar videos kept circulating.",
+  "technical_summary": "AI-generated videos in which a realistic likeness of the president appears to ask viewers about needing aid were posted on Instagram, TikTok and WhatsApp. Victims were told to contact a WhatsApp number and pay an administrative fee. The tools used are not identified.",
+  "systems": ["Deepfake video generation tools"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["Scammers impersonating Prabowo Subianto"],
+  "tags": {
+    "sector": [
+      {"id": "general_public", "evidence": "confirmed", "quote": "the words he utters are part of a fraudulent deepfake scam uncovered by police last month that has swindled Indonesians across 20 provinces", "report": 4810}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "the words he utters are part of a fraudulent deepfake scam uncovered by police last month that has swindled Indonesians across 20 provinces", "report": 4810}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "the words he utters are part of a fraudulent deepfake scam uncovered by police last month that has swindled Indonesians across 20 provinces", "report": 4810}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "Those ensnared by the message were asked to contact a WhatsApp number and hand over between Rp 250,000 and Rp 1 million ($15-$60)", "report": 4810}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "confirmed", "quote": "the words he utters are part of a fraudulent deepfake scam uncovered by police last month that has swindled Indonesians across 20 provinces", "report": 4810},
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Per-victim losses were small but spread widely."
+ },
+ {
+  "incident_id": 764,
+  "summary": "A reporter at a Wyoming newspaper resigned after a rival paper found that he had used generative AI to write stories containing fabricated quotes, including from the governor. The paper apologized and ran corrections.",
+  "technical_summary": "A reporter used a generative AI chatbot to help write articles, and it produced invented quotes and stilted phrasing. No editorial check caught them before publication. A competing paper noticed, and seven people said they never spoke with the reporter. The paper later removed the quotes and added corrections.",
+  "systems": ["Generative AI chatbot (unspecified)"],
+  "developers": ["Chatbot developers"],
+  "deployers": ["Cody Enterprise"],
+  "tags": {
+    "sector": [
+      {"id": "news_publishing", "evidence": "confirmed", "quote": "A novice reporter for the Cody Enterprise in Wyoming resigned this month after he was caught using generative artificial intelligence to help write his stories", "report": 4007}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "caught using generative artificial intelligence to help write his stories, resulting in numerous fabricated quotes", "report": 4007}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "caught using generative artificial intelligence to help write his stories, resulting in numerous fabricated quotes", "report": 4007},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "We regret the lack of oversight", "report": 4008}
+    ],
+    "harm_type": [
+      {"id": "misinformation", "evidence": "confirmed", "quote": "The newspaper also reached out to sources who may have been misquoted, and ran retractions.", "report": 4007},
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "confirmed", "quote": "Quotes from Wyoming's governor and a local prosecutor were the first things that seemed slightly off to Powell Tribune reporter", "report": 4001},
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "Both the reporter's unverified use of AI and the model's fabrication contributed."
+ },
+ {
+  "incident_id": 1306,
+  "summary": "A Florida couple lost about $45,000 to scammers who sent personalized AI deepfake videos of Elon Musk promising a car and investment returns. The victim is reportedly at risk of losing his home and his marriage.",
+  "technical_summary": "Scammers contacted a victim via a Facebook giveaway group, moved to WhatsApp, and sent personalized deepfake videos of a celebrity CEO to build trust. They collected shipping fees and investment payments. Deepfakes can reportedly be made from a short clip of speech.",
+  "systems": ["Deepfake video generation tools"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["Scammers impersonating Elon Musk"],
+  "tags": {
+    "sector": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "A deepfake video is something that's being generated to look like somebody, but it's not", "report": 6746}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "a personalized video message, which he believed was from Musk himself, promising delivery of the prize package", "report": 6746}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "losing nearly $45,000 to a scam that could cost him his home and his wife of 39 years", "report": 6746}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "older_adults", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "confirmed", "quote": "losing nearly $45,000 to a scam that could cost him his home and his wife of 39 years", "report": 6746},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Victim's age is reported but his name is withheld here."
+ },
+ {
+  "incident_id": 1495,
+  "summary": "During the Iran war, the Grok chatbot reportedly told users that a video of Israel's prime minister at a cafe was AI-generated, after he posted it to counter death rumors. Experts verified the video as authentic.",
+  "technical_summary": "Grok reportedly mislabelled authentic footage as a deepfake when users asked about it, amplifying doubts during a rumour campaign. The cited excerpts confirm the video's authenticity and the rumours but do not mention Grok, so the chatbot's role rests on the incident description.",
+  "systems": ["Grok"],
+  "developers": ["xAI"],
+  "deployers": ["xAI"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "misinformation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "public_figures", "evidence": "confirmed", "quote": "Is Israel's Prime Minister Benjamin Netanyahu dead?", "report": 7306}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Provided excerpts do not mention Grok; tags rely on the AIID description."
+ },
+ {
+  "incident_id": 548,
+  "summary": "Soon after launch, Opera's browser chatbot Aria reportedly answered a question by falsely accusing respected war photographers of committing war crimes. The account comes from a critic's social media post.",
+  "technical_summary": "Opera's Aria chatbot, built on OpenAI's GPT technology with live web results, reportedly generated a list of well-known conflict photographers when asked about photographers accused of war crimes, presenting false accusations as fact. The only source is a personal post.",
+  "systems": ["Opera Aria"],
+  "developers": ["OpenAI", "Opera"],
+  "deployers": ["Opera"],
+  "tags": {
+    "sector": [
+      {"id": "consumer_tech", "evidence": "confirmed", "quote": "released a new browser that integrates an AI chatbot called Aria", "report": 3163}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "released a new browser that integrates an AI chatbot called Aria", "report": 3163}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "It answered one of my questions by slandering acclaimed and highly respected photographers.", "report": 3163}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "confirmed", "quote": "It answered one of my questions by slandering acclaimed and highly respected photographers.", "report": 3163}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "creators", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Single-source account from a personal social media post."
+ },
+ {
+  "incident_id": 1140,
+  "summary": "A video circulating on social media appeared to show Sri Lanka's president announcing a government investment scheme with huge monthly returns. Fact-checkers found the voice did not match and that no such program exists, concluding it was a likely AI-generated scam.",
+  "technical_summary": "Footage from a real television program was reportedly altered with a dubbed or cloned English voice and paired with a sign-up link and a fake news article. Fact-checkers found the voice and pronunciation unnatural and no official announcement of the scheme.",
+  "systems": ["Deepfake and voice-cloning tools"],
+  "developers": ["Deepfake technology developers", "Synthetic audio generation technology developers"],
+  "deployers": ["Unknown scammers impersonating the Sri Lankan president"],
+  "tags": {
+    "sector": [
+      {"id": "finance", "evidence": "confirmed", "quote": "Social media users are frequently exposed to posts promoting investment schemes that promise extraordinary returns---often featuring well-known public figures.", "report": 5488}
+    ],
+    "technology": [
+      {"id": "voice_synthesis", "evidence": "confirmed", "quote": "upon closer examination of the circulating video, the voice heard does not match the President's actual voice", "report": 5488},
+      {"id": "image_video_generation", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "The pronunciation and tone also appear unnatural, indicating signs of manipulation or AI generation.", "report": 5488}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "misinformation", "evidence": "confirmed", "quote": "Neither the Ministry of Finance nor the Presidential Media Division has issued any announcement about such a government investment program", "report": 5488}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "confirmed", "quote": "Sri Lankan citizens can invest Rs. 75,000 and receive returns of up to Rs. 750,000 per month", "report": 5488},
+      {"id": "public_figures", "evidence": "confirmed", "quote": "shows President Anura Kumara Dissanayake allegedly making an announcement during a television program", "report": 5488}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "No victims or losses are reported in the excerpt; severity reflects the scam attempt."
+ }
+]

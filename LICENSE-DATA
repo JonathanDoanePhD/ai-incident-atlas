@@ -1,0 +1,16 @@
+Derived data in this repository is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+This covers: data/processed/, data/enrich/ (LLM extraction outputs, entity kinds,
+plan and logs), app/public/data/ (the published JSON bundle), config/taxonomy.yaml
+crosswalk tables and the generated reports in reports/.
+
+These files are adapted from the AI Incident Database (https://incidentdatabase.ai),
+Responsible AI Collaborative, licensed CC BY-SA 4.0. Changes: re-coding of incidents
+with a new taxonomy, summaries, similarity graphs, clusters and statistics.
+
+Short quotations (≤ 25 words) from news reports are included for evidence
+grounding under fair use / quotation exceptions, each attributed and linked to
+its publisher. Report texts themselves are not part of this repository and are not
+covered by this license.

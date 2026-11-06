@@ -14,11 +14,11 @@ const DIM_ORDER: [string, string][] = [
   ['lifecycle_stage', 'Lifecycle stage'],
 ];
 
-function Evidence({ tag, dim }: { tag: TagOut; dim: string }) {
+function Evidence({ tag, dim, hideName = false }: { tag: TagOut; dim: string; hideName?: boolean }) {
   const { termLabel } = useApp();
   return (
     <li className={`tag ev-${tag.ev}`}>
-      <span className="tag-name">{termLabel(dim, tag.id)}</span>
+      {!hideName && <span className="tag-name">{termLabel(dim, tag.id)}</span>}
       <span className={`ev-badge ${tag.ev}`} title={tag.ev === 'confirmed' ? 'Stated in a report (quote verified verbatim)' : 'Inferred from the evidence; not stated outright'}>
         {tag.ev}
       </span>
@@ -100,7 +100,7 @@ export default function IncidentPage() {
               <div className="fact">
                 <span className="fact-label">Severity</span>
                 <span className={`sev sev${node.sev}`}>{node.sev} — {SEV_LABEL[node.sev]}</span>
-                {prof?.severity && <ul className="tags compact"><Evidence tag={prof.severity} dim="severity" /></ul>}
+                {prof?.severity && <ul className="tags compact"><Evidence tag={prof.severity} dim="severity" hideName /></ul>}
               </div>
             )}
             {node.rd && (

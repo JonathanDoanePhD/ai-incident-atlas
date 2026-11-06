@@ -1,0 +1,16 @@
+AI Incident Atlas
+=================
+
+Incident data: AI Incident Database (AIID), Responsible AI Collaborative —
+https://incidentdatabase.ai — licensed CC BY-SA 4.0.
+Snapshot used: backup-20261102100724.tar.bz2 (2026-11-02), see data/SOURCES.md.
+
+Expert taxonomies used for evaluation (shipped in the AIID snapshot, CC BY-SA 4.0):
+- MIT AI Risk Repository domain taxonomy classifications
+- Goals, Methods and Failures (GMF) taxonomy
+- CSET AI Harm Taxonomy for AIID (CSETv1)
+
+Report contents (news articles) are subject to their publishers' rights. This
+project shows only short attributed excerpts with links to the originals.
+
+Sentence embeddings: sentence-transformers/all-MiniLM-L6-v2 (Apache-2.0).

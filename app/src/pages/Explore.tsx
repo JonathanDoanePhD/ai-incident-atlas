@@ -30,6 +30,7 @@ export default function ExplorePage() {
   const [playing, setPlaying] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [mouse, setMouse] = useState<[number, number]>([0, 0]);
+  const [legendOpen, setLegendOpen] = useState(() => window.innerWidth > 900);
   const webgl = useMemo(hasWebGL, []);
   const stage = useRef<HTMLDivElement>(null);
 
@@ -197,9 +198,11 @@ export default function ExplorePage() {
           {webgl && <span className="hint">Drag to rotate · scroll to zoom · right-drag to pan · click a star</span>}
         </div>
 
-        <div className="legend" role="group" aria-label="Color legend">
-          <div className="legend-title">{COLOR_OPTIONS.find(([v]) => v === colorBy)?.[1]}</div>
-          {encoder.legend.map((it) => (
+        <div className={`legend ${legendOpen ? '' : 'collapsed'}`} role="group" aria-label="Color legend">
+          <button type="button" className="legend-title" aria-expanded={legendOpen} onClick={() => setLegendOpen((o) => !o)}>
+            {COLOR_OPTIONS.find(([v]) => v === colorBy)?.[1]} <span aria-hidden="true">{legendOpen ? '▾' : '▸'}</span>
+          </button>
+          {legendOpen && encoder.legend.map((it) => (
             <button type="button" key={it.key} className={`legend-item ${legendFocus === it.key || (colorBy === 'cluster' && filters.cluster === Number(it.key)) ? 'on' : ''}`}
               onClick={() => legendClick(it.key)} title={colorBy === 'cluster' ? 'Isolate this cluster' : 'Highlight'}>
               <span className="swatch" style={{ background: it.color }} />
