@@ -94,3 +94,8 @@ def test_heuristic_kind():
     assert heuristic_kind("John Smith") == "private_individual"
     assert heuristic_kind("Tesla") == "organization"
     assert heuristic_kind("Black voters") == "group"
+
+
+def test_group_names_do_not_trigger_surname_matching():
+    names = ["Employee of Department of Families Fairness and Housing"]
+    assert not contains_private_name("Department of Families, Fairness and Housing (Victoria)", names)

@@ -10,7 +10,8 @@
 - [x] P1 Ingestion → SQLite (data/atlas.sqlite), reports/data_profile.md, tests (5 pass)
 - [x] P2 Taxonomy v1.0 + crosswalks (config/taxonomy.yaml) — revisit after pilot
 - [x] P2b Entity kinds: 5934 entities via haiku (1055 private_individual hidden) → data/enrich/entity_kinds.csv (hashed keys)
-- [ ] P3 Pilot extraction (20) → prompt v1.1 → scaled extraction
+- [x] P3a Pilot (20; haiku vs sonnet; 120/120 quotes grounded) → docs/pilot_review.md, prompt v1.1, taxonomy v1.1
+- [ ] P3b Scaled extraction with Sonnet, 2 batches/agent, 4 concurrent. Done batches = files in data/enrich/raw/. Launch order: pilot_00..01, b000..b148
 - [ ] P4 Evaluation vs expert labels + blind second coding
 - [ ] P5 Embeddings, multi-view graph, clusters, temporal
 - [ ] P6 App (React/Vite/3d-force-graph), Pages workflow, Playwright checks
@@ -23,7 +24,8 @@
 ## LLM usage (approx.)
 - P0: 0
 - P2 entity kinds: ~4 haiku agents × ~170k tokens
-- P3 pilot: 2 agents (haiku pilot_00, sonnet pilot_01)
+- P3 pilot: 2 agents (haiku 136k, sonnet 114k tokens)
+- P3b estimate: ~75 agents × ~200k ≈ 15M subagent tokens (cap 30M → then stop at representative sample)
 
 ## Blocked
 - No ANTHROPIC_API_KEY → extraction via subagents (see docs/decisions.md #4).

@@ -10,7 +10,7 @@
 #  - Severity describes the harm itself, not media attention or report count.
 #  - Expert taxonomies in AIID (MIT AI Risk Repository domains, GMF, CSETv1) are ground truth for evaluation.
 #    The `crosswalk` section maps their vocabularies onto ours; we never overwrite their labels.
-version: "1.0"
+version: "1.1"
 
 dimensions:
 
@@ -154,21 +154,67 @@ dimensions:
       - {id: businesses, label: Businesses & organizations}
       - {id: governments, label: Governments & public institutions}
 
-  intent:
-    label: Intent
+  risk_domain:
+    label: Risk domain (MIT AI Risk Repository domain taxonomy)
+    multi: false
+    description: >
+      Single best-fitting domain from the MIT AI Risk Repository's Domain Taxonomy, coded independently of the
+      expert labels (the coder never sees them). Aligning one dimension with an established external taxonomy
+      makes our coding directly comparable with the 1,498 expert MIT labels in AIID.
+    terms:
+      - {id: "1", label: Discrimination & toxicity, mit: "1. Discrimination and Toxicity"}
+      - {id: "2", label: Privacy & security, mit: "2. Privacy & Security"}
+      - {id: "3", label: Misinformation, mit: "3. Misinformation"}
+      - {id: "4", label: Malicious actors & misuse, mit: "4. Malicious Actors & Misuse"}
+      - {id: "5", label: Human–computer interaction, mit: "5. Human-Computer Interaction"}
+      - {id: "6", label: Socioeconomic & environmental, mit: "6. Socioeconomic & Environmental Harms"}
+      - {id: "7", label: AI system safety, failures & limitations, mit: "7. AI system safety, failures, and limitations"}
+
+  risk_subdomain:
+    label: Risk subdomain (MIT)
     multi: false
     terms:
-      - {id: intentional, label: Intentional (harm was the goal of a human actor)}
-      - {id: unintentional, label: Unintentional}
-      - {id: unclear, label: Unclear}
+      - {id: "1.1", label: Unfair discrimination and misrepresentation}
+      - {id: "1.2", label: Exposure to toxic content}
+      - {id: "1.3", label: Unequal performance across groups}
+      - {id: "2.1", label: Compromise of privacy (obtaining, leaking or inferring sensitive information)}
+      - {id: "2.2", label: AI system security vulnerabilities and attacks}
+      - {id: "3.1", label: False or misleading information}
+      - {id: "3.2", label: Pollution of information ecosystem and loss of consensus reality}
+      - {id: "4.1", label: Disinformation, surveillance, and influence at scale}
+      - {id: "4.2", label: Cyberattacks, weapon development or use, and mass harm}
+      - {id: "4.3", label: Fraud, scams, and targeted manipulation}
+      - {id: "5.1", label: Overreliance and unsafe use}
+      - {id: "5.2", label: Loss of human agency and autonomy}
+      - {id: "6.1", label: Power centralization and unfair distribution of benefits}
+      - {id: "6.2", label: Increased inequality and decline in employment quality}
+      - {id: "6.3", label: Economic and cultural devaluation of human effort}
+      - {id: "6.4", label: Competitive dynamics}
+      - {id: "6.5", label: Governance failure}
+      - {id: "6.6", label: Environmental harm}
+      - {id: "7.1", label: AI pursuing its own goals in conflict with human goals or values}
+      - {id: "7.2", label: AI possessing dangerous capabilities}
+      - {id: "7.3", label: Lack of capability or robustness}
+      - {id: "7.4", label: Lack of transparency or interpretability}
+      - {id: "7.5", label: AI welfare and rights}
+
+  intent:
+    label: Intent (MIT definition)
+    multi: false
+    description: Whether the risk occurred as an expected or an unexpected outcome of pursuing a goal.
+    terms:
+      - {id: intentional, label: Intentional (expected outcome of pursuing a goal)}
+      - {id: unintentional, label: Unintentional (unexpected outcome)}
+      - {id: other, label: Other / unclear}
 
   cause_entity:
-    label: Primary cause
+    label: Primary cause (MIT definition)
     multi: false
+    description: Which entity is presented as the main cause of the risk.
     terms:
-      - {id: ai, label: AI system behavior}
-      - {id: human, label: Human decision or use}
-      - {id: unclear, label: Unclear / both}
+      - {id: ai, label: AI system}
+      - {id: human, label: Human}
+      - {id: other, label: Other / unclear}
 
 # --------------------------------------------------------------------------------------------------
 # Crosswalks to expert taxonomies shipped in the AIID snapshot. Used ONLY for evaluation (Phase 4).
@@ -176,8 +222,8 @@ dimensions:
 crosswalk:
 
   # MIT AI Risk Repository domain (single label per incident in AIID).
-  # Our primary_failure_mode -> MIT domain. Where one failure mode can plausibly map to several domains,
-  # a harm_type tiebreak is listed. Rules are applied in order.
+  # Primary evaluation uses our directly coded `risk_domain` (v1.1+). As a secondary, mechanism-level check we also
+  # map our primary_failure_mode -> MIT domain (lossy: a mechanism is not a risk category; see docs/pilot_review.md).
   mit_domain_from_primary_failure:
     bias_discrimination: "1. Discrimination and Toxicity"
     harmful_content: "1. Discrimination and Toxicity"
@@ -192,8 +238,8 @@ crosswalk:
     inadequate_oversight: "7. AI system safety, failures, and limitations"
     opacity_contestability: "7. AI system safety, failures, and limitations"
     ip_consent_violation: "6. Socioeconomic & Environmental Harms"
-  mit_intent: {intentional: Intentional, unintentional: Unintentional, unclear: Other}
-  mit_entity: {ai: AI, human: Human, unclear: Other}
+  mit_intent: {intentional: Intentional, unintentional: Unintentional, other: Other}
+  mit_entity: {ai: AI, human: Human, other: Other}
 
   # GMF "Known AI Technical Failure" -> our failure_mode. GMF failures are low-level technical causes;
   # unmapped GMF values are excluded from evaluation and reported.
@@ -316,3 +362,8 @@ crosswalk:
 changelog:
   - version: "1.0"
     note: Initial design from AIID vocabularies (MIT, GMF, CSETv1) and the atlas research questions.
+  - version: "1.1"
+    note: >
+      After the 20-incident pilot (docs/pilot_review.md) — added MIT-aligned risk_domain/risk_subdomain;
+      intent and cause_entity now use MIT's definitions ('unclear' -> 'other'); coding guidance for
+      technology (pricing/pay algorithms, forecasting) and sector (internal corporate tools).

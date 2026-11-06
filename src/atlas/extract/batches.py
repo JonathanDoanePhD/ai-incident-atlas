@@ -19,6 +19,7 @@ import pandas as pd
 
 from atlas import paths
 from atlas.ingest.load import connect
+from atlas.privacy import entity_kind
 
 BATCH_SIZE = 12
 EXCERPT_CHARS = 2500
@@ -88,16 +89,19 @@ def _choose_reports(con, iid: int) -> list[dict[str, Any]]:
         """SELECT r.report_number, r.title, r.source_domain, r.language, r.text, r.text_chars
            FROM incident_report ir JOIN reports r USING (report_number)
            WHERE ir.incident_id = ? AND r.is_incident_report = 1 AND r.text_chars > 0""", (iid,)).fetchall()
-    rows = sorted(rows, key=lambda r: (r["language"] not in (None, "en"), r["text_chars"] < 600, r["report_number"]))
+    meta = ("incidentdatabase.ai", "github.com")  # AIID self-references rank last
+    rows = sorted(rows, key=lambda r: (any(m in (r["source_domain"] or "") for m in meta),
+                                       r["language"] not in (None, "en"), r["text_chars"] < 600, r["report_number"]))
     return [{"report_number": r["report_number"], "title": r["title"], "source": r["source_domain"],
              "excerpt": r["text"][:EXCERPT_CHARS]} for r in rows[:MAX_REPORTS]]
 
 
 def incident_input(con, iid: int) -> dict[str, Any]:
     inc = con.execute("SELECT * FROM incidents WHERE incident_id = ?", (iid,)).fetchone()
-    ents = con.execute(
-        """SELECT ie.role, e.name FROM incident_entity ie JOIN entities e USING (entity_id)
-           WHERE ie.incident_id = ? AND ie.role IN ('developer','deployer')""", (iid,)).fetchall()
+    ents = [{"role": e["role"], "name": e["name"] or e["entity_id"]} for e in con.execute(
+        """SELECT ie.role, e.entity_id, e.name FROM incident_entity ie JOIN entities e USING (entity_id)
+           WHERE ie.incident_id = ? AND ie.role IN ('developer','deployer')""", (iid,))
+        if entity_kind(e["entity_id"], e["name"]) != "private_individual"]
     return {"incident_id": iid, "title": inc["title"], "date": inc["date"], "description": inc["description"],
             "developers": sorted({e["name"] for e in ents if e["role"] == "developer"}),
             "deployers": sorted({e["name"] for e in ents if e["role"] == "deployer"}),

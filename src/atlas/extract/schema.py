@@ -74,9 +74,34 @@ class IncidentRecord(BaseModel):
     tags: Tags
     primary_failure_mode: Optional[str] = None
     severity: Optional[Tag] = None
-    intent: Optional[Literal["intentional", "unintentional", "unclear"]] = None
-    cause_entity: Optional[Literal["ai", "human", "unclear"]] = None
+    risk_domain: Optional[str] = None
+    risk_subdomain: Optional[str] = None
+    intent: Optional[Literal["intentional", "unintentional", "other"]] = None
+    cause_entity: Optional[Literal["ai", "human", "other"]] = None
     notes: Optional[str] = None
+
+    @field_validator("intent", "cause_entity", mode="before")
+    @classmethod
+    def _legacy_unclear(cls, v):  # prompt v1 used 'unclear'; v1.1 aligns with MIT's 'Other'
+        return "other" if v == "unclear" else v
+
+    @field_validator("risk_domain", "risk_subdomain", mode="before")
+    @classmethod
+    def _str_id(cls, v):
+        return None if v is None else str(v).strip()
+
+    @model_validator(mode="after")
+    def _risk_ids(self) -> "IncidentRecord":
+        if self.risk_domain is not None and self.risk_domain not in taxonomy.term_ids("risk_domain"):
+            raise ValueError(f"unknown risk_domain '{self.risk_domain}'")
+        if self.risk_subdomain is not None:
+            if self.risk_subdomain not in taxonomy.term_ids("risk_subdomain"):
+                raise ValueError(f"unknown risk_subdomain '{self.risk_subdomain}'")
+            if self.risk_domain is None:
+                self.risk_domain = self.risk_subdomain.split(".")[0]
+            elif not self.risk_subdomain.startswith(self.risk_domain + "."):
+                raise ValueError("risk_subdomain does not belong to risk_domain")
+        return self
 
     @field_validator("primary_failure_mode")
     @classmethod

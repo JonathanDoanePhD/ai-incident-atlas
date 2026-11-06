@@ -107,12 +107,23 @@ def contains_private_name(text: str, private_names: list[str]) -> bool:
     return False
 
 
+_PARTICLES = {"de", "da", "del", "van", "von", "der", "bin", "al", "la", "le", "di", "du"}
+
+
+def looks_like_personal_name(name: str) -> bool:
+    """'Jane Q. Example' → True; 'Employee of Department of Housing' → False."""
+    toks = name.replace(",", " ").split()
+    if not 2 <= len(toks) <= 4:
+        return False
+    return all(t[:1].isupper() or t.lower() in _PARTICLES for t in toks) and not any(c.isdigit() for c in name)
+
+
 def _name_variants(name: str) -> list[str]:
     n = normalize(name)
-    toks = [t for t in n.split() if len(t) > 2]
-    # Full name, plus the surname alone when it is distinctive enough (≥ 4 chars).
     out = [n] if n else []
-    if len(toks) >= 2 and len(toks[-1]) >= 4:
+    # The surname alone, when the entity is shaped like a personal name and the surname is distinctive (≥ 4 chars).
+    toks = n.split()
+    if looks_like_personal_name(name) and len(toks[-1]) >= 4:
         out.append(toks[-1])
     return out
 
@@ -125,7 +136,7 @@ def redact_private_names(text: str, private_names: list[str], replacement: str =
             continue
         text = re.sub(re.escape(full), replacement, text, flags=re.IGNORECASE)
         toks = full.split()
-        if len(toks) >= 2 and len(toks[-1]) >= 4 and toks[-1][0].isupper():
+        if looks_like_personal_name(full) and len(toks[-1]) >= 4:
             text = re.sub(rf"\b{re.escape(toks[-1])}\b", replacement, text)
     return text
 

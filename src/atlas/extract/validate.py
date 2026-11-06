@@ -126,15 +126,17 @@ def _write(con, records, repairs, errors, stats, source) -> None:
         DROP TABLE IF EXISTS extraction; DROP TABLE IF EXISTS extraction_tag;
         CREATE TABLE extraction (incident_id INTEGER PRIMARY KEY, summary TEXT, technical_summary TEXT,
           systems TEXT, developers TEXT, deployers TEXT, primary_failure_mode TEXT, severity TEXT,
-          severity_evidence TEXT, intent TEXT, cause_entity TEXT, notes TEXT, batch TEXT);
+          severity_evidence TEXT, risk_domain TEXT, risk_subdomain TEXT, intent TEXT, cause_entity TEXT,
+          notes TEXT, batch TEXT);
         CREATE TABLE extraction_tag (incident_id INTEGER, dimension TEXT, term TEXT, evidence TEXT,
           quote TEXT, report_number INTEGER);""")
     for iid, r in records.items():
         sev = r.get("severity") or {}
-        con.execute("INSERT INTO extraction VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        con.execute("INSERT INTO extraction VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                     (iid, r["summary"], r["technical_summary"], json.dumps(r["systems"]), json.dumps(r["developers"]),
                      json.dumps(r["deployers"]), r["primary_failure_mode"], sev.get("id"), sev.get("evidence"),
-                     r["intent"], r["cause_entity"], r.get("notes"), r["_batch"]))
+                     r.get("risk_domain"), r.get("risk_subdomain"), r["intent"], r["cause_entity"], r.get("notes"),
+                     r["_batch"]))
         for dim, tags in r["tags"].items():
             for t in tags:
                 con.execute("INSERT INTO extraction_tag VALUES (?,?,?,?,?,?)",
