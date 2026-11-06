@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+data/interim/
+*.sqlite
+*.db
+node_modules/
+app/dist/
+.DS_Store
+data/enrich/batches/inputs/
