@@ -1,6 +1,8 @@
+import { lazy, Suspense } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { AppProvider, useApp } from './state';
-import ExplorePage from './pages/Explore';
+// The 3-D constellation pulls in three.js; load it on demand so other pages stay light.
+const ExplorePage = lazy(() => import('./pages/Explore'));
 import CatalogPage from './pages/Catalog';
 import IncidentPage from './pages/Incident';
 import InsightsPage from './pages/Insights';
@@ -38,7 +40,7 @@ function Shell() {
           </div>
         ) : (
           <Routes>
-            <Route path="/" element={<ExplorePage />} />
+            <Route path="/" element={<Suspense fallback={<div className="loading" role="status">Loading the constellation…</div>}><ExplorePage /></Suspense>} />
             <Route path="/catalog" element={<CatalogPage />} />
             <Route path="/incident/:id" element={<IncidentPage />} />
             <Route path="/insights" element={<InsightsPage />} />
