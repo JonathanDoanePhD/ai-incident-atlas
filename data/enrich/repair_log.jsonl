@@ -34,3 +34,6 @@
 {"batch": "b128", "incident_id": 1775, "dimension": "sector", "tag": "elections_politics", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b128", "incident_id": 1775, "dimension": "technology", "tag": "image_video_generation", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b128", "incident_id": 1775, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b134", "incident_id": 1111, "dimension": "harm_type", "tag": "security_safety", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b134", "incident_id": 1713, "dimension": "harm_type", "tag": "civil_rights", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b136", "incident_id": 903, "dimension": "sector", "tag": "elections_politics", "action": "downgrade", "reason": "private_name", "old": null}
