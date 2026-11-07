@@ -7,7 +7,7 @@ re-coded with one consistent taxonomy, and linked to verbatim quotes from the or
 ![The constellation: 1,784 incidents coloured by MIT risk domain, sized by media attention, linked by blended similarity](docs/screenshots/constellation-desktop.png)
 
 **Live demo:** https://jonathandoanephd.github.io/ai-incident-atlas/ *(published by the Pages workflow once
-GitHub Pages is enabled; see “Deploy” below)* · **Author:** [Your Name]
+GitHub Pages is enabled; see “Deploy” below)* · **Author:** Jonathan Doane
 
 ---
 

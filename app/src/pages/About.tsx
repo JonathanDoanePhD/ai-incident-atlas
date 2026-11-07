@@ -67,7 +67,7 @@ export default function AboutPage() {
       </ul>
 
       <p className="muted small">
-        Built by [Your Name]. Generated {meta.generated}. Taxonomy v{meta.taxonomy_version}. {meta.n_extracted.toLocaleString()} of{' '}
+        Built by Jonathan Doane. Generated {meta.generated}. Taxonomy v{meta.taxonomy_version}. {meta.n_extracted.toLocaleString()} of{' '}
         {meta.n_incidents.toLocaleString()} incidents coded. Source code and reports: <a href={REPO}>{REPO.replace('https://', '')}</a>.
       </p>
       <p className="muted small">{meta.license.attribution}</p>

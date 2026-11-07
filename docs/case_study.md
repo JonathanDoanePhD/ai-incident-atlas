@@ -1,7 +1,7 @@
 # Same failure, different sector: building an evidence-grounded atlas of AI incidents
 
 *A case study of the AI Incident Atlas — what it found, and the engineering decisions that made the findings
-trustworthy. By [Your Name].*
+trustworthy. By Jonathan Doane.*
 
 ## Why another look at AI incidents?
 
