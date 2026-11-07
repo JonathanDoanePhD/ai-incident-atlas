@@ -223,6 +223,8 @@ def build() -> dict[str, Any]:
                            "Collaborative, licensed CC BY-SA 4.0. Report excerpts belong to their publishers."},
     }
     (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, separators=(",", ":")))
+    from atlas.export.compact import compact_bundle  # shared explanation table; lossless (see compact.py)
+    compact_bundle(out)
     sizes = {p.name: p.stat().st_size for p in out.glob("*.json")}
     sizes["profiles/*"] = sum(p.stat().st_size for p in (out / "profiles").glob("*.json"))
     return {"total_mb": round(sum(sizes.values()) / 1e6, 2), "sizes": sizes}

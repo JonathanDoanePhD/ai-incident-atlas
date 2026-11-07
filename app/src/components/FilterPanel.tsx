@@ -12,22 +12,19 @@ interface RangeProps {
   format?: (v: number) => string;
 }
 
+/** One track, two handles (same component style as the AI Project Atlas). */
 export function RangeSlider({ label, min, max, value, onChange, format = String }: RangeProps) {
   const id = label.replace(/\W+/g, '-').toLowerCase();
+  const pct = (v: number) => `${((v - min) / Math.max(1, max - min)) * 100}%`;
   return (
     <fieldset className="range">
-      <legend>
-        {label}: <strong>{format(value[0])}</strong> – <strong>{format(value[1])}</strong>
-      </legend>
-      <div className="range-inputs">
-        <label className="sr-only" htmlFor={`${id}-lo`}>
-          {label} minimum
-        </label>
+      <legend>{label}</legend>
+      <div className="range-vals"><span>{format(value[0])}</span><span>{format(value[1])}</span></div>
+      <div className="dual" style={{ ['--lo' as string]: pct(value[0]), ['--hi' as string]: pct(value[1]) }}>
+        <label className="sr-only" htmlFor={`${id}-lo`}>{label} minimum</label>
         <input id={`${id}-lo`} type="range" min={min} max={max} value={value[0]}
           onChange={(e) => onChange([Math.min(Number(e.target.value), value[1]), value[1]])} />
-        <label className="sr-only" htmlFor={`${id}-hi`}>
-          {label} maximum
-        </label>
+        <label className="sr-only" htmlFor={`${id}-hi`}>{label} maximum</label>
         <input id={`${id}-hi`} type="range" min={min} max={max} value={value[1]}
           onChange={(e) => onChange([value[0], Math.max(Number(e.target.value), value[0])])} />
       </div>
@@ -64,9 +61,8 @@ export default function FilterPanel({ nodes }: { nodes: IncidentNode[] }) {
         Use predicted tags for {data?.meta.n_predicted ?? 0} incidents not yet coded
       </label>
       <fieldset className="range">
-        <legend>
-          Minimum reports: <strong>{filters.minReports}</strong>
-        </legend>
+        <legend>Minimum reports</legend>
+        <div className="range-vals"><span>{filters.minReports}</span><span>{Math.min(maxRep, 30)}</span></div>
         <input aria-label="Minimum number of reports" type="range" min={0} max={Math.min(maxRep, 30)} value={filters.minReports}
           onChange={(e) => setFilters((f) => ({ ...f, minReports: Number(e.target.value) }))} />
       </fieldset>

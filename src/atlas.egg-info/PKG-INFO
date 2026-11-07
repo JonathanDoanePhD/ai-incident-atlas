@@ -4,3 +4,7 @@ Version: 0.1.0
 Summary: AI Incident Atlas: an evidence-grounded research atlas of the AI Incident Database
 License: MIT
 Requires-Python: >=3.11
+License-File: LICENSE
+License-File: LICENSE-DATA
+License-File: NOTICE
+Dynamic: license-file

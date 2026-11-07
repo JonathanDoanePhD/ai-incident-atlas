@@ -41,7 +41,7 @@ flowchart LR
   H --> I[Evaluation vs experts<br/>+ blind 2nd coder]
   H --> J[kNN propagation<br/>1 'predicted' + 5-fold CV]
   H & J --> K[Embeddings · 7 similarity views<br/>explained edges · UMAP+Ward · bridges]
-  K --> L[Static JSON bundle 10.4 MB<br/>profiles lazy-loaded]
+  K --> L[Static JSON bundle 8.7 MB<br/>profiles lazy-loaded]
   L --> M[React + 3d-force-graph app<br/>GitHub Pages]
 ```
 

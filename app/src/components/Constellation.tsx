@@ -50,6 +50,7 @@ interface Props {
 }
 
 const SCALE = 55;
+const bgColor = () => (document.documentElement.dataset.theme === 'light' ? '#f6f7fb' : '#0b0f17');
 const DIM = 'rgba(120,128,140,0.10)';
 
 type Graph = InstanceType<typeof ForceGraph3D>;
@@ -94,7 +95,7 @@ export default function Constellation(props: Props) {
   useEffect(() => {
     if (!el.current) return;
     const g = new ForceGraph3D(el.current, { controlType: 'orbit' })
-      .backgroundColor('#0b0d12')
+      .backgroundColor(bgColor())
       .showNavInfo(false)
       .nodeId('id')
       .nodeLabel(() => '')
@@ -115,6 +116,9 @@ export default function Constellation(props: Props) {
       })
       .onBackgroundClick(() => cbs.current.onSelect(null));
     graph.current = g;
+    // follow the light/dark theme toggle
+    const mo = new MutationObserver(() => g.backgroundColor(bgColor()));
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     (window as unknown as { __atlasGraph: Graph }).__atlasGraph = g;
     const resize = () => {
       if (el.current) g.width(el.current.clientWidth).height(el.current.clientHeight);
@@ -125,6 +129,7 @@ export default function Constellation(props: Props) {
     g.cameraPosition({ x: 0, y: 0, z: 260 });
     return () => {
       ro.disconnect();
+      mo.disconnect();
       g._destructor();
       graph.current = null;
     };

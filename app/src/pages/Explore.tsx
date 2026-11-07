@@ -31,6 +31,7 @@ export default function ExplorePage() {
   const [panelOpen, setPanelOpen] = useState(false);
   const [mouse, setMouse] = useState<[number, number]>([0, 0]);
   const [legendOpen, setLegendOpen] = useState(() => window.innerWidth > 900);
+  const [hudOpen, setHudOpen] = useState(() => window.innerWidth > 900);
   const webgl = useMemo(hasWebGL, []);
   const stage = useRef<HTMLDivElement>(null);
 
@@ -105,22 +106,25 @@ export default function ExplorePage() {
     [encoder, filters.includePredicted],
   );
 
-  // Year playback: animate the upper bound of the year range.
+  // Year playback: step the upper bound of the year range forward, one year per tick.
+  // Depends only on primitives; the current year lives in a local counter, not in React state, so a filter update
+  // can't restart the animation (the earlier version reset to the start year on every tick and never advanced).
+  const [y0, y1] = yearBounds;
+  const filtersRef = useRef(filters);
+  filtersRef.current = filters;
   useEffect(() => {
     if (!playing) return;
-    const start = Math.max(yearBounds[0], 2010);
-    setFilters((f) => ({ ...f, years: [yearBounds[0], start] }));
+    const startYear = Math.max(y0, 2010);
+    let year = filtersRef.current.years[1] >= y1 ? startYear : filtersRef.current.years[1];
+    const show = (yr: number) => setFilters((f) => ({ ...f, years: [Math.min(f.years[0], yr), yr] }));
+    show(year);
     const id = window.setInterval(() => {
-      setFilters((f) => {
-        if (f.years[1] >= yearBounds[1]) {
-          setPlaying(false);
-          return f;
-        }
-        return { ...f, years: [f.years[0], f.years[1] + 1] };
-      });
-    }, 900);
+      year = Math.min(year + 1, y1);
+      show(year);
+      if (year >= y1) setPlaying(false);
+    }, 700);
     return () => window.clearInterval(id);
-  }, [playing, yearBounds, setFilters]);
+  }, [playing, y0, y1, setFilters]);
 
   const onSelect = useCallback((n: IncidentNode | null) => setSelected(n), []);
   const onHover = useCallback((n: IncidentNode | null) => setHover(n), []);
@@ -145,36 +149,6 @@ export default function ExplorePage() {
         </button>
         <div className="panel-body">
           <label className="field">
-            <span>Preset view</span>
-            <select value={preset} onChange={(e) => applyPreset(e.target.value)}>
-              {PRESETS.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.label}
-                </option>
-              ))}
-              {!currentPreset && <option value="custom">Custom</option>}
-            </select>
-          </label>
-          {currentPreset && <p className="blurb">{currentPreset.blurb}</p>}
-          <label className="field">
-            <span>Color by</span>
-            <select value={colorBy} onChange={(e) => { setColorBy(e.target.value as ColorBy); setPreset('custom'); setLegendFocus(null); }}>
-              {COLOR_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
-            </select>
-          </label>
-          <label className="field">
-            <span>Size by</span>
-            <select value={sizeBy} onChange={(e) => { setSizeBy(e.target.value as SizeBy); setPreset('custom'); }}>
-              {SIZE_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
-            </select>
-          </label>
-          <label className="field">
-            <span>Connections</span>
-            <select value={view} onChange={(e) => { setView(e.target.value as View); setPreset('custom'); setSelected(null); }}>
-              {VIEW_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
-            </select>
-          </label>
-          <label className="field">
             <span>Search</span>
             <input type="search" placeholder="e.g. facial recognition police" value={query} onChange={(e) => setQuery(e.target.value)} />
           </label>
@@ -194,12 +168,52 @@ export default function ExplorePage() {
           <ListFallback nodes={nodes.filter((n) => visible.has(n.id))} />
         )}
 
+        <div className={`hud hud-view ${hudOpen ? '' : 'collapsed'}`} role="group" aria-label="View controls">
+          <button type="button" className="hud-title" aria-expanded={hudOpen} onClick={() => setHudOpen((o) => !o)}>
+            View <span aria-hidden="true">{hudOpen ? '▾' : '▸'}</span>
+          </button>
+          {hudOpen && (
+            <div className="hud-body">
+              <label className="field">
+                <span>Preset view</span>
+                <select value={preset} onChange={(e) => applyPreset(e.target.value)}>
+                  {PRESETS.map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.label}
+                    </option>
+                  ))}
+                  {!currentPreset && <option value="custom">Custom</option>}
+                </select>
+              </label>
+              {currentPreset && <p className="blurb">{currentPreset.blurb}</p>}
+              <label className="field">
+                <span>Color by</span>
+                <select value={colorBy} onChange={(e) => { setColorBy(e.target.value as ColorBy); setPreset('custom'); setLegendFocus(null); }}>
+                  {COLOR_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                </select>
+              </label>
+              <label className="field">
+                <span>Size by</span>
+                <select value={sizeBy} onChange={(e) => { setSizeBy(e.target.value as SizeBy); setPreset('custom'); }}>
+                  {SIZE_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                </select>
+              </label>
+              <label className="field">
+                <span>Connections</span>
+                <select value={view} onChange={(e) => { setView(e.target.value as View); setPreset('custom'); setSelected(null); }}>
+                  {VIEW_OPTIONS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                </select>
+              </label>
+            </div>
+          )}
+        </div>
+
         <div className="hud-top">
           <span className="count-pill" aria-live="polite">
             {visible.size.toLocaleString()} of {nodes.length.toLocaleString()} incidents
           </span>
-          {webgl && <span className="hint">Drag to rotate · scroll to zoom · right-drag to pan · click a star</span>}
         </div>
+        {webgl && <div className="hint-pill">Drag to rotate · scroll to zoom · right-drag to pan · click a star</div>}
 
         <div className={`legend ${legendOpen ? '' : 'collapsed'}`} role="group" aria-label="Color legend">
           <button type="button" className="legend-title" aria-expanded={legendOpen} onClick={() => setLegendOpen((o) => !o)}>

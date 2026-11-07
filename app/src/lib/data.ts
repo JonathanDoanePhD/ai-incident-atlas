@@ -44,9 +44,29 @@ export function loadCore(): Promise<CoreData> {
   return core;
 }
 
-export const loadEdges = () => loadJSON<EdgeBundle>('edges.json');
+/** Shared explanation sentences (edges and profiles store indices into this table; see src/atlas/export/compact.py). */
+export const loadExplanations = () => loadJSON<string[]>('explanations.json');
+
+let edgesP: Promise<EdgeBundle> | null = null;
+export function loadEdges(): Promise<EdgeBundle> {
+  if (!edgesP) {
+    edgesP = Promise.all([loadJSON<Pick<EdgeBundle, 'views'>>('edges.json'), loadExplanations()]).then(([e, explanations]) => ({
+      views: e.views,
+      explanations,
+    }));
+  }
+  return edgesP;
+}
+
+/** [incident id, weight, explanation index] as stored in profile chunks. */
+type PackedRelated = [number, number, number];
 
 export async function loadProfile(id: number): Promise<Profile | undefined> {
-  const chunk = await loadJSON<Record<string, Profile>>(`profiles/p${Math.floor(id / 100)}.json`);
-  return chunk[String(id)];
+  const [chunk, explanations] = await Promise.all([
+    loadJSON<Record<string, Omit<Profile, 'related'> & { related?: PackedRelated[] }>>(`profiles/p${Math.floor(id / 100)}.json`),
+    loadExplanations(),
+  ]);
+  const raw = chunk[String(id)];
+  if (!raw) return undefined;
+  return { ...raw, related: (raw.related ?? []).map(([rid, w, k]) => ({ id: rid, w, why: explanations[k] ?? '' })) };
 }

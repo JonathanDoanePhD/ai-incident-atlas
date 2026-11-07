@@ -36,9 +36,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
       .catch((e) => setError(String(e)));
   }, []);
 
-  const value = useMemo<AppState>(() => {
+  // Stable identity: depends on the data only (a new array on every filter change restarted year playback).
+  const yearBounds = useMemo<[number, number]>(() => {
     const ys = data ? data.nodes.map((n) => n.y) : [1983, 2026];
-    const yearBounds: [number, number] = [Math.min(...ys), Math.max(...ys)];
+    return [Math.min(...ys), Math.max(...ys)];
+  }, [data]);
+
+  const value = useMemo<AppState>(() => {
     const labels = new Map<string, string>();
     if (data) {
       for (const [dim, spec] of Object.entries(data.meta.dimensions)) {
@@ -60,7 +64,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       termLabel,
       orgName,
     };
-  }, [data, error, filters, query]);
+  }, [data, error, filters, query, yearBounds]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
