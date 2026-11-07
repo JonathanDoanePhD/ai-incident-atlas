@@ -83,7 +83,7 @@ export default function InsightsPage() {
         </div>
         <Dumbbell aLabel="Before" bLabel="After" rows={shifts.map((s) => ({
           label: shiftDim === 'risk_domain' ? `${s.term}. ${s.label}` : s.label, a: s.pre_share, b: s.post_share,
-          note: `${s.change_pp > 0 ? '+' : ''}${s.change_pp} pp · p = ${s.p_exploratory} (exploratory)`,
+          note: `${s.change_pp > 0 ? '+' : ''}${s.change_pp} pp · p ${s.p_exploratory <= 1e-16 ? '< 1e-16' : '= ' + s.p_exploratory} (exploratory)`,
         }))} />
       </section>
 
