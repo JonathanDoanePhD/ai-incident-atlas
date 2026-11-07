@@ -56,7 +56,7 @@ export interface Preset {
 }
 
 export const PRESETS: Preset[] = [
-  { id: 'clusters', label: 'Overview: clusters', blurb: 'Incidents grouped by what went wrong, with what technology and harm; links show the closest overall matches.', color: 'cluster', size: 'nrep', view: 'blend' },
+  { id: 'clusters', label: 'Overview: risk landscape', blurb: 'Nearby stars are similar incidents (text + taxonomy). Colour shows the MIT risk domain; links show the closest overall matches. Switch “Color by” to Cluster to isolate a cluster.', color: 'rd', size: 'nrep', view: 'blend' },
   { id: 'failures', label: 'Recurring failure modes', blurb: 'Colour shows the central failure mechanism; links join incidents that fail the same way — often across very different sectors.', color: 'pfm', size: 'degree', view: 'failure' },
   { id: 'actors', label: 'Who builds and deploys', blurb: 'Links join incidents involving the same named developer or deployer; larger nodes name more organizations.', color: 'tech', size: 'orgs', view: 'entity' },
   { id: 'harms', label: 'Harm landscape', blurb: 'Colour shows the type of harm, size its severity; links join incidents with the same kinds of harm.', color: 'harm', size: 'sev', view: 'harm' },

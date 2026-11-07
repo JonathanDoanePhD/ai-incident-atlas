@@ -19,7 +19,7 @@ export default function ExplorePage() {
   const nodes = data!.nodes;
   const meta = data!.meta;
   const [preset, setPreset] = useState('clusters');
-  const [colorBy, setColorBy] = useState<ColorBy>('cluster');
+  const [colorBy, setColorBy] = useState<ColorBy>('rd');
   const [sizeBy, setSizeBy] = useState<SizeBy>('nrep');
   const [view, setView] = useState<View>('blend');
   const [edges, setEdges] = useState<EdgeBundle | null>(null);

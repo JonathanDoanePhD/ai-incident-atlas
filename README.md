@@ -4,7 +4,7 @@
 [AI Incident Database](https://incidentdatabase.ai) (AIID) is placed in a 3-D constellation of related failures,
 re-coded with one consistent taxonomy, and linked to verbatim quotes from the original reporting.
 
-![The constellation: 1,784 incidents coloured by cluster, linked by blended similarity](docs/screenshots/constellation-desktop.png)
+![The constellation: 1,784 incidents coloured by MIT risk domain, sized by media attention, linked by blended similarity](docs/screenshots/constellation-desktop.png)
 
 **Live demo:** https://jonathandoanephd.github.io/ai-incident-atlas/ *(published by the Pages workflow once
 GitHub Pages is enabled; see “Deploy” below)* · **Author:** [Your Name]
@@ -37,11 +37,11 @@ flowchart LR
   E --> F{Validator<br/>pydantic schema<br/>verbatim quote check<br/>privacy rules}
   F -- fails --> G[logged repair:<br/>reattribute / snap / downgrade]
   G --> F
-  F --> H[(992 coded incidents)]
+  F --> H[(1,001 coded incidents)]
   H --> I[Evaluation vs experts<br/>+ blind 2nd coder]
-  H --> J[kNN propagation<br/>792 'predicted']
+  H --> J[kNN propagation<br/>783 'predicted']
   H & J --> K[Embeddings · 7 similarity views<br/>explained edges · UMAP+Ward · bridges]
-  K --> L[Static JSON bundle 9.6 MB]
+  K --> L[Static JSON bundle 9.7 MB]
   L --> M[React + 3d-force-graph app<br/>GitHub Pages]
 ```
 
@@ -70,19 +70,19 @@ flowchart LR
 All are descriptive statistics on AIID, a convenience sample of *publicly reported* incidents — trends reflect
 reporting and curation as well as the world. Significance tests are exploratory. Source: [reports/insights.md](reports/insights.md).
 
-1. **After ChatGPT, the dominant story flipped from “AI fails” to “people misuse AI.”** Among 992 coded
-   incidents, *deliberate misuse* was the mechanism in 10.7% of incidents before 30 Nov 2022 and 50.7% after;
-   robustness failures fell from 44.9% to 15.6% and bias from 24.9% to 3.3% (share of the mix, not absolute
-   counts). Image/video generation rose from 6.3% to 38.3% of incidents and voice cloning from 1.9% to 18.0%.
+1. **After ChatGPT, the dominant story flipped from “AI fails” to “people misuse AI.”** Among 1,001 coded
+   incidents, *deliberate misuse* was the mechanism in 11.1% of incidents before 30 Nov 2022 and 50.7% after;
+   robustness failures fell from 44.5% to 15.7% and bias from 24.7% to 3.4% (share of the mix, not absolute
+   counts). Image/video generation rose from 6.8% to 38.4% of incidents and voice cloning from 1.9% to 18.2%.
 2. **Hallucination is new as an incident class:** 1.0% of pre-ChatGPT incidents vs 13.6% after, with courts and
    news among its top sectors.
 3. **Some failures really are sector-agnostic.** *Inadequate testing or oversight* appears in all 20 sectors with a
    near-even spread (normalized entropy 0.91), and *bias & disparate performance* in 18; by contrast, harmful
    output concentrates in consumer apps and social media (0.61).
 4. **Severity is not media attention.** Coded severity and number of news reports are almost uncorrelated
-   (Spearman ρ = 0.08, n = 992). The constellation therefore offers both as separate size encodings.
+   (Spearman ρ = 0.09, n = 1,001). The constellation therefore offers both as separate size encodings.
 5. **Agentic AI is a distinct new harm profile:** AI agents and coding assistants co-occur with public/national
-   security harms 9.3× and with property damage or service disruption 5.4× more often than chance.
+   security harms 9.4× and with property damage or service disruption 5.4× more often than chance.
 
 ## Evaluation
 
@@ -90,20 +90,18 @@ The coder never saw expert labels. Details and analyzed disagreements: [reports/
 
 | Comparison | n | Result | Context |
 |---|---:|---|---|
-| Risk domain vs **MIT** experts (7 classes) | 868 | **84.3% accuracy, κ = 0.80**, macro-F1 0.76 | majority baseline 29.8% |
-| MIT risk subdomain (23 classes) | 868 | 75.5% exact | |
-| MIT intent / cause entity | 868 | 85.0% (κ 0.72) / 64.9% (κ 0.41) | cause is the hardest field |
+| Risk domain vs **MIT** experts (7 classes) | 876 | **84.4% accuracy, κ = 0.80**, macro-F1 0.76 | majority baseline 30.1% |
+| MIT risk subdomain (23 classes) | 876 | 75.6% exact | |
+| MIT intent / cause entity | 876 | 85.2% (κ 0.73) / 64.8% (κ 0.41) | cause is the hardest field |
 | Sector vs **CSETv1** | 198 | Jaccard **0.71**, 89.9% overlap | CSET annotators agree with each other at 0.70 |
 | Technology vs **GMF** AI goal | 244 | Jaccard **0.81**, 90.2% overlap | |
 | Failure mode vs GMF technical failure | 271 | Jaccard 0.42, 68.3% overlap | GMF codes lower-level causes; lossy crosswalk |
 | Severity vs CSET tangible harm | 200 | mean severity 2.24 when harm occurred vs 0.57–0.96 otherwise; 92% of fatal incidents coded *critical* | ordinal sanity check |
-| **Blind second coder** (different model) | 30* | see [evaluation §7](reports/evaluation.md) | random sample, seed 7 |
-| Quote grounding | 4,727 quotes | **99.5%** verbatim on first pass; 2 non-verbatim quotes caught (5 tags downgraded), 1 misattribution fixed, 17 quotes dropped because they named a private person | |
+| **Blind second coder** (different model) | 30 | risk domain κ **0.87**, primary failure mode κ 0.80, severity weighted κ **0.84** (100% within one band); tag Jaccard 0.72–0.92 | random sample, seed 7 |
+| Quote grounding | 4,763 quotes | **99.5%** verbatim on first pass; 2 non-verbatim quotes caught (5 tags downgraded), 1 misattribution fixed, 17 quotes dropped because they named a private person | |
 
-\* see `reports/evaluation.md` for the final n and agreement statistics.
-
-Incidents outside the coded set (792) get **predicted** tags from their 15 nearest coded neighbours; 5-fold CV
-gives 65.5% risk-domain accuracy (baseline 29.9%) and severity within one band 91% of the time
+Incidents outside the coded set (783) get **predicted** tags from their 15 nearest coded neighbours; 5-fold CV
+gives 65.3% risk-domain accuracy (baseline 30.2%) and severity within one band 91% of the time
 ([reports/propagation.md](reports/propagation.md)). They are labelled “predicted” everywhere, can be switched
 off, and are excluded from the findings above.
 
@@ -112,8 +110,11 @@ off, and are excluded from the findings above.
 - AIID over-represents English-language media and large companies; the atlas inherits that sampling.
 - The LLM read at most three report excerpts (≈2,500 characters each) per incident; details later in articles can
   be missed (then tags are *inferred* or absent).
-- 992 of 1,783 incidents were coded within the run’s budget. The coded set is the pilot, every incident with
-  CSET/GMF expert labels, and a stratified-random sample of the rest, so it is representative, but not complete.
+- 1,001 of 1,783 incidents were coded within the run’s budget. The coded set is the pilot, every incident with
+  CSET/GMF expert labels, a stratified-random sample of the rest, and the blind-coding sample, so it is
+  representative, but not complete.
+- The cluster-selection curve is flat (score 0.088–0.097 for k = 8–19): the chosen k = 18 is a resolution choice,
+  not a discovery. Seed ARI 0.79–0.83, bootstrap ARI 0.89.
 - Severity is a coarse judgement band; allegations in lawsuits are not established facts.
 - Clusters and edges are lenses for exploration. The explanation on each edge is the claim; the picture is not
   evidence.
