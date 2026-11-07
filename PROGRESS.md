@@ -11,7 +11,7 @@
 - [x] P2 Taxonomy v1.0 + crosswalks (config/taxonomy.yaml) — revisit after pilot
 - [x] P2b Entity kinds: 5934 entities via haiku (1055 private_individual hidden) → data/enrich/entity_kinds.csv (hashed keys)
 - [x] P3a Pilot (20; haiku vs sonnet; 120/120 quotes grounded) → docs/pilot_review.md, prompt v1.1, taxonomy v1.1
-- [ ] P3b Scaled extraction with Sonnet, 2 batches/agent, 4 concurrent. Done batches = files in data/enrich/raw/. 3 batches/agent. Dispatched so far: pilot, b000–b056 (4 batches/agent; b043/44/46/47 re-dispatched after limit) → dispatched through b076 → next: b077 (target ≈ b080 then stop, ~1,000 coded). Second coder complete (30). Check gaps: `python -m atlas.extract.status` (fill batches via `status fill`)
+- [ ] P3b Scaled extraction with Sonnet, 2 batches/agent, 4 concurrent. Done batches = files in data/enrich/raw/. 3 batches/agent. Dispatched so far: pilot, b000–b056 (4 batches/agent; b043/44/46/47 re-dispatched after limit) → dispatched through b080 = FINAL extraction scope (~1,064 coded). Next: final pipeline run + write-up. Second coder complete (30). Check gaps: `python -m atlas.extract.status` (fill batches via `status fill`)
 - [~] P4 evaluation module done (src/atlas/analysis/evaluation.py); blind second coding dispatched (haiku; sample in data/enrich/second_sample.json; outputs data/enrich/second/); final run after extraction
 - [~] P5 modules done (embed, similarity, cluster, insights); rerun after extraction
 - [~] P6 App built (Explore/Catalog/Incident/Insights/About); Playwright verify passes (node objects preserved). TODO: Pages workflow, mobile review, final data
