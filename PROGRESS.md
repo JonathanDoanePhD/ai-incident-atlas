@@ -2,7 +2,7 @@
 
 **Current phase:** CONTINUATION (owner asked to code all remaining incidents). Live site deployed from `main`.
 **Recurring check-in:** trigger `trig_01CL6Qhn8o7pBksehnkJEPMz` (hourly at :51) — delete when complete.
-**Extraction dispatch:** 2026-11-07 06:05 UTC (after 2nd usage-limit stop): dispatched b098,b099,b100,b102 | b103,b104,b106,b107 | b108–b111 | b112–b115 + b116–b119 → next: b120 (then up to b146; plan has 149 batches = 2 pilot + b000–b146). Use `python -m atlas.extract.status` to see pending.
+**Extraction dispatch:** 2026-11-07 06:05 UTC (after 2nd usage-limit stop): dispatched b098,b099,b100,b102 | b103,b104,b106,b107 | b108–b111 | b112–b115 + b116–b127 → next: b128 (then up to b146; plan has 149 batches = 2 pilot + b000–b146). Use `python -m atlas.extract.status` to see pending.
 **Publishing:** after each pipeline rerun push to BOTH `claude/ai-incident-atlas-pi61mn` and `main` (`git push origin claude/ai-incident-atlas-pi61mn:main`) — main triggers the Pages deploy.
 
 ## Checklist
