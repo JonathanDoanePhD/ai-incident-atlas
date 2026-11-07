@@ -1,28 +1,28 @@
 {
  "semantic": {
-  "edges": 7462,
-  "isolated_nodes": 59,
-  "mean_degree": 8.37
+  "edges": 7724,
+  "isolated_nodes": 30,
+  "mean_degree": 8.66
  },
  "failure": {
-  "edges": 9142,
-  "isolated_nodes": 100,
-  "mean_degree": 10.25
+  "edges": 9164,
+  "isolated_nodes": 88,
+  "mean_degree": 10.27
  },
  "technology": {
-  "edges": 9265,
-  "isolated_nodes": 163,
-  "mean_degree": 10.39
+  "edges": 9613,
+  "isolated_nodes": 97,
+  "mean_degree": 10.78
  },
  "sector": {
-  "edges": 7429,
-  "isolated_nodes": 442,
-  "mean_degree": 8.33
+  "edges": 7836,
+  "isolated_nodes": 365,
+  "mean_degree": 8.78
  },
  "harm": {
-  "edges": 8052,
-  "isolated_nodes": 307,
-  "mean_degree": 9.03
+  "edges": 8330,
+  "isolated_nodes": 238,
+  "mean_degree": 9.34
  },
  "entity": {
   "edges": 3382,
@@ -30,8 +30,8 @@
   "mean_degree": 3.79
  },
  "blend": {
-  "edges": 8233,
-  "isolated_nodes": 10,
-  "mean_degree": 9.23
+  "edges": 8211,
+  "isolated_nodes": 4,
+  "mean_degree": 9.21
  }
 }

@@ -1,13 +1,14 @@
 {
- "n": 92,
+ "n": 716,
  "genai_cutoff": "2022-11-30",
- "n_pre": 68,
- "n_post": 24,
+ "n_pre": 371,
+ "n_post": 345,
  "yearly": {
   "years": [
    2010,
    2011,
    2012,
+   2013,
    2014,
    2015,
    2016,
@@ -24,27 +25,28 @@
   ],
   "counts": [
    1,
-   1,
-   1,
-   2,
    3,
-   5,
    6,
    5,
-   6,
-   17,
-   6,
-   13,
    9,
-   8,
-   3,
-   3
+   19,
+   32,
+   34,
+   38,
+   30,
+   72,
+   53,
+   59,
+   64,
+   92,
+   112,
+   73
   ],
   "growth_fit": {
    "years": "2014-2025",
-   "annual_growth": 0.083,
-   "slope": 0.07991767170275536,
-   "intercept": -159.63045843613256
+   "annual_growth": 0.197,
+   "slope": 0.17976106459332294,
+   "intercept": -359.2861191517585
   }
  },
  "by_year": {
@@ -65,125 +67,125 @@
     2026
    ],
    "n": [
-    2,
-    3,
-    5,
-    6,
-    5,
-    6,
-    17,
-    6,
-    13,
     9,
-    8,
-    3,
-    3
+    19,
+    32,
+    34,
+    38,
+    30,
+    72,
+    53,
+    59,
+    64,
+    92,
+    112,
+    73
    ],
    "series": {
     "1": [
-     0.0,
-     0.0,
-     1.0,
-     0.5,
-     0.4,
-     0.5,
-     0.3529,
-     0.1667,
-     0.0769,
      0.1111,
-     0.125,
-     0.0,
-     0.0
+     0.3158,
+     0.4062,
+     0.2059,
+     0.2632,
+     0.4,
+     0.3472,
+     0.2642,
+     0.1864,
+     0.1406,
+     0.1196,
+     0.0536,
+     0.0137
     ],
     "2": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.3333
+     0.1111,
+     0.1579,
+     0.0312,
+     0.1765,
+     0.1053,
+     0.1333,
+     0.0278,
+     0.0377,
+     0.1017,
+     0.0156,
+     0.0761,
+     0.0625,
+     0.1233
     ],
     "3": [
      0.0,
+     0.0526,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.1111,
-     0.375,
-     0.6667,
-     0.0
+     0.0294,
+     0.0263,
+     0.0333,
+     0.0556,
+     0.0566,
+     0.0339,
+     0.2812,
+     0.1848,
+     0.1696,
+     0.1507
     ],
     "4": [
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.1176,
-     0.0,
-     0.0769,
-     0.4444,
-     0.5,
-     0.0,
-     0.0
+     0.0526,
+     0.0625,
+     0.0294,
+     0.0526,
+     0.0667,
+     0.0972,
+     0.0566,
+     0.1864,
+     0.2812,
+     0.4348,
+     0.5089,
+     0.4658
     ],
     "5": [
+     0.1111,
      0.0,
+     0.0312,
      0.0,
+     0.0263,
+     0.1333,
      0.0,
-     0.0,
-     0.2,
-     0.5,
-     0.0,
-     0.1667,
-     0.2308,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.0377,
+     0.0678,
+     0.0469,
+     0.0217,
+     0.0446,
+     0.0137
     ],
     "6": [
+     0.1111,
+     0.0526,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.0769,
-     0.0,
-     0.0,
-     0.3333,
-     0.3333
+     0.0263,
+     0.0333,
+     0.0556,
+     0.1321,
+     0.0678,
+     0.0469,
+     0.0217,
+     0.0536,
+     0.0274
     ],
     "7": [
-     1.0,
-     1.0,
-     0.0,
+     0.5556,
+     0.3684,
+     0.4688,
+     0.5588,
      0.5,
-     0.4,
-     0.0,
-     0.4706,
-     0.6667,
-     0.5385,
-     0.3333,
-     0.0,
-     0.0,
-     0.3333
+     0.2,
+     0.4167,
+     0.4151,
+     0.3559,
+     0.1875,
+     0.1413,
+     0.1071,
+     0.2055
     ]
    }
   },
@@ -204,49 +206,49 @@
     2026
    ],
    "n": [
-    2,
-    3,
-    5,
-    6,
-    5,
-    6,
-    17,
-    6,
-    13,
     9,
-    8,
-    3,
-    3
+    19,
+    32,
+    34,
+    38,
+    30,
+    72,
+    53,
+    59,
+    64,
+    92,
+    112,
+    73
    ],
    "series": {
     "adversarial_attack": [
      0.0,
      0.0,
+     0.0312,
+     0.0294,
      0.0,
+     0.0667,
+     0.0556,
      0.0,
-     0.0,
-     0.0,
-     0.1176,
-     0.0,
-     0.0769,
-     0.1111,
-     0.0,
-     0.0,
-     0.0
+     0.0339,
+     0.0312,
+     0.0435,
+     0.0268,
+     0.0685
     ],
     "bias_discrimination": [
-     0.0,
-     0.0,
-     1.0,
-     0.3333,
-     0.2,
-     0.5,
-     0.2353,
-     0.0,
-     0.0769,
      0.1111,
-     0.125,
-     0.0,
+     0.2632,
+     0.4062,
+     0.1765,
+     0.2105,
+     0.3667,
+     0.375,
+     0.1698,
+     0.0847,
+     0.0781,
+     0.0761,
+     0.0089,
      0.0
     ],
     "hallucination": [
@@ -256,163 +258,163 @@
      0.0,
      0.0,
      0.0,
+     0.0139,
      0.0,
-     0.0,
-     0.0,
-     0.1111,
-     0.125,
-     0.3333,
-     0.6667
+     0.0508,
+     0.1562,
+     0.1196,
+     0.1429,
+     0.137
     ],
     "harmful_content": [
      0.0,
-     0.0,
-     0.0,
-     0.3333,
-     0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.0,
-     0.1111,
-     0.0,
-     0.0,
-     0.0
+     0.1053,
+     0.0625,
+     0.1176,
+     0.0263,
+     0.0667,
+     0.0694,
+     0.0566,
+     0.0678,
+     0.1094,
+     0.087,
+     0.0714,
+     0.0137
     ],
     "human_automation_interaction": [
-     0.5,
-     0.0,
-     0.0,
-     0.0,
-     0.4,
-     0.6667,
-     0.0588,
-     0.1667,
-     0.3077,
-     0.0,
-     0.0,
-     0.0,
-     0.3333
+     0.3333,
+     0.0526,
+     0.1875,
+     0.0294,
+     0.2368,
+     0.2667,
+     0.0556,
+     0.0566,
+     0.1186,
+     0.0781,
+     0.0652,
+     0.1607,
+     0.0959
     ],
     "inadequate_oversight": [
-     0.0,
-     0.0,
-     0.0,
-     0.5,
-     0.4,
-     0.0,
-     0.2353,
      0.3333,
-     0.1538,
-     0.4444,
-     0.25,
-     0.0,
-     0.6667
+     0.2105,
+     0.125,
+     0.2647,
+     0.1842,
+     0.1333,
+     0.2083,
+     0.2264,
+     0.2712,
+     0.3281,
+     0.2609,
+     0.2232,
+     0.3288
     ],
     "ip_consent_violation": [
      0.0,
      0.0,
      0.0,
+     0.0588,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.125,
-     0.6667,
-     0.3333
+     0.0333,
+     0.0139,
+     0.0189,
+     0.0339,
+     0.0781,
+     0.1304,
+     0.1071,
+     0.0411
     ],
     "malicious_use": [
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.1176,
-     0.0,
-     0.0769,
-     0.4444,
-     0.75,
-     0.3333,
-     0.0
+     0.0526,
+     0.0312,
+     0.0588,
+     0.1053,
+     0.0333,
+     0.1528,
+     0.0377,
+     0.2203,
+     0.3594,
+     0.4891,
+     0.5446,
+     0.5342
     ],
     "misaligned_objective": [
+     0.1111,
+     0.2105,
+     0.0312,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.1176,
-     0.0,
-     0.0769,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.0789,
+     0.3333,
+     0.0833,
+     0.1509,
+     0.0508,
+     0.0156,
+     0.0326,
+     0.0179,
+     0.0137
     ],
     "opacity_contestability": [
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.0,
      0.3333,
-     0.1176,
-     0.0,
-     0.1538,
-     0.0,
+     0.2105,
      0.125,
-     0.0,
-     0.0
+     0.0588,
+     0.1316,
+     0.2,
+     0.1528,
+     0.1509,
+     0.0508,
+     0.0469,
+     0.0652,
+     0.0357,
+     0.0274
     ],
     "privacy_violation": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.0,
-     0.0,
-     0.125,
-     0.0,
-     0.3333
+     0.1111,
+     0.2105,
+     0.0625,
+     0.1471,
+     0.1053,
+     0.1333,
+     0.0972,
+     0.0755,
+     0.1017,
+     0.0312,
+     0.1087,
+     0.0804,
+     0.0685
     ],
     "robustness_failure": [
-     0.5,
-     1.0,
-     0.4,
+     0.4444,
+     0.2632,
+     0.5312,
+     0.4706,
+     0.5789,
      0.3333,
-     0.6,
-     0.5,
-     0.5882,
-     0.8333,
-     0.5385,
-     0.2222,
+     0.4583,
+     0.5283,
+     0.3898,
+     0.2188,
+     0.1739,
      0.125,
-     0.0,
-     0.0
+     0.1644
     ],
     "security_vulnerability": [
      0.0,
      0.0,
+     0.0312,
+     0.0588,
+     0.0,
+     0.0333,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.3333
+     0.0508,
+     0.0156,
+     0.0435,
+     0.0268,
+     0.1233
     ]
    }
   },
@@ -433,33 +435,33 @@
     2026
    ],
    "n": [
-    2,
-    3,
-    5,
-    6,
-    5,
-    6,
-    17,
-    6,
-    13,
     9,
-    8,
-    3,
-    3
+    19,
+    32,
+    34,
+    38,
+    30,
+    72,
+    53,
+    59,
+    64,
+    92,
+    112,
+    73
    ],
    "series": {
     "ad_targeting_pricing": [
+     0.2222,
+     0.0526,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0.0294,
+     0.0789,
      0.1667,
-     0.1538,
-     0.0,
-     0.0,
+     0.0417,
+     0.0189,
+     0.0339,
+     0.0156,
+     0.0217,
      0.0,
      0.0
     ],
@@ -475,188 +477,203 @@
      0.0,
      0.0,
      0.0,
-     0.0,
-     0.3333
+     0.0357,
+     0.1781
     ],
     "autonomous_vehicle": [
-     0.0,
-     0.3333,
-     0.0,
-     0.3333,
-     0.2,
-     0.5,
-     0.1765,
-     0.0,
-     0.3077,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.1111,
+     0.0526,
+     0.1875,
+     0.1176,
+     0.1579,
+     0.1667,
+     0.0556,
+     0.1132,
+     0.1695,
+     0.0625,
+     0.0543,
+     0.0179,
+     0.0274
     ],
     "computer_vision": [
-     0.5,
+     0.2222,
+     0.0526,
+     0.0312,
+     0.0294,
+     0.0526,
+     0.0333,
+     0.2222,
+     0.0755,
+     0.0508,
      0.0,
-     0.0,
-     0.1667,
-     0.0,
-     0.0,
-     0.1176,
-     0.1667,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.0109,
+     0.0268,
+     0.0137
     ],
     "content_moderation": [
      0.0,
+     0.0526,
      0.0,
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.1765,
-     0.1667,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0.0588,
+     0.1316,
+     0.0333,
+     0.1806,
+     0.1509,
+     0.0169,
+     0.0312,
+     0.0217,
+     0.0268,
      0.0
     ],
     "facial_recognition": [
      0.0,
-     0.0,
-     0.4,
-     0.0,
-     0.4,
-     0.1667,
-     0.1176,
-     0.0,
-     0.0,
-     0.1111,
+     0.1053,
      0.125,
-     0.0,
-     0.0
+     0.2059,
+     0.2105,
+     0.2,
+     0.0833,
+     0.0943,
+     0.0847,
+     0.0469,
+     0.0543,
+     0.0357,
+     0.0274
     ],
     "image_video_generation": [
      0.0,
      0.0,
      0.0,
-     0.1667,
-     0.0,
-     0.0,
      0.0588,
+     0.0263,
      0.0,
-     0.1538,
-     0.3333,
-     0.5,
-     0.6667,
-     0.0
+     0.0694,
+     0.0566,
+     0.1695,
+     0.3125,
+     0.3913,
+     0.4464,
+     0.3973
     ],
     "llm_chatbot": [
      0.0,
      0.0,
-     0.0,
-     0.1667,
-     0.0,
-     0.0,
+     0.0625,
      0.0588,
-     0.0,
-     0.0,
-     0.2222,
-     0.25,
-     0.3333,
-     0.6667
+     0.0263,
+     0.0333,
+     0.0833,
+     0.1132,
+     0.1186,
+     0.3125,
+     0.3261,
+     0.2768,
+     0.274
     ],
     "other_unspecified": [
+     0.1111,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.2,
-     0.0,
+     0.125,
      0.0588,
-     0.1667,
+     0.0526,
      0.0,
+     0.0417,
+     0.0943,
+     0.0678,
      0.0,
-     0.0,
-     0.0,
-     0.0
+     0.0217,
+     0.0536,
+     0.0137
     ],
     "predictive_scoring": [
      0.0,
-     0.0,
-     0.6,
-     0.0,
-     0.0,
-     0.3333,
-     0.2353,
-     0.1667,
-     0.0769,
+     0.2105,
+     0.1875,
+     0.0882,
+     0.1316,
+     0.2333,
      0.1111,
-     0.0,
-     0.0,
-     0.0
+     0.1509,
+     0.0678,
+     0.0938,
+     0.0217,
+     0.0179,
+     0.0411
     ],
     "recommender_ranking": [
      0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.0,
-     0.0,
+     0.3158,
+     0.125,
      0.0588,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0.0789,
+     0.1333,
+     0.0972,
+     0.0943,
+     0.0678,
+     0.0625,
+     0.0109,
+     0.0089,
      0.0
     ],
     "robotics_drones": [
-     0.5,
-     0.3333,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
+     0.1111,
+     0.1053,
+     0.125,
      0.0588,
-     0.3333,
-     0.2308,
+     0.0526,
+     0.0333,
+     0.0556,
+     0.0943,
+     0.0847,
+     0.0,
+     0.0217,
+     0.0,
+     0.0274
+    ],
+    "speech_recognition": [
+     0.1111,
+     0.0526,
+     0.0625,
+     0.0588,
+     0.0526,
+     0.0,
+     0.0139,
+     0.0189,
      0.0,
      0.0,
-     0.0,
+     0.0217,
+     0.0089,
      0.0
     ],
     "surveillance_analytics": [
+     0.2222,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.1111,
-     0.0,
-     0.0,
+     0.0625,
+     0.0294,
+     0.0789,
+     0.0667,
+     0.0694,
+     0.0755,
+     0.1017,
+     0.0312,
+     0.0326,
+     0.0536,
      0.0
     ],
     "translation_nlp": [
      0.0,
-     0.3333,
-     0.0,
-     0.1667,
-     0.0,
-     0.0,
+     0.0526,
+     0.0312,
+     0.1176,
      0.0,
      0.0,
-     0.0769,
+     0.0417,
+     0.0,
+     0.0339,
      0.0,
      0.0,
      0.0,
-     0.0
+     0.0137
     ],
     "voice_synthesis": [
      0.0,
@@ -664,14 +681,14 @@
      0.0,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.1111,
-     0.5,
-     0.0,
-     0.0
+     0.0333,
+     0.0278,
+     0.0189,
+     0.0508,
+     0.1875,
+     0.2283,
+     0.2411,
+     0.0959
     ]
    }
   },
@@ -692,245 +709,245 @@
     2026
    ],
    "n": [
-    2,
-    3,
-    5,
-    6,
-    5,
-    6,
-    17,
-    6,
-    13,
     9,
-    8,
-    3,
-    3
+    19,
+    32,
+    34,
+    38,
+    30,
+    72,
+    53,
+    59,
+    64,
+    92,
+    112,
+    73
    ],
    "series": {
     "child_safety": [
      0.0,
+     0.1053,
+     0.0312,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0769,
-     0.2222,
-     0.125,
-     0.0,
-     0.0
+     0.0263,
+     0.0667,
+     0.0139,
+     0.0566,
+     0.0339,
+     0.0938,
+     0.0761,
+     0.0804,
+     0.0548
     ],
     "civil_rights": [
-     0.0,
-     0.0,
-     0.6,
-     0.0,
-     0.6,
-     0.5,
-     0.1765,
-     0.0,
-     0.0769,
-     0.2222,
-     0.125,
-     0.0,
-     0.0
+     0.3333,
+     0.2105,
+     0.3125,
+     0.2353,
+     0.3158,
+     0.3333,
+     0.2778,
+     0.2264,
+     0.0847,
+     0.0938,
+     0.0761,
+     0.0714,
+     0.0274
     ],
     "democratic": [
      0.0,
+     0.0526,
+     0.0312,
+     0.0,
+     0.0263,
+     0.0667,
+     0.0694,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.0,
-     0.1111,
-     0.25,
-     0.0,
-     0.0
+     0.0938,
+     0.1087,
+     0.0714,
+     0.0822
     ],
     "economic_labor": [
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.0,
-     0.0,
-     0.1176,
-     0.1667,
-     0.1538,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.2222,
+     0.0526,
+     0.0312,
+     0.0294,
+     0.0526,
+     0.0667,
+     0.0694,
+     0.0943,
+     0.0678,
+     0.0469,
+     0.0217,
+     0.0089,
+     0.0274
     ],
     "financial": [
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.0,
-     0.3333,
-     0.1765,
-     0.3333,
-     0.0769,
-     0.0,
-     0.25,
-     0.0,
-     0.0
+     0.1111,
+     0.2105,
+     0.0938,
+     0.0294,
+     0.0789,
+     0.1667,
+     0.1111,
+     0.2075,
+     0.1017,
+     0.1094,
+     0.1957,
+     0.3214,
+     0.1781
     ],
     "intellectual_property": [
      0.0,
      0.0,
      0.0,
+     0.0294,
      0.0,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.3333,
-     0.3333
+     0.0139,
+     0.0189,
+     0.0339,
+     0.0625,
+     0.0326,
+     0.0357,
+     0.0137
     ],
     "misinformation": [
      0.0,
      0.0,
      0.0,
      0.0,
+     0.0263,
      0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.0769,
-     0.2222,
-     0.375,
-     0.6667,
-     0.0
+     0.1111,
+     0.0377,
+     0.1186,
+     0.2812,
+     0.2826,
+     0.2857,
+     0.2466
     ],
     "no_harm_near_miss": [
-     0.5,
-     0.6667,
-     0.2,
-     0.1667,
-     0.2,
-     0.0,
-     0.2353,
-     0.0,
-     0.2308,
+     0.2222,
+     0.1053,
+     0.1562,
+     0.3235,
+     0.1842,
+     0.1333,
      0.1111,
-     0.0,
-     0.0,
-     0.0
+     0.1698,
+     0.2034,
+     0.0625,
+     0.1196,
+     0.0357,
+     0.0274
     ],
     "physical": [
-     0.5,
-     0.3333,
-     0.0,
-     0.1667,
-     0.4,
-     0.5,
-     0.1176,
-     0.3333,
-     0.1538,
      0.1111,
-     0.0,
-     0.0,
-     0.0
+     0.1579,
+     0.1875,
+     0.0294,
+     0.1842,
+     0.2333,
+     0.1111,
+     0.1321,
+     0.1525,
+     0.1094,
+     0.087,
+     0.0804,
+     0.0274
     ],
     "privacy": [
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.2,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
      0.1111,
+     0.2105,
+     0.0625,
+     0.0882,
+     0.1316,
+     0.1,
+     0.0833,
+     0.0566,
+     0.0847,
+     0.0469,
+     0.1304,
      0.125,
-     0.0,
-     0.3333
+     0.1233
     ],
     "property_operational": [
      0.0,
      0.0,
-     0.0,
-     0.1667,
-     0.0,
-     0.0,
-     0.0588,
-     0.0,
-     0.2308,
-     0.0,
-     0.0,
-     0.0,
-     0.0
+     0.1562,
+     0.1471,
+     0.1579,
+     0.0333,
+     0.0556,
+     0.1132,
+     0.1356,
+     0.0781,
+     0.0435,
+     0.0625,
+     0.1781
     ],
     "psychological": [
-     0.0,
-     0.0,
-     0.0,
-     0.5,
-     0.2,
-     0.1667,
-     0.2353,
-     0.3333,
-     0.0769,
-     0.4444,
-     0.0,
-     0.0,
-     0.0
+     0.1111,
+     0.2105,
+     0.0938,
+     0.1765,
+     0.1316,
+     0.1333,
+     0.2778,
+     0.1887,
+     0.1695,
+     0.1719,
+     0.1304,
+     0.1964,
+     0.1644
     ],
     "reputational": [
      0.0,
      0.0,
+     0.0312,
+     0.0294,
+     0.0526,
      0.0,
+     0.0833,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.25,
-     0.3333,
-     0.3333
+     0.0508,
+     0.2031,
+     0.2609,
+     0.2857,
+     0.2329
     ],
     "security_safety": [
      0.0,
+     0.0526,
      0.0,
+     0.0294,
      0.0,
+     0.0333,
      0.0,
+     0.0377,
+     0.0169,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.125,
-     0.0,
-     0.6667
+     0.0217,
+     0.0804,
+     0.1644
     ],
     "sexual_exploitation": [
      0.0,
      0.0,
      0.0,
      0.0,
+     0.0263,
      0.0,
+     0.0139,
+     0.0189,
      0.0,
-     0.0,
-     0.0,
-     0.0,
-     0.2222,
-     0.0,
-     0.0,
-     0.0
+     0.0938,
+     0.1413,
+     0.0714,
+     0.0822
     ]
    }
   }
@@ -938,868 +955,1877 @@
  "era_shift": {
   "risk_domain": [
    {
-    "term": "7",
-    "label": "AI system safety",
-    "pre_share": 0.4853,
-    "post_share": 0.1667,
-    "change_pp": -31.9,
-    "z": -2.74,
-    "p_exploratory": 0.0062
-   },
-   {
     "term": "4",
     "label": "Malicious actors & misuse",
-    "pre_share": 0.0588,
-    "post_share": 0.3333,
-    "change_pp": 27.5,
-    "z": 3.43,
-    "p_exploratory": 0.0006
+    "pre_share": 0.0782,
+    "post_share": 0.4348,
+    "change_pp": 35.7,
+    "z": 11.01,
+    "p_exploratory": 0.0
    },
    {
-    "term": "3",
-    "label": "Misinformation",
-    "pre_share": 0.0,
-    "post_share": 0.25,
-    "change_pp": 25.0,
-    "z": 4.26,
-    "p_exploratory": 2e-05
+    "term": "7",
+    "label": "AI system safety",
+    "pre_share": 0.4151,
+    "post_share": 0.1507,
+    "change_pp": -26.4,
+    "z": -7.81,
+    "p_exploratory": 5.8e-15
    },
    {
     "term": "1",
     "label": "Discrimination & toxicity",
-    "pre_share": 0.3235,
-    "post_share": 0.0833,
-    "change_pp": -24.0,
-    "z": -2.3,
-    "p_exploratory": 0.021
+    "pre_share": 0.2965,
+    "post_share": 0.0812,
+    "change_pp": -21.5,
+    "z": -7.3,
+    "p_exploratory": 2.9e-13
    },
    {
-    "term": "5",
-    "label": "Human\u2013computer interaction",
-    "pre_share": 0.1029,
-    "post_share": 0.0417,
-    "change_pp": -6.1,
-    "z": -0.92,
-    "p_exploratory": 0.36
+    "term": "3",
+    "label": "Misinformation",
+    "pre_share": 0.0377,
+    "post_share": 0.1884,
+    "change_pp": 15.1,
+    "z": 6.43,
+    "p_exploratory": 1.3e-10
    },
    {
     "term": "6",
     "label": "Socioeconomic & environmental",
-    "pre_share": 0.0294,
-    "post_share": 0.0833,
-    "change_pp": 5.4,
-    "z": 1.11,
-    "p_exploratory": 0.27
+    "pre_share": 0.0539,
+    "post_share": 0.0377,
+    "change_pp": -1.6,
+    "z": -1.03,
+    "p_exploratory": 0.3
    },
    {
     "term": "2",
     "label": "Privacy & security",
-    "pre_share": 0.0,
-    "post_share": 0.0417,
-    "change_pp": 4.2,
-    "z": 1.69,
-    "p_exploratory": 0.091
+    "pre_share": 0.0863,
+    "post_share": 0.0725,
+    "change_pp": -1.4,
+    "z": -0.68,
+    "p_exploratory": 0.5
+   },
+   {
+    "term": "5",
+    "label": "Human\u2013computer interaction",
+    "pre_share": 0.0323,
+    "post_share": 0.0348,
+    "change_pp": 0.2,
+    "z": 0.18,
+    "p_exploratory": 0.86
    }
   ],
   "failure_mode": [
    {
-    "term": "robustness_failure",
-    "label": "Robustness / capability failure",
-    "pre_share": 0.5735,
-    "post_share": 0.125,
-    "change_pp": -44.9,
-    "z": -3.79,
-    "p_exploratory": 0.00015
-   },
-   {
     "term": "malicious_use",
     "label": "Deliberate misuse by people",
-    "pre_share": 0.0735,
-    "post_share": 0.4583,
-    "change_pp": 38.5,
-    "z": 4.28,
-    "p_exploratory": 1.9e-05
+    "pre_share": 0.0943,
+    "post_share": 0.4899,
+    "change_pp": 39.6,
+    "z": 11.72,
+    "p_exploratory": 0.0
    },
    {
-    "term": "hallucination",
-    "label": "Hallucination & fabrication",
-    "pre_share": 0.0,
-    "post_share": 0.2083,
-    "change_pp": 20.8,
-    "z": 3.87,
-    "p_exploratory": 0.00011
+    "term": "robustness_failure",
+    "label": "Robustness / capability failure",
+    "pre_share": 0.4582,
+    "post_share": 0.1652,
+    "change_pp": -29.3,
+    "z": -8.42,
+    "p_exploratory": 0.0
    },
    {
     "term": "bias_discrimination",
     "label": "Bias & disparate performance",
-    "pre_share": 0.25,
-    "post_share": 0.0833,
-    "change_pp": -16.7,
-    "z": -1.73,
-    "p_exploratory": 0.083
+    "pre_share": 0.2615,
+    "post_share": 0.0377,
+    "change_pp": -22.4,
+    "z": -8.3,
+    "p_exploratory": 0.0
    },
    {
-    "term": "ip_consent_violation",
-    "label": "IP",
-    "pre_share": 0.0,
-    "post_share": 0.1667,
-    "change_pp": 16.7,
-    "z": 3.44,
-    "p_exploratory": 0.00058
-   },
-   {
-    "term": "inadequate_oversight",
-    "label": "Inadequate testing or oversight",
-    "pre_share": 0.2059,
-    "post_share": 0.3333,
-    "change_pp": 12.7,
-    "z": 1.26,
-    "p_exploratory": 0.21
-   },
-   {
-    "term": "human_automation_interaction",
-    "label": "Human\u2013automation interaction",
-    "pre_share": 0.1765,
-    "post_share": 0.0833,
-    "change_pp": -9.3,
-    "z": -1.09,
-    "p_exploratory": 0.27
+    "term": "hallucination",
+    "label": "Hallucination & fabrication",
+    "pre_share": 0.0108,
+    "post_share": 0.1362,
+    "change_pp": 12.5,
+    "z": 6.52,
+    "p_exploratory": 7e-11
    },
    {
     "term": "opacity_contestability",
     "label": "Opacity & lack of recourse",
-    "pre_share": 0.1176,
-    "post_share": 0.0417,
-    "change_pp": -7.6,
-    "z": -1.08,
-    "p_exploratory": 0.28
-   },
-   {
-    "term": "privacy_violation",
-    "label": "Privacy violation & data misuse",
-    "pre_share": 0.0147,
-    "post_share": 0.0833,
-    "change_pp": 6.9,
-    "z": 1.63,
-    "p_exploratory": 0.1
+    "pre_share": 0.1402,
+    "post_share": 0.0435,
+    "change_pp": -9.7,
+    "z": -4.44,
+    "p_exploratory": 9.1e-06
    },
    {
     "term": "misaligned_objective",
     "label": "Misaligned objective / specification gaming",
-    "pre_share": 0.0588,
-    "post_share": 0.0,
-    "change_pp": -5.9,
-    "z": -1.21,
-    "p_exploratory": 0.22
+    "pre_share": 0.1024,
+    "post_share": 0.0203,
+    "change_pp": -8.2,
+    "z": -4.53,
+    "p_exploratory": 6e-06
    },
    {
-    "term": "adversarial_attack",
-    "label": "Adversarial attack / jailbreak",
-    "pre_share": 0.0294,
-    "post_share": 0.0833,
-    "change_pp": 5.4,
-    "z": 1.11,
-    "p_exploratory": 0.27
+    "term": "inadequate_oversight",
+    "label": "Inadequate testing or oversight",
+    "pre_share": 0.2049,
+    "post_share": 0.2783,
+    "change_pp": 7.3,
+    "z": 2.3,
+    "p_exploratory": 0.022
+   },
+   {
+    "term": "ip_consent_violation",
+    "label": "IP",
+    "pre_share": 0.0216,
+    "post_share": 0.0928,
+    "change_pp": 7.1,
+    "z": 4.14,
+    "p_exploratory": 3.4e-05
+   },
+   {
+    "term": "privacy_violation",
+    "label": "Privacy violation & data misuse",
+    "pre_share": 0.1078,
+    "post_share": 0.0783,
+    "change_pp": -3.0,
+    "z": -1.36,
+    "p_exploratory": 0.17
    },
    {
     "term": "security_vulnerability",
     "label": "Security vulnerability",
-    "pre_share": 0.0,
-    "post_share": 0.0417,
-    "change_pp": 4.2,
-    "z": 1.69,
-    "p_exploratory": 0.091
+    "pre_share": 0.0216,
+    "post_share": 0.0493,
+    "change_pp": 2.8,
+    "z": 2.02,
+    "p_exploratory": 0.044
+   },
+   {
+    "term": "adversarial_attack",
+    "label": "Adversarial attack / jailbreak",
+    "pre_share": 0.0243,
+    "post_share": 0.0435,
+    "change_pp": 1.9,
+    "z": 1.43,
+    "p_exploratory": 0.15
+   },
+   {
+    "term": "human_automation_interaction",
+    "label": "Human\u2013automation interaction",
+    "pre_share": 0.124,
+    "post_share": 0.1072,
+    "change_pp": -1.7,
+    "z": -0.7,
+    "p_exploratory": 0.48
    },
    {
     "term": "harmful_content",
     "label": "Harmful or unsafe output",
-    "pre_share": 0.0441,
-    "post_share": 0.0417,
-    "change_pp": -0.2,
-    "z": -0.05,
-    "p_exploratory": 0.96
+    "pre_share": 0.0647,
+    "post_share": 0.0696,
+    "change_pp": 0.5,
+    "z": 0.26,
+    "p_exploratory": 0.79
    }
   ],
   "technology": [
    {
     "term": "image_video_generation",
     "label": "Image & video generation (incl. deepfakes)",
-    "pre_share": 0.0588,
-    "post_share": 0.375,
-    "change_pp": 31.6,
-    "z": 3.82,
-    "p_exploratory": 0.00013
+    "pre_share": 0.0566,
+    "post_share": 0.3913,
+    "change_pp": 33.5,
+    "z": 10.84,
+    "p_exploratory": 0.0
    },
    {
     "term": "llm_chatbot",
     "label": "LLM / chatbot / generative text",
-    "pre_share": 0.0294,
-    "post_share": 0.2917,
-    "change_pp": 26.2,
-    "z": 3.72,
-    "p_exploratory": 0.0002
+    "pre_share": 0.0647,
+    "post_share": 0.2957,
+    "change_pp": 23.1,
+    "z": 8.11,
+    "p_exploratory": 4.4e-16
    },
    {
     "term": "voice_synthesis",
     "label": "Voice cloning & speech synthesis",
-    "pre_share": 0.0,
-    "post_share": 0.2083,
-    "change_pp": 20.8,
-    "z": 3.87,
-    "p_exploratory": 0.00011
+    "pre_share": 0.0189,
+    "post_share": 0.1942,
+    "change_pp": 17.5,
+    "z": 7.7,
+    "p_exploratory": 1.4e-14
    },
    {
     "term": "predictive_scoring",
     "label": "Predictive / risk scoring & automated decisions",
-    "pre_share": 0.2059,
-    "post_share": 0.0417,
-    "change_pp": -16.4,
-    "z": -1.87,
-    "p_exploratory": 0.061
-   },
-   {
-    "term": "autonomous_vehicle",
-    "label": "Autonomous & driver-assist vehicles",
-    "pre_share": 0.1912,
-    "post_share": 0.0417,
-    "change_pp": -15.0,
-    "z": -1.75,
-    "p_exploratory": 0.08
-   },
-   {
-    "term": "robotics_drones",
-    "label": "Robotics",
-    "pre_share": 0.1176,
-    "post_share": 0.0,
-    "change_pp": -11.8,
-    "z": -1.76,
-    "p_exploratory": 0.079
-   },
-   {
-    "term": "computer_vision",
-    "label": "Computer vision & object detection",
-    "pre_share": 0.0735,
-    "post_share": 0.0,
-    "change_pp": -7.4,
-    "z": -1.37,
-    "p_exploratory": 0.17
-   },
-   {
-    "term": "content_moderation",
-    "label": "Content moderation & classification",
-    "pre_share": 0.0735,
-    "post_share": 0.0,
-    "change_pp": -7.4,
-    "z": -1.37,
-    "p_exploratory": 0.17
-   },
-   {
-    "term": "other_unspecified",
-    "label": "Other / unspecified AI",
-    "pre_share": 0.0735,
-    "post_share": 0.0,
-    "change_pp": -7.4,
-    "z": -1.37,
-    "p_exploratory": 0.17
-   },
-   {
-    "term": "ad_targeting_pricing",
-    "label": "Ad targeting",
-    "pre_share": 0.0441,
-    "post_share": 0.0,
-    "change_pp": -4.4,
-    "z": -1.05,
-    "p_exploratory": 0.3
+    "pre_share": 0.159,
+    "post_share": 0.0377,
+    "change_pp": -12.1,
+    "z": -5.39,
+    "p_exploratory": 6.9e-08
    },
    {
     "term": "recommender_ranking",
     "label": "Recommender",
-    "pre_share": 0.0441,
-    "post_share": 0.0,
-    "change_pp": -4.4,
-    "z": -1.05,
-    "p_exploratory": 0.3
+    "pre_share": 0.1078,
+    "post_share": 0.0174,
+    "change_pp": -9.0,
+    "z": -4.93,
+    "p_exploratory": 8.2e-07
    },
    {
-    "term": "translation_nlp",
-    "label": "Translation & other language processing",
-    "pre_share": 0.0441,
-    "post_share": 0.0,
-    "change_pp": -4.4,
-    "z": -1.05,
-    "p_exploratory": 0.3
+    "term": "autonomous_vehicle",
+    "label": "Autonomous & driver-assist vehicles",
+    "pre_share": 0.1132,
+    "post_share": 0.0406,
+    "change_pp": -7.3,
+    "z": -3.62,
+    "p_exploratory": 0.0003
    },
    {
-    "term": "agentic_ai",
-    "label": "AI agents & coding assistants",
-    "pre_share": 0.0,
-    "post_share": 0.0417,
-    "change_pp": 4.2,
-    "z": 1.69,
-    "p_exploratory": 0.091
-   },
-   {
-    "term": "surveillance_analytics",
-    "label": "Surveillance & tracking analytics",
-    "pre_share": 0.0147,
-    "post_share": 0.0417,
-    "change_pp": 2.7,
-    "z": 0.78,
-    "p_exploratory": 0.44
+    "term": "computer_vision",
+    "label": "Computer vision & object detection",
+    "pre_share": 0.0863,
+    "post_share": 0.0145,
+    "change_pp": -7.2,
+    "z": -4.33,
+    "p_exploratory": 1.5e-05
    },
    {
     "term": "facial_recognition",
     "label": "Facial recognition & biometrics",
-    "pre_share": 0.1029,
-    "post_share": 0.0833,
-    "change_pp": -2.0,
-    "z": -0.28,
-    "p_exploratory": 0.78
+    "pre_share": 0.1159,
+    "post_share": 0.0435,
+    "change_pp": -7.2,
+    "z": -3.55,
+    "p_exploratory": 0.00039
+   },
+   {
+    "term": "content_moderation",
+    "label": "Content moderation & classification",
+    "pre_share": 0.0836,
+    "post_share": 0.0232,
+    "change_pp": -6.0,
+    "z": -3.56,
+    "p_exploratory": 0.00038
+   },
+   {
+    "term": "robotics_drones",
+    "label": "Robotics",
+    "pre_share": 0.0701,
+    "post_share": 0.0116,
+    "change_pp": -5.8,
+    "z": -3.9,
+    "p_exploratory": 9.5e-05
+   },
+   {
+    "term": "agentic_ai",
+    "label": "AI agents & coding assistants",
+    "pre_share": 0.0027,
+    "post_share": 0.0493,
+    "change_pp": 4.7,
+    "z": 3.98,
+    "p_exploratory": 6.9e-05
+   },
+   {
+    "term": "ad_targeting_pricing",
+    "label": "Ad targeting",
+    "pre_share": 0.0539,
+    "post_share": 0.0087,
+    "change_pp": -4.5,
+    "z": -3.43,
+    "p_exploratory": 0.00061
+   },
+   {
+    "term": "surveillance_analytics",
+    "label": "Surveillance & tracking analytics",
+    "pre_share": 0.0755,
+    "post_share": 0.0319,
+    "change_pp": -4.4,
+    "z": -2.57,
+    "p_exploratory": 0.01
+   },
+   {
+    "term": "other_unspecified",
+    "label": "Other / unspecified AI",
+    "pre_share": 0.0647,
+    "post_share": 0.0261,
+    "change_pp": -3.9,
+    "z": -2.46,
+    "p_exploratory": 0.014
+   },
+   {
+    "term": "translation_nlp",
+    "label": "Translation & other language processing",
+    "pre_share": 0.0296,
+    "post_share": 0.0029,
+    "change_pp": -2.7,
+    "z": -2.79,
+    "p_exploratory": 0.0053
+   },
+   {
+    "term": "speech_recognition",
+    "label": "Speech recognition & voice assistants",
+    "pre_share": 0.027,
+    "post_share": 0.0087,
+    "change_pp": -1.8,
+    "z": -1.83,
+    "p_exploratory": 0.067
    }
   ],
   "harm_type": [
    {
     "term": "misinformation",
     "label": "Misinformation & information integrity",
-    "pre_share": 0.0294,
-    "post_share": 0.2917,
-    "change_pp": 26.2,
-    "z": 3.72,
-    "p_exploratory": 0.0002
+    "pre_share": 0.0485,
+    "post_share": 0.2725,
+    "change_pp": 22.4,
+    "z": 8.24,
+    "p_exploratory": 2.2e-16
    },
    {
     "term": "reputational",
     "label": "Reputation & defamation",
-    "pre_share": 0.0,
-    "post_share": 0.1667,
-    "change_pp": 16.7,
-    "z": 3.44,
-    "p_exploratory": 0.00058
-   },
-   {
-    "term": "physical",
-    "label": "Physical injury or death",
-    "pre_share": 0.2059,
-    "post_share": 0.0417,
-    "change_pp": -16.4,
-    "z": -1.87,
-    "p_exploratory": 0.061
-   },
-   {
-    "term": "security_safety",
-    "label": "Public or national security",
-    "pre_share": 0.0,
-    "post_share": 0.125,
-    "change_pp": 12.5,
-    "z": 2.96,
-    "p_exploratory": 0.003
-   },
-   {
-    "term": "no_harm_near_miss",
-    "label": "No realized harm (issue or near miss)",
-    "pre_share": 0.2059,
-    "post_share": 0.0833,
-    "change_pp": -12.3,
-    "z": -1.36,
-    "p_exploratory": 0.17
-   },
-   {
-    "term": "child_safety",
-    "label": "Child safety",
-    "pre_share": 0.0147,
-    "post_share": 0.125,
-    "change_pp": 11.0,
-    "z": 2.28,
-    "p_exploratory": 0.023
-   },
-   {
-    "term": "democratic",
-    "label": "Democratic & political processes",
-    "pre_share": 0.0147,
-    "post_share": 0.125,
-    "change_pp": 11.0,
-    "z": 2.28,
-    "p_exploratory": 0.023
-   },
-   {
-    "term": "privacy",
-    "label": "Privacy",
-    "pre_share": 0.0147,
-    "post_share": 0.125,
-    "change_pp": 11.0,
-    "z": 2.28,
-    "p_exploratory": 0.023
-   },
-   {
-    "term": "financial",
-    "label": "Financial loss",
-    "pre_share": 0.1765,
-    "post_share": 0.0833,
-    "change_pp": -9.3,
-    "z": -1.09,
-    "p_exploratory": 0.27
-   },
-   {
-    "term": "economic_labor",
-    "label": "Labor & economic opportunity",
-    "pre_share": 0.0882,
-    "post_share": 0.0,
-    "change_pp": -8.8,
-    "z": -1.51,
-    "p_exploratory": 0.13
-   },
-   {
-    "term": "intellectual_property",
-    "label": "Intellectual property",
-    "pre_share": 0.0,
-    "post_share": 0.0833,
-    "change_pp": 8.3,
-    "z": 2.41,
-    "p_exploratory": 0.016
-   },
-   {
-    "term": "sexual_exploitation",
-    "label": "Non-consensual sexual content & exploitation",
-    "pre_share": 0.0,
-    "post_share": 0.0833,
-    "change_pp": 8.3,
-    "z": 2.41,
-    "p_exploratory": 0.016
+    "pre_share": 0.0431,
+    "post_share": 0.2493,
+    "change_pp": 20.6,
+    "z": 7.89,
+    "p_exploratory": 3.1e-15
    },
    {
     "term": "civil_rights",
     "label": "Civil rights & discrimination",
-    "pre_share": 0.2059,
-    "post_share": 0.125,
-    "change_pp": -8.1,
-    "z": -0.88,
-    "p_exploratory": 0.38
+    "pre_share": 0.2588,
+    "post_share": 0.0696,
+    "change_pp": -18.9,
+    "z": -6.77,
+    "p_exploratory": 1.3e-11
+   },
+   {
+    "term": "no_harm_near_miss",
+    "label": "No realized harm (issue or near miss)",
+    "pre_share": 0.1617,
+    "post_share": 0.0696,
+    "change_pp": -9.2,
+    "z": -3.83,
+    "p_exploratory": 0.00013
+   },
+   {
+    "term": "financial",
+    "label": "Financial loss",
+    "pre_share": 0.1267,
+    "post_share": 0.2145,
+    "change_pp": 8.8,
+    "z": 3.13,
+    "p_exploratory": 0.0017
+   },
+   {
+    "term": "sexual_exploitation",
+    "label": "Non-consensual sexual content & exploitation",
+    "pre_share": 0.0081,
+    "post_share": 0.0957,
+    "change_pp": 8.8,
+    "z": 5.36,
+    "p_exploratory": 8.4e-08
+   },
+   {
+    "term": "physical",
+    "label": "Physical injury or death",
+    "pre_share": 0.1429,
+    "post_share": 0.0754,
+    "change_pp": -6.7,
+    "z": -2.88,
+    "p_exploratory": 0.004
+   },
+   {
+    "term": "democratic",
+    "label": "Democratic & political processes",
+    "pre_share": 0.027,
+    "post_share": 0.087,
+    "change_pp": 6.0,
+    "z": 3.49,
+    "p_exploratory": 0.00048
+   },
+   {
+    "term": "security_safety",
+    "label": "Public or national security",
+    "pre_share": 0.0135,
+    "post_share": 0.0696,
+    "change_pp": 5.6,
+    "z": 3.8,
+    "p_exploratory": 0.00014
+   },
+   {
+    "term": "economic_labor",
+    "label": "Labor & economic opportunity",
+    "pre_share": 0.0728,
+    "post_share": 0.0232,
+    "change_pp": -5.0,
+    "z": -3.07,
+    "p_exploratory": 0.0021
+   },
+   {
+    "term": "child_safety",
+    "label": "Child safety",
+    "pre_share": 0.0323,
+    "post_share": 0.0754,
+    "change_pp": 4.3,
+    "z": 2.57,
+    "p_exploratory": 0.01
+   },
+   {
+    "term": "intellectual_property",
+    "label": "Intellectual property",
+    "pre_share": 0.0135,
+    "post_share": 0.0348,
+    "change_pp": 2.1,
+    "z": 1.87,
+    "p_exploratory": 0.061
+   },
+   {
+    "term": "privacy",
+    "label": "Privacy",
+    "pre_share": 0.0943,
+    "post_share": 0.113,
+    "change_pp": 1.9,
+    "z": 0.82,
+    "p_exploratory": 0.41
    },
    {
     "term": "property_operational",
     "label": "Property damage & service disruption",
-    "pre_share": 0.0735,
-    "post_share": 0.0,
-    "change_pp": -7.4,
-    "z": -1.37,
-    "p_exploratory": 0.17
+    "pre_share": 0.0943,
+    "post_share": 0.0841,
+    "change_pp": -1.0,
+    "z": -0.48,
+    "p_exploratory": 0.63
    },
    {
     "term": "psychological",
     "label": "Psychological & emotional",
-    "pre_share": 0.1765,
-    "post_share": 0.1667,
-    "change_pp": -1.0,
-    "z": -0.11,
-    "p_exploratory": 0.91
+    "pre_share": 0.1698,
+    "post_share": 0.1652,
+    "change_pp": -0.5,
+    "z": -0.16,
+    "p_exploratory": 0.87
    }
   ]
  },
- "harm_x_technology": [],
- "failure_x_technology": [],
+ "harm_x_technology": [
+  {
+   "a": "surveillance_analytics",
+   "a_label": "Surveillance & tracking analytics",
+   "b": "privacy",
+   "b_label": "Privacy",
+   "n": 22,
+   "lift": 5.46,
+   "share_of_a": 0.564
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "privacy",
+   "b_label": "Privacy",
+   "n": 28,
+   "lift": 4.67,
+   "share_of_a": 0.483
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "sexual_exploitation",
+   "b_label": "Non-consensual sexual content & exploitation",
+   "n": 33,
+   "lift": 4.21,
+   "share_of_a": 0.212
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "property_operational",
+   "b_label": "Property damage & service disruption",
+   "n": 19,
+   "lift": 3.8,
+   "share_of_a": 0.339
+  },
+  {
+   "a": "robotics_drones",
+   "a_label": "Robotics",
+   "b": "physical",
+   "b_label": "Physical injury or death",
+   "n": 12,
+   "lift": 3.63,
+   "share_of_a": 0.4
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "physical",
+   "b_label": "Physical injury or death",
+   "n": 21,
+   "lift": 3.4,
+   "share_of_a": 0.375
+  },
+  {
+   "a": "surveillance_analytics",
+   "a_label": "Surveillance & tracking analytics",
+   "b": "civil_rights",
+   "b_label": "Civil rights & discrimination",
+   "n": 22,
+   "lift": 3.37,
+   "share_of_a": 0.564
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "civil_rights",
+   "b_label": "Civil rights & discrimination",
+   "n": 32,
+   "lift": 3.29,
+   "share_of_a": 0.552
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "democratic",
+   "b_label": "Democratic & political processes",
+   "n": 13,
+   "lift": 3.14,
+   "share_of_a": 0.176
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "economic_labor",
+   "b_label": "Labor & economic opportunity",
+   "n": 11,
+   "lift": 3.13,
+   "share_of_a": 0.153
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "reputational",
+   "b_label": "Reputation & defamation",
+   "n": 32,
+   "lift": 3.04,
+   "share_of_a": 0.432
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "misinformation",
+   "b_label": "Misinformation & information integrity",
+   "n": 34,
+   "lift": 2.94,
+   "share_of_a": 0.459
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "civil_rights",
+   "b_label": "Civil rights & discrimination",
+   "n": 34,
+   "lift": 2.82,
+   "share_of_a": 0.472
+  },
+  {
+   "a": "computer_vision",
+   "a_label": "Computer vision & object detection",
+   "b": "no_harm_near_miss",
+   "b_label": "No realized harm (issue or near miss)",
+   "n": 11,
+   "lift": 2.53,
+   "share_of_a": 0.297
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "democratic",
+   "b_label": "Democratic & political processes",
+   "n": 22,
+   "lift": 2.52,
+   "share_of_a": 0.141
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "financial",
+   "b_label": "Financial loss",
+   "n": 31,
+   "lift": 2.48,
+   "share_of_a": 0.419
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "reputational",
+   "b_label": "Reputation & defamation",
+   "n": 54,
+   "lift": 2.43,
+   "share_of_a": 0.346
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "misinformation",
+   "b_label": "Misinformation & information integrity",
+   "n": 57,
+   "lift": 2.34,
+   "share_of_a": 0.365
+  },
+  {
+   "a": "recommender_ranking",
+   "a_label": "Recommender",
+   "b": "psychological",
+   "b_label": "Psychological & emotional",
+   "n": 15,
+   "lift": 1.95,
+   "share_of_a": 0.326
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "financial",
+   "b_label": "Financial loss",
+   "n": 50,
+   "lift": 1.9,
+   "share_of_a": 0.321
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "no_harm_near_miss",
+   "b_label": "No realized harm (issue or near miss)",
+   "n": 12,
+   "lift": 1.83,
+   "share_of_a": 0.214
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "misinformation",
+   "b_label": "Misinformation & information integrity",
+   "n": 36,
+   "lift": 1.83,
+   "share_of_a": 0.286
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "child_safety",
+   "b_label": "Child safety",
+   "n": 15,
+   "lift": 1.81,
+   "share_of_a": 0.096
+  },
+  {
+   "a": "computer_vision",
+   "a_label": "Computer vision & object detection",
+   "b": "psychological",
+   "b_label": "Psychological & emotional",
+   "n": 11,
+   "lift": 1.77,
+   "share_of_a": 0.297
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "physical",
+   "b_label": "Physical injury or death",
+   "n": 14,
+   "lift": 1.76,
+   "share_of_a": 0.194
+  },
+  {
+   "a": "content_moderation",
+   "a_label": "Content moderation & classification",
+   "b": "psychological",
+   "b_label": "Psychological & emotional",
+   "n": 11,
+   "lift": 1.68,
+   "share_of_a": 0.282
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "reputational",
+   "b_label": "Reputation & defamation",
+   "n": 30,
+   "lift": 1.67,
+   "share_of_a": 0.238
+  },
+  {
+   "a": "computer_vision",
+   "a_label": "Computer vision & object detection",
+   "b": "civil_rights",
+   "b_label": "Civil rights & discrimination",
+   "n": 10,
+   "lift": 1.61,
+   "share_of_a": 0.27
+  },
+  {
+   "a": "content_moderation",
+   "a_label": "Content moderation & classification",
+   "b": "civil_rights",
+   "b_label": "Civil rights & discrimination",
+   "n": 10,
+   "lift": 1.53,
+   "share_of_a": 0.256
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "psychological",
+   "b_label": "Psychological & emotional",
+   "n": 36,
+   "lift": 1.38,
+   "share_of_a": 0.231
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "financial",
+   "b_label": "Financial loss",
+   "n": 16,
+   "lift": 1.31,
+   "share_of_a": 0.222
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "no_harm_near_miss",
+   "b_label": "No realized harm (issue or near miss)",
+   "n": 18,
+   "lift": 1.22,
+   "share_of_a": 0.143
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "psychological",
+   "b_label": "Psychological & emotional",
+   "n": 25,
+   "lift": 1.18,
+   "share_of_a": 0.198
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "privacy",
+   "b_label": "Privacy",
+   "n": 12,
+   "lift": 0.92,
+   "share_of_a": 0.095
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "physical",
+   "b_label": "Physical injury or death",
+   "n": 11,
+   "lift": 0.79,
+   "share_of_a": 0.087
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "financial",
+   "b_label": "Financial loss",
+   "n": 14,
+   "lift": 0.66,
+   "share_of_a": 0.111
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "privacy",
+   "b_label": "Privacy",
+   "n": 10,
+   "lift": 0.62,
+   "share_of_a": 0.064
+  }
+ ],
+ "failure_x_technology": [
+  {
+   "a": "ad_targeting_pricing",
+   "a_label": "Ad targeting",
+   "b": "misaligned_objective",
+   "b_label": "Misaligned objective / specification gaming",
+   "n": 10,
+   "lift": 6.92,
+   "share_of_a": 0.435
+  },
+  {
+   "a": "surveillance_analytics",
+   "a_label": "Surveillance & tracking analytics",
+   "b": "privacy_violation",
+   "b_label": "Privacy violation & data misuse",
+   "n": 22,
+   "lift": 6.03,
+   "share_of_a": 0.564
+  },
+  {
+   "a": "recommender_ranking",
+   "a_label": "Recommender",
+   "b": "misaligned_objective",
+   "b_label": "Misaligned objective / specification gaming",
+   "n": 17,
+   "lift": 5.88,
+   "share_of_a": 0.37
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "hallucination",
+   "b_label": "Hallucination & fabrication",
+   "n": 49,
+   "lift": 5.46,
+   "share_of_a": 0.389
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "privacy_violation",
+   "b_label": "Privacy violation & data misuse",
+   "n": 27,
+   "lift": 4.97,
+   "share_of_a": 0.466
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "opacity_contestability",
+   "b_label": "Opacity & lack of recourse",
+   "n": 31,
+   "lift": 4.6,
+   "share_of_a": 0.431
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "human_automation_interaction",
+   "b_label": "Human\u2013automation interaction",
+   "n": 27,
+   "lift": 4.16,
+   "share_of_a": 0.482
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "ip_consent_violation",
+   "b_label": "IP",
+   "n": 14,
+   "lift": 3.39,
+   "share_of_a": 0.189
+  },
+  {
+   "a": "recommender_ranking",
+   "a_label": "Recommender",
+   "b": "harmful_content",
+   "b_label": "Harmful or unsafe output",
+   "n": 10,
+   "lift": 3.24,
+   "share_of_a": 0.217
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "harmful_content",
+   "b_label": "Harmful or unsafe output",
+   "n": 27,
+   "lift": 3.2,
+   "share_of_a": 0.214
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "bias_discrimination",
+   "b_label": "Bias & disparate performance",
+   "n": 34,
+   "lift": 3.07,
+   "share_of_a": 0.472
+  },
+  {
+   "a": "voice_synthesis",
+   "a_label": "Voice cloning & speech synthesis",
+   "b": "malicious_use",
+   "b_label": "Deliberate misuse by people",
+   "n": 64,
+   "lift": 3.04,
+   "share_of_a": 0.865
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "malicious_use",
+   "b_label": "Deliberate misuse by people",
+   "n": 134,
+   "lift": 3.01,
+   "share_of_a": 0.859
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 49,
+   "lift": 2.76,
+   "share_of_a": 0.875
+  },
+  {
+   "a": "agentic_ai",
+   "a_label": "AI agents & coding assistants",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 11,
+   "lift": 2.54,
+   "share_of_a": 0.611
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "ip_consent_violation",
+   "b_label": "IP",
+   "n": 22,
+   "lift": 2.52,
+   "share_of_a": 0.141
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "adversarial_attack",
+   "b_label": "Adversarial attack / jailbreak",
+   "n": 10,
+   "lift": 2.37,
+   "share_of_a": 0.079
+  },
+  {
+   "a": "content_moderation",
+   "a_label": "Content moderation & classification",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 29,
+   "lift": 2.35,
+   "share_of_a": 0.744
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "bias_discrimination",
+   "b_label": "Bias & disparate performance",
+   "n": 20,
+   "lift": 2.24,
+   "share_of_a": 0.345
+  },
+  {
+   "a": "robotics_drones",
+   "a_label": "Robotics",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 20,
+   "lift": 2.1,
+   "share_of_a": 0.667
+  },
+  {
+   "a": "computer_vision",
+   "a_label": "Computer vision & object detection",
+   "b": "bias_discrimination",
+   "b_label": "Bias & disparate performance",
+   "n": 11,
+   "lift": 1.94,
+   "share_of_a": 0.297
+  },
+  {
+   "a": "computer_vision",
+   "a_label": "Computer vision & object detection",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 22,
+   "lift": 1.88,
+   "share_of_a": 0.595
+  },
+  {
+   "a": "recommender_ranking",
+   "a_label": "Recommender",
+   "b": "bias_discrimination",
+   "b_label": "Bias & disparate performance",
+   "n": 13,
+   "lift": 1.84,
+   "share_of_a": 0.283
+  },
+  {
+   "a": "content_moderation",
+   "a_label": "Content moderation & classification",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 17,
+   "lift": 1.81,
+   "share_of_a": 0.436
+  },
+  {
+   "a": "robotics_drones",
+   "a_label": "Robotics",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 12,
+   "lift": 1.67,
+   "share_of_a": 0.4
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "human_automation_interaction",
+   "b_label": "Human\u2013automation interaction",
+   "n": 23,
+   "lift": 1.57,
+   "share_of_a": 0.183
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 47,
+   "lift": 1.55,
+   "share_of_a": 0.373
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 34,
+   "lift": 1.49,
+   "share_of_a": 0.472
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 24,
+   "lift": 1.31,
+   "share_of_a": 0.414
+  },
+  {
+   "a": "surveillance_analytics",
+   "a_label": "Surveillance & tracking analytics",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 12,
+   "lift": 1.28,
+   "share_of_a": 0.308
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "privacy_violation",
+   "b_label": "Privacy violation & data misuse",
+   "n": 14,
+   "lift": 1.19,
+   "share_of_a": 0.111
+  },
+  {
+   "a": "other_unspecified",
+   "a_label": "Other / unspecified AI",
+   "b": "malicious_use",
+   "b_label": "Deliberate misuse by people",
+   "n": 11,
+   "lift": 1.17,
+   "share_of_a": 0.333
+  },
+  {
+   "a": "other_unspecified",
+   "a_label": "Other / unspecified AI",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 12,
+   "lift": 1.15,
+   "share_of_a": 0.364
+  },
+  {
+   "a": "recommender_ranking",
+   "a_label": "Recommender",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 12,
+   "lift": 1.09,
+   "share_of_a": 0.261
+  },
+  {
+   "a": "surveillance_analytics",
+   "a_label": "Surveillance & tracking analytics",
+   "b": "robustness_failure",
+   "b_label": "Robustness / capability failure",
+   "n": 13,
+   "lift": 1.05,
+   "share_of_a": 0.333
+  },
+  {
+   "a": "predictive_scoring",
+   "a_label": "Predictive / risk scoring & automated decisions",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 17,
+   "lift": 0.98,
+   "share_of_a": 0.236
+  },
+  {
+   "a": "facial_recognition",
+   "a_label": "Facial recognition & biometrics",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 11,
+   "lift": 0.79,
+   "share_of_a": 0.19
+  },
+  {
+   "a": "autonomous_vehicle",
+   "a_label": "Autonomous & driver-assist vehicles",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 10,
+   "lift": 0.74,
+   "share_of_a": 0.179
+  },
+  {
+   "a": "llm_chatbot",
+   "a_label": "LLM / chatbot / generative text",
+   "b": "malicious_use",
+   "b_label": "Deliberate misuse by people",
+   "n": 26,
+   "lift": 0.72,
+   "share_of_a": 0.206
+  },
+  {
+   "a": "image_video_generation",
+   "a_label": "Image & video generation (incl. deepfakes)",
+   "b": "inadequate_oversight",
+   "b_label": "Inadequate testing or oversight",
+   "n": 22,
+   "lift": 0.59,
+   "share_of_a": 0.141
+  }
+ ],
  "cross_sector_failures": [
   {
    "term": "inadequate_oversight",
    "label": "Inadequate testing or oversight",
-   "incidents": 22,
-   "sectors": 14,
-   "entropy_bits": 3.66,
-   "normalized_entropy": 0.85,
+   "incidents": 172,
+   "sectors": 20,
+   "entropy_bits": 3.9,
+   "normalized_entropy": 0.9,
    "top_sectors": [
-    {
-     "sector": "retail_commerce",
-     "label": "Retail",
-     "n": 3
-    },
-    {
-     "sector": "law_enforcement",
-     "label": "Policing & law enforcement",
-     "n": 3
-    },
     {
      "sector": "social_media",
      "label": "Social media & online platforms",
-     "n": 3
+     "n": 35
+    },
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 22
     },
     {
      "sector": "government_services",
      "label": "Government & public services",
-     "n": 2
+     "n": 18
+    },
+    {
+     "sector": "retail_commerce",
+     "label": "Retail",
+     "n": 17
     }
    ]
   },
   {
    "term": "bias_discrimination",
    "label": "Bias & disparate performance",
-   "incidents": 19,
-   "sectors": 11,
-   "entropy_bits": 3.28,
-   "normalized_entropy": 0.76,
+   "incidents": 110,
+   "sectors": 17,
+   "entropy_bits": 3.84,
+   "normalized_entropy": 0.89,
    "top_sectors": [
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 17
+    },
     {
      "sector": "consumer_tech",
      "label": "Consumer apps & devices",
-     "n": 4
-    },
-    {
-     "sector": "law_enforcement",
-     "label": "Policing & law enforcement",
-     "n": 3
-    },
-    {
-     "sector": "education",
-     "label": "Education",
-     "n": 2
+     "n": 15
     },
     {
      "sector": "government_services",
      "label": "Government & public services",
-     "n": 2
-    }
-   ]
-  },
-  {
-   "term": "robustness_failure",
-   "label": "Robustness / capability failure",
-   "incidents": 42,
-   "sectors": 14,
-   "entropy_bits": 3.31,
-   "normalized_entropy": 0.76,
-   "top_sectors": [
-    {
-     "sector": "transportation",
-     "label": "Transportation & mobility",
-     "n": 11
-    },
-    {
-     "sector": "consumer_tech",
-     "label": "Consumer apps & devices",
-     "n": 6
+     "n": 13
     },
     {
      "sector": "law_enforcement",
      "label": "Policing & law enforcement",
-     "n": 5
-    },
-    {
-     "sector": "retail_commerce",
-     "label": "Retail",
-     "n": 5
-    }
-   ]
-  },
-  {
-   "term": "opacity_contestability",
-   "label": "Opacity & lack of recourse",
-   "incidents": 9,
-   "sectors": 9,
-   "entropy_bits": 3.12,
-   "normalized_entropy": 0.72,
-   "top_sectors": [
-    {
-     "sector": "employment",
-     "label": "Employment & workplace",
-     "n": 2
-    },
-    {
-     "sector": "consumer_tech",
-     "label": "Consumer apps & devices",
-     "n": 1
-    },
-    {
-     "sector": "education",
-     "label": "Education",
-     "n": 1
-    },
-    {
-     "sector": "finance",
-     "label": "Finance",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "adversarial_attack",
-   "label": "Adversarial attack / jailbreak",
-   "incidents": 4,
-   "sectors": 5,
-   "entropy_bits": 2.32,
-   "normalized_entropy": 0.54,
-   "top_sectors": [
-    {
-     "sector": "elections_politics",
-     "label": "Elections & politics",
-     "n": 1
-    },
-    {
-     "sector": "finance",
-     "label": "Finance",
-     "n": 1
-    },
-    {
-     "sector": "search_online_services",
-     "label": "Search & online services",
-     "n": 1
-    },
-    {
-     "sector": "social_media",
-     "label": "Social media & online platforms",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "ip_consent_violation",
-   "label": "IP",
-   "incidents": 4,
-   "sectors": 5,
-   "entropy_bits": 2.32,
-   "normalized_entropy": 0.54,
-   "top_sectors": [
-    {
-     "sector": "consumer_tech",
-     "label": "Consumer apps & devices",
-     "n": 1
-    },
-    {
-     "sector": "entertainment_arts",
-     "label": "Entertainment",
-     "n": 1
-    },
-    {
-     "sector": "news_publishing",
-     "label": "News",
-     "n": 1
-    },
-    {
-     "sector": "search_online_services",
-     "label": "Search & online services",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "malicious_use",
-   "label": "Deliberate misuse by people",
-   "incidents": 16,
-   "sectors": 6,
-   "entropy_bits": 2.31,
-   "normalized_entropy": 0.53,
-   "top_sectors": [
-    {
-     "sector": "social_media",
-     "label": "Social media & online platforms",
-     "n": 6
-    },
-    {
-     "sector": "elections_politics",
-     "label": "Elections & politics",
-     "n": 4
-    },
-    {
-     "sector": "finance",
-     "label": "Finance",
-     "n": 4
-    },
-    {
-     "sector": "education",
-     "label": "Education",
-     "n": 2
-    }
-   ]
-  },
-  {
-   "term": "hallucination",
-   "label": "Hallucination & fabrication",
-   "incidents": 5,
-   "sectors": 5,
-   "entropy_bits": 2.25,
-   "normalized_entropy": 0.52,
-   "top_sectors": [
-    {
-     "sector": "search_online_services",
-     "label": "Search & online services",
-     "n": 2
-    },
-    {
-     "sector": "consumer_tech",
-     "label": "Consumer apps & devices",
-     "n": 1
-    },
-    {
-     "sector": "employment",
-     "label": "Employment & workplace",
-     "n": 1
-    },
-    {
-     "sector": "government_services",
-     "label": "Government & public services",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "misaligned_objective",
-   "label": "Misaligned objective / specification gaming",
-   "incidents": 4,
-   "sectors": 4,
-   "entropy_bits": 1.92,
-   "normalized_entropy": 0.44,
-   "top_sectors": [
-    {
-     "sector": "employment",
-     "label": "Employment & workplace",
-     "n": 2
-    },
-    {
-     "sector": "transportation",
-     "label": "Transportation & mobility",
-     "n": 2
-    },
-    {
-     "sector": "healthcare",
-     "label": "Healthcare & medicine",
-     "n": 1
-    },
-    {
-     "sector": "social_media",
-     "label": "Social media & online platforms",
-     "n": 1
+     "n": 12
     }
    ]
   },
   {
    "term": "privacy_violation",
    "label": "Privacy violation & data misuse",
-   "incidents": 3,
-   "sectors": 4,
-   "entropy_bits": 1.92,
-   "normalized_entropy": 0.44,
-   "top_sectors": [
-    {
-     "sector": "government_services",
-     "label": "Government & public services",
-     "n": 2
-    },
-    {
-     "sector": "education",
-     "label": "Education",
-     "n": 1
-    },
-    {
-     "sector": "elections_politics",
-     "label": "Elections & politics",
-     "n": 1
-    },
-    {
-     "sector": "social_media",
-     "label": "Social media & online platforms",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "human_automation_interaction",
-   "label": "Human\u2013automation interaction",
-   "incidents": 14,
-   "sectors": 6,
-   "entropy_bits": 1.77,
-   "normalized_entropy": 0.41,
-   "top_sectors": [
-    {
-     "sector": "transportation",
-     "label": "Transportation & mobility",
-     "n": 9
-    },
-    {
-     "sector": "employment",
-     "label": "Employment & workplace",
-     "n": 1
-    },
-    {
-     "sector": "entertainment_arts",
-     "label": "Entertainment",
-     "n": 1
-    },
-    {
-     "sector": "law_enforcement",
-     "label": "Policing & law enforcement",
-     "n": 1
-    }
-   ]
-  },
-  {
-   "term": "harmful_content",
-   "label": "Harmful or unsafe output",
-   "incidents": 4,
-   "sectors": 3,
-   "entropy_bits": 1.5,
-   "normalized_entropy": 0.35,
+   "incidents": 67,
+   "sectors": 17,
+   "entropy_bits": 3.76,
+   "normalized_entropy": 0.87,
    "top_sectors": [
     {
      "sector": "consumer_tech",
      "label": "Consumer apps & devices",
-     "n": 2
+     "n": 12
+    },
+    {
+     "sector": "law_enforcement",
+     "label": "Policing & law enforcement",
+     "n": 12
+    },
+    {
+     "sector": "government_services",
+     "label": "Government & public services",
+     "n": 9
+    },
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 9
+    }
+   ]
+  },
+  {
+   "term": "robustness_failure",
+   "label": "Robustness / capability failure",
+   "incidents": 227,
+   "sectors": 19,
+   "entropy_bits": 3.6,
+   "normalized_entropy": 0.83,
+   "top_sectors": [
+    {
+     "sector": "transportation",
+     "label": "Transportation & mobility",
+     "n": 59
+    },
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 31
+    },
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 28
+    },
+    {
+     "sector": "law_enforcement",
+     "label": "Policing & law enforcement",
+     "n": 28
+    }
+   ]
+  },
+  {
+   "term": "opacity_contestability",
+   "label": "Opacity & lack of recourse",
+   "incidents": 67,
+   "sectors": 16,
+   "entropy_bits": 3.56,
+   "normalized_entropy": 0.82,
+   "top_sectors": [
+    {
+     "sector": "government_services",
+     "label": "Government & public services",
+     "n": 18
+    },
+    {
+     "sector": "employment",
+     "label": "Employment & workplace",
+     "n": 14
+    },
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 12
     },
     {
      "sector": "healthcare",
      "label": "Healthcare & medicine",
-     "n": 1
+     "n": 7
+    }
+   ]
+  },
+  {
+   "term": "hallucination",
+   "label": "Hallucination & fabrication",
+   "incidents": 51,
+   "sectors": 15,
+   "entropy_bits": 3.46,
+   "normalized_entropy": 0.8,
+   "top_sectors": [
+    {
+     "sector": "justice_corrections",
+     "label": "Courts",
+     "n": 13
     },
     {
      "sector": "news_publishing",
      "label": "News",
-     "n": 1
+     "n": 7
+    },
+    {
+     "sector": "government_services",
+     "label": "Government & public services",
+     "n": 7
+    },
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 6
+    }
+   ]
+  },
+  {
+   "term": "adversarial_attack",
+   "label": "Adversarial attack / jailbreak",
+   "incidents": 24,
+   "sectors": 12,
+   "entropy_bits": 3.35,
+   "normalized_entropy": 0.78,
+   "top_sectors": [
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 5
+    },
+    {
+     "sector": "finance",
+     "label": "Finance",
+     "n": 4
+    },
+    {
+     "sector": "retail_commerce",
+     "label": "Retail",
+     "n": 3
+    },
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 3
+    }
+   ]
+  },
+  {
+   "term": "misaligned_objective",
+   "label": "Misaligned objective / specification gaming",
+   "incidents": 45,
+   "sectors": 15,
+   "entropy_bits": 3.37,
+   "normalized_entropy": 0.78,
+   "top_sectors": [
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 14
+    },
+    {
+     "sector": "employment",
+     "label": "Employment & workplace",
+     "n": 9
+    },
+    {
+     "sector": "transportation",
+     "label": "Transportation & mobility",
+     "n": 8
+    },
+    {
+     "sector": "retail_commerce",
+     "label": "Retail",
+     "n": 7
+    }
+   ]
+  },
+  {
+   "term": "malicious_use",
+   "label": "Deliberate misuse by people",
+   "incidents": 204,
+   "sectors": 18,
+   "entropy_bits": 3.34,
+   "normalized_entropy": 0.77,
+   "top_sectors": [
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 71
+    },
+    {
+     "sector": "general_public",
+     "label": "Cross-sector / general public",
+     "n": 39
+    },
+    {
+     "sector": "elections_politics",
+     "label": "Elections & politics",
+     "n": 37
+    },
+    {
+     "sector": "finance",
+     "label": "Finance",
+     "n": 34
+    }
+   ]
+  },
+  {
+   "term": "ip_consent_violation",
+   "label": "IP",
+   "incidents": 40,
+   "sectors": 12,
+   "entropy_bits": 3.27,
+   "normalized_entropy": 0.76,
+   "top_sectors": [
+    {
+     "sector": "entertainment_arts",
+     "label": "Entertainment",
+     "n": 12
+    },
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 8
+    },
+    {
+     "sector": "general_public",
+     "label": "Cross-sector / general public",
+     "n": 5
+    },
+    {
+     "sector": "education",
+     "label": "Education",
+     "n": 5
     }
    ]
   },
   {
    "term": "security_vulnerability",
    "label": "Security vulnerability",
-   "incidents": 1,
-   "sectors": 2,
-   "entropy_bits": 1.0,
-   "normalized_entropy": 0.23,
+   "incidents": 25,
+   "sectors": 13,
+   "entropy_bits": 2.98,
+   "normalized_entropy": 0.69,
    "top_sectors": [
     {
-     "sector": "education",
-     "label": "Education",
-     "n": 1
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 12
+    },
+    {
+     "sector": "finance",
+     "label": "Finance",
+     "n": 5
     },
     {
      "sector": "government_services",
      "label": "Government & public services",
-     "n": 1
+     "n": 4
+    },
+    {
+     "sector": "general_public",
+     "label": "Cross-sector / general public",
+     "n": 2
+    }
+   ]
+  },
+  {
+   "term": "human_automation_interaction",
+   "label": "Human\u2013automation interaction",
+   "incidents": 83,
+   "sectors": 14,
+   "entropy_bits": 2.89,
+   "normalized_entropy": 0.67,
+   "top_sectors": [
+    {
+     "sector": "transportation",
+     "label": "Transportation & mobility",
+     "n": 30
+    },
+    {
+     "sector": "justice_corrections",
+     "label": "Courts",
+     "n": 19
+    },
+    {
+     "sector": "law_enforcement",
+     "label": "Policing & law enforcement",
+     "n": 14
+    },
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 6
+    }
+   ]
+  },
+  {
+   "term": "harmful_content",
+   "label": "Harmful or unsafe output",
+   "incidents": 48,
+   "sectors": 11,
+   "entropy_bits": 2.6,
+   "normalized_entropy": 0.6,
+   "top_sectors": [
+    {
+     "sector": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "n": 18
+    },
+    {
+     "sector": "social_media",
+     "label": "Social media & online platforms",
+     "n": 14
+    },
+    {
+     "sector": "news_publishing",
+     "label": "News",
+     "n": 4
+    },
+    {
+     "sector": "science_research",
+     "label": "Science & research",
+     "n": 3
     }
    ]
   }
  ],
  "recurring_actors": [
   {
+   "entity_id": "openai",
+   "name": "OpenAI",
+   "incidents": 50,
+   "as_developer": 50,
+   "as_deployer": 24,
+   "top_failure_modes": [
+    {
+     "term": "hallucination",
+     "label": "Hallucination & fabrication",
+     "n": 16
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 13
+    },
+    {
+     "term": "malicious_use",
+     "label": "Deliberate misuse by people",
+     "n": 13
+    }
+   ],
+   "mean_severity": 1.12,
+   "years": [
+    2016,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  },
+  {
+   "entity_id": "google",
+   "name": "Google",
+   "incidents": 42,
+   "as_developer": 42,
+   "as_deployer": 28,
+   "top_failure_modes": [
+    {
+     "term": "bias_discrimination",
+     "label": "Bias & disparate performance",
+     "n": 16
+    },
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 13
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 7
+    }
+   ],
+   "mean_severity": 0.95,
+   "years": [
+    2006,
+    2011,
+    2012,
+    2013,
+    2015,
+    2016,
+    2017,
+    2018,
+    2020,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  },
+  {
+   "entity_id": "facebook",
+   "name": "Facebook",
+   "incidents": 34,
+   "as_developer": 32,
+   "as_deployer": 34,
+   "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 22
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 11
+    },
+    {
+     "term": "opacity_contestability",
+     "label": "Opacity & lack of recourse",
+     "n": 7
+    }
+   ],
+   "mean_severity": 1.59,
+   "years": [
+    2006,
+    2015,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  {
    "entity_id": "tesla",
    "name": "Tesla",
-   "incidents": 8,
-   "as_developer": 8,
-   "as_deployer": 6,
+   "incidents": 31,
+   "as_developer": 31,
+   "as_deployer": 26,
    "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 26
+    },
     {
      "term": "human_automation_interaction",
      "label": "Human\u2013automation interaction",
-     "n": 7
+     "n": 23
     },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 3
+    }
+   ],
+   "mean_severity": 2.16,
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "entity_id": "meta",
+   "name": "Meta",
+   "incidents": 30,
+   "as_developer": 28,
+   "as_deployer": 28,
+   "top_failure_modes": [
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 14
+    },
+    {
+     "term": "hallucination",
+     "label": "Hallucination & fabrication",
+     "n": 8
+    },
+    {
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "n": 6
+    }
+   ],
+   "mean_severity": 1.53,
+   "years": [
+    2006,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  },
+  {
+   "entity_id": "amazon",
+   "name": "Amazon",
+   "incidents": 21,
+   "as_developer": 20,
+   "as_deployer": 19,
+   "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 8
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 5
+    },
+    {
+     "term": "misaligned_objective",
+     "label": "Misaligned objective / specification gaming",
+     "n": 5
+    }
+   ],
+   "mean_severity": 1.29,
+   "years": [
+    2006,
+    2008,
+    2015,
+    2016,
+    2017,
+    2018,
+    2020,
+    2021,
+    2022,
+    2025
+   ]
+  },
+  {
+   "entity_id": "microsoft",
+   "name": "Microsoft",
+   "incidents": 15,
+   "as_developer": 15,
+   "as_deployer": 10,
+   "top_failure_modes": [
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 5
+    },
+    {
+     "term": "bias_discrimination",
+     "label": "Bias & disparate performance",
+     "n": 5
+    },
+    {
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "n": 4
+    }
+   ],
+   "mean_severity": 1.13,
+   "years": [
+    2006,
+    2016,
+    2017,
+    2018,
+    2020,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "entity_id": "xai",
+   "name": "xAI",
+   "incidents": 11,
+   "as_developer": 11,
+   "as_deployer": 9,
+   "top_failure_modes": [
+    {
+     "term": "hallucination",
+     "label": "Hallucination & fabrication",
+     "n": 5
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 4
+    },
+    {
+     "term": "security_vulnerability",
+     "label": "Security vulnerability",
+     "n": 2
+    }
+   ],
+   "mean_severity": 1.36,
+   "years": [
+    2024,
+    2025,
+    2026
+   ]
+  },
+  {
+   "entity_id": "youtube",
+   "name": "YouTube",
+   "incidents": 10,
+   "as_developer": 10,
+   "as_deployer": 10,
+   "top_failure_modes": [
     {
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
      "n": 4
     },
     {
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "n": 3
+    },
+    {
      "term": "misaligned_objective",
      "label": "Misaligned objective / specification gaming",
-     "n": 1
+     "n": 3
     }
    ],
-   "mean_severity": 1.62,
+   "mean_severity": 1.8,
    "years": [
+    2015,
     2018,
     2019,
     2020,
@@ -1807,260 +2833,115 @@
    ]
   },
   {
-   "entity_id": "google",
-   "name": "Google",
-   "incidents": 5,
-   "as_developer": 5,
-   "as_deployer": 4,
+   "entity_id": "anthropic",
+   "name": "Anthropic",
+   "incidents": 10,
+   "as_developer": 10,
+   "as_deployer": 2,
    "top_failure_modes": [
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 5
+    },
     {
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
      "n": 3
-    },
-    {
-     "term": "privacy_violation",
-     "label": "Privacy violation & data misuse",
-     "n": 1
     },
     {
      "term": "security_vulnerability",
      "label": "Security vulnerability",
-     "n": 1
-    }
-   ],
-   "mean_severity": 1.0,
-   "years": [
-    2015,
-    2020,
-    2023,
-    2026
-   ]
-  },
-  {
-   "entity_id": "openai",
-   "name": "OpenAI",
-   "incidents": 4,
-   "as_developer": 4,
-   "as_deployer": 2,
-   "top_failure_modes": [
-    {
-     "term": "hallucination",
-     "label": "Hallucination & fabrication",
-     "n": 2
-    },
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 2
-    },
-    {
-     "term": "harmful_content",
-     "label": "Harmful or unsafe output",
-     "n": 1
-    }
-   ],
-   "mean_severity": 0.75,
-   "years": [
-    2020,
-    2023,
-    2024
-   ]
-  },
-  {
-   "entity_id": "facebook",
-   "name": "Facebook",
-   "incidents": 4,
-   "as_developer": 4,
-   "as_deployer": 4,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
      "n": 3
-    },
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 2
-    },
-    {
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "n": 1
     }
    ],
-   "mean_severity": 2.5,
+   "mean_severity": 1.5,
    "years": [
-    2018,
-    2020,
-    2021
-   ]
-  },
-  {
-   "entity_id": "faceapp",
-   "name": "FaceApp",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 2,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
-     "n": 1
-    },
-    {
-     "term": "bias_discrimination",
-     "label": "Bias & disparate performance",
-     "n": 1
-    }
-   ],
-   "mean_severity": 1.0,
-   "years": [
-    2017,
-    2020
+    2024,
+    2025,
+    2026
    ]
   },
   {
    "entity_id": "apple",
    "name": "Apple",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 1,
+   "incidents": 9,
+   "as_developer": 9,
+   "as_deployer": 8,
    "top_failure_modes": [
     {
-     "term": "opacity_contestability",
-     "label": "Opacity & lack of recourse",
-     "n": 2
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 5
     },
     {
      "term": "bias_discrimination",
      "label": "Bias & disparate performance",
-     "n": 1
-    },
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
-     "n": 1
-    }
-   ],
-   "mean_severity": 1.5,
-   "years": [
-    2011,
-    2019
-   ]
-  },
-  {
-   "entity_id": "meta",
-   "name": "Meta",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 2,
-   "top_failure_modes": [
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 2
-    },
-    {
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "n": 1
-    },
-    {
-     "term": "hallucination",
-     "label": "Hallucination & fabrication",
-     "n": 1
-    }
-   ],
-   "mean_severity": 2.5,
-   "years": [
-    2018,
-    2026
-   ]
-  },
-  {
-   "entity_id": "starship-technologies",
-   "name": "Starship Technologies",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
      "n": 2
     },
     {
      "term": "opacity_contestability",
      "label": "Opacity & lack of recourse",
-     "n": 1
+     "n": 2
     }
    ],
-   "mean_severity": 1.0,
+   "mean_severity": 1.11,
    "years": [
+    2011,
+    2017,
+    2019,
     2020,
+    2021,
+    2022
+   ]
+  },
+  {
+   "entity_id": "tiktok",
+   "name": "TikTok",
+   "incidents": 8,
+   "as_developer": 8,
+   "as_deployer": 8,
+   "top_failure_modes": [
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 4
+    },
+    {
+     "term": "misaligned_objective",
+     "label": "Misaligned objective / specification gaming",
+     "n": 3
+    },
+    {
+     "term": "malicious_use",
+     "label": "Deliberate misuse by people",
+     "n": 2
+    }
+   ],
+   "mean_severity": 1.62,
+   "years": [
+    2019,
+    2020,
+    2021,
     2022
    ]
   },
   {
    "entity_id": "cruise",
    "name": "Cruise",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 2,
+   "incidents": 8,
+   "as_developer": 8,
+   "as_deployer": 8,
    "top_failure_modes": [
     {
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
+     "n": 7
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
      "n": 2
-    }
-   ],
-   "mean_severity": 1.0,
-   "years": [
-    2022
-   ]
-  },
-  {
-   "entity_id": "wechat",
-   "name": "WeChat",
-   "incidents": 2,
-   "as_developer": 2,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "bias_discrimination",
-     "label": "Bias & disparate performance",
-     "n": 1
-    },
-    {
-     "term": "harmful_content",
-     "label": "Harmful or unsafe output",
-     "n": 1
-    },
-    {
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "n": 1
-    }
-   ],
-   "mean_severity": 1.5,
-   "years": [
-    2017,
-    2020
-   ]
-  },
-  {
-   "entity_id": "boeing",
-   "name": "Boeing",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
-     "n": 1
     },
     {
      "term": "human_automation_interaction",
@@ -2068,201 +2949,254 @@
      "n": 1
     }
    ],
-   "mean_severity": 4.0,
+   "mean_severity": 1.0,
    "years": [
-    2018
+    2018,
+    2022,
+    2023
    ]
   },
   {
-   "entity_id": "intuitive-surgical",
-   "name": "Intuitive Surgical",
-   "incidents": 1,
-   "as_developer": 1,
+   "entity_id": "uber",
+   "name": "Uber",
+   "incidents": 6,
+   "as_developer": 6,
+   "as_deployer": 6,
+   "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 4
+    },
+    {
+     "term": "opacity_contestability",
+     "label": "Opacity & lack of recourse",
+     "n": 3
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 2
+    }
+   ],
+   "mean_severity": 1.83,
+   "years": [
+    2014,
+    2018,
+    2020,
+    2022
+   ]
+  },
+  {
+   "entity_id": "twitter",
+   "name": "Twitter",
+   "incidents": 6,
+   "as_developer": 6,
+   "as_deployer": 6,
+   "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 3
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 3
+    },
+    {
+     "term": "bias_discrimination",
+     "label": "Bias & disparate performance",
+     "n": 3
+    }
+   ],
+   "mean_severity": 1.0,
+   "years": [
+    2016,
+    2020,
+    2021,
+    2022,
+    2023
+   ]
+  },
+  {
+   "entity_id": "character.ai",
+   "name": "Character.ai",
+   "incidents": 6,
+   "as_developer": 6,
+   "as_deployer": 5,
+   "top_failure_modes": [
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 5
+    },
+    {
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "n": 5
+    },
+    {
+     "term": "hallucination",
+     "label": "Hallucination & fabrication",
+     "n": 2
+    }
+   ],
+   "mean_severity": 2.83,
+   "years": [
+    2023,
+    2024,
+    2025
+   ]
+  },
+  {
+   "entity_id": "shotspotter",
+   "name": "ShotSpotter",
+   "incidents": 5,
+   "as_developer": 5,
    "as_deployer": 0,
    "top_failure_modes": [
     {
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
-     "n": 1
-    }
-   ],
-   "mean_severity": 4.0,
-   "years": [
-    2015
-   ]
-  },
-  {
-   "entity_id": "northpointe",
-   "name": "Northpointe",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "opacity_contestability",
-     "label": "Opacity & lack of recourse",
-     "n": 1
+     "n": 5
     },
     {
      "term": "bias_discrimination",
      "label": "Bias & disparate performance",
+     "n": 2
+    },
+    {
+     "term": "opacity_contestability",
+     "label": "Opacity & lack of recourse",
      "n": 1
     }
    ],
-   "mean_severity": 3.0,
+   "mean_severity": 1.8,
    "years": [
-    2016
+    2012,
+    2020,
+    2021,
+    2023
    ]
   },
   {
-   "entity_id": "volkswagen",
-   "name": "Volkswagen",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
+   "entity_id": "clearview-ai",
+   "name": "Clearview AI",
+   "incidents": 5,
+   "as_developer": 5,
+   "as_deployer": 2,
    "top_failure_modes": [
+    {
+     "term": "privacy_violation",
+     "label": "Privacy violation & data misuse",
+     "n": 3
+    },
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 2
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 2
+    }
+   ],
+   "mean_severity": 2.2,
+   "years": [
+    2017,
+    2020,
+    2024,
+    2025
+   ]
+  },
+  {
+   "entity_id": "waymo",
+   "name": "Waymo",
+   "incidents": 5,
+   "as_developer": 5,
+   "as_deployer": 5,
+   "top_failure_modes": [
+    {
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "n": 5
+    },
+    {
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 1
+    },
     {
      "term": "human_automation_interaction",
      "label": "Human\u2013automation interaction",
      "n": 1
     }
    ],
-   "mean_severity": 4.0,
-   "years": [
-    2014
-   ]
-  },
-  {
-   "entity_id": "delphi-technologies",
-   "name": "Delphi Technologies",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
-     "n": 1
-    }
-   ],
-   "mean_severity": 0.0,
-   "years": [
-    2015
-   ]
-  },
-  {
-   "entity_id": "soviet-union",
-   "name": "Soviet Union",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "robustness_failure",
-     "label": "Robustness / capability failure",
-     "n": 1
-    }
-   ],
-   "mean_severity": 0.0,
-   "years": [
-    1983
-   ]
-  },
-  {
-   "entity_id": "barclays-capital",
-   "name": "Barclays Capital",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "n": 1
-    },
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 1
-    }
-   ],
-   "mean_severity": 2.0,
-   "years": [
-    2010
-   ]
-  },
-  {
-   "entity_id": "waddell-and-reed",
-   "name": "Waddell & Reed",
-   "incidents": 1,
-   "as_developer": 1,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "n": 1
-    },
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 1
-    }
-   ],
-   "mean_severity": 2.0,
-   "years": [
-    2010
-   ]
-  },
-  {
-   "entity_id": "delhi-metro-rail-corporation",
-   "name": "Delhi Metro Rail Corporation",
-   "incidents": 1,
-   "as_developer": 0,
-   "as_deployer": 1,
-   "top_failure_modes": [
-    {
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "n": 1
-    }
-   ],
    "mean_severity": 1.0,
    "years": [
-    2017
+    2021,
+    2024,
+    2025,
+    2026
    ]
   },
   {
-   "entity_id": "amazon",
-   "name": "Amazon",
-   "incidents": 1,
+   "entity_id": "instagram",
+   "name": "Instagram",
+   "incidents": 5,
    "as_developer": 1,
-   "as_deployer": 1,
+   "as_deployer": 5,
    "top_failure_modes": [
     {
-     "term": "bias_discrimination",
-     "label": "Bias & disparate performance",
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "n": 4
+    },
+    {
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "n": 2
+    },
+    {
+     "term": "misaligned_objective",
+     "label": "Misaligned objective / specification gaming",
      "n": 1
     }
    ],
-   "mean_severity": 0.0,
+   "mean_severity": 2.2,
    "years": [
-    2016
+    2006,
+    2023,
+    2024
    ]
   }
  ],
  "severity_vs_attention": {
-  "spearman_rho": 0.129,
-  "p_exploratory": 0.22,
-  "n": 92,
+  "spearman_rho": 0.103,
+  "p_exploratory": 0.0059,
+  "n": 716,
   "fit": {
    "x": "log(1 + reports)",
-   "slope": 0.159,
-   "intercept": 1.218
+   "slope": 0.141,
+   "intercept": 1.27
   },
   "points": [
    [
+    14,
+    2
+   ],
+   [
+    17,
+    3
+   ],
+   [
     21,
+    4
+   ],
+   [
+    25,
     4
    ],
    [
@@ -2270,12 +3204,76 @@
     4
    ],
    [
+    28,
+    1
+   ],
+   [
+    6,
+    0
+   ],
+   [
+    9,
+    0
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    9,
+    2
+   ],
+   [
     15,
     3
    ],
    [
+    1,
+    0
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    24,
+    1
+   ],
+   [
+    23,
+    1
+   ],
+   [
     22,
     0
+   ],
+   [
+    10,
+    1
+   ],
+   [
+    27,
+    1
+   ],
+   [
+    22,
+    4
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    22,
+    0
+   ],
+   [
+    23,
+    1
    ],
    [
     27,
@@ -2283,6 +3281,10 @@
    ],
    [
     12,
+    0
+   ],
+   [
+    24,
     0
    ],
    [
@@ -2294,11 +3296,55 @@
     2
    ],
    [
+    3,
+    0
+   ],
+   [
+    28,
+    1
+   ],
+   [
     29,
     1
    ],
    [
+    21,
+    0
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    35,
+    1
+   ],
+   [
+    20,
+    2
+   ],
+   [
+    24,
+    1
+   ],
+   [
     34,
+    0
+   ],
+   [
+    11,
+    1
+   ],
+   [
+    29,
+    0
+   ],
+   [
+    21,
+    2
+   ],
+   [
+    26,
     0
    ],
    [
@@ -2307,6 +3353,14 @@
    ],
    [
     4,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    27,
     2
    ],
    [
@@ -2322,7 +3376,47 @@
     1
    ],
    [
+    9,
+    1
+   ],
+   [
+    24,
+    3
+   ],
+   [
+    27,
+    1
+   ],
+   [
+    29,
+    4
+   ],
+   [
+    18,
+    1
+   ],
+   [
+    17,
+    1
+   ],
+   [
+    16,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    39,
+    3
+   ],
+   [
     5,
+    1
+   ],
+   [
+    10,
     1
    ],
    [
@@ -2334,8 +3428,92 @@
     0
    ],
    [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    16,
+    1
+   ],
+   [
     23,
     0
+   ],
+   [
+    29,
+    1
+   ],
+   [
+    12,
+    4
+   ],
+   [
+    4,
+    0
+   ],
+   [
+    27,
+    1
+   ],
+   [
+    26,
+    3
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    11,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
    ],
    [
     1,
@@ -2350,7 +3528,95 @@
     2
    ],
    [
+    1,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    5,
+    1
+   ],
+   [
     6,
+    2
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    6,
+    4
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    11,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    5,
     2
    ],
    [
@@ -2358,7 +3624,91 @@
     1
    ],
    [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
     3,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    12,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
     1
    ],
    [
@@ -2370,24 +3720,148 @@
     1
    ],
    [
-    5,
-    3
-   ],
-   [
-    4,
-    4
+    6,
+    1
    ],
    [
     2,
     1
    ],
    [
-    5,
-    4
+    1,
+    1
    ],
    [
     1,
     1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    5,
+    4
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    5,
+    0
    ],
    [
     1,
@@ -2403,7 +3877,15 @@
    ],
    [
     3,
+    0
+   ],
+   [
+    3,
     2
+   ],
+   [
+    2,
+    1
    ],
    [
     2,
@@ -2414,11 +3896,87 @@
     2
    ],
    [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    4,
+    1
+   ],
+   [
     2,
     2
    ],
    [
+    2,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    12,
+    2
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    5,
+    0
+   ],
+   [
     3,
+    2
+   ],
+   [
+    4,
     2
    ],
    [
@@ -2430,12 +3988,32 @@
     1
    ],
    [
+    4,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
     5,
     0
    ],
    [
     3,
     2
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    5,
+    1
    ],
    [
     1,
@@ -2450,15 +4028,95 @@
     1
    ],
    [
+    2,
+    1
+   ],
+   [
     3,
     1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    0
    ],
    [
     1,
     2
    ],
    [
+    2,
+    0
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
     1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    5,
     1
    ],
    [
@@ -2470,6 +4128,102 @@
     4
    ],
    [
+    2,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    10,
+    2
+   ],
+   [
     4,
     2
    ],
@@ -2478,8 +4232,72 @@
     1
    ],
    [
+    3,
+    4
+   ],
+   [
+    3,
+    2
+   ],
+   [
     1,
     1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    0
    ],
    [
     4,
@@ -2490,7 +4308,23 @@
     1
    ],
    [
+    3,
+    0
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   [
     7,
+    1
+   ],
+   [
+    4,
     1
    ],
    [
@@ -2502,7 +4336,155 @@
     1
    ],
    [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    15,
+    1
+   ],
+   [
     5,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    10,
+    3
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
     2
    ],
    [
@@ -2511,6 +4493,34 @@
    ],
    [
     1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    3,
     0
    ],
    [
@@ -2518,7 +4528,23 @@
     1
    ],
    [
-    1,
+    2,
+    2
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    21,
+    1
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
     1
    ],
    [
@@ -2526,7 +4552,131 @@
     0
    ],
    [
+    3,
+    0
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    25,
+    0
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    8,
+    2
+   ],
+   [
     2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    11,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    7,
+    4
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
     1
    ],
    [
@@ -2534,7 +4684,23 @@
     2
    ],
    [
+    2,
+    1
+   ],
+   [
     3,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    58,
     1
    ],
    [
@@ -2547,15 +4713,155 @@
    ],
    [
     1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
     0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    10,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    10,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    13,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
    ],
    [
     2,
     2
    ],
    [
+    3,
+    2
+   ],
+   [
     14,
     2
+   ],
+   [
+    12,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    15,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    31,
+    2
+   ],
+   [
+    17,
+    1
    ],
    [
     30,
@@ -2566,12 +4872,52 @@
     1
    ],
    [
+    5,
+    1
+   ],
+   [
+    17,
+    4
+   ],
+   [
+    12,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
     6,
+    2
+   ],
+   [
+    35,
+    1
+   ],
+   [
+    4,
     2
    ],
    [
     2,
     1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    3
    ],
    [
     3,
@@ -2582,11 +4928,11 @@
     1
    ],
    [
-    9,
-    2
+    3,
+    1
    ],
    [
-    2,
+    3,
     3
    ],
    [
@@ -2598,8 +4944,580 @@
     1
    ],
    [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    0
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    4,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    7,
+    3
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    27,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    9,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    38,
+    4
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    20,
+    0
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    14,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    26,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    8,
+    1
+   ],
+   [
+    11,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    19,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    33,
+    3
+   ],
+   [
+    15,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    4
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    41,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    26,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    0
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    0
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
     6,
     1
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    2
    ],
    [
     5,
@@ -2611,6 +5529,78 @@
    ],
    [
     2,
+    3
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    3
+   ],
+   [
+    6,
+    1
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
     1
    ],
    [
@@ -2618,7 +5608,351 @@
     2
    ],
    [
+    3,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    16,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    13,
+    3
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    1,
+    0
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
     6,
+    3
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    10,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    3,
+    2
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    5,
+    1
+   ],
+   [
+    3,
     3
    ],
    [
@@ -2626,68 +5960,243 @@
     4
    ],
    [
+    4,
+    0
+   ],
+   [
     1,
     2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    7,
+    1
+   ],
+   [
+    3,
+    0
+   ],
+   [
+    4,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    2,
+    3
    ]
   ],
   "by_severity": [
    {
     "sev": 0,
-    "count": 16,
-    "median": 5.0,
-    "mean": 9.5
+    "count": 84,
+    "median": 2.0,
+    "mean": 5.37
    },
    {
     "sev": 1,
-    "count": 37,
+    "count": 352,
     "median": 2.0,
-    "mean": 5.95
+    "mean": 4.47
    },
    {
     "sev": 2,
-    "count": 25,
-    "median": 3.0,
-    "mean": 4.92
+    "count": 181,
+    "median": 2.0,
+    "mean": 4.28
    },
    {
     "sev": 3,
-    "count": 7,
-    "median": 5.0,
-    "mean": 9.57
+    "count": 60,
+    "median": 3.0,
+    "mean": 6.47
    },
    {
     "sev": 4,
-    "count": 7,
-    "median": 9.0,
-    "mean": 11.14
+    "count": 39,
+    "median": 4.0,
+    "mean": 7.69
    }
   ]
  },
  "severity_by_technology": [
   {
+   "term": "surveillance_analytics",
+   "label": "Surveillance & tracking analytics",
+   "n": 39,
+   "mean_severity": 2.0,
+   "share_s3_plus": 0.359
+  },
+  {
    "term": "predictive_scoring",
    "label": "Predictive / risk scoring & automated decisions",
-   "n": 15,
-   "mean_severity": 1.73,
-   "share_s3_plus": 0.2
+   "n": 72,
+   "mean_severity": 1.81,
+   "share_s3_plus": 0.194
+  },
+  {
+   "term": "facial_recognition",
+   "label": "Facial recognition & biometrics",
+   "n": 58,
+   "mean_severity": 1.66,
+   "share_s3_plus": 0.241
   },
   {
    "term": "autonomous_vehicle",
    "label": "Autonomous & driver-assist vehicles",
-   "n": 14,
-   "mean_severity": 1.36,
-   "share_s3_plus": 0.143
+   "n": 56,
+   "mean_severity": 1.62,
+   "share_s3_plus": 0.268
+  },
+  {
+   "term": "other_unspecified",
+   "label": "Other / unspecified AI",
+   "n": 33,
+   "mean_severity": 1.61,
+   "share_s3_plus": 0.242
+  },
+  {
+   "term": "recommender_ranking",
+   "label": "Recommender",
+   "n": 46,
+   "mean_severity": 1.59,
+   "share_s3_plus": 0.13
+  },
+  {
+   "term": "ad_targeting_pricing",
+   "label": "Ad targeting",
+   "n": 23,
+   "mean_severity": 1.57,
+   "share_s3_plus": 0.087
+  },
+  {
+   "term": "agentic_ai",
+   "label": "AI agents & coding assistants",
+   "n": 18,
+   "mean_severity": 1.56,
+   "share_s3_plus": 0.111
+  },
+  {
+   "term": "content_moderation",
+   "label": "Content moderation & classification",
+   "n": 39,
+   "mean_severity": 1.49,
+   "share_s3_plus": 0.077
+  },
+  {
+   "term": "robotics_drones",
+   "label": "Robotics",
+   "n": 30,
+   "mean_severity": 1.47,
+   "share_s3_plus": 0.167
   },
   {
    "term": "image_video_generation",
    "label": "Image & video generation (incl. deepfakes)",
+   "n": 156,
+   "mean_severity": 1.43,
+   "share_s3_plus": 0.071
+  },
+  {
+   "term": "voice_synthesis",
+   "label": "Voice cloning & speech synthesis",
+   "n": 74,
+   "mean_severity": 1.27,
+   "share_s3_plus": 0.027
+  },
+  {
+   "term": "llm_chatbot",
+   "label": "LLM / chatbot / generative text",
+   "n": 126,
+   "mean_severity": 1.24,
+   "share_s3_plus": 0.087
+  },
+  {
+   "term": "speech_recognition",
+   "label": "Speech recognition & voice assistants",
    "n": 13,
-   "mean_severity": 1.23,
+   "mean_severity": 1.0,
    "share_s3_plus": 0.077
+  },
+  {
+   "term": "translation_nlp",
+   "label": "Translation & other language processing",
+   "n": 12,
+   "mean_severity": 1.0,
+   "share_s3_plus": 0.083
+  },
+  {
+   "term": "computer_vision",
+   "label": "Computer vision & object detection",
+   "n": 37,
+   "mean_severity": 0.97,
+   "share_s3_plus": 0.054
   }
  ],
  "evidence_mix": {
-  "confirmed": 509,
-  "inferred": 292
+  "confirmed": 3428,
+  "inferred": 3105
  }
 }

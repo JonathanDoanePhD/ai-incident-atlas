@@ -38,7 +38,7 @@ from sklearn.metrics import adjusted_rand_score, silhouette_score
 from atlas import paths, taxonomy
 from atlas.graph.similarity import Features, load_features
 
-W_EMB, W_TAG = 1.0, 0.6
+W_EMB, W_TAG = 1.0, 0.35
 TAG_BLOCKS = ("failure_mode", "technology", "harm_type")
 K_RANGE = range(6, 25)
 N_BOOT = 20
@@ -47,7 +47,9 @@ SEED = 42
 
 def feature_matrix(f: Features, risk_domain: list[str | None]) -> np.ndarray:
     blocks = [W_EMB * f.emb]
-    sets_by_block = [f.tags[d] for d in TAG_BLOCKS] + [[{r} if r else set() for r in risk_domain]]
+    # Risk domain is deliberately NOT a feature: as a 7-value one-hot block it split the space into 7 islands
+    # (k = 7, bootstrap ARI = 1.0), i.e. clustering just reproduced one label. It is kept for cluster labelling.
+    sets_by_block = [f.tags[d] for d in TAG_BLOCKS]
     for sets in sets_by_block:
         vocab = sorted(set().union(*sets))
         if not vocab:
@@ -121,7 +123,14 @@ def label_clusters(f: Features, labels: np.ndarray, risk_domain: list[str | None
             return lab[dim].get(cnt.most_common(1)[0][0], "") if cnt else ""
         tech, fail, harm = top("technology"), top("failure_mode"), top("harm_type")
         name = " · ".join(x.split(" (")[0] for x in (tech, fail) if x) or harm
-        out.append({"cluster": int(c), "size": int(len(idx)), "name": name, "over_represented": terms[:8]})
+        out.append({"cluster": int(c), "size": int(len(idx)), "name": name, "over_represented": terms[:8],
+                    "_harm": harm.split(" (")[0]})
+    # Disambiguate clusters that share a technology · failure name with their dominant harm.
+    names = Counter(o["name"] for o in out)
+    for o in out:
+        if names[o["name"]] > 1 and o["_harm"]:
+            o["name"] = f"{o['name']} → {o['_harm']}"
+        o.pop("_harm")
     return out
 
 
@@ -210,7 +219,7 @@ def build() -> dict:
             c["name"] = "Titles: " + ", ".join(kw[c["cluster"]][:3])
     res = {"k": k, "selection": table, "seed_ari": seed_aris,
            "chosen": next(r for r in table if r["k"] == k),
-           "params": {"w_emb": W_EMB, "w_tag": W_TAG, "tag_blocks": list(TAG_BLOCKS) + ["risk_domain"],
+           "params": {"w_emb": W_EMB, "w_tag": W_TAG, "tag_blocks": list(TAG_BLOCKS),
                       "umap": {"n_components": 10, "n_neighbors": 15, "min_dist": 0.0, "metric": "cosine"},
                       "n_boot": N_BOOT, "subsample": 0.8},
            "clusters": clusters}

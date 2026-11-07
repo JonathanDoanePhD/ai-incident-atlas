@@ -1,160 +1,159 @@
 {
- "k": 21,
+ "k": 10,
  "selection": [
   {
    "k": 6,
-   "silhouette": 0.0807,
-   "bootstrap_ari": 0.6878,
-   "bootstrap_ari_sd": 0.18,
-   "score": 0.05548
+   "silhouette": 0.101,
+   "bootstrap_ari": 0.9838,
+   "bootstrap_ari_sd": 0.0189,
+   "score": 0.0994
   },
   {
    "k": 7,
-   "silhouette": 0.056,
-   "bootstrap_ari": 0.7037,
-   "bootstrap_ari_sd": 0.1395,
-   "score": 0.03938
+   "silhouette": 0.1103,
+   "bootstrap_ari": 0.973,
+   "bootstrap_ari_sd": 0.0313,
+   "score": 0.10727
   },
   {
    "k": 8,
-   "silhouette": 0.0612,
-   "bootstrap_ari": 0.7085,
-   "bootstrap_ari_sd": 0.118,
-   "score": 0.04339
+   "silhouette": 0.1096,
+   "bootstrap_ari": 0.8868,
+   "bootstrap_ari_sd": 0.0796,
+   "score": 0.09717
   },
   {
    "k": 9,
-   "silhouette": 0.0547,
-   "bootstrap_ari": 0.7786,
-   "bootstrap_ari_sd": 0.1165,
-   "score": 0.0426
+   "silhouette": 0.1155,
+   "bootstrap_ari": 0.8909,
+   "bootstrap_ari_sd": 0.0873,
+   "score": 0.10291
   },
   {
    "k": 10,
-   "silhouette": 0.0661,
-   "bootstrap_ari": 0.7476,
-   "bootstrap_ari_sd": 0.0933,
-   "score": 0.04938
+   "silhouette": 0.1209,
+   "bootstrap_ari": 0.9577,
+   "bootstrap_ari_sd": 0.0472,
+   "score": 0.11575
   },
   {
    "k": 11,
-   "silhouette": 0.0703,
-   "bootstrap_ari": 0.7849,
-   "bootstrap_ari_sd": 0.0834,
-   "score": 0.05519
+   "silhouette": 0.1096,
+   "bootstrap_ari": 0.9267,
+   "bootstrap_ari_sd": 0.0819,
+   "score": 0.10157
   },
   {
    "k": 12,
-   "silhouette": 0.07,
-   "bootstrap_ari": 0.793,
-   "bootstrap_ari_sd": 0.0837,
-   "score": 0.05553
+   "silhouette": 0.1043,
+   "bootstrap_ari": 0.9002,
+   "bootstrap_ari_sd": 0.0525,
+   "score": 0.0939
   },
   {
    "k": 13,
-   "silhouette": 0.0672,
-   "bootstrap_ari": 0.8431,
-   "bootstrap_ari_sd": 0.0657,
-   "score": 0.0567
+   "silhouette": 0.1061,
+   "bootstrap_ari": 0.9137,
+   "bootstrap_ari_sd": 0.0379,
+   "score": 0.09696
   },
   {
    "k": 14,
-   "silhouette": 0.0652,
-   "bootstrap_ari": 0.866,
-   "bootstrap_ari_sd": 0.0683,
-   "score": 0.05646
+   "silhouette": 0.1064,
+   "bootstrap_ari": 0.9043,
+   "bootstrap_ari_sd": 0.0378,
+   "score": 0.09623
   },
   {
    "k": 15,
-   "silhouette": 0.0699,
-   "bootstrap_ari": 0.86,
-   "bootstrap_ari_sd": 0.0576,
-   "score": 0.06009
+   "silhouette": 0.1065,
+   "bootstrap_ari": 0.9129,
+   "bootstrap_ari_sd": 0.0313,
+   "score": 0.09724
   },
   {
    "k": 16,
-   "silhouette": 0.0772,
-   "bootstrap_ari": 0.8826,
-   "bootstrap_ari_sd": 0.057,
-   "score": 0.0681
+   "silhouette": 0.1062,
+   "bootstrap_ari": 0.9033,
+   "bootstrap_ari_sd": 0.0371,
+   "score": 0.09594
   },
   {
    "k": 17,
-   "silhouette": 0.0749,
-   "bootstrap_ari": 0.8602,
-   "bootstrap_ari_sd": 0.0527,
-   "score": 0.06442
+   "silhouette": 0.1019,
+   "bootstrap_ari": 0.8842,
+   "bootstrap_ari_sd": 0.04,
+   "score": 0.09013
   },
   {
    "k": 18,
-   "silhouette": 0.0767,
-   "bootstrap_ari": 0.8342,
-   "bootstrap_ari_sd": 0.0432,
-   "score": 0.064
+   "silhouette": 0.1041,
+   "bootstrap_ari": 0.9019,
+   "bootstrap_ari_sd": 0.0379,
+   "score": 0.09386
   },
   {
    "k": 19,
-   "silhouette": 0.0814,
-   "bootstrap_ari": 0.8796,
-   "bootstrap_ari_sd": 0.0544,
-   "score": 0.07156
+   "silhouette": 0.1032,
+   "bootstrap_ari": 0.8651,
+   "bootstrap_ari_sd": 0.0275,
+   "score": 0.0893
   },
   {
    "k": 20,
-   "silhouette": 0.0816,
-   "bootstrap_ari": 0.8922,
-   "bootstrap_ari_sd": 0.0417,
-   "score": 0.07282
+   "silhouette": 0.1026,
+   "bootstrap_ari": 0.8901,
+   "bootstrap_ari_sd": 0.0291,
+   "score": 0.09136
   },
   {
    "k": 21,
-   "silhouette": 0.0841,
-   "bootstrap_ari": 0.8892,
-   "bootstrap_ari_sd": 0.0433,
-   "score": 0.07478
+   "silhouette": 0.1059,
+   "bootstrap_ari": 0.8881,
+   "bootstrap_ari_sd": 0.0394,
+   "score": 0.09404
   },
   {
    "k": 22,
-   "silhouette": 0.0775,
-   "bootstrap_ari": 0.8771,
-   "bootstrap_ari_sd": 0.0423,
-   "score": 0.06799
+   "silhouette": 0.1032,
+   "bootstrap_ari": 0.8793,
+   "bootstrap_ari_sd": 0.0331,
+   "score": 0.09073
   },
   {
    "k": 23,
-   "silhouette": 0.0801,
-   "bootstrap_ari": 0.8717,
-   "bootstrap_ari_sd": 0.042,
-   "score": 0.06986
+   "silhouette": 0.1039,
+   "bootstrap_ari": 0.8881,
+   "bootstrap_ari_sd": 0.0296,
+   "score": 0.09224
   },
   {
    "k": 24,
-   "silhouette": 0.0812,
-   "bootstrap_ari": 0.8717,
-   "bootstrap_ari_sd": 0.0411,
-   "score": 0.07078
+   "silhouette": 0.1041,
+   "bootstrap_ari": 0.8859,
+   "bootstrap_ari_sd": 0.026,
+   "score": 0.09219
   }
  ],
  "seed_ari": [
-  0.8896,
-  0.841,
-  0.7967
+  0.8849,
+  0.9339,
+  0.8972
  ],
  "chosen": {
-  "k": 21,
-  "silhouette": 0.0841,
-  "bootstrap_ari": 0.8892,
-  "bootstrap_ari_sd": 0.0433,
-  "score": 0.07478
+  "k": 10,
+  "silhouette": 0.1209,
+  "bootstrap_ari": 0.9577,
+  "bootstrap_ari_sd": 0.0472,
+  "score": 0.11575
  },
  "params": {
   "w_emb": 1.0,
-  "w_tag": 0.6,
+  "w_tag": 0.35,
   "tag_blocks": [
    "failure_mode",
    "technology",
-   "harm_type",
-   "risk_domain"
+   "harm_type"
   ],
   "umap": {
    "n_components": 10,
@@ -168,533 +167,622 @@
  "clusters": [
   {
    "cluster": 0,
-   "size": 96,
-   "name": "Titles: voice, scam, phishing",
-   "over_represented": [],
+   "size": 279,
+   "name": "Image & video generation \u00b7 Deliberate misuse by people \u2192 Misinformation & information integrity",
+   "over_represented": [
+    {
+     "dimension": "harm_type",
+     "term": "misinformation",
+     "label": "Misinformation & information integrity",
+     "share": 0.857,
+     "lift": 3.97
+    },
+    {
+     "dimension": "sector",
+     "term": "elections_politics",
+     "label": "Elections & politics",
+     "share": 0.541,
+     "lift": 5.71
+    },
+    {
+     "dimension": "technology",
+     "term": "image_video_generation",
+     "label": "Image & video generation (incl. deepfakes)",
+     "share": 0.925,
+     "lift": 2.53
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "malicious_use",
+     "label": "Deliberate misuse by people",
+     "share": 0.943,
+     "lift": 2.03
+    },
+    {
+     "dimension": "sector",
+     "term": "social_media",
+     "label": "Social media & online platforms",
+     "share": 0.62,
+     "lift": 2.72
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "4",
+     "label": "Malicious actors & misuse",
+     "share": 0.792,
+     "lift": 1.8
+    },
+    {
+     "dimension": "harm_type",
+     "term": "democratic",
+     "label": "Democratic & political processes",
+     "share": 0.258,
+     "lift": 5.42
+    },
+    {
+     "dimension": "harm_type",
+     "term": "reputational",
+     "label": "Reputation & defamation",
+     "share": 0.559,
+     "lift": 2.17
+    }
+   ],
    "keywords": [
-    "voice",
-    "scam",
-    "phishing",
-    "fraud"
+    "video",
+    "deepfake",
+    "disinformation",
+    "campaign"
    ]
   },
   {
    "cluster": 1,
-   "size": 115,
-   "name": "Titles: facebook, content, google",
-   "over_represented": [],
+   "size": 238,
+   "name": "LLM / chatbot / generative text \u00b7 Harmful or unsafe output",
+   "over_represented": [
+    {
+     "dimension": "technology",
+     "term": "llm_chatbot",
+     "label": "LLM / chatbot / generative text",
+     "share": 0.84,
+     "lift": 3.93
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "harmful_content",
+     "label": "Harmful or unsafe output",
+     "share": 0.256,
+     "lift": 5.44
+    },
+    {
+     "dimension": "sector",
+     "term": "consumer_tech",
+     "label": "Consumer apps & devices",
+     "share": 0.294,
+     "lift": 4.07
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "share": 0.412,
+     "lift": 2.31
+    },
+    {
+     "dimension": "harm_type",
+     "term": "psychological",
+     "label": "Psychological & emotional",
+     "share": 0.265,
+     "lift": 1.81
+    }
+   ],
    "keywords": [
-    "facebook",
-    "content",
-    "google",
-    "news"
+    "chatgpt",
+    "data",
+    "chatbot",
+    "openai"
    ]
   },
   {
    "cluster": 2,
-   "size": 81,
-   "name": "Titles: citations, court, legal",
-   "over_represented": [],
+   "size": 299,
+   "name": "Voice cloning & speech synthesis \u00b7 Deliberate misuse by people",
+   "over_represented": [
+    {
+     "dimension": "harm_type",
+     "term": "financial",
+     "label": "Financial loss",
+     "share": 0.849,
+     "lift": 3.87
+    },
+    {
+     "dimension": "technology",
+     "term": "voice_synthesis",
+     "label": "Voice cloning & speech synthesis",
+     "share": 0.753,
+     "lift": 3.79
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "4",
+     "label": "Malicious actors & misuse",
+     "share": 0.97,
+     "lift": 2.21
+    },
+    {
+     "dimension": "sector",
+     "term": "finance",
+     "label": "Finance",
+     "share": 0.462,
+     "lift": 5.21
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "malicious_use",
+     "label": "Deliberate misuse by people",
+     "share": 0.967,
+     "lift": 2.08
+    },
+    {
+     "dimension": "technology",
+     "term": "image_video_generation",
+     "label": "Image & video generation (incl. deepfakes)",
+     "share": 0.769,
+     "lift": 2.1
+    },
+    {
+     "dimension": "harm_type",
+     "term": "reputational",
+     "label": "Reputation & defamation",
+     "share": 0.538,
+     "lift": 2.09
+    }
+   ],
    "keywords": [
-    "citations",
-    "court",
-    "legal",
-    "case"
+    "deepfake",
+    "scam",
+    "voice",
+    "investment"
    ]
   },
   {
    "cluster": 3,
-   "size": 201,
-   "name": "Titles: deepfake, scam, investment",
-   "over_represented": [],
-   "keywords": [
-    "deepfake",
-    "scam",
-    "investment",
-    "impersonating"
-   ]
-  },
-  {
-   "cluster": 4,
-   "size": 118,
-   "name": "Titles: meta, chatbot, chatgpt",
-   "over_represented": [],
-   "keywords": [
-    "meta",
-    "chatbot",
-    "chatgpt",
-    "users"
-   ]
-  },
-  {
-   "cluster": 5,
-   "size": 107,
-   "name": "Predictive / risk scoring & automated decisions \u00b7 Robustness / capability failure",
+   "size": 186,
+   "name": "Facial recognition & biometrics \u00b7 Privacy violation & data misuse",
    "over_represented": [
     {
-     "dimension": "risk_domain",
-     "term": "7",
-     "label": "AI system safety",
-     "share": 0.897,
-     "lift": 10.6
+     "dimension": "technology",
+     "term": "facial_recognition",
+     "label": "Facial recognition & biometrics",
+     "share": 0.495,
+     "lift": 9.49
+    },
+    {
+     "dimension": "sector",
+     "term": "law_enforcement",
+     "label": "Policing & law enforcement",
+     "share": 0.43,
+     "lift": 7.91
+    },
+    {
+     "dimension": "harm_type",
+     "term": "civil_rights",
+     "label": "Civil rights & discrimination",
+     "share": 0.538,
+     "lift": 5.18
+    },
+    {
+     "dimension": "technology",
+     "term": "surveillance_analytics",
+     "label": "Surveillance & tracking analytics",
+     "share": 0.306,
+     "lift": 9.43
+    },
+    {
+     "dimension": "harm_type",
+     "term": "privacy",
+     "label": "Privacy",
+     "share": 0.349,
+     "lift": 5.88
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "privacy_violation",
+     "label": "Privacy violation & data misuse",
+     "share": 0.296,
+     "lift": 5.86
     },
     {
      "dimension": "failure_mode",
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
-     "share": 0.757,
-     "lift": 8.18
+     "share": 0.538,
+     "lift": 2.47
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "2",
+     "label": "Privacy & security",
+     "share": 0.258,
+     "lift": 5.17
+    }
+   ],
+   "keywords": [
+    "facial",
+    "recognition",
+    "police",
+    "safety"
+   ]
+  },
+  {
+   "cluster": 4,
+   "size": 124,
+   "name": "Predictive / risk scoring & automated decisions \u00b7 Bias & disparate performance",
+   "over_represented": [
+    {
+     "dimension": "technology",
+     "term": "predictive_scoring",
+     "label": "Predictive / risk scoring & automated decisions",
+     "share": 0.621,
+     "lift": 11.66
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "bias_discrimination",
+     "label": "Bias & disparate performance",
+     "share": 0.637,
+     "lift": 8.3
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "1",
+     "label": "Discrimination & toxicity",
+     "share": 0.597,
+     "lift": 4.18
+    },
+    {
+     "dimension": "harm_type",
+     "term": "civil_rights",
+     "label": "Civil rights & discrimination",
+     "share": 0.508,
+     "lift": 4.9
     },
     {
      "dimension": "failure_mode",
      "term": "opacity_contestability",
      "label": "Opacity & lack of recourse",
-     "share": 0.29,
-     "lift": 10.13
+     "share": 0.363,
+     "lift": 7.9
     },
     {
-     "dimension": "technology",
-     "term": "predictive_scoring",
-     "label": "Predictive / risk scoring & automated decisions",
-     "share": 0.28,
-     "lift": 8.62
+     "dimension": "risk_domain",
+     "term": "7",
+     "label": "AI system safety",
+     "share": 0.387,
+     "lift": 1.99
     },
     {
-     "dimension": "harm_type",
-     "term": "no_harm_near_miss",
-     "label": "No realized harm (issue or near miss)",
-     "share": 0.262,
-     "lift": 7.65
+     "dimension": "failure_mode",
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "share": 0.347,
+     "lift": 1.59
     }
    ],
    "keywords": [
-    "automated",
     "algorithm",
-    "drivers",
-    "amazon"
+    "gender",
+    "bias",
+    "racial"
    ]
   },
   {
-   "cluster": 6,
-   "size": 128,
-   "name": "Titles: video, deepfake, president",
-   "over_represented": [],
-   "keywords": [
-    "video",
-    "deepfake",
-    "president",
-    "depicts"
-   ]
-  },
-  {
-   "cluster": 7,
-   "size": 63,
+   "cluster": 5,
+   "size": 157,
    "name": "Autonomous & driver-assist vehicles \u00b7 Robustness / capability failure",
    "over_represented": [
     {
      "dimension": "sector",
      "term": "transportation",
      "label": "Transportation & mobility",
-     "share": 0.619,
-     "lift": 18.72
+     "share": 0.796,
+     "lift": 10.15
     },
     {
      "dimension": "technology",
      "term": "autonomous_vehicle",
      "label": "Autonomous & driver-assist vehicles",
-     "share": 0.54,
-     "lift": 22.92
+     "share": 0.726,
+     "lift": 11.36
     },
     {
      "dimension": "risk_domain",
      "term": "7",
      "label": "AI system safety",
-     "share": 0.762,
-     "lift": 9.0
+     "share": 0.879,
+     "lift": 4.52
     },
     {
      "dimension": "failure_mode",
      "term": "robustness_failure",
      "label": "Robustness / capability failure",
-     "share": 0.778,
-     "lift": 8.41
-    },
-    {
-     "dimension": "failure_mode",
-     "term": "human_automation_interaction",
-     "label": "Human\u2013automation interaction",
-     "share": 0.492,
-     "lift": 18.68
+     "share": 0.885,
+     "lift": 4.06
     },
     {
      "dimension": "harm_type",
      "term": "physical",
      "label": "Physical injury or death",
-     "share": 0.508,
-     "lift": 16.78
+     "share": 0.471,
+     "lift": 6.47
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "human_automation_interaction",
+     "label": "Human\u2013automation interaction",
+     "share": 0.439,
+     "lift": 4.64
     },
     {
      "dimension": "technology",
      "term": "robotics_drones",
      "label": "Robotics",
-     "share": 0.365,
-     "lift": 25.05
+     "share": 0.261,
+     "lift": 11.09
     },
     {
      "dimension": "harm_type",
      "term": "property_operational",
      "label": "Property damage & service disruption",
-     "share": 0.349,
-     "lift": 16.84
+     "share": 0.293,
+     "lift": 6.3
     }
    ],
    "keywords": [
-    "tesla",
     "robot",
-    "autopilot",
-    "car"
+    "car",
+    "cruise",
+    "san"
    ]
   },
   {
-   "cluster": 8,
-   "size": 66,
-   "name": "Image & video generation \u00b7 Deliberate misuse by people",
+   "cluster": 6,
+   "size": 120,
+   "name": "Content moderation & classification \u00b7 Robustness / capability failure",
    "over_represented": [
     {
-     "dimension": "failure_mode",
-     "term": "malicious_use",
-     "label": "Deliberate misuse by people",
-     "share": 0.652,
-     "lift": 20.76
-    },
-    {
-     "dimension": "risk_domain",
-     "term": "4",
-     "label": "Malicious actors & misuse",
-     "share": 0.53,
-     "lift": 21.5
-    },
-    {
      "dimension": "technology",
-     "term": "image_video_generation",
-     "label": "Image & video generation (incl. deepfakes)",
-     "share": 0.485,
-     "lift": 20.12
-    },
-    {
-     "dimension": "harm_type",
-     "term": "misinformation",
-     "label": "Misinformation & information integrity",
-     "share": 0.455,
-     "lift": 20.79
-    },
-    {
-     "dimension": "technology",
-     "term": "voice_synthesis",
-     "label": "Voice cloning & speech synthesis",
-     "share": 0.318,
-     "lift": 27.03
-    },
-    {
-     "dimension": "risk_domain",
-     "term": "3",
-     "label": "Misinformation",
-     "share": 0.318,
-     "lift": 19.57
-    },
-    {
-     "dimension": "harm_type",
-     "term": "reputational",
-     "label": "Reputation & defamation",
-     "share": 0.303,
-     "lift": 16.89
-    },
-    {
-     "dimension": "technology",
-     "term": "llm_chatbot",
-     "label": "LLM / chatbot / generative text",
-     "share": 0.288,
-     "lift": 10.93
-    }
-   ],
-   "keywords": [
-    "deepfake",
-    "media",
-    "social",
-    "voice"
-   ]
-  },
-  {
-   "cluster": 9,
-   "size": 67,
-   "name": "Titles: grok, disinformation, election",
-   "over_represented": [],
-   "keywords": [
-    "grok",
-    "disinformation",
-    "election",
-    "tiktok"
-   ]
-  },
-  {
-   "cluster": 10,
-   "size": 70,
-   "name": "Titles: algorithm, patient, health",
-   "over_represented": [],
-   "keywords": [
-    "algorithm",
-    "patient",
-    "health",
-    "claims"
-   ]
-  },
-  {
-   "cluster": 11,
-   "size": 16,
-   "name": "Titles: flock, license-plate, reader",
-   "over_represented": [],
-   "keywords": [
-    "flock",
-    "license-plate",
-    "reader",
-    "safety"
-   ]
-  },
-  {
-   "cluster": 12,
-   "size": 78,
-   "name": "Titles: tesla, waymo, robotaxi",
-   "over_represented": [],
-   "keywords": [
-    "tesla",
-    "waymo",
-    "robotaxi",
-    "crashed"
-   ]
-  },
-  {
-   "cluster": 13,
-   "size": 136,
-   "name": "Titles: images, deepfake, school",
-   "over_represented": [],
-   "keywords": [
-    "images",
-    "deepfake",
-    "school",
-    "students"
-   ]
-  },
-  {
-   "cluster": 14,
-   "size": 75,
-   "name": "Predictive / risk scoring & automated decisions \u00b7 Bias & disparate performance",
-   "over_represented": [
-    {
-     "dimension": "failure_mode",
-     "term": "bias_discrimination",
-     "label": "Bias & disparate performance",
-     "share": 1.0,
-     "lift": 18.78
-    },
-    {
-     "dimension": "risk_domain",
-     "term": "1",
-     "label": "Discrimination & toxicity",
-     "share": 1.0,
-     "lift": 15.93
-    },
-    {
-     "dimension": "harm_type",
-     "term": "civil_rights",
-     "label": "Civil rights & discrimination",
-     "share": 0.747,
-     "lift": 14.17
-    },
-    {
-     "dimension": "technology",
-     "term": "predictive_scoring",
-     "label": "Predictive / risk scoring & automated decisions",
-     "share": 0.32,
-     "lift": 9.84
-    }
-   ],
-   "keywords": [
-    "algorithm",
-    "gender",
-    "black",
-    "racial"
-   ]
-  },
-  {
-   "cluster": 15,
-   "size": 36,
-   "name": "Facial recognition & biometrics \u00b7 Privacy violation & data misuse",
-   "over_represented": [
-    {
-     "dimension": "risk_domain",
-     "term": "2",
-     "label": "Privacy & security",
-     "share": 0.806,
-     "lift": 47.9
-    },
-    {
-     "dimension": "harm_type",
-     "term": "privacy",
-     "label": "Privacy",
-     "share": 0.833,
-     "lift": 39.12
-    },
-    {
-     "dimension": "failure_mode",
-     "term": "privacy_violation",
-     "label": "Privacy violation & data misuse",
-     "share": 0.806,
-     "lift": 36.85
-    },
-    {
-     "dimension": "technology",
-     "term": "facial_recognition",
-     "label": "Facial recognition & biometrics",
-     "share": 0.556,
-     "lift": 24.78
-    },
-    {
-     "dimension": "technology",
-     "term": "surveillance_analytics",
-     "label": "Surveillance & tracking analytics",
-     "share": 0.361,
-     "lift": 23.86
-    },
-    {
-     "dimension": "failure_mode",
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "share": 0.306,
-     "lift": 5.45
-    }
-   ],
-   "keywords": [
-    "facial",
-    "recognition",
-    "data",
-    "consent"
-   ]
-  },
-  {
-   "cluster": 16,
-   "size": 52,
-   "name": "Titles: facial, recognition, arrest",
-   "over_represented": [],
-   "keywords": [
-    "facial",
-    "recognition",
-    "arrest",
-    "police"
-   ]
-  },
-  {
-   "cluster": 17,
-   "size": 54,
-   "name": "Titles: chatgpt, suicide, chatbot",
-   "over_represented": [],
-   "keywords": [
-    "chatgpt",
-    "suicide",
-    "chatbot",
-    "man"
-   ]
-  },
-  {
-   "cluster": 18,
-   "size": 99,
-   "name": "AI agents & coding assistants \u00b7 Hallucination & fabrication",
-   "over_represented": [],
-   "keywords": [
-    "agent",
-    "claude",
-    "data",
-    "anthropic"
-   ]
-  },
-  {
-   "cluster": 19,
-   "size": 70,
-   "name": "Titles: image, images, trump",
-   "over_represented": [],
-   "keywords": [
-    "image",
-    "images",
-    "trump",
-    "photo"
-   ]
-  },
-  {
-   "cluster": 20,
-   "size": 56,
-   "name": "Recommender \u00b7 Harmful or unsafe output",
-   "over_represented": [
-    {
-     "dimension": "failure_mode",
-     "term": "harmful_content",
-     "label": "Harmful or unsafe output",
-     "share": 0.518,
-     "lift": 30.8
-    },
-    {
-     "dimension": "risk_domain",
-     "term": "1",
-     "label": "Discrimination & toxicity",
-     "share": 0.661,
-     "lift": 10.52
-    },
-    {
-     "dimension": "sector",
-     "term": "social_media",
-     "label": "Social media & online platforms",
-     "share": 0.536,
-     "lift": 13.46
-    },
-    {
-     "dimension": "harm_type",
-     "term": "psychological",
-     "label": "Psychological & emotional",
-     "share": 0.429,
-     "lift": 12.96
-    },
-    {
-     "dimension": "failure_mode",
-     "term": "inadequate_oversight",
-     "label": "Inadequate testing or oversight",
-     "share": 0.482,
-     "lift": 8.6
+     "term": "content_moderation",
+     "label": "Content moderation & classification",
+     "share": 0.442,
+     "lift": 13.59
     },
     {
      "dimension": "technology",
      "term": "recommender_ranking",
      "label": "Recommender",
-     "share": 0.339,
-     "lift": 15.93
+     "share": 0.358,
+     "lift": 11.02
+    },
+    {
+     "dimension": "sector",
+     "term": "social_media",
+     "label": "Social media & online platforms",
+     "share": 0.692,
+     "lift": 3.04
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "robustness_failure",
+     "label": "Robustness / capability failure",
+     "share": 0.567,
+     "lift": 2.6
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "1",
+     "label": "Discrimination & toxicity",
+     "share": 0.458,
+     "lift": 3.21
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "7",
+     "label": "AI system safety",
+     "share": 0.333,
+     "lift": 1.71
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "share": 0.3,
+     "lift": 1.68
+    },
+    {
+     "dimension": "harm_type",
+     "term": "psychological",
+     "label": "Psychological & emotional",
+     "share": 0.25,
+     "lift": 1.71
+    }
+   ],
+   "keywords": [
+    "facebook",
+    "content",
+    "moderation",
+    "algorithms"
+   ]
+  },
+  {
+   "cluster": 7,
+   "size": 166,
+   "name": "LLM / chatbot / generative text \u00b7 Hallucination & fabrication",
+   "over_represented": [
+    {
+     "dimension": "failure_mode",
+     "term": "hallucination",
+     "label": "Hallucination & fabrication",
+     "share": 0.705,
+     "lift": 9.25
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "3",
+     "label": "Misinformation",
+     "share": 0.813,
+     "lift": 6.15
     },
     {
      "dimension": "technology",
      "term": "llm_chatbot",
      "label": "LLM / chatbot / generative text",
-     "share": 0.339,
-     "lift": 12.88
+     "share": 0.952,
+     "lift": 4.46
     },
     {
-     "dimension": "technology",
-     "term": "content_moderation",
-     "label": "Content moderation & classification",
-     "share": 0.268,
-     "lift": 16.48
+     "dimension": "sector",
+     "term": "justice_corrections",
+     "label": "Courts",
+     "share": 0.289,
+     "lift": 8.74
+    },
+    {
+     "dimension": "harm_type",
+     "term": "misinformation",
+     "label": "Misinformation & information integrity",
+     "share": 0.59,
+     "lift": 2.74
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "human_automation_interaction",
+     "label": "Human\u2013automation interaction",
+     "share": 0.331,
+     "lift": 3.5
+    },
+    {
+     "dimension": "harm_type",
+     "term": "reputational",
+     "label": "Reputation & defamation",
+     "share": 0.488,
+     "lift": 1.89
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "share": 0.289,
+     "lift": 1.62
     }
    ],
    "keywords": [
-    "content",
-    "facebook",
-    "tiktok",
-    "failed"
+    "case",
+    "legal",
+    "court",
+    "false"
+   ]
+  },
+  {
+   "cluster": 8,
+   "size": 66,
+   "name": "AI agents & coding assistants \u00b7 Security vulnerability",
+   "over_represented": [
+    {
+     "dimension": "technology",
+     "term": "agentic_ai",
+     "label": "AI agents & coding assistants",
+     "share": 0.712,
+     "lift": 27.03
+    },
+    {
+     "dimension": "harm_type",
+     "term": "security_safety",
+     "label": "Public or national security",
+     "share": 0.591,
+     "lift": 16.73
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "security_vulnerability",
+     "label": "Security vulnerability",
+     "share": 0.258,
+     "lift": 12.42
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "inadequate_oversight",
+     "label": "Inadequate testing or oversight",
+     "share": 0.379,
+     "lift": 2.13
+    }
+   ],
+   "keywords": [
+    "agent",
+    "claude",
+    "agents",
+    "anthropic"
+   ]
+  },
+  {
+   "cluster": 9,
+   "size": 149,
+   "name": "Image & video generation \u00b7 Deliberate misuse by people \u2192 Non-consensual sexual content & exploitation",
+   "over_represented": [
+    {
+     "dimension": "harm_type",
+     "term": "sexual_exploitation",
+     "label": "Non-consensual sexual content & exploitation",
+     "share": 0.812,
+     "lift": 11.78
+    },
+    {
+     "dimension": "harm_type",
+     "term": "psychological",
+     "label": "Psychological & emotional",
+     "share": 0.705,
+     "lift": 4.82
+    },
+    {
+     "dimension": "technology",
+     "term": "image_video_generation",
+     "label": "Image & video generation (incl. deepfakes)",
+     "share": 0.933,
+     "lift": 2.55
+    },
+    {
+     "dimension": "risk_domain",
+     "term": "4",
+     "label": "Malicious actors & misuse",
+     "share": 0.933,
+     "lift": 2.12
+    },
+    {
+     "dimension": "failure_mode",
+     "term": "malicious_use",
+     "label": "Deliberate misuse by people",
+     "share": 0.946,
+     "lift": 2.04
+    },
+    {
+     "dimension": "harm_type",
+     "term": "child_safety",
+     "label": "Child safety",
+     "share": 0.329,
+     "lift": 7.33
+    },
+    {
+     "dimension": "sector",
+     "term": "education",
+     "label": "Education",
+     "share": 0.322,
+     "lift": 5.81
+    }
+   ],
+   "keywords": [
+    "images",
+    "deepfake",
+    "school",
+    "students"
    ]
   }
  ]

@@ -148,13 +148,16 @@ def eval_gmf_failure(con, ours):
 
 def eval_cset_sector(con, ours):
     cw = taxonomy.crosswalk("cset_sector")
-    rev = {o: c for c, lst in cw.items() for o in lst}
+    rev: dict[str, set[str]] = defaultdict(set)  # one of our sectors can map to several CSET buckets
+    for c, lst in cw.items():
+        for o in lst:
+            rev[o].add(c)
     cs = expert(con, "CSETv1", "Sector of Deployment")
     pairs, ex = [], []
     for iid, vals in cs.items():
         e = {v for v in vals if v in cw}
         if iid in ours and e:
-            o = {rev[t] for t in tagset(ours[iid], "sector") if t in rev}
+            o = set().union(*(rev[t] for t in tagset(ours[iid], "sector") if t in rev))
             pairs.append((e, o))
             if not (e & o):
                 ex.append({"incident_id": iid, "expert": sorted(e), "ours": sorted(tagset(ours[iid], "sector")),

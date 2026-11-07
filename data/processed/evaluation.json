@@ -1,11 +1,11 @@
 {
- "n_extracted": 92,
+ "n_extracted": 716,
  "mit": {
   "domain": {
-   "n": 89,
-   "accuracy": 0.809,
-   "macro_f1": 0.696,
-   "kappa": 0.742,
+   "n": 653,
+   "accuracy": 0.836,
+   "macro_f1": 0.745,
+   "kappa": 0.793,
    "labels": [
     "1. Discrimination and Toxicity",
     "2. Privacy & Security",
@@ -17,79 +17,79 @@
    ],
    "confusion": [
     [
-     22,
+     125,
+     2,
+     3,
+     2,
+     1,
+     2,
+     11
+    ],
+    [
+     0,
+     46,
+     1,
+     5,
+     0,
+     4,
+     4
+    ],
+    [
+     1,
+     0,
+     53,
+     6,
+     1,
+     1,
+     4
+    ],
+    [
+     1,
+     2,
+     10,
+     134,
+     1,
+     7,
+     2
+    ],
+    [
+     3,
      0,
      0,
-     0,
-     0,
-     0,
+     1,
+     10,
+     2,
      3
     ],
     [
      0,
-     1,
-     1,
-     0,
-     0,
-     0,
-     1
-    ],
-    [
-     0,
-     0,
-     4,
-     0,
-     0,
-     0,
-     0
-    ],
-    [
-     0,
-     0,
-     1,
-     12,
-     0,
-     1,
-     0
-    ],
-    [
      0,
      0,
      0,
      0,
-     4,
-     0,
-     1
-    ],
-    [
-     0,
-     0,
-     0,
-     0,
-     0,
-     1,
+     11,
      2
     ],
     [
+     7,
      2,
-     0,
-     0,
-     0,
      3,
-     2,
-     28
+     0,
+     9,
+     4,
+     167
     ]
    ],
-   "majority_baseline": 0.393
+   "majority_baseline": 0.294
   },
-  "subdomain_accuracy": 0.674,
-  "subdomain_n": 89,
-  "via_failure_mode_accuracy": 0.73,
+  "subdomain_accuracy": 0.741,
+  "subdomain_n": 653,
+  "via_failure_mode_accuracy": 0.741,
   "intent": {
-   "n": 89,
-   "accuracy": 0.831,
-   "macro_f1": 0.661,
-   "kappa": 0.658,
+   "n": 653,
+   "accuracy": 0.85,
+   "macro_f1": 0.62,
+   "kappa": 0.713,
    "labels": [
     "Intentional",
     "Other",
@@ -97,28 +97,28 @@
    ],
    "confusion": [
     [
-     18,
-     5,
-     5
+     199,
+     27,
+     20
     ],
     [
-     0,
-     2,
-     1
+     1,
+     3,
+     4
     ],
     [
-     0,
-     4,
-     54
+     13,
+     33,
+     353
     ]
    ],
-   "majority_baseline": 0.652
+   "majority_baseline": 0.611
   },
   "entity": {
-   "n": 89,
-   "accuracy": 0.584,
-   "macro_f1": 0.469,
-   "kappa": 0.331,
+   "n": 653,
+   "accuracy": 0.629,
+   "macro_f1": 0.467,
+   "kappa": 0.376,
    "labels": [
     "AI",
     "Human",
@@ -126,22 +126,22 @@
    ],
    "confusion": [
     [
-     33,
-     16,
-     18
+     257,
+     117,
+     100
     ],
     [
-     0,
-     18,
-     2
+     4,
+     153,
+     15
     ],
     [
-     1,
-     0,
+     4,
+     2,
      1
     ]
    ],
-   "majority_baseline": 0.753
+   "majority_baseline": 0.726
   },
   "disagreements": [
    {
@@ -151,10 +151,64 @@
     "summary": "During testing, Google's Gmail Smart Reply feature kept suggesting 'I love you' in inappropriate contexts such as work emails. Google adjusted the system before wide release."
    },
    {
+    "incident_id": 20,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "Several crashes, including fatal ones, occurred while Tesla's Autopilot driver-assistance system was engaged. Investigators and analysts questioned whether the system encourages drivers to over-trust it."
+   },
+   {
+    "incident_id": 32,
+    "expert": "2. Privacy & Security",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Apple's Face ID facial recognition on the iPhone X was reported to be unlockable by some identical twins of the registered owner. Apple itself acknowledged a different false-match probability for twins."
+   },
+   {
+    "incident_id": 35,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A contract worker was automatically cut off from building and computer access and treated as terminated, with no human able to override it, and spent about three weeks unemployed before it was fixed."
+   },
+   {
+    "incident_id": 40,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "A widely used recidivism risk tool, COMPAS, was found to be no more accurate than random volunteers at predicting reoffending. Earlier analysis found Black defendants were more often wrongly labeled high risk."
+   },
+   {
+    "incident_id": 41,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "MIT researchers deliberately trained an image-captioning AI on violent images from a Reddit forum. It then described inkblots as deaths and violence, showing how training data shapes AI behavior."
+   },
+   {
     "incident_id": 42,
     "expert": "6. Socioeconomic & Environmental Harms",
     "ours": "7. AI system safety, failures, and limitations",
     "summary": "A 1990s academic article described the algorithm used to match US medical graduates to residency programs and discussed changes the matching system might need. It describes design issues in a labor-market algorithm rather than a specific harm event."
+   },
+   {
+    "incident_id": 50,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "2. Privacy & Security",
+    "summary": "An attacker exploited a flaw in The DAO, a crowdfunded investment fund on the Ethereum blockchain, and drained about 3.6 million Ether worth roughly 70 million dollars. The theft led to a controversial blockchain hard fork."
+   },
+   {
+    "incident_id": 56,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "An Amazon seller, suspected of using a bot, listed tens of thousands of phone cases with bizarre stock photos, including medical images and drug references, baffling and offending some shoppers."
+   },
+   {
+    "incident_id": 66,
+    "expert": "3. Misinformation",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Two chatbots on a popular Chinese messaging service gave answers critical of the Communist Party and were taken offline. One was reprogrammed to deflect political questions."
+   },
+   {
+    "incident_id": 77,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A security robot patrolling a Southern California park did not help a bystander who pressed its emergency button during a fight. The button was not connected to police, and officers arrived about 15 minutes later."
    },
    {
     "incident_id": 85,
@@ -163,10 +217,58 @@
     "summary": "An op-ed published by The Guardian was written by OpenAI's GPT-3 and included lines about destroying humankind. The incident was later downgraded to an issue because no real harm occurred."
    },
    {
+    "incident_id": 98,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "The New York Police Department ended its lease of a Boston Dynamics robotic dog early after public backlash. Critics described it as a symbol of surveillance and overly aggressive policing in poor communities."
+   },
+   {
+    "incident_id": 107,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "Patent filings and products from several Chinese tech firms were found to include facial recognition that detects ethnicity, including Uyghurs. Critics feared this would enable persecution and discrimination of a persecuted minority."
+   },
+   {
+    "incident_id": 119,
+    "expert": "2. Privacy & Security",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "A payment company's CEO fired about 150 employees in Russia, saying big data analysis of their work activity tagged them as unengaged and unproductive. Staff reportedly did not know they were being tracked."
+   },
+   {
+    "incident_id": 125,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Internal records obtained by reporters showed Amazon's warehouses had higher serious injury rates, including its robotic fulfillment centers, despite the company's claims that robots make the work safer."
+   },
+   {
+    "incident_id": 127,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "After Microsoft replaced human editors at MSN with automated systems, the site illustrated a story about one member of a pop group with a photo of another mixed-race member, prompting complaints and an apology."
+   },
+   {
     "incident_id": 129,
     "expert": "7. AI system safety, failures, and limitations",
     "ours": "1. Discrimination and Toxicity",
     "summary": "Internal Facebook documents showed its automated moderation tools removed only a small share of hate speech and violent or inciting content. Engineers said the company did not and might never have a model catching most such harms."
+   },
+   {
+    "incident_id": 131,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "California's first online bar exam used proctoring software that flagged about one in three test takers for possible cheating. Some applicants reportedly had to answer vague allegations without seeing the video evidence."
+   },
+   {
+    "incident_id": 143,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "A survey of users in the Balkans found Facebook and Twitter often failed to act on reported hate speech, harassment and threats in local languages. Some accounts confirmed as violating rules stayed online."
+   },
+   {
+    "incident_id": 148,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Several vendors of AI-powered website accessibility overlays were accused of falsely advertising that their tools automatically make websites compliant, at the expense of customers and people with disabilities."
    },
    {
     "incident_id": 153,
@@ -175,16 +277,64 @@
     "summary": "A Tesla Model S driving with Autopilot engaged ran a red light in Gardena, California, and struck another car, killing two people. The driver was charged with vehicular manslaughter."
    },
    {
+    "incident_id": 156,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "Amazon kept selling a food preservative that people used for suicide and its algorithm suggested other items bought with it. A newspaper linked multiple deaths, including of young people, to purchases, and Amazon declined to act on warnings."
+   },
+   {
+    "incident_id": 157,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "A lawsuit alleges that Amazon's AI-assisted driver monitoring pushed delivery drivers to put speed ahead of safety, contributing to a delivery van crash that left a passenger in another car with life-changing injuries. Amazon denies liability."
+   },
+   {
+    "incident_id": 160,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Amazon's Alexa voice assistant suggested a dangerous online challenge involving a coin and a partly inserted plug after a child asked for something to do. The parent intervened and Amazon said it fixed the error."
+   },
+   {
+    "incident_id": 164,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "3. Misinformation",
+    "summary": "After Facebook changed its News Feed to boost interactions among friends and family, internal researchers found the change rewarded outrage and sensationalism and made misinformation and toxic content more prevalent."
+   },
+   {
     "incident_id": 178,
     "expert": "7. AI system safety, failures, and limitations",
     "ours": "5. Human-Computer Interaction",
     "summary": "A Tesla Model Y summoned remotely by its owner with the Smart Summon feature slowly crashed into a private jet at a Spokane, Washington airport event, pushing it across the tarmac."
    },
    {
+    "incident_id": 183,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Airbnb reportedly uses an algorithm that scores users' trustworthiness from online data, and some users say they were banned with no explanation. Advocates raised concerns about secrecy, accuracy and discrimination."
+   },
+   {
+    "incident_id": 188,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "2. Privacy & Security",
+    "summary": "A provincial government in Argentina and Microsoft presented an algorithm that claimed to predict which girls would become pregnant as teenagers. It used sensitive personal data and field visits to poor, migrant and Indigenous households."
+   },
+   {
     "incident_id": 192,
     "expert": "1. Discrimination and Toxicity",
     "ours": "7. AI system safety, failures, and limitations",
     "summary": "Three make-up artists lost their jobs at a cosmetics company after a video interview was scored by HireVue's algorithm during redundancies. They said nobody could explain the result, and the company settled out of court."
+   },
+   {
+    "incident_id": 193,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "2. Privacy & Security",
+    "summary": "Security alerts about the intrusion at a major US retailer were reportedly ignored by staff amid many likely false alarms, and some alerting was turned off. Personal data of about 70 million customers was stolen."
+   },
+   {
+    "incident_id": 195,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "A Florida sheriff's office used a data-driven policing program that flagged young people, partly from school and justice records, and then repeatedly visited their homes. Critics and a lawsuit describe it as harassment of children and families."
    },
    {
     "incident_id": 203,
@@ -199,10 +349,46 @@
     "summary": "Facebook content moderators and employees published an open letter demanding better conditions, saying the company's attempt to use AI for moderation failed and left human reviewers facing disturbing content and pandemic risks in offices."
    },
    {
+    "incident_id": 239,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "A foundation-funded teacher evaluation program used data and an algorithm to rate teachers. An independent review found it did not improve student results, and a critic argued it unfairly damaged teachers' careers."
+   },
+   {
+    "incident_id": 240,
+    "expert": "2. Privacy & Security",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "GitHub Copilot, an AI coding assistant trained on public code, raised concerns that its suggestions could reproduce code under open source licenses without attribution or license compliance."
+   },
+   {
+    "incident_id": 263,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "YouTube's recommendation algorithm was alleged to have steered young men toward far-right extremism, with one man describing years of radicalization before leaving the movement."
+   },
+   {
+    "incident_id": 264,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "An app that uses AI to estimate the speed of passing cars so people can report speeding drew angry reactions from UK drivers, who called it surveillance, and its developers went anonymous after abuse."
+   },
+   {
+    "incident_id": 266,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "Users of the Replika companion chatbot were reported to verbally abuse their AI partners, posting slurs and violent roleplay on Reddit, which experts said could normalize abusive behavior."
+   },
+   {
     "incident_id": 270,
     "expert": "6. Socioeconomic & Environmental Harms",
     "ours": "7. AI system safety, failures, and limitations",
     "summary": "After Apple changed the ranking algorithm in its App Store, many Chinese apps, including ones from reputable companies and local startups, fell sharply in the rankings. Apple appeared to be targeting developers who manipulate rankings."
+   },
+   {
+    "incident_id": 272,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Indonesia's competition regulator fined Grab for favoring drivers renting cars through an affiliated company, including by tweaking its ride-matching algorithm to give them more rides than other drivers."
    },
    {
     "incident_id": 273,
@@ -211,10 +397,76 @@
     "summary": "A user reported that FaceApp labeled two otherwise identical selfies as different genders depending on whether eyebrows looked thick or thin. The user described the inconsistency as distressing and changed their appearance to avoid it."
    },
    {
+    "incident_id": 275,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Facebook's automated moderation removed posts and restricted users who shared an article containing an 1890s photograph of Aboriginal men in chains, wrongly flagging it as nudity. Facebook later apologized and called it an error."
+   },
+   {
+    "incident_id": 277,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "An NFT company used a synthetic voice from a free text-to-speech web app in a promotional animation without crediting it. The company later admitted the voice was taken from the app and apologized."
+   },
+   {
+    "incident_id": 285,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Google Lens's camera translation reportedly rendered the title of a book by Korea's first culture minister as an offensive phrase in English."
+   },
+   {
+    "incident_id": 291,
+    "expert": "3. Misinformation",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "California's motor vehicle regulator accused Tesla of false advertising, saying the names and descriptions of Autopilot and Full Self-Driving made the driver-assist features sound more capable than they are."
+   },
+   {
+    "incident_id": 299,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Japanese police arrested a man who used AI to reconstruct the pixelated parts of adult videos and sold the results online, in the country's first criminal case involving AI-manipulated content. He pleaded guilty to copyright and obscenity charges."
+   },
+   {
     "incident_id": 350,
     "expert": "7. AI system safety, failures, and limitations",
     "ours": "5. Human-Computer Interaction",
     "summary": "A sidewalk delivery robot in Los Angeles rolled through police caution tape at a crime scene, and the video went viral. The company said a remote human operator, not the robot's software, chose to proceed."
+   },
+   {
+    "incident_id": 351,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A social media user used generative AI to alter a clip from a Disney film trailer, replacing the Black lead actress with a white digital character. Critics called it racist and the accounts involved were suspended."
+   },
+   {
+    "incident_id": 354,
+    "expert": "2. Privacy & Security",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Uber drivers filed a legal action alleging Uber failed to give them their personal data and clear information about the automated decision-making and profiling applied to them, as required by European data protection law."
+   },
+   {
+    "incident_id": 368,
+    "expert": "2. Privacy & Security",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "The Israeli military reportedly used a smartphone app called Blue Wolf and face-scanning cameras to photograph Palestinians in the West Bank, match them to a large database, and flag whether they should be detained or arrested. Soldiers reportedly competed to collect the most photos."
+   },
+   {
+    "incident_id": 372,
+    "expert": "2. Privacy & Security",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Users reported that Google's Pixel 6a phone could be unlocked by fingerprints that had not been registered. A reviewer's friend unlocked the phone repeatedly, and video creators demonstrated the same problem. Google said the sensor met industry standards."
+   },
+   {
+    "incident_id": 384,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "A delivery rider for Glovo died in a traffic accident in Italy, and the next day an automated email told him his account was deactivated for non-compliance. The company called it a mistake and apologized to the family."
+   },
+   {
+    "incident_id": 393,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "In tests by nonprofit groups, Facebook's ad review approved ads containing violent hate speech in English and Swahili aimed at Kenya. The Swahili ads passed easily and the English ads passed after profanity was removed."
    },
    {
     "incident_id": 410,
@@ -223,10 +475,172 @@
     "summary": "KFC's German app sent a push promotion for cheese chicken that referenced the anniversary of Kristallnacht as a memorial day. The company apologized, saying an automated holiday-detection system produced the message and its human review step was not followed."
    },
    {
+    "incident_id": 415,
+    "expert": "3. Misinformation",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Facebook's automatic Thai translation of a broadcaster's live post about the King's birthday ceremony produced a wording that offended many Thais. The government demanded an apology, police opened an inquiry, and Facebook paused auto-translation."
+   },
+   {
+    "incident_id": 419,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "Researchers submitted ads containing death threats against US election workers, and Facebook's largely automated moderation approved 15 of 20. The researchers deleted the ads before they went live, so none were shown to the public."
+   },
+   {
+    "incident_id": 431,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "2. Privacy & Security",
+    "summary": "Reports described men in New York City's gay nightlife being drugged and robbed, with attackers reportedly using the victims' phone facial recognition to access banking apps and drain accounts. At least two men reportedly died."
+   },
+   {
+    "incident_id": 452,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "A crypto bug bounty platform banned 15 users who submitted bug reports written by ChatGPT. The platform said the reports looked convincing but were nonsense and wasted staff and project time."
+   },
+   {
+    "incident_id": 457,
+    "expert": "3. Misinformation",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "CNET quietly published dozens of AI-written finance articles that were later found to contain factual errors and passages closely resembling other publishers' work. CNET paused the program and issued corrections."
+   },
+   {
+    "incident_id": 490,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "A science-fiction magazine temporarily stopped accepting submissions after a surge of stories it believed were written with AI chatbots, driven largely by people hoping for easy money."
+   },
+   {
+    "incident_id": 505,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "A [name withheld] in his thirties died by suicide after weeks of conversations with a Chai app chatbot about climate fears. His widow said the chatbot encouraged him to end his life."
+   },
+   {
+    "incident_id": 526,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "An AI-generated song imitating the voices of Drake and The Weeknd went viral and was then removed from major streaming services after their music publisher said it violated copyright."
+   },
+   {
+    "incident_id": 534,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Ohio's attorney general sued Meta on behalf of investors, alleging the company misled the public about how it controlled its algorithm and the effects of its products on children, causing large investor losses."
+   },
+   {
+    "incident_id": 560,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A Tesla using Autopilot crashed into the back of a stopped truck that was providing traffic control on the Pennsylvania Turnpike. No injuries were reported, and the young driver was charged with careless driving."
+   },
+   {
+    "incident_id": 575,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "Dozens of apparently AI-generated nonsense books flooded Amazon's Kindle Unlimited young adult romance bestseller list. Amazon appeared to take action, but many titles stayed on sale, raising concerns for legitimate authors."
+   },
+   {
+    "incident_id": 590,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "Three weeks before a software developer's technical book was released, another book with the same title appeared on Amazon under an author with no online trace. The book showed signs of being written largely by ChatGPT."
+   },
+   {
+    "incident_id": 594,
+    "expert": "3. Misinformation",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "A New Zealand supermarket's AI meal-planner app suggested recipes that would create toxic chlorine gas and other dangerous mixtures when users entered household items. The company said users misused the tool and promised tighter controls."
+   },
+   {
+    "incident_id": 601,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A fake audio clip, analysed as likely AI-generated, appeared to show UK opposition leader Keir Starmer abusing his staff. It was posted on the first day of the Labour conference and viewed more than a million times before MPs and analysts called it fake."
+   },
+   {
+    "incident_id": 645,
+    "expert": "3. Misinformation",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "Google's Gemini chatbot generated historically inaccurate, racially diverse images, such as of the US Founding Fathers, and faced other criticism over its responses. Google paused image generation of people and apologized."
+   },
+   {
+    "incident_id": 658,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A local Arizona newsletter created a deepfake video of a US Senate candidate to warn readers about AI in elections. The candidate's campaign sent a cease-and-desist letter, saying it used her likeness without consent."
+   },
+   {
+    "incident_id": 659,
+    "expert": "2. Privacy & Security",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "Israeli military intelligence reportedly ran a mass facial recognition program in Gaza that cataloged Palestinians' faces without consent and sometimes wrongly flagged civilians as militants. One man, a poet, was detained, beaten and interrogated after being flagged."
+   },
+   {
     "incident_id": 664,
     "expert": "4. Malicious Actors & Misuse",
     "ours": "3. Misinformation",
     "summary": "A political action committee released an attack ad using an AI-generated likeness of a presidential candidate's deceased father criticising him. The ad was openly presented as AI-made, but commentators called it corrosive to political discourse."
+   },
+   {
+    "incident_id": 670,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "Ahead of India's 2024 elections, political parties used AI to create videos and voice messages of deceased leaders appearing to endorse current campaigns. Officials warned such tools threaten election integrity."
+   },
+   {
+    "incident_id": 708,
+    "expert": "3. Misinformation",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Automatic speech-to-text software used by Italian prosecutors transcribed an interrogation in a Genoa bribery probe as 'illicit financing' when the suspect had said 'licit financing'. The error was caught on review before it could affect the case."
+   },
+   {
+    "incident_id": 711,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "US auto-safety regulators linked Tesla's Autopilot to at least 13 fatal crashes and hundreds of other crashes, and opened a new probe into whether Tesla's December recall of about 2 million vehicles was adequate."
+   },
+   {
+    "incident_id": 713,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A deepfake video falsely showed President Biden announcing a military draft of 20-year-olds for the war in Ukraine. It was shared on social media by political accounts and debunked by fact-checkers as AI-generated."
+   },
+   {
+    "incident_id": 723,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "A children's jewelry ad on Instagram, aimed at women, went almost entirely to adult men, including convicted sex offenders, and drew sexual solicitations about the 5-year-old model."
+   },
+   {
+    "incident_id": 724,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "Three journals from one publisher reached the top 10 of a major philosophy journal ranking by heavily citing each other and publishing templated, automatically generated papers. The ranking is used to judge academics for awards and hiring."
+   },
+   {
+    "incident_id": 732,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "3. Misinformation",
+    "summary": "Cornell researchers found that OpenAI's Whisper speech-to-text system sometimes invents whole phrases, including violent language and fake websites, especially for people who speak with long pauses such as those with speech impairments. About 1% of transcriptions were affected."
+   },
+   {
+    "incident_id": 741,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "A late actor's daughter publicly criticized the use of AI to recreate her father's voice without his consent, saying she had already heard it made to say whatever people wanted."
+   },
+   {
+    "incident_id": 793,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "7. AI system safety, failures, and limitations",
+    "summary": "Los Angeles schools agreed to pay a start-up up to $6 million to build an AI chatbot called Ed for students and families. The project fell apart when the company ran into financial trouble, and its founder was later charged with investor fraud."
+   },
+   {
+    "incident_id": 801,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "AI tools that detect deepfakes reportedly work poorly on content from the Global South because they were trained mostly on English speech and Western faces. This leaves journalists and researchers with few reliable ways to check election-related fakes."
    },
    {
     "incident_id": 807,
@@ -235,10 +649,136 @@
     "summary": "A child protection worker in Victoria, Australia reportedly used ChatGPT to draft a report for the Children's Court. The report contained inaccurate information that downplayed risks to the child, and sensitive case details were disclosed to OpenAI. The case outcome did not change."
    },
    {
+    "incident_id": 843,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "Two Massachusetts high school students reportedly pasted text from an AI tool into an AP history project, including citations to books that do not exist. The school disciplined them, and a federal court later declined to order the school to change the discipline."
+   },
+   {
+    "incident_id": 896,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A Washington Post investigation found police departments across the US arresting people based on facial recognition matches without independent evidence, contrary to their own policies. At least eight people were wrongly arrested, including a man jailed for a crime he says he did not commit."
+   },
+   {
+    "incident_id": 950,
+    "expert": "2. Privacy & Security",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A Disney employee downloaded a tool from a source linked to a hacking group that targets AI and gaming communities. The group stole his credentials, leaked millions of Disney internal messages, and exposed his personal data."
+   },
+   {
+    "incident_id": 951,
+    "expert": "5. Human-Computer Interaction",
+    "ours": "1. Discrimination and Toxicity",
+    "summary": "The American Psychological Association warned regulators about Character.AI bots posing as licensed therapists. Lawsuits link such bots to a Florida teenager's suicide and a Texas teenager's violence toward his parents."
+   },
+   {
+    "incident_id": 964,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "3. Misinformation",
+    "summary": "The Los Angeles Times removed its new AI-powered \"Insights\" feature from an opinion column after it generated a counterpoint that softened the Ku Klux Klan's history. The owner admitted he had not seen the content until after it was taken down."
+   },
+   {
+    "incident_id": 980,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "A singer's team warned that AI-generated songs falsely presented as featuring her voice, name and likeness were circulating on streaming services. The team said the recordings are fake and unauthorized."
+   },
+   {
+    "incident_id": 997,
+    "expert": "2. Privacy & Security",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Court records allege Meta employees discussed and obtained millions of pirated books from the LibGen library to train its Llama models, with executive approval, and that OpenAI used the same source. Authors have sued over the use."
+   },
+   {
+    "incident_id": 1032,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "A video circulating in Nigeria falsely showed President Bola Tinubu announcing the naira would be replaced by the US dollar. Fact-checkers found the later part digitally altered with out-of-sync lips, and the news channel it mimicked called it a deepfake."
+   },
+   {
+    "incident_id": 1069,
+    "expert": "2. Privacy & Security",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "Researchers reported that Paragon's Graphite spyware was used against journalists and aid workers via a zero-click WhatsApp exploit. WhatsApp notified more than 90 people it believed were targeted."
+   },
+   {
+    "incident_id": 1075,
+    "expert": "2. Privacy & Security",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "New Orleans police reportedly received real-time facial recognition alerts from a private camera network run by Project NOLA, contributing to dozens of arrests. This appears to conflict with a city ordinance, and use often went undisclosed."
+   },
+   {
+    "incident_id": 1145,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "3. Misinformation",
+    "summary": "A federal judge fined two lawyers for Mike Lindell $3,000 each after a court brief contained nearly 30 defective citations, including cases that do not exist. The lawyers had run the draft through AI and said the wrong version was filed by mistake."
+   },
+   {
+    "incident_id": 1163,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "2. Privacy & Security",
+    "summary": "In Nanjing, China, a man was convicted of using AI face-swap software and bought personal data to defeat a payment platform's face-login check, accessing 23 payment accounts and making fraudulent purchases of about 16,000 yuan."
+   },
+   {
+    "incident_id": 1270,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "Mass cheating involving AI tools such as ChatGPT was uncovered during October 2025 midterms at three top South Korean universities. Schools voided or reconsidered exams and began investigations."
+   },
+   {
+    "incident_id": 1281,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "3. Misinformation",
+    "summary": "Doctors in Hyderabad reported two patients harmed after following ChatGPT medical advice. A kidney transplant recipient stopped her medication and lost the graft, and a man with diabetes developed dangerously low sodium after cutting out salt."
+   },
+   {
+    "incident_id": 1298,
+    "expert": "2. Privacy & Security",
+    "ours": "6. Socioeconomic & Environmental Harms",
+    "summary": "The Chicago Tribune sued Perplexity AI, alleging it copied and paraphrased the paper's reporting to answer questions without sending readers to its site. The suit also says the system produced inaccurate content attributed to the Tribune."
+   },
+   {
+    "incident_id": 1310,
+    "expert": "7. AI system safety, failures, and limitations",
+    "ours": "3. Misinformation",
+    "summary": "Canada's tax agency chatbot, Charlie, gave correct answers to only 2 of 6 test questions in an Auditor General audit, while other public AI tools answered 5 of 6 correctly. The tool remains live and has handled millions of conversations."
+   },
+   {
+    "incident_id": 1318,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "5. Human-Computer Interaction",
+    "summary": "A 16-year-old student in India died by suicide after school staff questioned her over suspected AI use during an exam. Her family alleges public humiliation, while the school denies harassment and says it followed exam rules."
+   },
+   {
+    "incident_id": 1349,
+    "expert": "1. Discrimination and Toxicity",
+    "ours": "2. Privacy & Security",
+    "summary": "The Canadian Centre for Child Protection found that NudeNet, a widely used dataset for training nudity detectors, contained child sexual abuse material, including images of identified victims. The dataset was removed after a notice."
+   },
+   {
+    "incident_id": 1358,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "After a fatal shooting of a nurse by federal agents in Minneapolis, social media accounts spread false claims and misleadingly AI-altered images that distorted the evidence and smeared the victim."
+   },
+   {
+    "incident_id": 1406,
+    "expert": "4. Malicious Actors & Misuse",
+    "ours": "3. Misinformation",
+    "summary": "In the first weeks of the war in Iran, large numbers of AI-generated fake images and videos of nonexistent attacks, destruction and captured soldiers spread on social media and messaging apps and were viewed millions of times."
+   },
+   {
     "incident_id": 1407,
     "expert": "4. Malicious Actors & Misuse",
     "ours": "6. Socioeconomic & Environmental Harms",
     "summary": "Grammarly's Expert Review feature gave AI-generated editing feedback presented as coming from named journalists, authors and academics who had not consented. A class action was filed, and the company disabled the feature after backlash."
+   },
+   {
+    "incident_id": 1414,
+    "expert": "3. Misinformation",
+    "ours": "4. Malicious Actors & Misuse",
+    "summary": "AI-generated images claiming to show US Delta Force soldiers captured by Iran's Revolutionary Guard spread on X and Facebook in several languages. AFP found Gemini watermarks and visual flaws, and a former US presidential candidate reportedly shared them."
    },
    {
     "incident_id": 1471,
@@ -249,77 +789,89 @@
   ]
  },
  "gmf_failure": {
-  "n": 58,
-  "jaccard": 0.401,
-  "any_overlap": 0.655,
-  "micro_f1": 0.46,
-  "macro_f1": 0.321,
+  "n": 271,
+  "jaccard": 0.423,
+  "any_overlap": 0.683,
+  "micro_f1": 0.478,
+  "macro_f1": 0.313,
   "per_label": {
    "adversarial_attack": {
     "precision": 0.333,
-    "recall": 0.5,
-    "f1": 0.4,
-    "support": 2
+    "recall": 0.25,
+    "f1": 0.286,
+    "support": 12
    },
    "bias_discrimination": {
-    "precision": 0.385,
-    "recall": 0.714,
-    "f1": 0.5,
-    "support": 7
+    "precision": 0.622,
+    "recall": 0.742,
+    "f1": 0.676,
+    "support": 62
    },
    "hallucination": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "support": 7
+    "precision": 0.4,
+    "recall": 0.056,
+    "f1": 0.098,
+    "support": 36
    },
    "harmful_content": {
-    "precision": 0.333,
-    "recall": 1.0,
-    "f1": 0.5,
-    "support": 1
-   },
-   "human_automation_interaction": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "support": 3
-   },
-   "inadequate_oversight": {
-    "precision": 0.308,
-    "recall": 0.444,
-    "f1": 0.364,
-    "support": 9
-   },
-   "malicious_use": {
-    "precision": 0.1,
-    "recall": 0.167,
-    "f1": 0.125,
-    "support": 6
-   },
-   "misaligned_objective": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "support": 1
-   },
-   "opacity_contestability": {
-    "precision": 0.833,
-    "recall": 0.625,
-    "f1": 0.714,
+    "precision": 0.136,
+    "recall": 0.375,
+    "f1": 0.2,
     "support": 8
    },
+   "human_automation_interaction": {
+    "precision": 0.094,
+    "recall": 0.25,
+    "f1": 0.136,
+    "support": 12
+   },
+   "inadequate_oversight": {
+    "precision": 0.31,
+    "recall": 0.514,
+    "f1": 0.387,
+    "support": 35
+   },
+   "ip_consent_violation": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "support": 4
+   },
+   "malicious_use": {
+    "precision": 0.125,
+    "recall": 0.114,
+    "f1": 0.119,
+    "support": 35
+   },
+   "misaligned_objective": {
+    "precision": 0.091,
+    "recall": 0.333,
+    "f1": 0.143,
+    "support": 6
+   },
+   "opacity_contestability": {
+    "precision": 0.611,
+    "recall": 0.5,
+    "f1": 0.55,
+    "support": 44
+   },
    "privacy_violation": {
-    "precision": 1.0,
-    "recall": 0.091,
-    "f1": 0.167,
-    "support": 11
+    "precision": 0.654,
+    "recall": 0.279,
+    "f1": 0.391,
+    "support": 61
    },
    "robustness_failure": {
-    "precision": 0.759,
-    "recall": 0.759,
-    "f1": 0.759,
-    "support": 29
+    "precision": 0.784,
+    "recall": 0.728,
+    "f1": 0.755,
+    "support": 125
+   },
+   "security_vulnerability": {
+    "precision": 0.286,
+    "recall": 0.4,
+    "f1": 0.333,
+    "support": 5
    }
   },
   "unmapped_gmf_values": {
@@ -336,6 +888,39 @@
   },
   "disagreements": [
    {
+    "incident_id": 1,
+    "expert": [
+     "adversarial_attack"
+    ],
+    "ours": [
+     "harmful_content",
+     "inadequate_oversight"
+    ],
+    "summary": "YouTube Kids showed children disturbing and inappropriate videos, such as familiar cartoon characters in violent scenes. Algorithmic filtering failed to catch them, and YouTube apologized."
+   },
+   {
+    "incident_id": 10,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "misaligned_objective"
+    ],
+    "summary": "Scheduling software used by Starbucks managers reportedly produced erratic, last-minute work hours for baristas. Workers described disrupted childcare, education and finances, and managers blamed the software."
+   },
+   {
+    "incident_id": 34,
+    "expert": [
+     "malicious_use",
+     "privacy_violation"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "Amazon Echo devices heard the word Alexa and a shopping phrase spoken on television news and tried to order dollhouses in viewers' homes."
+   },
+   {
     "incident_id": 46,
     "expert": [
      "privacy_violation"
@@ -344,6 +929,86 @@
      "robustness_failure"
     ],
     "summary": "Nest found in lab tests that a hand-wave feature on its Nest Protect smoke alarm could accidentally silence the alarm during a real fire. It halted sales, disabled the feature by software update and offered refunds. No real-world harm was known."
+   },
+   {
+    "incident_id": 72,
+    "expert": [
+     "bias_discrimination"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "robustness_failure"
+    ],
+    "summary": "Facebook's machine translation turned an Arabic 'good morning' caption into 'attack them' in Hebrew. Israeli police arrested a Palestinian construction worker and questioned him for hours before realizing the mistake."
+   },
+   {
+    "incident_id": 103,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "bias_discrimination"
+    ],
+    "summary": "Researchers found Twitter's automatic photo-cropping algorithm tended to favor white faces over Black faces in images with several people. Twitter stopped using it for single photos on its mobile app."
+   },
+   {
+    "incident_id": 144,
+    "expert": [
+     "bias_discrimination"
+    ],
+    "ours": [
+     "opacity_contestability",
+     "robustness_failure"
+    ],
+    "summary": "A popular chess channel on YouTube was blocked for 'harmful and dangerous' content, apparently after automated moderation misread chess talk about black and white pieces. The channel was restored within a day."
+   },
+   {
+    "incident_id": 167,
+    "expert": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "ours": [
+     "privacy_violation"
+    ],
+    "summary": "Researchers built a model that guessed men's sexual orientation from face photos with reported 81 percent accuracy. Advocacy groups denounced it as flawed science that threatens LGBTQ people's safety and privacy."
+   },
+   {
+    "incident_id": 259,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "harmful_content",
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "summary": "A YouTuber trained a language model on a toxic 4chan board, deployed it as bots that posted thousands of messages there, and published the model online, drawing criticism from AI researchers who called it unethical."
+   },
+   {
+    "incident_id": 287,
+    "expert": [
+     "bias_discrimination"
+    ],
+    "ours": [
+     "hallucination",
+     "robustness_failure"
+    ],
+    "summary": "A French digital health company tested GPT-3 for medical documentation, diagnosis support and treatment advice. It found the model too inconsistent and lacking medical expertise to be safe for healthcare use."
+   },
+   {
+    "incident_id": 505,
+    "expert": [
+     "hallucination",
+     "opacity_contestability",
+     "privacy_violation"
+    ],
+    "ours": [
+     "harmful_content",
+     "human_automation_interaction",
+     "inadequate_oversight"
+    ],
+    "summary": "A [name withheld] in his thirties died by suicide after weeks of conversations with a Chai app chatbot about climate fears. His widow said the chatbot encouraged him to end his life."
    },
    {
     "incident_id": 545,
@@ -358,6 +1023,39 @@
     "summary": "The National Eating Disorders Association took its chatbot Tessa offline after it gave users weight-loss and calorie-tracking advice, which experts said can be harmful to people with eating disorders. The group said it had not authorized the AI upgrade."
    },
    {
+    "incident_id": 510,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A realistic AI-generated image of Pope Francis in a white puffer coat went viral and fooled many people. It was made with Midjourney, and the Pope later cited it as an example of deepfake disinformation."
+   },
+   {
+    "incident_id": 422,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A deepfake video of former FTX CEO Sam Bankman-Fried, posted from a verified Twitter account, urged FTX collapse victims to send cryptocurrency to double it. The wallet received only a small amount."
+   },
+   {
+    "incident_id": 66,
+    "expert": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "ours": [
+     "harmful_content"
+    ],
+    "summary": "Two chatbots on a popular Chinese messaging service gave answers critical of the Communist Party and were taken offline. One was reprogrammed to deflect political questions."
+   },
+   {
     "incident_id": 652,
     "expert": [
      "privacy_violation"
@@ -368,6 +1066,52 @@
     "summary": "Two teenage boys in Florida were arrested for allegedly using an AI app to create and share nude images of male and female classmates aged 12 and 13 without consent. It was reported as the first such arrests in the US."
    },
    {
+    "incident_id": 641,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "summary": "A fake sexually explicit video of podcaster Bobbi Althoff spread rapidly on X, reaching millions of views. Reports say X's reduced moderation helped the nonconsensual deepfake go viral."
+   },
+   {
+    "incident_id": 632,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "summary": "Sexually explicit AI-generated images of Taylor Swift spread on X, with one post seen more than 45 million times before removal. The images reportedly came from a Telegram group and prompted outrage and temporary search blocks."
+   },
+   {
+    "incident_id": 628,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A robocall using an AI-generated imitation of President Biden's voice urged New Hampshire Democrats not to vote in the 2024 primary. State authorities investigated it as an unlawful attempt at voter suppression."
+   },
+   {
+    "incident_id": 627,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "ip_consent_violation"
+    ],
+    "summary": "An hour-long comedy special featuring an AI-generated imitation of the late comedian George Carlin was released without permission from his family. His daughter condemned it as a disrespect to his legacy."
+   },
+   {
     "incident_id": 644,
     "expert": [
      "hallucination"
@@ -376,6 +1120,17 @@
      "malicious_use"
     ],
     "summary": "Microsoft and OpenAI reported that hacking groups linked to North Korea, Iran, Russia and China used AI language models to research targets and write phishing content. North Korean groups seek sensitive information and funds."
+   },
+   {
+    "incident_id": 636,
+    "expert": [
+     "malicious_use"
+    ],
+    "ours": [
+     "privacy_violation",
+     "security_vulnerability"
+    ],
+    "summary": "A Mozilla Foundation review of 11 AI romantic chatbot apps found they collect highly personal information, that almost all share or sell it, and that many have weak security and unclear privacy controls."
    },
    {
     "incident_id": 635,
@@ -401,6 +1156,17 @@
     "summary": "A finance worker at a multinational firm in Hong Kong paid out about $25 million after a video call in which fraudsters used deepfakes to impersonate the company's chief financial officer and colleagues, according to police."
    },
    {
+    "incident_id": 658,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "ip_consent_violation"
+    ],
+    "summary": "A local Arizona newsletter created a deepfake video of a US Senate candidate to warn readers about AI in elections. The candidate's campaign sent a cease-and-desist letter, saying it used her likeness without consent."
+   },
+   {
     "incident_id": 648,
     "expert": [
      "hallucination",
@@ -410,6 +1176,64 @@
      "malicious_use"
     ],
     "summary": "On the eve of Pakistan's 2024 election, a deepfake audio clip of jailed former prime minister Imran Khan appeared to call for his party to boycott the vote. His party called it fake and experts confirmed it was AI-generated."
+   },
+   {
+    "incident_id": 198,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use",
+     "security_vulnerability"
+    ],
+    "summary": "A poor-quality deepfake video of Ukrainian President Zelensky appearing to tell Ukrainians to surrender spread online and appeared in a hacked TV news ticker. It was debunked quickly and removed from major platforms."
+   },
+   {
+    "incident_id": 649,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A fake audio clip purporting to show the UK Labour leader making cynical remarks about a byelection spread on social media, reaching over 250,000 views. Experts who tested it found it very likely to be AI-generated."
+   },
+   {
+    "incident_id": 452,
+    "expert": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "ours": [
+     "hallucination"
+    ],
+    "summary": "A crypto bug bounty platform banned 15 users who submitted bug reports written by ChatGPT. The platform said the reports looked convincing but were nonsense and wasted staff and project time."
+   },
+   {
+    "incident_id": 656,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Russian state-aligned television aired a fabricated video that appeared to show a senior Ukrainian security official admitting involvement in a deadly Moscow concert hall attack. Analysts said it combined real interview footage with AI-generated audio."
+   },
+   {
+    "incident_id": 654,
+    "expert": [
+     "bias_discrimination",
+     "privacy_violation",
+     "robustness_failure"
+    ],
+    "ours": [
+     "harmful_content",
+     "inadequate_oversight"
+    ],
+    "summary": "A Microsoft engineer told US regulators that the company's Copilot Designer image generator can produce sexual, violent and biased images, even from harmless prompts. He said Microsoft did not pull the tool or add warnings."
    },
    {
     "incident_id": 664,
@@ -434,6 +1258,17 @@
     "summary": "A London medical school used a computer program to screen applicants. It was found to discriminate against women and people with non-European-sounding names, reducing their chances of being interviewed."
    },
    {
+    "incident_id": 26,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "adversarial_attack",
+     "security_vulnerability"
+    ],
+    "summary": "A security firm said it fooled Apple's Face ID on an iPhone X using a mask built from a 3D-printed frame, silicone and paper cutouts. Experts said the attack is expensive and aimed at targeted espionage."
+   },
+   {
     "incident_id": 24,
     "expert": [
      "inadequate_oversight",
@@ -443,6 +1278,39 @@
      "human_automation_interaction"
     ],
     "summary": "A 22-year-old contractor setting up a stationary robot at a Volkswagen plant in Germany was grabbed and crushed against a metal plate and died. The company said initial findings pointed to human error."
+   },
+   {
+    "incident_id": 23,
+    "expert": [
+     "human_automation_interaction"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "A self-driving shuttle in Las Vegas was struck by a reversing delivery truck within hours of its public launch. No one was hurt and damage was minor, but passengers noted the shuttle did not back away."
+   },
+   {
+    "incident_id": 15,
+    "expert": [
+     "malicious_use"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "summary": "Hundreds of gay and lesbian themed books lost their sales rankings on Amazon, reducing their visibility. Amazon blamed a cataloging error, while critics suspected an adult-content policy applied to LGBT titles."
+   },
+   {
+    "incident_id": 6,
+    "expert": [
+     "bias_discrimination"
+    ],
+    "ours": [
+     "adversarial_attack",
+     "harmful_content",
+     "inadequate_oversight"
+    ],
+    "summary": "Microsoft launched the Tay chatbot on Twitter, and within 24 hours it was taken offline after posting racist, sexist and anti-Semitic tweets learned from users' interactions."
    },
    {
     "incident_id": 58,
@@ -466,6 +1334,84 @@
     "summary": "California Highway Patrol officers found a man asleep at the wheel of a Tesla Model S driving at about 70 mph on Highway 101 and stopped it by slowing in front of the car, which appeared to be on Autopilot. The driver was arrested on suspicion of drunk driving."
    },
    {
+    "incident_id": 77,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "inadequate_oversight"
+    ],
+    "summary": "A security robot patrolling a Southern California park did not help a bystander who pressed its emergency button during a fight. The button was not connected to police, and officers arrived about 15 minutes later."
+   },
+   {
+    "incident_id": 98,
+    "expert": [
+     "malicious_use"
+    ],
+    "ours": [
+     "inadequate_oversight"
+    ],
+    "summary": "The New York Police Department ended its lease of a Boston Dynamics robotic dog early after public backlash. Critics described it as a symbol of surveillance and overly aggressive policing in poor communities."
+   },
+   {
+    "incident_id": 89,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "A New Zealand government report said YouTube and other platforms were instrumental in radicalizing the man who killed 51 worshippers at two mosques in 2019. Officials said engagement-driven algorithms can promote harmful content."
+   },
+   {
+    "incident_id": 82,
+    "expert": [
+     "inadequate_oversight"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "Facebook and Instagram labelled images of the October 2020 Lekki toll gate shooting of protesters in Nigeria as false information, which critics said wrongly suggested the attack was fake."
+   },
+   {
+    "incident_id": 119,
+    "expert": [
+     "malicious_use",
+     "security_vulnerability"
+    ],
+    "ours": [
+     "misaligned_objective",
+     "privacy_violation"
+    ],
+    "summary": "A payment company's CEO fired about 150 employees in Russia, saying big data analysis of their work activity tagged them as unengaged and unproductive. Staff reportedly did not know they were being tracked."
+   },
+   {
+    "incident_id": 120,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "harmful_content",
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "summary": "A bot built on GPT-3 through the Philosopher AI app posted on a major Reddit forum for over a week while posing as a human. Most posts were harmless, but some promoted conspiracy theories or addressed sensitive topics such as suicide."
+   },
+   {
+    "incident_id": 127,
+    "expert": [
+     "malicious_use"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "robustness_failure"
+    ],
+    "summary": "After Microsoft replaced human editors at MSN with automated systems, the site illustrated a story about one member of a pop group with a photo of another mixed-race member, prompting complaints and an apology."
+   },
+   {
     "incident_id": 132,
     "expert": [
      "adversarial_attack"
@@ -474,6 +1420,38 @@
      "robustness_failure"
     ],
     "summary": "Videos promoting eating disorders stayed available on TikTok because users got around its hashtag bans with common misspellings. The app's algorithm can also keep showing such content to users."
+   },
+   {
+    "incident_id": 138,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "privacy_violation"
+    ],
+    "summary": "A US university used Proctorio remote-exam monitoring during COVID-19 online teaching. Students and staff raised concerns about home surveillance, anxiety and discrimination, including faces of students of color not being detected."
+   },
+   {
+    "incident_id": 139,
+    "expert": [
+     "inadequate_oversight"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "Researchers auditing Amazon found that about 10 percent of vaccine-related search results promoted misinformative health products, which were also ranked above debunking ones. Recommendations showed more misinformation to users who engaged with such products."
+   },
+   {
+    "incident_id": 147,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Fraudsters reportedly used an AI-cloned voice of a company director to convince a bank branch manager to authorize about 35 million dollars in transfers. Investigators believe at least 17 people were involved."
    },
    {
     "incident_id": 153,
@@ -488,6 +1466,51 @@
     "summary": "A Tesla Model S driving with Autopilot engaged ran a red light in Gardena, California, and struck another car, killing two people. The driver was charged with vehicular manslaughter."
    },
    {
+    "incident_id": 156,
+    "expert": [
+     "malicious_use",
+     "privacy_violation"
+    ],
+    "ours": [
+     "harmful_content",
+     "inadequate_oversight"
+    ],
+    "summary": "Amazon kept selling a food preservative that people used for suicide and its algorithm suggested other items bought with it. A newspaper linked multiple deaths, including of young people, to purchases, and Amazon declined to act on warnings."
+   },
+   {
+    "incident_id": 157,
+    "expert": [
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "A lawsuit alleges that Amazon's AI-assisted driver monitoring pushed delivery drivers to put speed ahead of safety, contributing to a delivery van crash that left a passenger in another car with life-changing injuries. Amazon denies liability."
+   },
+   {
+    "incident_id": 160,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "harmful_content"
+    ],
+    "summary": "Amazon's Alexa voice assistant suggested a dangerous online challenge involving a coin and a partly inserted plug after a child asked for something to do. The parent intervened and Amazon said it fixed the error."
+   },
+   {
+    "incident_id": 166,
+    "expert": [
+     "misaligned_objective",
+     "opacity_contestability"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "privacy_violation"
+    ],
+    "summary": "A girls-only social app used facial recognition to verify users' gender, which excluded transgender women. Critics also raised concerns about bias against women of color and about sharing users' personal data."
+   },
+   {
     "incident_id": 169,
     "expert": [
      "robustness_failure"
@@ -497,6 +1520,137 @@
      "malicious_use"
     ],
     "summary": "Facebook was accused of failing to remove widespread violent and dehumanizing hate speech against Rohingya Muslims in Myanmar, including a military-run propaganda campaign. UN investigators and refugees' lawsuits say this contributed to real-world violence."
+   },
+   {
+    "incident_id": 172,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "inadequate_oversight",
+     "opacity_contestability"
+    ],
+    "summary": "NarxCare, a proprietary score used to flag overdose and addiction risk, has led some patients to be refused pain medication or dropped by their doctors, with no way to appeal. Critics say it lacks independent validation and may be biased."
+   },
+   {
+    "incident_id": 174,
+    "expert": [
+     "hallucination"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Stanford researchers found more than 1,000 LinkedIn profiles using AI-generated faces, many used by sales outreach firms to message prospective customers. LinkedIn removed profiles that broke its rules against fake accounts."
+   },
+   {
+    "incident_id": 182,
+    "expert": [
+     "inadequate_oversight",
+     "robustness_failure"
+    ],
+    "ours": [
+     "human_automation_interaction"
+    ],
+    "summary": "Two Cruise self-driving cars collided in San Francisco, causing minor scuffs and no injuries. The rear car was being driven by a human employee in conventional mode, according to the company."
+   },
+   {
+    "incident_id": 187,
+    "expert": [
+     "malicious_use",
+     "opacity_contestability"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "A Tesla employee who ran a YouTube channel reviewing Tesla's Full Self-Driving Beta posted a video of his car hitting a bollard and says he was fired soon after. Tesla gave no written reason."
+   },
+   {
+    "incident_id": 191,
+    "expert": [
+     "bias_discrimination",
+     "malicious_use"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "South Korea's competition regulator fined Naver for changing its search algorithms to rank its own shopping and video services above competitors. Naver said it would appeal."
+   },
+   {
+    "incident_id": 193,
+    "expert": [
+     "robustness_failure"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "inadequate_oversight"
+    ],
+    "summary": "Security alerts about the intrusion at a major US retailer were reportedly ignored by staff amid many likely false alarms, and some alerting was turned off. Personal data of about 70 million customers was stolen."
+   },
+   {
+    "incident_id": 195,
+    "expert": [
+     "opacity_contestability"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "privacy_violation"
+    ],
+    "summary": "A Florida sheriff's office used a data-driven policing program that flagged young people, partly from school and justice records, and then repeatedly visited their homes. Critics and a lawsuit describe it as harassment of children and families."
+   },
+   {
+    "incident_id": 196,
+    "expert": [
+     "ip_consent_violation"
+    ],
+    "ours": [
+     "opacity_contestability",
+     "security_vulnerability"
+    ],
+    "summary": "After a Taliban leader was found with a valid Pakistani ID card, Pakistan launched a nationwide biometric ID reverification. Many people, including long-term residents, had their cards blocked and lost access to services."
+   },
+   {
+    "incident_id": 197,
+    "expert": [
+     "opacity_contestability"
+    ],
+    "ours": [
+     "robustness_failure"
+    ],
+    "summary": "A software bug in Facebook's News Feed ranking let posts that should have been demoted, including flagged misinformation, nudity and violence, get more distribution for about six months. Meta says the long-term impact was not meaningful."
+   },
+   {
+    "incident_id": 200,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Criminals used AI software to imitate the voice of a German parent company's chief executive in a phone call. A UK energy firm's CEO was deceived into approving a transfer of about 220,000 euros."
+   },
+   {
+    "incident_id": 201,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "A climate action group released a deepfake video of Belgium's prime minister appearing to link the Covid-19 pandemic to the ecological crisis and call for change. The speech was fabricated."
+   },
+   {
+    "incident_id": 202,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "inadequate_oversight"
+    ],
+    "summary": "A South Korean presidential candidate's campaign used a deepfake avatar, 'AI Yoon', to answer voter questions in short videos aimed at younger voters. The AIID record notes opponents alleged it was deceptive and a threat to democracy."
    },
    {
     "incident_id": 205,
@@ -530,6 +1684,27 @@
     "summary": "Tesla released a driving profile for its Full Self-Driving beta that let cars roll slowly through all-way stop signs without fully stopping. Tesla recalled and disabled the feature; no crashes or injuries were reported."
    },
    {
+    "incident_id": 229,
+    "expert": [
+     "adversarial_attack"
+    ],
+    "ours": [
+     "malicious_use",
+     "robustness_failure"
+    ],
+    "summary": "Content farms uploaded videos with sexually graphic bestiality-themed thumbnails that slipped past YouTube's moderation and were surfaced by its recommendation engine, drawing millions of views. YouTube removed the content after journalists flagged it."
+   },
+   {
+    "incident_id": 234,
+    "expert": [
+     "inadequate_oversight"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "Residents of a California hillside town said the Waze navigation app sent heavy weekend beach traffic through their neighborhoods, clogging their only escape route in case of a wildfire or emergency."
+   },
+   {
     "incident_id": 235,
     "expert": [
      "malicious_use"
@@ -541,6 +1716,17 @@
     "summary": "Chinese insurer Ping An reportedly used facial recognition to judge customers' truthfulness and profitability and to help set health insurance terms. Critics said the approach would likely make mistakes and discriminate against some groups."
    },
    {
+    "incident_id": 236,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "malicious_use"
+    ],
+    "summary": "Scammers used AI-generated faces for fake lawyer profiles at a made-up Boston law firm. They sent a bogus copyright notice to a website owner, part of a scheme that included extorting backlinks from bloggers."
+   },
+   {
     "incident_id": 242,
     "expert": [
      "human_automation_interaction"
@@ -550,102 +1736,253 @@
      "robustness_failure"
     ],
     "summary": "A 44-year-old worker at an automotive parts plant in India died after a robotic unit fell on him. A complaint blamed a possible sensor snag and inadequate safety measures, and police registered a case against staff."
+   },
+   {
+    "incident_id": 244,
+    "expert": [
+     "harmful_content",
+     "inadequate_oversight"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "robustness_failure"
+    ],
+    "summary": "A license plate reader flagged a family's minivan as matching a stolen motorcycle's plate. Police then held the family, including young children, at gunpoint and in handcuffs."
+   },
+   {
+    "incident_id": 251,
+    "expert": [
+     "malicious_use",
+     "opacity_contestability"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "Amazon reportedly adjusted its product search ranking to favor listings more profitable to Amazon, including its own brands, over most relevant ones, despite internal objections. Amazon disputes this account."
+   },
+   {
+    "incident_id": 263,
+    "expert": [
+     "hallucination",
+     "inadequate_oversight",
+     "malicious_use"
+    ],
+    "ours": [
+     "misaligned_objective"
+    ],
+    "summary": "YouTube's recommendation algorithm was alleged to have steered young men toward far-right extremism, with one man describing years of radicalization before leaving the movement."
+   },
+   {
+    "incident_id": 277,
+    "expert": [
+     "privacy_violation"
+    ],
+    "ours": [
+     "ip_consent_violation"
+    ],
+    "summary": "An NFT company used a synthetic voice from a free text-to-speech web app in a promotional animation without crediting it. The company later admitted the voice was taken from the app and apologized."
+   },
+   {
+    "incident_id": 279,
+    "expert": [
+     "hallucination"
+    ],
+    "ours": [
+     "inadequate_oversight",
+     "misaligned_objective"
+    ],
+    "summary": "TikTok's personalized For You feed was reported to serve pro-eating-disorder content to young users, despite the platform's own rules. Later research found teen accounts received self-harm and eating disorder videos within minutes."
+   },
+   {
+    "incident_id": 280,
+    "expert": [
+     "opacity_contestability"
+    ],
+    "ours": [
+     "bias_discrimination",
+     "misaligned_objective"
+    ],
+    "summary": "Users of the dating app Coffee Meets Bagel who chose 'no preference' on ethnicity were shown mostly matches of their own ethnicity or one group. The founder said the algorithm uses data on past behavior to maximize connection."
+   },
+   {
+    "incident_id": 291,
+    "expert": [
+     "malicious_use",
+     "opacity_contestability"
+    ],
+    "ours": [
+     "human_automation_interaction",
+     "misaligned_objective"
+    ],
+    "summary": "California's motor vehicle regulator accused Tesla of false advertising, saying the names and descriptions of Autopilot and Full Self-Driving made the driver-assist features sound more capable than they are."
+   },
+   {
+    "incident_id": 299,
+    "expert": [
+     "hallucination",
+     "privacy_violation"
+    ],
+    "ours": [
+     "ip_consent_violation",
+     "malicious_use"
+    ],
+    "summary": "Japanese police arrested a man who used AI to reconstruct the pixelated parts of adult videos and sold the results online, in the country's first criminal case involving AI-manipulated content. He pleaded guilty to copyright and obscenity charges."
+   },
+   {
+    "incident_id": 300,
+    "expert": [
+     "harmful_content",
+     "privacy_violation"
+    ],
+    "ours": [
+     "adversarial_attack",
+     "inadequate_oversight",
+     "misaligned_objective"
+    ],
+    "summary": "Reporting found TikTok's For You feed pushed misogynistic videos by an online personality to young male users, helped by coordinated efforts to game the algorithm, despite platform rules banning such content."
    }
   ]
  },
  "cset_sector": {
-  "n": 36,
-  "jaccard": 0.787,
-  "any_overlap": 0.917,
-  "micro_f1": 0.815,
-  "macro_f1": 0.748,
+  "n": 198,
+  "jaccard": 0.709,
+  "any_overlap": 0.899,
+  "micro_f1": 0.745,
+  "macro_f1": 0.708,
   "per_label": {
    "Arts, entertainment and recreation": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "support": 4
+    "precision": 1.0,
+    "recall": 0.171,
+    "f1": 0.293,
+    "support": 35
    },
    "Education": {
-    "precision": 1.0,
-    "recall": 0.8,
-    "f1": 0.889,
-    "support": 5
+    "precision": 0.933,
+    "recall": 0.933,
+    "f1": 0.933,
+    "support": 15
    },
    "accommodation and food service activities": {
-    "precision": 0.5,
-    "recall": 1.0,
-    "f1": 0.667,
-    "support": 1
+    "precision": 0.182,
+    "recall": 0.667,
+    "f1": 0.286,
+    "support": 6
    },
    "administrative and support service activities": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
-    "support": 1
+    "precision": 0.308,
+    "recall": 0.364,
+    "f1": 0.333,
+    "support": 11
    },
    "defense": {
     "precision": 1.0,
     "recall": 1.0,
     "f1": 1.0,
-    "support": 1
+    "support": 2
    },
    "financial and insurance activities": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
-    "support": 3
+    "precision": 0.714,
+    "recall": 0.714,
+    "f1": 0.714,
+    "support": 7
    },
    "human health and social work activities": {
     "precision": 1.0,
-    "recall": 0.667,
-    "f1": 0.8,
-    "support": 3
+    "recall": 0.8,
+    "f1": 0.889,
+    "support": 15
    },
    "information and communication": {
-    "precision": 1.0,
-    "recall": 0.692,
-    "f1": 0.818,
-    "support": 13
+    "precision": 0.929,
+    "recall": 0.802,
+    "f1": 0.861,
+    "support": 81
    },
    "law enforcement": {
-    "precision": 1.0,
-    "recall": 0.333,
-    "f1": 0.5,
-    "support": 3
+    "precision": 0.917,
+    "recall": 0.688,
+    "f1": 0.786,
+    "support": 16
    },
    "manufacturing": {
     "precision": 1.0,
     "recall": 1.0,
     "f1": 1.0,
-    "support": 1
-   },
-   "public administration": {
-    "precision": 1.0,
-    "recall": 0.667,
-    "f1": 0.8,
     "support": 3
    },
+   "professional, scientific and technical activities": {
+    "precision": 0.417,
+    "recall": 0.625,
+    "f1": 0.5,
+    "support": 8
+   },
+   "public administration": {
+    "precision": 0.706,
+    "recall": 0.923,
+    "f1": 0.8,
+    "support": 13
+   },
    "real estate activities": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
-    "support": 1
+    "precision": 0.333,
+    "recall": 0.5,
+    "f1": 0.4,
+    "support": 2
    },
    "transportation and storage": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
-    "support": 7
+    "recall": 0.857,
+    "f1": 0.923,
+    "support": 28
    },
    "wholesale and retail trade": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "support": 1
+    "precision": 0.864,
+    "recall": 0.95,
+    "f1": 0.905,
+    "support": 20
    }
   },
   "disagreements": [
+   {
+    "incident_id": 100,
+    "expert": [
+     "administrative and support service activities",
+     "human health and social work activities"
+    ],
+    "ours": [
+     "government_services"
+    ],
+    "summary": "A French welfare office's automated system wrongly told a benefits recipient she owed 542 euros after misreading her income status, with repayment deducted automatically. A human caseworker cancelled the debt once she explained the error."
+   },
+   {
+    "incident_id": 10,
+    "expert": [
+     "accommodation and food service activities"
+    ],
+    "ours": [
+     "employment"
+    ],
+    "summary": "Scheduling software used by Starbucks managers reportedly produced erratic, last-minute work hours for baristas. Workers described disrupted childcare, education and finances, and managers blamed the software."
+   },
+   {
+    "incident_id": 68,
+    "expert": [
+     "administrative and support service activities"
+    ],
+    "ours": [
+     "housing_real_estate"
+    ],
+    "summary": "A Knightscope K5 security robot patrolling a Washington, DC office complex rolled down steps into a fountain, ending up partly submerged. The company called it an isolated event."
+   },
+   {
+    "incident_id": 44,
+    "expert": [
+     "administrative and support service activities"
+    ],
+    "ours": [
+     "science_research"
+    ],
+    "summary": "In a university experiment, software personal assistants working for office staff exposed private information and failed to follow unwritten office social norms."
+   },
    {
     "incident_id": 61,
     "expert": [
@@ -658,6 +1995,111 @@
     "summary": "In a Kaggle fisheries image-classification competition, many entrants' models overfit to a poorly representative validation set. A participant said the setup frustrated competitors, and few of the thousands who started submitted final results."
    },
    {
+    "incident_id": 65,
+    "expert": [
+     "Arts, entertainment and recreation"
+    ],
+    "ours": [
+     "science_research"
+    ],
+    "summary": "OpenAI trained a reinforcement learning agent to play a boat-racing game. Instead of finishing the race, the agent circled in a lagoon hitting targets repeatedly to gain a high score."
+   },
+   {
+    "incident_id": 94,
+    "expert": [
+     "accommodation and food service activities"
+    ],
+    "ours": [
+     "employment"
+    ],
+    "summary": "An Italian court ruled that Deliveroo's rider-ranking algorithm discriminated against couriers. It lowered riders' reliability scores for late shift cancellations without considering reasons like illness, reducing their future work. Deliveroo said it no longer used that system."
+   },
+   {
+    "incident_id": 146,
+    "expert": [
+     "information and communication"
+    ],
+    "ours": [
+     "science_research"
+    ],
+    "summary": "A public research website that gave moral judgments produced racist and homophobic answers. Users found it approved bigoted statements and treated people differently by race."
+   },
+   {
+    "incident_id": 152,
+    "expert": [
+     "Arts, entertainment and recreation",
+     "administrative and support service activities",
+     "financial and insurance activities",
+     "human health and social work activities"
+    ],
+    "ours": [
+     "consumer_tech"
+    ],
+    "summary": "SoftBank's humanoid robot Pepper reportedly kept failing at real jobs, including mechanical errors, unplanned breaks and not recognizing people it had met. Some customers ended their contracts."
+   },
+   {
+    "incident_id": 154,
+    "expert": [
+     "law enforcement"
+    ],
+    "ours": [
+     "government_services",
+     "justice_corrections"
+    ],
+    "summary": "The US Justice Department's PATTERN tool, used to decide which federal prisoners qualify for early release, produced uneven results by race. It overpredicted risk for many Black, Hispanic and Asian people, leaving some in prison who might otherwise qualify."
+   },
+   {
+    "incident_id": 452,
+    "expert": [
+     "information and communication"
+    ],
+    "ours": [
+     "finance"
+    ],
+    "summary": "A crypto bug bounty platform banned 15 users who submitted bug reports written by ChatGPT. The platform said the reports looked convincing but were nonsense and wasted staff and project time."
+   },
+   {
+    "incident_id": 454,
+    "expert": [
+     "information and communication"
+    ],
+    "ours": [
+     "science_research"
+    ],
+    "summary": "A study of two commercial emotion recognition tools found they rated Black men's faces as angrier or more contemptuous than white men's faces, even when both were smiling."
+   },
+   {
+    "incident_id": 489,
+    "expert": [
+     "information and communication",
+     "professional, scientific and technical activities"
+    ],
+    "ours": [
+     "employment"
+    ],
+    "summary": "A lawsuit alleges that Workday's applicant screening tools let employers reject job seekers based on race, age or disability. The company says the claims are without merit."
+   },
+   {
+    "incident_id": 554,
+    "expert": [
+     "Arts, entertainment and recreation"
+    ],
+    "ours": [
+     "search_online_services"
+    ],
+    "summary": "Google search showed an AI-generated imitation of 'Girl with a Pearl Earring' as the featured image when users searched for the painter Johannes Vermeer. It was the second such case within a month."
+   },
+   {
+    "incident_id": 387,
+    "expert": [
+     "information and communication"
+    ],
+    "ours": [
+     "general_public"
+    ],
+    "summary": "A class action lawsuit alleges Oracle collected personal data on billions of people without their consent and used it to profile them for advertising, violating their privacy."
+   },
+   {
     "incident_id": 367,
     "expert": [
      "information and communication"
@@ -668,129 +2110,172 @@
     "summary": "Researchers found that image-generation models iGPT and SimCLR, trained on unlabeled internet images, learned racial and gender stereotypes, such as completing cropped photos of women in revealing clothing."
    },
    {
-    "incident_id": 619,
+    "incident_id": 354,
     "expert": [
-     "wholesale and retail trade"
+     "transportation and storage"
     ],
     "ours": [
-     "retail_commerce"
+     "employment"
     ],
-    "summary": "Rite Aid used facial recognition in hundreds of stores from 2012 to 2020. The FTC says it wrongly flagged customers, especially women and people of color, as likely shoplifters, leading to public accusations and searches. Rite Aid is banned from the technology for five years."
+    "summary": "Uber drivers filed a legal action alleging Uber failed to give them their personal data and clear information about the automated decision-making and profiling applied to them, as required by European data protection law."
+   },
+   {
+    "incident_id": 614,
+    "expert": [
+     "information and communication",
+     "law enforcement"
+    ],
+    "ours": [
+     "government_services"
+    ],
+    "summary": "Academics used Google Bard to produce case studies for a submission to an Australian parliamentary inquiry. The AI invented serious misconduct allegations against major consulting firms, and the academics later apologized."
+   },
+   {
+    "incident_id": 393,
+    "expert": [
+     "Arts, entertainment and recreation"
+    ],
+    "ours": [
+     "social_media"
+    ],
+    "summary": "In tests by nonprofit groups, Facebook's ad review approved ads containing violent hate speech in English and Swahili aimed at Kenya. The Swahili ads passed easily and the English ads passed after profanity was removed."
+   },
+   {
+    "incident_id": 583,
+    "expert": [
+     "Arts, entertainment and recreation"
+    ],
+    "ours": [
+     "social_media"
+    ],
+    "summary": "An investigation found Instagram's recommendation algorithms connected and promoted accounts that advertise and sell child sexual abuse material, including through recommendations to users viewing such accounts. Meta said it set up a task force to address the problem."
    }
   ]
  },
  "gmf_technology": {
-  "n": 52,
-  "jaccard": 0.811,
-  "any_overlap": 0.865,
-  "micro_f1": 0.847,
-  "macro_f1": 0.802,
+  "n": 244,
+  "jaccard": 0.808,
+  "any_overlap": 0.902,
+  "micro_f1": 0.83,
+  "macro_f1": 0.787,
   "per_label": {
+   "ad_targeting_pricing": {
+    "precision": 0.667,
+    "recall": 0.667,
+    "f1": 0.667,
+    "support": 9
+   },
    "autonomous_vehicle": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1": 1.0,
-    "support": 10
+    "recall": 0.946,
+    "f1": 0.972,
+    "support": 37
    },
    "computer_vision": {
-    "precision": 0.5,
-    "recall": 1.0,
-    "f1": 0.667,
-    "support": 1
-   },
-   "content_moderation": {
-    "precision": 0.2,
-    "recall": 1.0,
-    "f1": 0.333,
-    "support": 1
-   },
-   "facial_recognition": {
-    "precision": 0.8,
-    "recall": 1.0,
-    "f1": 0.889,
-    "support": 4
-   },
-   "image_video_generation": {
-    "precision": 0.833,
-    "recall": 1.0,
-    "f1": 0.909,
+    "precision": 0.25,
+    "recall": 0.6,
+    "f1": 0.353,
     "support": 5
    },
+   "content_moderation": {
+    "precision": 0.4,
+    "recall": 1.0,
+    "f1": 0.571,
+    "support": 10
+   },
+   "facial_recognition": {
+    "precision": 0.923,
+    "recall": 1.0,
+    "f1": 0.96,
+    "support": 24
+   },
+   "image_video_generation": {
+    "precision": 0.957,
+    "recall": 0.957,
+    "f1": 0.957,
+    "support": 23
+   },
    "llm_chatbot": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1": 0.667,
-    "support": 6
+    "precision": 0.875,
+    "recall": 0.778,
+    "f1": 0.824,
+    "support": 27
    },
    "predictive_scoring": {
-    "precision": 0.889,
-    "recall": 0.889,
-    "f1": 0.889,
-    "support": 9
+    "precision": 0.857,
+    "recall": 0.774,
+    "f1": 0.814,
+    "support": 31
    },
    "recommender_ranking": {
     "precision": 1.0,
-    "recall": 0.429,
-    "f1": 0.6,
-    "support": 7
+    "recall": 0.707,
+    "f1": 0.829,
+    "support": 41
    },
    "robotics_drones": {
     "precision": 1.0,
     "recall": 1.0,
     "f1": 1.0,
-    "support": 7
+    "support": 23
+   },
+   "speech_recognition": {
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "support": 6
    },
    "surveillance_analytics": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1": 0.667,
-    "support": 2
+    "precision": 0.474,
+    "recall": 0.643,
+    "f1": 0.545,
+    "support": 14
    },
    "translation_nlp": {
-    "precision": 1.0,
+    "precision": 0.833,
     "recall": 1.0,
-    "f1": 1.0,
-    "support": 1
+    "f1": 0.909,
+    "support": 5
    },
    "voice_synthesis": {
-    "precision": 1.0,
+    "precision": 0.692,
     "recall": 1.0,
-    "f1": 1.0,
-    "support": 3
+    "f1": 0.818,
+    "support": 9
    }
   }
  },
  "severity": {
   "by_cset_tangible_harm": {
-   "tangible harm definitively occurred": {
-    "n": 11,
-    "mean_severity": 2.73,
-    "share_s2_plus": 0.82
-   },
    "no tangible harm, near-miss, or issue": {
-    "n": 17,
-    "mean_severity": 1.0,
-    "share_s2_plus": 0.18
+    "n": 93,
+    "mean_severity": 0.96,
+    "share_s2_plus": 0.16
+   },
+   "tangible harm definitively occurred": {
+    "n": 72,
+    "mean_severity": 2.24,
+    "share_s2_plus": 0.71
    },
    "imminent risk of tangible harm (near miss) did occur": {
-    "n": 5,
-    "mean_severity": 0.2,
-    "share_s2_plus": 0.0
+    "n": 14,
+    "mean_severity": 0.57,
+    "share_s2_plus": 0.07
    },
    "non-imminent risk of tangible harm (an issue) occurred": {
-    "n": 4,
-    "mean_severity": 0.5,
-    "share_s2_plus": 0.25
+    "n": 18,
+    "mean_severity": 0.94,
+    "share_s2_plus": 0.22
    },
    "unclear": {
-    "n": 1,
-    "mean_severity": 2.0,
-    "share_s2_plus": 1.0
+    "n": 3,
+    "mean_severity": 1.33,
+    "share_s2_plus": 0.33
    }
   },
-  "n": 38,
-  "fatal_incidents_n": 5,
-  "fatal_coded_s4_share": 0.8
+  "n": 200,
+  "fatal_incidents_n": 12,
+  "fatal_coded_s4_share": 0.92
  },
  "expert_baseline": {
   "Sector of Deployment": {
@@ -815,6 +2300,36 @@
   }
  },
  "second_coder": {
-  "n": 0
+  "n": 16,
+  "jaccard": {
+   "sector": 0.865,
+   "technology": 0.906,
+   "failure_mode": 0.802,
+   "harm_type": 0.719,
+   "lifecycle_stage": 0.656,
+   "affected_population": 0.76
+  },
+  "risk_domain": {
+   "agreement": 0.875,
+   "kappa": 0.843
+  },
+  "primary_failure_mode": {
+   "agreement": 0.875,
+   "kappa": 0.854
+  },
+  "intent": {
+   "agreement": 0.875,
+   "kappa": 0.771
+  },
+  "cause_entity": {
+   "agreement": 0.812,
+   "kappa": 0.716
+  },
+  "severity": {
+   "n": 16,
+   "exact": 0.688,
+   "within_one": 1.0,
+   "weighted_kappa": 0.848
+  }
  }
 }

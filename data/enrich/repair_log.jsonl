@@ -6,3 +6,12 @@
 {"batch": "b027", "incident_id": 71, "dimension": "lifecycle_stage", "tag": "testing", "action": "downgrade", "reason": "not_found", "old": "The Google AV test driver saw the bus approaching in the left side mirror"}
 {"batch": "b055", "incident_id": 1721, "dimension": "sector", "tag": "elections_politics", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b055", "incident_id": 1721, "dimension": "failure_mode", "tag": "malicious_use", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b058", "incident_id": 1518, "dimension": "technology", "tag": "voice_synthesis", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b058", "incident_id": 1518, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b058", "incident_id": 1115, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b059", "incident_id": 1607, "dimension": "sector", "tag": "government_services", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b059", "incident_id": 1607, "dimension": "technology", "tag": "llm_chatbot", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b059", "incident_id": 1607, "dimension": "failure_mode", "tag": "human_automation_interaction", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b059", "incident_id": 1607, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b069", "incident_id": 1527, "dimension": "technology", "tag": "image_video_generation", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b069", "incident_id": 1527, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "private_name", "old": null}
