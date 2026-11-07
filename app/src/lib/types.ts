@@ -78,6 +78,7 @@ export interface Profile {
   id: number;
   aiid_url: string;
   description: string | null;
+  n_reports_total?: number;
   reports: { n: number; title: string; url: string | null; source: string | null; date: string | null }[];
   developers: string[];
   deployers: string[];

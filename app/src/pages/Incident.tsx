@@ -14,8 +14,9 @@ const DIM_ORDER: [string, string][] = [
   ['lifecycle_stage', 'Lifecycle stage'],
 ];
 
-function Evidence({ tag, dim, hideName = false }: { tag: TagOut; dim: string; hideName?: boolean }) {
+function Evidence({ tag, dim, hideName = false, sources }: { tag: TagOut; dim: string; hideName?: boolean; sources: Profile['reports'] }) {
   const { termLabel } = useApp();
+  const src = tag.rn !== undefined ? sources.find((r) => r.n === tag.rn) : undefined;
   return (
     <li className={`tag ev-${tag.ev}`}>
       {!hideName && <span className="tag-name">{termLabel(dim, tag.id)}</span>}
@@ -26,7 +27,7 @@ function Evidence({ tag, dim, hideName = false }: { tag: TagOut; dim: string; hi
         <blockquote>
           “{tag.q}”{' '}
           <cite>
-            — {tag.url ? <a href={tag.url} target="_blank" rel="noopener noreferrer">{tag.src ?? 'source'}</a> : tag.src}
+            — {src?.url ? <a href={src.url} target="_blank" rel="noopener noreferrer">{src.source ?? 'source'}</a> : (src?.source ?? `report #${tag.rn}`)}
           </cite>
         </blockquote>
       )}
@@ -94,7 +95,7 @@ export default function IncidentPage() {
                 prof.tags![dim]?.length ? (
                   <div key={dim} className="tag-group">
                     <h3>{label}</h3>
-                    <ul className="tags">{prof.tags![dim].map((t) => <Evidence key={t.id} tag={t} dim={dim} />)}</ul>
+                    <ul className="tags">{prof.tags![dim].map((t) => <Evidence key={t.id} tag={t} dim={dim} sources={prof.reports} />)}</ul>
                   </div>
                 ) : null,
               )}
@@ -108,7 +109,7 @@ export default function IncidentPage() {
               <div className="fact">
                 <span className="fact-label">Severity</span>
                 <span className={`sev sev${node.sev}`}>{node.sev} — {SEV_LABEL[node.sev]}</span>
-                {prof?.severity && <ul className="tags compact"><Evidence tag={prof.severity} dim="severity" hideName /></ul>}
+                {prof?.severity && <ul className="tags compact"><Evidence tag={prof.severity} dim="severity" hideName sources={prof.reports} /></ul>}
               </div>
             )}
             {node.rd && node.x === 1 && (
@@ -170,6 +171,12 @@ export default function IncidentPage() {
               </li>
             ))}
           </ol>
+          {prof.n_reports_total && prof.n_reports_total > prof.reports.length ? (
+            <p className="muted small">
+              + {prof.n_reports_total - prof.reports.length} more reports on the{' '}
+              <a href={prof.aiid_url} target="_blank" rel="noopener noreferrer">AIID entry</a>.
+            </p>
+          ) : null}
         </section>
       )}
       {prof === undefined && <p role="status">Loading details…</p>}

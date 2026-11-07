@@ -1,65 +1,65 @@
 {
- "n": 716,
+ "n": 992,
  "k": 15,
  "threshold": 0.4,
  "single": {
   "risk_domain": {
-   "accuracy": 0.644,
-   "macro_f1": 0.434,
-   "majority_baseline": 0.288
+   "accuracy": 0.655,
+   "macro_f1": 0.484,
+   "majority_baseline": 0.299
   },
   "primary_failure_mode": {
-   "accuracy": 0.612,
-   "macro_f1": 0.297,
-   "majority_baseline": 0.265
+   "accuracy": 0.622,
+   "macro_f1": 0.322,
+   "majority_baseline": 0.321
   },
   "intent": {
-   "accuracy": 0.765,
-   "macro_f1": 0.531,
-   "majority_baseline": 0.557
+   "accuracy": 0.775,
+   "macro_f1": 0.542,
+   "majority_baseline": 0.509
   },
   "cause_entity": {
-   "accuracy": 0.669,
-   "macro_f1": 0.6,
-   "majority_baseline": 0.44
+   "accuracy": 0.694,
+   "macro_f1": 0.578,
+   "majority_baseline": 0.498
   },
   "severity": {
-   "accuracy": 0.541,
-   "macro_f1": 0.333,
-   "majority_baseline": 0.492,
-   "within_one": 0.898
+   "accuracy": 0.564,
+   "macro_f1": 0.351,
+   "majority_baseline": 0.496,
+   "within_one": 0.908
   }
  },
  "multi": {
   "sector": {
-   "jaccard": 0.434,
-   "precision": 0.751,
-   "empty_prediction_share": 0.355
+   "jaccard": 0.47,
+   "precision": 0.737,
+   "empty_prediction_share": 0.297
   },
   "technology": {
-   "jaccard": 0.628,
-   "precision": 0.778,
-   "empty_prediction_share": 0.155
+   "jaccard": 0.651,
+   "precision": 0.784,
+   "empty_prediction_share": 0.134
   },
   "failure_mode": {
-   "jaccard": 0.512,
-   "precision": 0.71,
-   "empty_prediction_share": 0.112
+   "jaccard": 0.536,
+   "precision": 0.721,
+   "empty_prediction_share": 0.09
   },
   "harm_type": {
-   "jaccard": 0.354,
-   "precision": 0.619,
-   "empty_prediction_share": 0.293
+   "jaccard": 0.392,
+   "precision": 0.636,
+   "empty_prediction_share": 0.248
   },
   "lifecycle_stage": {
-   "jaccard": 0.733,
-   "precision": 0.772,
-   "empty_prediction_share": 0.003
+   "jaccard": 0.744,
+   "precision": 0.777,
+   "empty_prediction_share": 0.002
   },
   "affected_population": {
-   "jaccard": 0.371,
-   "precision": 0.653,
-   "empty_prediction_share": 0.292
+   "jaccard": 0.407,
+   "precision": 0.648,
+   "empty_prediction_share": 0.226
   }
  }
 }

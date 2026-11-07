@@ -1,0 +1,52 @@
+{
+ "report": {
+  "pages": {
+   "constellation-desktop": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "catalog-desktop": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "incident-desktop": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "insights-desktop": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "about-desktop": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "constellation-mobile": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "catalog-mobile": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "incident-mobile": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "insights-mobile": {
+    "errors": [],
+    "horizontalOverflow": false
+   },
+   "about-mobile": {
+    "errors": [],
+    "horizontalOverflow": false
+   }
+  },
+  "sliderCheck": {
+   "nodes": 1784,
+   "objectsPreserved": true,
+   "positionsUnchanged": true
+  }
+ },
+ "problems": []
+}

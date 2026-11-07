@@ -133,12 +133,14 @@ export default function Constellation(props: Props) {
   // ---- data join: only when node set or link view changes --------------------------------------------
   useEffect(() => {
     joined.current = links.map((l) => ({ ...l }));
+    // Denser views fade their links so structure stays readable (≈ 0.22 at 1,500 links, floor 0.05).
+    graph.current?.linkOpacity(Math.max(0.05, Math.min(0.22, (0.22 * 1500) / Math.max(links.length, 1))));
     graph.current?.graphData({ nodes: gnodes, links: joined.current });
     applyVisibilitySoon();
     if (!fitted.current && graph.current) {
       fitted.current = true;
       const g = graph.current;
-      window.setTimeout(() => g.zoomToFit(0, 20), 60);
+      window.setTimeout(() => g.zoomToFit(0, 70), 60);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gnodes, links]);

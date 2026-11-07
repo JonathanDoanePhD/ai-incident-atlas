@@ -32,6 +32,7 @@ from atlas.ingest.load import clean_text, connect
 from atlas.privacy import SHOWN_AS_ACTOR, entity_kind, private_names_by_incident
 
 CHUNK = 100
+MAX_SOURCES = 12
 MAX_WORDS = 25
 SEV = {"s0_none": 0, "s1_minor": 1, "s2_moderate": 2, "s3_severe": 3, "s4_critical": 4}
 NODE_FIELDS = {
@@ -152,12 +153,19 @@ def build() -> dict[str, Any]:
         names = private.get(iid, [])
         r = ext.get(iid)
         reps = {x[1]: x for x in rep_rows[iid]}
+        cited = set()
+        if r:
+            for tl in list(r["tags"].values()) + [[r["severity"]] if r.get("severity") else []]:
+                cited.update(t["report"] for t in tl if t.get("quote") and t.get("report") in reps)
+        # cited reports first (so every quote resolves to a listed source), then by date
+        ordered = [x for x in rep_rows[iid] if x[1] in cited] + [x for x in rep_rows[iid] if x[1] not in cited]
         prof: dict[str, Any] = {
             "id": iid, "aiid_url": f"https://incidentdatabase.ai/cite/{iid}/",
             "description": redact_private_names(clean_text(inc["description"]) or "", names) or None,
             "reports": [{"n": x[1], "title": words(redact_private_names(clean_text(x[2]) or "Untitled report", names)),
                          "url": clean_text(x[3]), "source": clean_text(x[4]),
-                         "date": (clean_text(x[5]) or "")[:10] or None} for x in rep_rows[iid][:40]],
+                         "date": (clean_text(x[5]) or "")[:10] or None} for x in ordered[:max(MAX_SOURCES, len(cited))]],
+            "n_reports_total": len(rep_rows[iid]),
             "developers": sorted(ent_names[e] for e in org_by_inc[iid]["developer"]),
             "deployers": sorted(ent_names[e] for e in org_by_inc[iid]["deployer"]),
             "harmed_groups": sorted(set(harmed_groups[iid]))[:12],
@@ -165,9 +173,8 @@ def build() -> dict[str, Any]:
         if r:
             def tag_out(t):
                 o = {"id": t["id"], "ev": t["evidence"]}
-                if t.get("quote") and t.get("report") in reps:
-                    x = reps[t["report"]]
-                    o.update({"q": words(t["quote"]), "rn": t["report"], "src": clean_text(x[4]), "url": clean_text(x[3])})
+                if t.get("quote") and t.get("report") in reps:  # source details live in prof["reports"]
+                    o.update({"q": words(t["quote"]), "rn": t["report"]})
                 return o
             prof.update({
                 "technical_summary": r["technical_summary"], "systems": clean_list(r["systems"]),
@@ -177,7 +184,7 @@ def build() -> dict[str, Any]:
         if r is None and iid in pred:
             prof["predicted"] = {"confidence": pred[iid].get("confidence"), "risk_subdomain": None}
         if iid in row:
-            prof["related"] = [{"id": j, "w": round(w, 3), "why": why} for j, w, why in related(f, mats, row[iid], 8)]
+            prof["related"] = [{"id": j, "w": round(w, 3), "why": why} for j, w, why in related(f, mats, row[iid], 6)]
         chunks[iid // CHUNK][str(iid)] = prof
     for k, v in chunks.items():
         (out / "profiles" / f"p{k}.json").write_text(json.dumps(v, ensure_ascii=False, separators=(",", ":")))

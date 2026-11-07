@@ -27,7 +27,8 @@ def test_quotes_and_headlines_are_short():
             for t in tags:
                 if "q" in t:
                     assert len(t["q"].rstrip("…").split()) <= 25
-                    assert t.get("url") or t.get("src")
+                    # every quote is attributed: its report is listed in the profile's sources
+                    assert any(r["n"] == t["rn"] for r in prof["reports"])
 
 
 @needs_bundle
