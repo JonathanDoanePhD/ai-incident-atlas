@@ -31,7 +31,7 @@ including a ~1-hour pause when the 5-hour usage limit was hit (no work lost).
 
 1. **Code the remaining 782 incidents** (batches b081–b148 in `data/enrich/plan.json`): `make prepare`, have an LLM code each `data/interim/batches/bNNN.json` into `data/enrich/raw/bNNN.json` with `prompts/extraction_v1.1.md`, then `make all` and re-run the Playwright check. The pipeline is resumable and idempotent; `python -m atlas.extract.status` shows gaps.
 2. Optional improvements noted in the case study: merge entity aliases (Facebook/Meta) via AIID `entity_relationships`; longer excerpts for long investigations.
-3. ~~Replace the author placeholder~~ — done (Jonathan Doane).
+3. Author placeholder replaced (Jonathan Doane). `main` created from the working branch; Pages deploys from it.
 
 ## One-click actions for the owner
 

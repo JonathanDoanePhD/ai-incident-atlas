@@ -1,7 +1,9 @@
 # PROGRESS — AI Incident Atlas
 
-**Current phase:** COMPLETE (run ended 2026-11-07). See MORNING_REPORT.md.
-**Recurring check-in:** trigger `trig_01XDECTpPd8P61iAibcui2NV` — deleted at end of run.
+**Current phase:** CONTINUATION (owner asked to code all remaining incidents). Live site deployed from `main`.
+**Recurring check-in:** trigger `trig_01CL6Qhn8o7pBksehnkJEPMz` (hourly at :51) — delete when complete.
+**Extraction dispatch:** b081–b096 dispatched 2026-11-07 01:52 UTC → next: b097. Remaining after that: b097–b148 (4 batches/agent, ≤4 agents).
+**Publishing:** after each pipeline rerun push to BOTH `claude/ai-incident-atlas-pi61mn` and `main` (`git push origin claude/ai-incident-atlas-pi61mn:main`) — main triggers the Pages deploy.
 
 ## Checklist
 - [x] P0 Official snapshot (2026-11-02) downloaded, SHA-256 verified, license verified (CC BY-SA 4.0; report text excluded)
@@ -29,4 +31,4 @@
 - GitHub Pages must be enabled by the owner (Settings → Pages → Source: GitHub Actions); deploy runs on `main`.
 
 ## Next action (if resuming)
-Code remaining batches b081–b148: `python -m atlas.extract.batches prepare`, code into `data/enrich/raw/`, then `make all`.
+Dispatch next batches (see 'Extraction dispatch' above). When `python -m atlas.extract.status` shows 149/149: run full pipeline (validate, validate second, embed, propagate, similarity, cluster, insights, evaluation, export), app build + verify, update README/case study/MORNING_REPORT numbers, push branch + main, delete check-in.
