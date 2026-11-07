@@ -50,6 +50,7 @@ class Features:
     actors: list[set[str]]               # entity ids (developer/deployer orgs)
     actor_names: dict[str, str]
     sector: list[set[str]]
+    predicted: list[bool]
 
 
 def load_features() -> Features:
@@ -61,10 +62,20 @@ def load_features() -> Features:
     for iid, dim, term in con.execute("SELECT incident_id, dimension, term FROM extraction_tag"):
         if iid in idx and dim in tags:
             tags[dim][idx[iid]].add(term)
+    predicted = [False] * n
     primary: list[str | None] = [None] * n
     for iid, pfm in con.execute("SELECT incident_id, primary_failure_mode FROM extraction"):
         if iid in idx:
             primary[idx[iid]] = pfm
+    # Uncoded incidents: kNN-predicted tags (atlas.analysis.propagate), so every incident can be connected.
+    if con.execute("SELECT name FROM sqlite_master WHERE name='predicted'").fetchone():
+        for iid, payload in con.execute("SELECT incident_id, payload FROM predicted"):
+            if iid in idx and not any(tags[d][idx[iid]] for d in tags):
+                p = json.loads(payload)
+                for dim in tags:
+                    tags[dim][idx[iid]].update(p.get(dim, []))
+                primary[idx[iid]] = p.get("primary_failure_mode")
+                predicted[idx[iid]] = True
     actors = [set() for _ in range(n)]
     names: dict[str, str] = {}
     for iid, eid, name in con.execute(
@@ -73,7 +84,7 @@ def load_features() -> Features:
         if iid in idx and entity_kind(eid, name) in SHOWN_AS_ACTOR:
             actors[idx[iid]].add(eid)
             names[eid] = name
-    return Features(ids, emb, tags, primary, actors, names, tags["sector"])
+    return Features(ids, emb, tags, primary, actors, names, tags["sector"], predicted)
 
 
 def _idf(sets: list[set[str]]) -> dict[str, float]:
@@ -171,6 +182,8 @@ def explain(f: Features, i: int, j: int, view: str, sim: float) -> str:
         b = lab["sector"].get(sorted(sj)[0], "")
         parts.append(f"one in {a.lower()}, one in {b.lower()}")
     s = "; ".join(parts)
+    if view != "semantic" and view != "entity" and (f.predicted[i] or f.predicted[j]):
+        s += " (tags partly predicted)"
     return s[0].upper() + s[1:]
 
 

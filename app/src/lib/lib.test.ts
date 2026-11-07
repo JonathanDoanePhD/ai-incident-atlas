@@ -6,7 +6,7 @@ import type { IncidentNode, Meta } from './types';
 
 const node = (over: Partial<IncidentNode>): IncidentNode => ({
   id: 1, t: 'Title', y: 2020, d: '2020-01-01', s: 'summary', sec: [], tech: [], fm: [], pfm: null, harm: [], pop: [],
-  life: [], sev: null, rd: null, int: null, cause: null, org: [], nrep: 1, cl: 0, p: [0, 0, 0], br: 0, x: 1, ...over,
+  life: [], sev: null, rd: null, int: null, cause: null, org: [], nrep: 1, cl: 0, p: [0, 0, 0], br: 0, x: 1, pr: 0, ...over,
 });
 
 const NODES = [
@@ -40,6 +40,14 @@ describe('filters', () => {
   it('filters by organization and cluster', () => {
     const f = { ...defaultFilters(2018, 2024), org: 'clearview' };
     expect(NODES.filter((n) => matches(n, f)).map((n) => n.id)).toEqual([1]);
+  });
+  it('can ignore predicted tags for uncoded incidents', () => {
+    const p = node({ id: 50, pr: 1, x: 0, tech: ['llm_chatbot'], sev: 3 });
+    let f = toggleFacet(defaultFilters(2018, 2024), 'tech', 'llm_chatbot');
+    expect(matches(p, f)).toBe(true);
+    f = { ...f, includePredicted: false };
+    expect(matches(p, f)).toBe(false);
+    expect(matches(p, { ...defaultFilters(2018, 2024), includePredicted: false, includeUnknownSeverity: false })).toBe(false);
   });
   it('counts facet values, sorted by frequency', () => {
     expect(facetCounts(NODES, 'tech')[0][1]).toBe(1);

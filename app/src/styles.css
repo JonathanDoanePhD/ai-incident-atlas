@@ -222,3 +222,4 @@ table.heatmap td.diag { outline: 1px solid #6da7ec66; }
 }
 .axis-title { text-align: right; color: var(--text-muted); font-size: 0.78rem; margin: 2px 0 0; }
 .chart svg { max-height: 520px; }
+.chip-row.predicted .chip { border: 1px dashed #5b6475; background: transparent; }

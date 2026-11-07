@@ -17,6 +17,8 @@ export interface Filters {
   severity: [number, number];
   minReports: number;
   includeUnknownSeverity: boolean;
+  /** Use kNN-predicted tags for incidents without LLM extraction. */
+  includePredicted: boolean;
   facets: Partial<Record<FacetKey, string[]>>;
   cluster: number | null;
   org: string | null;
@@ -28,13 +30,15 @@ export function defaultFilters(minYear: number, maxYear: number): Filters {
     severity: [0, 4],
     minReports: 0,
     includeUnknownSeverity: true,
+    includePredicted: true,
     facets: {},
     cluster: null,
     org: null,
   };
 }
 
-export function facetValues(n: IncidentNode, key: FacetKey): string[] {
+export function facetValues(n: IncidentNode, key: FacetKey, includePredicted = true): string[] {
+  if (n.pr && !includePredicted) return [];
   if (key === 'rd') return n.rd ? [n.rd] : [];
   return n[key];
 }
@@ -42,16 +46,17 @@ export function facetValues(n: IncidentNode, key: FacetKey): string[] {
 /** Pure predicate: does node `n` pass filters `f`? */
 export function matches(n: IncidentNode, f: Filters): boolean {
   if (n.y < f.years[0] || n.y > f.years[1]) return false;
-  if (n.sev === null) {
+  const sev = n.pr && !f.includePredicted ? null : n.sev;
+  if (sev === null) {
     if (!f.includeUnknownSeverity) return false;
-  } else if (n.sev < f.severity[0] || n.sev > f.severity[1]) return false;
+  } else if (sev < f.severity[0] || sev > f.severity[1]) return false;
   if (n.nrep < f.minReports) return false;
   if (f.cluster !== null && n.cl !== f.cluster) return false;
   if (f.org !== null && !n.org.includes(f.org)) return false;
   for (const key of Object.keys(f.facets) as FacetKey[]) {
     const sel = f.facets[key];
     if (!sel || sel.length === 0) continue;
-    const vals = facetValues(n, key);
+    const vals = facetValues(n, key, f.includePredicted);
     if (!sel.some((s) => vals.includes(s))) return false;
   }
   return true;
@@ -74,6 +79,7 @@ export function activeFilterCount(f: Filters, minYear: number, maxYear: number):
   let k = 0;
   if (f.years[0] !== minYear || f.years[1] !== maxYear) k++;
   if (f.severity[0] !== 0 || f.severity[1] !== 4 || !f.includeUnknownSeverity) k++;
+  if (!f.includePredicted) k++;
   if (f.minReports > 0) k++;
   if (f.cluster !== null) k++;
   if (f.org !== null) k++;

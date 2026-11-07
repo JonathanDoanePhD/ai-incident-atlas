@@ -75,11 +75,11 @@ export default function CatalogPage() {
               <article className="card" key={n.id}>
                 <div className="hc-year">
                   {n.d} · {n.nrep} report{n.nrep === 1 ? '' : 's'}
-                  {n.sev !== null && <> · <span className={`sev sev${n.sev}`}>severity {n.sev}</span></>}
+                  {n.sev !== null && <> · <span className={`sev sev${n.sev}`}>severity {n.sev}{n.pr ? ' (predicted)' : ''}</span></>}
                 </div>
                 <h3><Link to={`/incident/${n.id}`}>{n.t}</Link></h3>
                 <p>{n.s.length > 240 ? n.s.slice(0, 240) + '…' : n.s}</p>
-                <div className="chip-row">
+                <div className={`chip-row ${n.pr ? 'predicted' : ''}`} title={n.pr ? 'Predicted tags' : undefined}>
                   {n.tech.slice(0, 2).map((t) => <span className="chip" key={t}>{termLabel('technology', t)}</span>)}
                   {n.pfm && <span className="chip">{termLabel('failure_mode', n.pfm)}</span>}
                   {n.sec.slice(0, 1).map((t) => <span className="chip" key={t}>{termLabel('sector', t)}</span>)}

@@ -190,6 +190,9 @@ def build() -> dict:
     f = load_features()
     con = connect()
     rd = dict(con.execute("SELECT incident_id, risk_domain FROM extraction").fetchall())
+    if con.execute("SELECT name FROM sqlite_master WHERE name='predicted'").fetchone():
+        for iid, payload in con.execute("SELECT incident_id, payload FROM predicted"):
+            rd.setdefault(iid, json.loads(payload).get("risk_domain"))
     risk_domain = [rd.get(int(i)) for i in f.ids]
     X = feature_matrix(f, risk_domain)
     Z = umap_embed(X, 10, SEED)

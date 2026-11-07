@@ -58,6 +58,11 @@ export default function FilterPanel({ nodes }: { nodes: IncidentNode[] }) {
           onChange={(e) => setFilters((f) => ({ ...f, includeUnknownSeverity: e.target.checked }))} />
         Include incidents without a coded severity
       </label>
+      <label className="check">
+        <input type="checkbox" checked={filters.includePredicted}
+          onChange={(e) => setFilters((f) => ({ ...f, includePredicted: e.target.checked }))} />
+        Use predicted tags for {data?.meta.n_predicted ?? 0} incidents not yet coded
+      </label>
       <fieldset className="range">
         <legend>
           Minimum reports: <strong>{filters.minReports}</strong>

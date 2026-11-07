@@ -8,7 +8,7 @@ import { activeFilterCount, matches } from '../lib/filters';
 import { search } from '../lib/search';
 import {
   buildEncoder, COLOR_OPTIONS, minMax, PRESETS, scaleTo, SIZE_OPTIONS, sizeValue, VIEW_OPTIONS,
-  type ColorBy, type SizeBy, type View,
+  type ColorBy, type SizeBy, type View, UNKNOWN as UNKNOWN_COLOR,
 } from '../lib/style';
 import type { EdgeBundle, IncidentNode } from '../lib/types';
 
@@ -100,7 +100,10 @@ export default function ExplorePage() {
     return new Set<number>();
   }, [selected, neighbors, legendFocus, nodes, encoder]);
 
-  const colorOf = encoder.color;
+  const colorOf = useMemo(
+    () => (filters.includePredicted ? encoder.color : (n: IncidentNode) => (n.pr ? UNKNOWN_COLOR : encoder.color(n))),
+    [encoder, filters.includePredicted],
+  );
 
   // Year playback: animate the upper bound of the year range.
   useEffect(() => {
@@ -223,7 +226,7 @@ export default function ExplorePage() {
 
         {hover && !sel && (
           <div className="hovercard" style={{ left: Math.min(mouse[0] + 16, (stage.current?.clientWidth ?? 800) - 330), top: Math.max(mouse[1] - 10, 50) }}>
-            <div className="hc-year">{hover.d} · {hover.nrep} report{hover.nrep === 1 ? '' : 's'}{hover.sev !== null ? ` · severity ${hover.sev} (${SEV_LABEL[hover.sev]})` : ''}</div>
+            <div className="hc-year">{hover.pr ? 'Predicted tags · ' : ''}{hover.d} · {hover.nrep} report{hover.nrep === 1 ? '' : 's'}{hover.sev !== null ? ` · severity ${hover.sev} (${SEV_LABEL[hover.sev]})` : ''}</div>
             <div className="hc-title">{hover.t}</div>
             <p>{hover.s.length > 220 ? hover.s.slice(0, 220) + '…' : hover.s}</p>
             <div className="chip-row">
@@ -236,7 +239,7 @@ export default function ExplorePage() {
         {sel && (
           <aside className="selection" aria-label="Selected incident">
             <button type="button" className="close" aria-label="Close" onClick={() => setSelected(null)}>×</button>
-            <div className="hc-year">#{sel.id} · {sel.d}</div>
+            <div className="hc-year">#{sel.id} · {sel.d}{sel.pr ? ' · tags predicted from similar coded incidents' : ''}</div>
             <h2>{sel.t}</h2>
             <p>{sel.s}</p>
             <div className="chip-row">

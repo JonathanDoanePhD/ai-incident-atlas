@@ -1,0 +1,368 @@
+[
+  {
+    "incident_id": 316,
+    "summary": "A security researcher reported that Facebook's ad-approval system let fraudulent ads through by missing simple checks on advertised web domains. The ads appeared to lead to a trusted news site while sending users to unrelated supplement sales pages.",
+    "technical_summary": "An automated ad-approval algorithm reviewed Facebook advertisements but did not check whether the displayed domain matched the destination URL. Advertisers used a bait-and-switch technique, showing a reputable news domain and redirecting users to unrelated product pages. The ads reportedly violated Facebook advertising policies.",
+    "systems": ["Facebook ad-approval algorithm"],
+    "developers": ["Facebook"],
+    "deployers": ["Facebook"],
+    "tags": {
+      "sector": [
+        {"id": "social_media", "evidence": "confirmed", "quote": "This violates a number of Facebook advertising policies.", "report": 1971}
+      ],
+      "technology": [
+        {"id": "ad_targeting_pricing", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "failure_mode": [
+        {"id": "adversarial_attack", "evidence": "confirmed", "quote": "Clearly someone has figured out how to game the Facebook system in order to run ads that look like they lead one place", "report": 1971},
+        {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "financial", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "adversarial_attack",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.3",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Harm was exposure to fraudulent ads rather than a documented loss. Severity, technology and lifecycle are inferred from the excerpt."
+  },
+  {
+    "incident_id": 451,
+    "summary": "Getty Images sued Stability AI, the maker of the Stable Diffusion image tool, alleging that its training data included millions of copyrighted images copied without permission. Artists and other creators filed related lawsuits.",
+    "technical_summary": "Stable Diffusion is a generative image model trained on large sets of images scraped from the web. Rights holders allege that the training data included copyrighted works used without license or consent, which the developers dispute as fair use.",
+    "systems": ["Stable Diffusion"],
+    "developers": ["CompVis LMU", "EleutherAI", "LAION", "Runway", "Stability AI"],
+    "deployers": ["Stability AI"],
+    "tags": {
+      "sector": [
+        {"id": "entertainment_arts", "evidence": "confirmed", "quote": "The lawsuit marks an escalation in the developing legal battle between AI firms and content creators", "report": 2515}
+      ],
+      "technology": [
+        {"id": "image_video_generation", "evidence": "confirmed", "quote": "AI art tools like Stable Diffusion rely on human-created images for training data", "report": 2515}
+      ],
+      "failure_mode": [
+        {"id": "ip_consent_violation", "evidence": "confirmed", "quote": "companies scrape from the web, often without their creators’ knowledge or consent", "report": 2515}
+      ],
+      "harm_type": [
+        {"id": "intellectual_property", "evidence": "confirmed", "quote": "unlawfully copied and processed millions of images protected by copyright", "report": 2515}
+      ],
+      "lifecycle_stage": [
+        {"id": "data", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "creators", "evidence": "confirmed", "quote": "The lawsuit marks an escalation in the developing legal battle between AI firms and content creators", "report": 2515}
+      ]
+    },
+    "primary_failure_mode": "ip_consent_violation",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "6",
+    "risk_subdomain": "6.3",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Allegations are contested and unresolved in the excerpts. Severity is inferred; the harm is to rights holders rather than individuals in a single incident."
+  },
+  {
+    "incident_id": 469,
+    "summary": "Investigations found that AI image-classification tools from large technology companies rated everyday photos of women as sexually suggestive. Platforms that used these scores reportedly reduced the reach of images featuring women's bodies.",
+    "technical_summary": "Image classifiers used for content moderation scored photos for sexual 'raciness' and nudity. Photos of women in everyday or medical contexts, and pregnancy photos, received higher scores than comparable photos of men, so platforms using the scores could suppress posts without notifying users.",
+    "systems": ["Google SafeSearch classifier", "Microsoft image classification tool"],
+    "developers": ["Amazon", "Google", "Microsoft"],
+    "deployers": ["Facebook", "Instagram", "LinkedIn", "Meta"],
+    "tags": {
+      "sector": [
+        {"id": "social_media", "evidence": "confirmed", "quote": "so that social media companies can block it before anyone sees it", "report": 2636}
+      ],
+      "technology": [
+        {"id": "content_moderation", "evidence": "confirmed", "quote": "are meant to protect users by identifying violent or pornographic visuals", "report": 2636}
+      ],
+      "failure_mode": [
+        {"id": "bias_discrimination", "evidence": "confirmed", "quote": "rate pictures of women as more “racy” or sexually suggestive than comparable pictures of men", "report": 2636}
+      ],
+      "harm_type": [
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "the social media companies that leverage these or similar algorithms have suppressed the reach of countless images featuring women’s bodies", "report": 2636}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "women_girls", "evidence": "confirmed", "quote": "rate pictures of women as more “racy” or sexually suggestive than comparable pictures of men", "report": 2636},
+        {"id": "creators", "evidence": "confirmed", "quote": "Shadowbanning is especially harmful to social media content creators who rely on viewership", "report": 2638}
+      ]
+    },
+    "primary_failure_mode": "bias_discrimination",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "1",
+    "risk_subdomain": "1.1",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Harm described is reduced reach of posts; the excerpts come from journalistic audits, not platform data. Severity is inferred."
+  },
+  {
+    "incident_id": 504,
+    "summary": "Answers shown in Microsoft's Bing Chat demonstration reportedly included false or invented information, such as product features a vacuum does not have and nightlife venues that could not be verified. A blogger who checked the cited sources found they did not support the claims.",
+    "technical_summary": "A generative chatbot answered shopping and travel questions with fluent text that cited sources. The reviewer found that the cited pages did not contain the stated facts, indicating the model generated plausible but unsupported content.",
+    "systems": ["Bing Chat"],
+    "developers": ["Microsoft", "OpenAI"],
+    "deployers": ["Microsoft"],
+    "tags": {
+      "sector": [
+        {"id": "search_online_services", "evidence": "confirmed", "quote": "Bing AI generated a 5-day trip itinerary for Mexico City", "report": 2860}
+      ],
+      "technology": [
+        {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "failure_mode": [
+        {"id": "hallucination", "evidence": "confirmed", "quote": "this is all completely made up information", "report": 2860}
+      ],
+      "harm_type": [
+        {"id": "misinformation", "evidence": "confirmed", "quote": "Bing AI got some answers completely wrong during their demo", "report": 2860}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "hallucination",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "3",
+    "risk_subdomain": "3.1",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "The source is a single blog post; the demo video itself was not reviewed. Harm is reputational and informational, so severity is inferred as minor."
+  },
+  {
+    "incident_id": 678,
+    "summary": "A privacy group filed a GDPR complaint in Europe alleging that ChatGPT gave wrong personal information, such as a person's birthday, and refused to correct it. The complaint asks regulators to investigate OpenAI.",
+    "technical_summary": "A large language model generated a date of birth for a named person instead of acknowledging it lacked the correct data. The developer reportedly refused to correct or delete the wrong answers and did not disclose the data sources.",
+    "systems": ["ChatGPT"],
+    "developers": ["OpenAI"],
+    "deployers": ["OpenAI"],
+    "tags": {
+      "sector": [
+        {"id": "consumer_tech", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "llm_chatbot", "evidence": "confirmed", "quote": "The chatbot doesn't tell users that it doesn't have the correct data to answer a request.", "report": 3840}
+      ],
+      "failure_mode": [
+        {"id": "hallucination", "evidence": "confirmed", "quote": "making a wild guess instead", "report": 3840},
+        {"id": "privacy_violation", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "privacy", "evidence": "confirmed", "quote": "A person's date of birth is personal data under the GDPR", "report": 3840}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "hallucination",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "3",
+    "risk_subdomain": "3.1",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "This is a regulatory complaint, not a finding. The AIID lists ChatGPT as deployer; recorded here as OpenAI. Privacy framing is the complainant's claim."
+  },
+  {
+    "incident_id": 763,
+    "summary": "Grok, the AI chatbot on X, published a summary repeating unverified online speculation that a former president was not wearing his dentures during an interview. X quickly took the post down.",
+    "technical_summary": "A chatbot that generated news summaries from trending posts on X summarized unsubstantiated user speculation as a headline and summary. The system did not verify the claim before publishing it to subscribers.",
+    "systems": ["Grok"],
+    "developers": ["xAI"],
+    "deployers": ["xAI"],
+    "tags": {
+      "sector": [
+        {"id": "news_publishing", "evidence": "confirmed", "quote": "generate news summaries from trending topics for the platform’s premium subscribers", "report": 4000},
+        {"id": "elections_politics", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "llm_chatbot", "evidence": "confirmed", "quote": "The chatbot can only be accessed by X’s premium subscribers who pay $8 a month", "report": 4000}
+      ],
+      "failure_mode": [
+        {"id": "hallucination", "evidence": "inferred", "quote": null, "report": null},
+        {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "misinformation", "evidence": "confirmed", "quote": "briefly push unsubstantiated claims about the former president missing his", "report": 4000}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "hallucination",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "3",
+    "risk_subdomain": "3.1",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Whether the failure is hallucination or unverified amplification of user posts is ambiguous. The post was removed within a short period, so harm is treated as minor."
+  },
+  {
+    "incident_id": 823,
+    "summary": "Police and prosecutors used Cybercheck, a proprietary AI tool, to build evidence against suspects in murder cases. Defense lawyers and reporters questioned the tool's reliability, and some Cybercheck evidence was excluded or withdrawn.",
+    "technical_summary": "Cybercheck is a commercial system that claims to geolocate people from open-source data using more than 700 algorithms. Its methodology was not independently vetted and was withheld from courts, so its outputs could not be tested or challenged.",
+    "systems": ["Cybercheck"],
+    "developers": ["Global Intelligence"],
+    "deployers": ["Law enforcement agencies", "Prosecutors"],
+    "tags": {
+      "sector": [
+        {"id": "law_enforcement", "evidence": "confirmed", "quote": "Law enforcement agencies and prosecutors from Colorado to New York have turned to a little-known artificial intelligence tool", "report": 4238},
+        {"id": "justice_corrections", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "surveillance_analytics", "evidence": "confirmed", "quote": "its Cybercheck system allegedly can geolocate an individual in real time or at a specific time in the past", "report": 4190}
+      ],
+      "failure_mode": [
+        {"id": "opacity_contestability", "evidence": "confirmed", "quote": "Its methodology is opaque, they’ve said, and it hasn’t been independently vetted", "report": 4238},
+        {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "That goes against the right to due process", "report": 4238}
+      ],
+      "lifecycle_stage": [
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "people_in_justice_system", "evidence": "confirmed", "quote": "We’re being asked to trust a company to present evidence that could eventually put people in prison", "report": 4238}
+      ]
+    },
+    "primary_failure_mode": "inadequate_oversight",
+    "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "7",
+    "risk_subdomain": "7.4",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Describes contested evidence in criminal cases; individual defendants are not named. Severity reflects reported life sentences and convictions tied to the evidence, which the excerpts describe as contested."
+  },
+  {
+    "incident_id": 871,
+    "summary": "A deepfake video showing Elon Musk announcing a $20 million cryptocurrency giveaway circulated on social media and led viewers to a fraudulent website. The video was debunked as fake.",
+    "technical_summary": "A synthetic video generated with deepfake technology imitated a public figure's appearance and voice. It was used in a crypto giveaway scam that directed viewers to an external website.",
+    "systems": [],
+    "developers": ["Deepfake technology developers"],
+    "deployers": ["Elon4u.com scammers"],
+    "tags": {
+      "sector": [
+        {"id": "finance", "evidence": "confirmed", "quote": "The misleading video falsely promotes a $20 million cryptocurrency giveaway", "report": 4378},
+        {"id": "social_media", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "image_video_generation", "evidence": "confirmed", "quote": "A deepfake video of Elon Musk promising a massive cryptocurrency giveaway", "report": 4378}
+      ],
+      "failure_mode": [
+        {"id": "malicious_use", "evidence": "confirmed", "quote": "luring viewers to a website called Elon4u.com", "report": 4378},
+        {"id": "ip_consent_violation", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "financial", "evidence": "inferred", "quote": null, "report": null},
+        {"id": "misinformation", "evidence": "confirmed", "quote": "However, the video was soon debunked as a deepfake", "report": 4378}
+      ],
+      "lifecycle_stage": [
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null},
+        {"id": "public_figures", "evidence": "confirmed", "quote": "A deepfake video of Elon Musk promising a massive cryptocurrency giveaway", "report": 4378}
+      ]
+    },
+    "primary_failure_mode": "malicious_use",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.3",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "No realized financial loss is documented in the excerpt. Severity and the financial harm tag are inferred from the scam design."
+  },
+  {
+    "incident_id": 884,
+    "summary": "The U.S. Treasury said a Moscow-based group linked to Russian military intelligence used generative AI to create disinformation about U.S. presidential candidates in 2024, including deepfake videos. The group allegedly spread it through a network of imitation news sites, and Treasury sanctioned the group.",
+    "technical_summary": "Generative AI tools were used to rapidly produce false stories and deepfake video content about candidates. The content was distributed through a network of websites designed to look like legitimate news outlets, which hid its Russian origin.",
+    "systems": [],
+    "developers": ["Center for Geopolitical Expertise (CGE)"],
+    "deployers": ["Center for Geopolitical Expertise (CGE)", "Main Intelligence Directorate (GRU)"],
+    "tags": {
+      "sector": [
+        {"id": "elections_politics", "evidence": "confirmed", "quote": "used AI tools to spread disinformation about candidates in the US presidential campaign", "report": 4426},
+        {"id": "news_publishing", "evidence": "confirmed", "quote": "a massive network of websites designed to imitate legitimate news outlets", "report": 4426}
+      ],
+      "technology": [
+        {"id": "image_video_generation", "evidence": "confirmed", "quote": "it created deepfake videos of a vice presidential candidate", "report": 4426}
+      ],
+      "failure_mode": [
+        {"id": "malicious_use", "evidence": "confirmed", "quote": "used generative AI tools to quickly create disinformation", "report": 4426}
+      ],
+      "harm_type": [
+        {"id": "democratic", "evidence": "confirmed", "quote": "to spread disinformation about candidates in the US presidential campaign", "report": 4426},
+        {"id": "misinformation", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "voters", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "malicious_use",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.1",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Attribution is the US government's allegation; the group and the Russian embassy denied interference. No measured effect on the election is stated."
+  },
+  {
+    "incident_id": 903,
+    "summary": "A sexually explicit deepfake of a Northern Ireland politician was shared on WhatsApp weeks before a 2022 election. Police said they lacked the tools to trace it, and months later she received more AI-generated images.",
+    "technical_summary": "Generative AI produced a fake video that depicted a real politician in sexual content, which was then shared widely on a messaging app. The synthetic images were used to harass her and to undermine her political standing.",
+    "systems": [],
+    "developers": ["Deepfake technology developers"],
+    "deployers": ["Deepfake creators"],
+    "tags": {
+      "sector": [
+        {"id": "elections_politics", "evidence": "confirmed", "quote": "shows how AI can be used to disrupt democratic processes", "report": 4520}
+      ],
+      "technology": [
+        {"id": "image_video_generation", "evidence": "confirmed", "quote": "fueled by the latest generation of AI technology that makes it too easy to create and share such non-consensual explicit content", "report": 4521}
+      ],
+      "failure_mode": [
+        {"id": "malicious_use", "evidence": "confirmed", "quote": "A deepfake pornography attack targeting Northern Irish politician", "report": 4520}
+      ],
+      "harm_type": [
+        {"id": "sexual_exploitation", "evidence": "confirmed", "quote": "fueled by the latest generation of AI technology that makes it too easy to create and share such non-consensual explicit content", "report": 4521},
+        {"id": "democratic", "evidence": "confirmed", "quote": "it is a threat to the very sanctity of our democracy", "report": 4518},
+        {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "women_girls", "evidence": "confirmed", "quote": "It's been around for almost a decade and almost entirely targets women", "report": 4521},
+        {"id": "public_figures", "evidence": "confirmed", "quote": "A deepfake pornography attack targeting Northern Irish politician", "report": 4520}
+      ]
+    },
+    "primary_failure_mode": "malicious_use",
+    "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.3",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Victim is described by role, not name. The excerpts describe a deliberate campaign against her; severity is inferred from reported distress and reputational harm."
+  }
+]

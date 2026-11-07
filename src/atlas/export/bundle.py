@@ -41,7 +41,8 @@ NODE_FIELDS = {
     "life": "lifecycle stages", "sev": "severity rank 0–4 or null", "rd": "MIT-aligned risk domain id",
     "int": "intent", "cause": "cause entity", "org": "visible developer/deployer entity ids",
     "nrep": "number of reports", "cl": "cluster id", "p": "3-D layout position", "br": "bridge incident (1/0)",
-    "x": "1 if our extraction exists for the incident",
+    "x": "1 if our evidence-grounded LLM extraction exists for the incident",
+    "pr": "1 if tags are kNN-predicted from coded neighbours (no LLM extraction)",
 }
 
 # Accessible categorical palette (Okabe–Ito + Tableau-like extensions), gray reserved for unknown.
@@ -73,6 +74,10 @@ def build() -> dict[str, Any]:
     tax = taxonomy.load()
     private = private_names_by_incident(con)
     ext = {r["incident_id"]: r for r in map(json.loads, (paths.PROCESSED / "extractions.jsonl").read_text().splitlines())}
+    pred_path = paths.PROCESSED / "predicted.jsonl"
+    pred = {r["incident_id"]: r for r in map(json.loads, pred_path.read_text().splitlines())} if pred_path.exists() else {}
+    cv_path = paths.PROCESSED / "propagation_cv.json"
+    cv = json.loads(cv_path.read_text()) if cv_path.exists() else None
     layout = np.load(paths.PROCESSED / "layout.npz")
     pos = {int(i): (xyz.tolist(), int(c)) for i, xyz, c in zip(layout["incident_ids"], layout["xyz"], layout["labels"])}
     bridges = {b["incident_id"] for b in json.loads((paths.PROCESSED / "bridges.json").read_text())}
@@ -99,21 +104,27 @@ def build() -> dict[str, Any]:
         iid = inc["incident_id"]
         names = private.get(iid, [])
         r = ext.get(iid)
-        tags = (lambda d: [t["id"] for t in r["tags"].get(d, [])]) if r else (lambda d: [])
+        pr = pred.get(iid) if r is None else None
+        if r:
+            tags = lambda d: [t["id"] for t in r["tags"].get(d, [])]  # noqa: E731
+        elif pr:
+            tags = lambda d: list(pr.get(d, []))  # noqa: E731
+        else:
+            tags = lambda d: []  # noqa: E731
         p, cl = pos.get(iid, ([0.0, 0.0, 0.0], -1))
-        sev = SEV.get((r.get("severity") or {}).get("id")) if r else None
+        sev = SEV.get((r.get("severity") or {}).get("id")) if r else (SEV.get(pr.get("severity")) if pr else None)
+        src = r or pr or {}
         nodes.append({
             "id": iid, "t": redact_private_names(inc["title"] or f"Incident {iid}", names),
             "y": inc["year"], "d": inc["date"],
             "s": r["summary"] if r else redact_private_names(words(inc["description"], 60) or "", names),
             "sec": tags("sector"), "tech": tags("technology"), "fm": tags("failure_mode"),
-            "pfm": r.get("primary_failure_mode") if r else None, "harm": tags("harm_type"),
+            "pfm": src.get("primary_failure_mode"), "harm": tags("harm_type"),
             "pop": tags("affected_population"), "life": tags("lifecycle_stage"), "sev": sev,
-            "rd": r.get("risk_domain") if r else None, "int": r.get("intent") if r else None,
-            "cause": r.get("cause_entity") if r else None,
+            "rd": src.get("risk_domain"), "int": src.get("intent"), "cause": src.get("cause_entity"),
             "org": sorted(org_by_inc[iid]["developer"] | org_by_inc[iid]["deployer"]),
             "nrep": inc["n_reports"], "cl": cl, "p": [round(v, 3) for v in p], "br": int(iid in bridges),
-            "x": int(r is not None)})
+            "x": int(r is not None), "pr": int(pr is not None)})
     (out / "nodes.json").write_text(json.dumps(nodes, ensure_ascii=False, separators=(",", ":")))
 
     # ---- edges -------------------------------------------------------------------------------------
@@ -163,6 +174,8 @@ def build() -> dict[str, Any]:
                 "tags": {d: [tag_out(t) for t in r["tags"].get(d, [])] for d in taxonomy.TAG_DIMENSIONS},
                 "severity": tag_out(r["severity"]) if r.get("severity") else None,
                 "risk_subdomain": r.get("risk_subdomain"), "notes": clean_text(r.get("notes"))})
+        if r is None and iid in pred:
+            prof["predicted"] = {"confidence": pred[iid].get("confidence"), "risk_subdomain": None}
         if iid in row:
             prof["related"] = [{"id": j, "w": round(w, 3), "why": why} for j, w, why in related(f, mats, row[iid], 8)]
         chunks[iid // CHUNK][str(iid)] = prof
@@ -182,8 +195,6 @@ def build() -> dict[str, Any]:
             data = json.loads(src.read_text())
             if name == "evaluation":
                 data = slim_evaluation(data)
-            if name == "insights":
-                data.pop("severity_vs_attention", None) if False else None
             (out / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")))
 
     dims = {}
@@ -198,7 +209,8 @@ def build() -> dict[str, Any]:
         "snapshot": paths.SNAPSHOT_FILE.name, "snapshot_date": "2026-11-02",
         "taxonomy_version": tax["version"], "n_incidents": len(nodes), "n_extracted": sum(n["x"] for n in nodes),
         "dimensions": dims, "unknown_color": UNKNOWN, "palette": PALETTE, "node_fields": NODE_FIELDS,
-        "views": list(packed), "license": {
+        "views": list(packed), "n_predicted": sum(n["pr"] for n in nodes),
+        "propagation_cv": cv, "license": {
             "data": "CC BY-SA 4.0", "code": "MIT",
             "attribution": "Incident data from the AI Incident Database (incidentdatabase.ai), Responsible AI "
                            "Collaborative, licensed CC BY-SA 4.0. Report excerpts belong to their publishers."},

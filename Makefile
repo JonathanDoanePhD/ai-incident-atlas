@@ -1,9 +1,9 @@
 # AI Incident Atlas — reproducible pipeline. `make all` rebuilds everything downstream of the committed
 # LLM extraction outputs (data/enrich/raw/*.json); re-running extraction itself needs an LLM (see docs/methodology.md).
 PY ?= .venv/bin/python
-.PHONY: all setup data ingest profile plan prepare validate status embed graph clusters insights evaluate export app verify test clean
+.PHONY: all setup data ingest profile plan prepare validate status embed propagate graph clusters insights evaluate export app verify test clean
 
-all: ingest profile validate embed graph clusters insights evaluate export app
+all: ingest profile validate embed propagate graph clusters insights evaluate export app
 
 setup:
 	uv venv -p 3.12 .venv && uv pip install -r requirements.txt && uv pip install -e .
@@ -30,6 +30,9 @@ status:
 
 embed:                ## Phase 5: sentence embeddings
 	$(PY) -m atlas.embed.embed
+
+propagate:            ## Phase 5: kNN-predicted tags for incidents without LLM extraction (+ 5-fold CV)
+	$(PY) -m atlas.analysis.propagate
 
 graph:                ## Phase 5: multi-view similarity graphs with explained edges
 	$(PY) -m atlas.graph.similarity

@@ -24,6 +24,8 @@ export interface Meta {
   dimensions: Record<string, Dimension>;
   unknown_color: string;
   views: string[];
+  n_predicted?: number;
+  propagation_cv?: { n: number; single: Record<string, { accuracy: number; majority_baseline: number }>; multi: Record<string, { jaccard: number }> } | null;
   license: { data: string; code: string; attribution: string };
 }
 
@@ -51,6 +53,8 @@ export interface IncidentNode {
   p: [number, number, number];
   br: number;
   x: number;
+  /** 1 when tags are kNN-predicted (no LLM extraction) */
+  pr: number;
 }
 
 /** [source, target, weight, explanationIndex] */
@@ -85,6 +89,7 @@ export interface Profile {
   risk_subdomain?: string | null;
   notes?: string | null;
   related?: { id: number; w: number; why: string }[];
+  predicted?: { confidence: number | null };
 }
 
 export interface Entity {

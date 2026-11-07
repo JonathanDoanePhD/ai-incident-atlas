@@ -1,0 +1,65 @@
+{
+ "n": 560,
+ "k": 15,
+ "threshold": 0.4,
+ "single": {
+  "risk_domain": {
+   "accuracy": 0.625,
+   "macro_f1": 0.436,
+   "majority_baseline": 0.321
+  },
+  "primary_failure_mode": {
+   "accuracy": 0.609,
+   "macro_f1": 0.306,
+   "majority_baseline": 0.286
+  },
+  "intent": {
+   "accuracy": 0.754,
+   "macro_f1": 0.515,
+   "majority_baseline": 0.602
+  },
+  "cause_entity": {
+   "accuracy": 0.648,
+   "macro_f1": 0.593,
+   "majority_baseline": 0.416
+  },
+  "severity": {
+   "accuracy": 0.543,
+   "macro_f1": 0.352,
+   "majority_baseline": 0.48,
+   "within_one": 0.898
+  }
+ },
+ "multi": {
+  "sector": {
+   "jaccard": 0.421,
+   "precision": 0.733,
+   "empty_prediction_share": 0.362
+  },
+  "technology": {
+   "jaccard": 0.606,
+   "precision": 0.795,
+   "empty_prediction_share": 0.198
+  },
+  "failure_mode": {
+   "jaccard": 0.502,
+   "precision": 0.704,
+   "empty_prediction_share": 0.098
+  },
+  "harm_type": {
+   "jaccard": 0.329,
+   "precision": 0.598,
+   "empty_prediction_share": 0.323
+  },
+  "lifecycle_stage": {
+   "jaccard": 0.724,
+   "precision": 0.77,
+   "empty_prediction_share": 0.005
+  },
+  "affected_population": {
+   "jaccard": 0.359,
+   "precision": 0.659,
+   "empty_prediction_share": 0.304
+  }
+ }
+}

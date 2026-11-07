@@ -12,3 +12,9 @@ Each entry: date — decision — rationale.
    Code subagents that read prepared batch files and write JSON outputs, which a deterministic validator then checks.
    The pipeline also supports an API-based runner (`atlas.extract.api_runner`) for anyone reproducing with a key.
 5. 2026-11-06 — **Resumption check-in scheduled hourly** (cron cannot express 75 minutes).
+6. 2026-11-07 — **Scope LLM extraction to a representative prefix if usage limits recur.** The plan orders the
+   pilot, then every incident with CSET/GMF expert labels (complete), then a stratified-shuffled remainder, so any
+   prefix is representative and fully evaluable. Incidents not coded by the LLM receive *predicted* tags from a
+   kNN model over title+description embeddings, evaluated by 5-fold cross-validation on coded incidents, labelled
+   "predicted" in the app, and excluded from the evidence-based statistics on the Insights page.
+7. 2026-11-07 — **Bulk extraction model: Sonnet; blind second coder: Haiku** (pilot evidence, docs/pilot_review.md).

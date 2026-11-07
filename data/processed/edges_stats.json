@@ -5,24 +5,24 @@
   "mean_degree": 8.37
  },
  "failure": {
-  "edges": 355,
-  "isolated_nodes": 1692,
-  "mean_degree": 0.4
+  "edges": 9142,
+  "isolated_nodes": 100,
+  "mean_degree": 10.25
  },
  "technology": {
-  "edges": 286,
-  "isolated_nodes": 1693,
-  "mean_degree": 0.32
+  "edges": 9265,
+  "isolated_nodes": 163,
+  "mean_degree": 10.39
  },
  "sector": {
-  "edges": 245,
-  "isolated_nodes": 1694,
-  "mean_degree": 0.27
+  "edges": 7429,
+  "isolated_nodes": 442,
+  "mean_degree": 8.33
  },
  "harm": {
-  "edges": 331,
-  "isolated_nodes": 1692,
-  "mean_degree": 0.37
+  "edges": 8052,
+  "isolated_nodes": 307,
+  "mean_degree": 9.03
  },
  "entity": {
   "edges": 3382,
@@ -30,8 +30,8 @@
   "mean_degree": 3.79
  },
  "blend": {
-  "edges": 1643,
-  "isolated_nodes": 1025,
-  "mean_degree": 1.84
+  "edges": 8233,
+  "isolated_nodes": 10,
+  "mean_degree": 9.23
  }
 }

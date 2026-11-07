@@ -57,7 +57,15 @@ export default function IncidentPage() {
         {node.d} · {node.nrep} report{node.nrep === 1 ? '' : 's'} ·{' '}
         <a href={`https://incidentdatabase.ai/cite/${iid}/`} target="_blank" rel="noopener noreferrer">AIID entry #{iid}</a>
       </p>
-      {!node.x && <p className="notice">This incident has not been coded by the extraction pipeline yet; only AIID data is shown.</p>}
+      {!node.x && node.pr ? (
+        <p className="notice">
+          Not yet coded by the evidence-grounded pipeline. The tags shown in the constellation and catalog for this incident are{' '}
+          <strong>predicted</strong> from its most similar coded incidents (kNN; cross-validated risk-domain accuracy{' '}
+          {data!.meta.propagation_cv ? `${Math.round(data!.meta.propagation_cv.single.risk_domain.accuracy * 100)}%` : 'n/a'}). They carry no quotes and are not evidence.
+        </p>
+      ) : !node.x ? (
+        <p className="notice">This incident has not been coded by the extraction pipeline; only AIID data is shown.</p>
+      ) : null}
 
       <div className="profile-grid">
         <section>
@@ -96,24 +104,24 @@ export default function IncidentPage() {
 
         <aside>
           <div className="facts">
-            {node.sev !== null && (
+            {node.sev !== null && node.x === 1 && (
               <div className="fact">
                 <span className="fact-label">Severity</span>
                 <span className={`sev sev${node.sev}`}>{node.sev} — {SEV_LABEL[node.sev]}</span>
                 {prof?.severity && <ul className="tags compact"><Evidence tag={prof.severity} dim="severity" hideName /></ul>}
               </div>
             )}
-            {node.rd && (
+            {node.rd && node.x === 1 && (
               <div className="fact">
                 <span className="fact-label">Risk domain (MIT)</span>
                 {node.rd}. {termLabel('risk_domain', node.rd)}
                 {prof?.risk_subdomain && <div className="muted small">{prof.risk_subdomain} {termLabel('risk_subdomain', prof.risk_subdomain)}</div>}
               </div>
             )}
-            {node.pfm && (
+            {node.pfm && node.x === 1 && (
               <div className="fact"><span className="fact-label">Primary failure mode</span>{termLabel('failure_mode', node.pfm)}</div>
             )}
-            {node.int && (
+            {node.int && node.x === 1 && (
               <div className="fact"><span className="fact-label">Intent / cause</span>{node.int} · {node.cause === 'ai' ? 'AI system' : node.cause}</div>
             )}
             {prof?.systems && prof.systems.length > 0 && (
