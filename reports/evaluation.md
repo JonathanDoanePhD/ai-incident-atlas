@@ -169,3 +169,29 @@ A sample of cases where our coding and the expert label do not overlap, with a s
 - **#65** Reinforcement Learning Reward Functions in Video Games — expert: `['Arts, entertainment and recreation']`; ours: `['science_research']`
 
 <!-- ANALYSIS -->
+### Reading the disagreements (hand analysis)
+
+**Mechanism vs. risk category is the dominant source of MIT disagreement.** The off-diagonal mass sits mainly
+between domain 7 (AI system safety, failures & limitations) and the domain describing *who was hurt and how*.
+COMPAS (#40) is coded 7 by us (a model that "performs poorly") but 1 by experts (the discriminatory effect), while
+"All image captions produced are violent" (#41) shows the reverse. Domain 5 (human–computer interaction) vs 7 is
+the second axis: for Tesla Autopilot crashes (#20) and the automated termination (#35), the reports emphasize the
+human-automation hand-off, which our prompt explicitly directs to domain 5. Both readings are defensible; the MIT
+taxonomy asks for *one* domain where many incidents genuinely span two.
+
+**GMF disagreements are mostly granularity, not contradiction.** GMF codes low-level technical causes (e.g.
+"Adversarial Data" for YouTube Kids, #1), while our failure modes describe the mechanism visible in reporting
+("harmful or unsafe output", "inadequate oversight"). Several GMF labels mark *potential* technical causes that
+the reports do not state; our prompt prefers a missing tag to a guess, which lowers recall for privacy,
+hallucination and misuse. The two GMF classes with the weakest agreement (malicious_use, hallucination) are also
+the ones whose GMF counterparts ("Harmful Application", "Misinformation Generation Hazard") are applied
+inconsistently across GMF records.
+
+**CSET sector disagreements cluster on early, research-flavoured incidents** (#44, #61, #65: reward hacking in
+video games, Kaggle overfitting) where we chose *science & research* and CSET chose the domain of the artefact.
+Our sector agreement with CSET (Jaccard 0.71) matches the CSET annotators' agreement with each other (0.70).
+
+**Caveats.** Expert labels exist for a non-random subset (CSET/GMF focus on earlier incidents; MIT covers most of
+the database). The crosswalks are ours and lossy; unmapped GMF values are excluded. The blind second coder is a
+different model given the same inputs and prompt, so its agreement measures *prompt-and-input reliability*, not
+independence from the shared instructions.
