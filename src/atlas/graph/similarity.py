@@ -174,7 +174,7 @@ def explain(f: Features, i: int, j: int, view: str, sim: float) -> str:
         if common:
             parts.append("same developer/deployer: " + ", ".join(f.actor_names[c] for c in common[:2]))
     if view == "semantic" or not parts:
-        parts.insert(0, f"similar descriptions (cosine {float(f.emb[i] @ f.emb[j]):.2f})")
+        parts.insert(0, "similar descriptions")  # the similarity score itself is stored on the edge
     # "Same failure, different sector" — the atlas's core question.
     si, sj = f.sector[i] - f.sector[j], f.sector[j] - f.sector[i]
     if view in ("failure", "blend", "technology") and si and sj and not (f.sector[i] & f.sector[j]):

@@ -266,7 +266,7 @@ export default function ExplorePage() {
                       <button type="button" className="link" onClick={() => { setSelected(n); setFocusId(n.id); }}>
                         {n.t}
                       </button>
-                      <span className="why">{edges?.explanations[nb.why]}</span>
+                      <span className="why">{edges?.explanations[nb.why]} · similarity {nb.w.toFixed(2)}</span>
                     </li>
                   ) : null;
                 })}

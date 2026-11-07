@@ -18,3 +18,10 @@ Each entry: date — decision — rationale.
    kNN model over title+description embeddings, evaluated by 5-fold cross-validation on coded incidents, labelled
    "predicted" in the app, and excluded from the evidence-based statistics on the Insights page.
 7. 2026-11-07 — **Bulk extraction model: Sonnet; blind second coder: Haiku** (pilot evidence, docs/pilot_review.md).
+8. 2026-11-07 — **Owner asked to complete coding of all incidents.** Extraction resumed in plan order after the
+   1,001-incident interim release (which remains described in the case study) and finished all 149 batches. kNN
+   propagation now covers only the one incident without reports.
+9. 2026-11-07 — **Pages deploys from the default branch.** The `github-pages` environment only accepts the default
+   branch (the working branch); the workflow deploys on pushes to it and to `main`.
+10. 2026-11-07 — **Bundle cap:** profile source lists trimmed to the cited reports plus up to 6 others (full list on
+    AIID) to keep the bundle ≈ 10 MB.

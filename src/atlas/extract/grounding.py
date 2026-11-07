@@ -129,16 +129,32 @@ def _name_variants(name: str) -> list[str]:
     return out
 
 
+_APOS = "['\u2019\u2018`\u00b4]"
+
+
+def _name_pattern(name: str) -> str:
+    """Regex for a name that tolerates apostrophe variants (' vs ’) and runs of whitespace."""
+    parts = []
+    for ch in name:
+        if ch in "'\u2019\u2018`\u00b4":
+            parts.append(_APOS)
+        elif ch.isspace():
+            parts.append(r"\s+")
+        else:
+            parts.append(re.escape(ch))
+    return "".join(parts)
+
+
 def redact_private_names(text: str, private_names: list[str], replacement: str = "[name withheld]") -> str:
     """Replace full names (and distinctive surnames) of private individuals in free text."""
     for name in sorted(private_names, key=len, reverse=True):
-        full = name.strip()
+        full = " ".join(name.split())
         if len(full) < 4:
             continue
-        text = re.sub(re.escape(full), replacement, text, flags=re.IGNORECASE)
+        text = re.sub(_name_pattern(full), replacement, text, flags=re.IGNORECASE)
         toks = full.split()
         if looks_like_personal_name(full) and len(toks[-1]) >= 4:
-            text = re.sub(rf"\b{re.escape(toks[-1])}\b", replacement, text)
+            text = re.sub(rf"\b{_name_pattern(toks[-1])}\b", replacement, text)
     return text
 
 

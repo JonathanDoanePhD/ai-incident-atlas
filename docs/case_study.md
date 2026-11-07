@@ -18,24 +18,24 @@ every label has to be traceable to evidence, and every number in the write-up ha
 
 ## Three findings
 
-**1. After ChatGPT, the incident record flipped from "AI fails" to "people misuse AI."** Of the 1,001 incidents I
-coded, deliberate misuse — scams, deepfakes, harassment, disinformation — was the central mechanism in about one in
-ten incidents before 30 November 2022 and in about half (50.7%) after it. Over the same split, robustness failures
-fell from 44.5% to 15.7% of the mix and bias from 24.7% to 3.4%. Image and video generation went from 7% to 38% of
-incidents; voice cloning from 2% to 18%. These are shares, not counts: bias incidents did not disappear, they were
+**1. After ChatGPT, the incident record flipped from "AI fails" to "people misuse AI."** Across all 1,783
+coded incidents, deliberate misuse — scams, deepfakes, harassment, disinformation — was the central mechanism in
+about one in eight incidents before 30 November 2022 and in more than half (54.0%) after it. Over the same split,
+robustness failures fell from 44.3% to 13.5% of the mix and bias from 22.9% to 2.9%. Image and video generation
+went from 9% to 42% of incidents; voice cloning from 2% to 20%. These are shares, not counts: bias incidents did not disappear, they were
 swamped by a wave of misuse. And AIID records what journalists report and volunteers submit, so this is a shift in
 the *visible* incident record, not a measured shift in the world.
 
 **2. Some failures are genuinely sector-agnostic — and they are governance failures.** Ranking failure modes by
 how evenly they spread across sectors, *inadequate testing or oversight* tops the list: it appears in all 20
-sectors with a normalized entropy of 0.91. Bias and disparate performance and privacy violations (18 sectors each)
-follow. At the other end, *harmful or unsafe output* is concentrated in consumer apps and social media. In the
+sectors (421 incidents) with a normalized entropy of 0.89. Privacy violations (all 20 sectors, 0.88) and bias and
+disparate performance (18 sectors) follow. At the other end, *harmful or unsafe output* is concentrated in consumer apps and social media. In the
 constellation, the "Recurring failure modes" view links incidents that fail the same way, and the edge
 explanations say so in plain words: *"same failure mode: bias & disparate performance; both use facial
 recognition; one in policing, one in retail."*
 
 **3. Severity is not attention.** I coded severity (0–4) separately from media coverage on purpose. They turn out
-to be almost unrelated: Spearman ρ = 0.09 between the number of news reports and coded severity. Many of the most
+to be almost unrelated: Spearman ρ = 0.11 between the number of news reports and coded severity. Many of the most
 covered incidents are embarrassments; several fatal ones have a single report. The app offers both as separate
 size encodings, rather than letting report count masquerade as importance.
 
@@ -51,10 +51,12 @@ case, Unicode quotes, punctuation and whitespace.
 
 Failures don't silently pass. They block loading until repaired by one of three logged rules: *reattribute* (the
 quote is verbatim, but in a different report of the same incident), *snap* (a near-verbatim match is replaced by
-the exact span), or *downgrade* to inferred. Across 4,763 quotes, 99.5% were verbatim on the first pass. The
-validator caught two paraphrases that looked plausible — one quietly dropped the words "this week" from the middle
-of a sentence — and fixed one misattributed citation. The other 17 downgrades were deliberate: verbatim quotes
-that named a private person, which the privacy rule removes.
+the exact span), or *downgrade* to inferred. Across 7,815 quotes, 99.5% were verbatim on the first pass. The
+validator caught paraphrases that looked plausible — one quietly dropped the words "this week" from the middle
+of a sentence — fixed one misattributed citation and snapped one near-verbatim quote. The other 32 downgrades were
+deliberate: verbatim quotes that named a private person, which the privacy rule removes. The privacy tests earned
+their keep too: on the final run they caught a name that escaped redaction because the database spelled it with a
+curly apostrophe and the headline with a straight one.
 
 ### Pilot first, then scale
 
@@ -67,9 +69,9 @@ one, which decided the bulk model.
 
 ### Evaluation as the differentiator
 
-Because AIID ships expert labels, the coding can be graded. The coder never saw them. On 876 incidents with MIT
-labels, the coded risk domain matches the expert domain 84.4% of the time (Cohen's κ = 0.80; majority baseline
-30.1%). Sector agreement with CSET (Jaccard 0.71) is on par with how well CSET's own annotators agree with each
+Because AIID ships expert labels, the coding can be graded. The coder never saw them. On 1,495 incidents with MIT
+labels, the coded risk domain matches the expert domain 84.3% of the time (Cohen's κ = 0.80; majority baseline
+37.9%). Sector agreement with CSET (Jaccard 0.71) is on par with how well CSET's own annotators agree with each
 other (0.70) — a useful reminder that "ground truth" is itself noisy. Agreement with GMF's technical failure
 labels is lower (Jaccard 0.42), and the disagreement analysis explains why: GMF codes low-level technical causes
 that reports often don't state, while my prompt prefers a missing tag to a confident guess. A different model
@@ -77,14 +79,14 @@ re-coded a random sample of 30 incidents blind: risk-domain κ = 0.87 and severi
 severity within one band. Since both coders share the prompt, this measures the reliability of the *instructions*,
 not independent judgement.
 
-### Honest about coverage
+### Resumable by design
 
-Within the run's budget I coded 1,001 of 1,783 incidents. Rather than pretend otherwise, the batch planner ordered
-work so that any stopping point is useful: the pilot, then every incident with CSET or GMF expert labels (so
-evaluation is complete), then a stratified-random remainder (so the coded set is representative). The other 783
-incidents get *predicted* tags from their nearest coded neighbours, cross-validated (65.3% risk-domain accuracy
-against a 30.2% baseline) and labelled "predicted" everywhere, with a switch to turn them off. They never enter the
-statistics above.
+Coding 1,783 incidents took several sessions and two usage-limit interruptions. The batch planner ordered work so
+that any stopping point would have been useful — the pilot, then every incident with CSET or GMF expert labels (so
+evaluation is complete first), then a stratified-random remainder (so any prefix is representative) — and every
+step is idempotent, so interrupted agents simply resumed. An interim release shipped with 1,001 coded incidents
+and kNN-*predicted* tags for the rest, clearly labelled and cross-validated; with full coverage, only the single
+incident that has no linked report still carries predicted tags.
 
 ### Clusters you can defend
 
@@ -93,8 +95,9 @@ reported. My first run picked k = 7 with a perfect bootstrap ARI of 1.0 — susp
 risk-domain block in the features split the space into seven islands, so the "clusters" just reproduced one
 label. After removing that block and down-weighting tag features, the clusters read cleanly — voice-clone scams,
 political deepfakes, non-consensual imagery, chatbot hallucinations, autonomous-vehicle failures, opaque
-automated decisions, AI agents — but the honest finding is that the selection curve is *flat* (scores 0.088–0.097
-for k = 8–19). The rule picks k = 18; adding nine incidents moved an earlier run from 8 to 18. So k is a
+automated decisions, AI agents — but the honest finding is that the selection curve is fairly *flat*. On partial data,
+adding nine incidents moved the choice from 8 to 18 clusters. On the full data the curve has a clearer optimum
+(k = 13, bootstrap ARI 0.96, seed ARI 0.90–0.91), yet scores stay within 0.107–0.116 for k = 8–17. So k is a
 resolution choice, and the atlas says so. A perfect score that is too good is a bug report; a flat curve is a
 limitation to state, not hide.
 
@@ -116,7 +119,7 @@ machine except as short, attributed, linked quotes.
 
 ## What I'd do next
 
-Code the remaining 782 incidents (the pipeline is resumable and the plan is fixed); merge entity aliases such as
+Track new AIID snapshots incrementally (the pipeline is resumable and only new incidents need coding); merge entity aliases such as
 Facebook/Meta using AIID's entity relationships; extend excerpts beyond the first 2,500 characters for long
 investigations; and add an "explain this cluster" view that surfaces the most typical incidents and their quotes.
 The broader lesson holds regardless: with LLM-assisted coding, the interesting engineering is not the prompt — it

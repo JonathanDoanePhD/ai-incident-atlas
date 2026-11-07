@@ -108,3 +108,9 @@ def test_repair_reattributes_quote_to_the_right_report():
     r = _rec(severity={"id": "s4_critical", "evidence": "confirmed", "quote": "first known pedestrian fatality", "report": 2})
     r, log = repair(r, {2: "unrelated text", 1: REPORT}, [])
     assert r.severity.report == 1 and r.severity.evidence == "confirmed" and log[0]["action"] == "reattribute"
+
+
+def test_redaction_tolerates_apostrophe_variants():
+    names = ["Jane O\u2019Example"]
+    out = redact_private_names("Official Jane O'Example shared a video", names)
+    assert "Example" not in out and "[name withheld]" in out

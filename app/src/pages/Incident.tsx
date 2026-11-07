@@ -151,7 +151,7 @@ export default function IncidentPage() {
               return n ? (
                 <li key={r.id}>
                   <Link to={`/incident/${r.id}`}>{n.t}</Link> <span className="muted">({n.y})</span>
-                  <div className="why">{r.why}</div>
+                  <div className="why">{r.why} · similarity {r.w.toFixed(2)}</div>
                 </li>
               ) : null;
             })}

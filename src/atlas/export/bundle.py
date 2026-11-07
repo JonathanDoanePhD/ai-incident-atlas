@@ -32,7 +32,7 @@ from atlas.ingest.load import clean_text, connect
 from atlas.privacy import SHOWN_AS_ACTOR, entity_kind, private_names_by_incident
 
 CHUNK = 100
-MAX_SOURCES = 12
+MAX_SOURCES = 6
 MAX_WORDS = 25
 SEV = {"s0_none": 0, "s1_minor": 1, "s2_moderate": 2, "s3_severe": 3, "s4_critical": 4}
 NODE_FIELDS = {
