@@ -29,3 +29,8 @@
 {"batch": "b112", "incident_id": 1413, "dimension": "failure_mode", "tag": "malicious_use", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b112", "incident_id": 1413, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b114", "incident_id": 1524, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b120", "incident_id": 1674, "dimension": "technology", "tag": "agentic_ai", "action": "snap", "old": "The agent itself works by connecting to your applications and devices, including your email, messaging apps, calendar", "new": "The AI agent itself works by connecting to your applications and devices, including your email, messaging apps, calen"}
+{"batch": "b121", "incident_id": 785, "dimension": "failure_mode", "tag": "robustness_failure", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b128", "incident_id": 1775, "dimension": "sector", "tag": "elections_politics", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b128", "incident_id": 1775, "dimension": "technology", "tag": "image_video_generation", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b128", "incident_id": 1775, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "private_name", "old": null}
