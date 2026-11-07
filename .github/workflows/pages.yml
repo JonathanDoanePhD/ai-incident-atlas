@@ -1,7 +1,9 @@
 name: Deploy app to GitHub Pages
 on:
   push:
-    branches: [main]
+    # The github-pages environment only accepts the repository's default branch. Deploy from both, so the site
+    # updates whichever branch is the default (currently the working branch; main once it is made the default).
+    branches: [main, claude/ai-incident-atlas-pi61mn]
   workflow_dispatch:
 permissions:
   contents: read

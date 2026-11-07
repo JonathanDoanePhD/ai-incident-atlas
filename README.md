@@ -6,8 +6,7 @@ re-coded with one consistent taxonomy, and linked to verbatim quotes from the or
 
 ![The constellation: 1,784 incidents coloured by MIT risk domain, sized by media attention, linked by blended similarity](docs/screenshots/constellation-desktop.png)
 
-**Live demo:** https://jonathandoanephd.github.io/ai-incident-atlas/ *(published by the Pages workflow once
-GitHub Pages is enabled; see “Deploy” below)* · **Author:** Jonathan Doane
+**Live demo:** https://jonathandoanephd.github.io/ai-incident-atlas/ · **Author:** Jonathan Doane
 
 ---
 
@@ -144,8 +143,8 @@ coder, entity kinds). Re-running extraction itself needs an LLM: `make plan prep
 `data/enrich/raw/`, then `make validate`. See [docs/methodology.md](docs/methodology.md) and
 [docs/decisions.md](docs/decisions.md).
 
-**Deploy:** `.github/workflows/pages.yml` builds `app/` and publishes it on pushes to `main`. Enable it once in
-*Settings → Pages → Source: GitHub Actions*.
+**Deploy:** `.github/workflows/pages.yml` builds `app/` and publishes it to GitHub Pages on pushes to the default
+branch (*Settings → Pages → Source: GitHub Actions*).
 
 ## Tech stack
 

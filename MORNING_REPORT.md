@@ -41,7 +41,10 @@ including a ~1-hour pause when the 5-hour usage limit was hit (no work lost).
 
 ## Live demo
 
-Not yet deployed (needs actions 1–2 above). Expected URL: **https://jonathandoanephd.github.io/ai-incident-atlas/**
+**Live:** https://jonathandoanephd.github.io/ai-incident-atlas/ (deployed 2026-11-07 ~01:55 UTC; verified with Playwright, no console errors).
+Note: GitHub only lets the repository's *default branch* deploy to Pages. The default branch is currently
+`claude/ai-incident-atlas-pi61mn`, so the workflow deploys on pushes to it and to `main`. Optional tidy-up: make
+`main` the default branch (Settings → General → Default branch).
 
 ## Blockers encountered
 
