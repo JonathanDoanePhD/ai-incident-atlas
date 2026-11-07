@@ -2,7 +2,7 @@
 
 **Current phase:** CONTINUATION (owner asked to code all remaining incidents). Live site deployed from `main`.
 **Recurring check-in:** trigger `trig_01CL6Qhn8o7pBksehnkJEPMz` (hourly at :51) — delete when complete.
-**Extraction dispatch:** b081–b104 dispatched → next: b105. Remaining after that: b105–b148 (4 batches/agent, ≤4 agents).
+**Extraction dispatch:** b081–b108 dispatched → next: b109. Remaining after that: b109–b148 (4 batches/agent, ≤4 agents).
 **Publishing:** after each pipeline rerun push to BOTH `claude/ai-incident-atlas-pi61mn` and `main` (`git push origin claude/ai-incident-atlas-pi61mn:main`) — main triggers the Pages deploy.
 
 ## Checklist
