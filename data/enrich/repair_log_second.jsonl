@@ -1,0 +1,2 @@
+{"batch": "second_0", "incident_id": 181, "dimension": "lifecycle_stage", "tag": "testing", "action": "downgrade", "reason": "not_found", "old": "Driverless Cruise autonomous vehicle involved in two-car collision"}
+{"batch": "second_0", "incident_id": 190, "dimension": "technology", "tag": "recommender_ranking", "action": "downgrade", "reason": "not_found", "old": "were used to train the “For You” algorithm"}

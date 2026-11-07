@@ -1,0 +1,377 @@
+[
+  {
+    "incident_id": 77,
+    "summary": "A Knightscope security robot patrolling a California park did not respond when a bystander pressed its emergency button during a fight. The button routed calls to the company rather than to police, and a woman injured in the fight needed hospital treatment.",
+    "technical_summary": "An autonomous K5 security robot with an emergency alert button that was not yet connected to police dispatch. Pressing the button produced a step-out-of-the-way prompt and the robot kept patrolling. Officers arrived about 15 minutes after the fight had ended, so the robot gave no assistance.",
+    "systems": ["Knightscope K5 (HP RoboCop) autonomous security robot"],
+    "developers": ["Knightscope"],
+    "deployers": ["Huntington Park Police Department", "Knightscope"],
+    "tags": {
+      "sector": [
+        {"id": "law_enforcement", "evidence": "confirmed", "quote": "has been patrolling Salt Lake Park for the Huntington Park Police Department", "report": 1340}
+      ],
+      "technology": [
+        {"id": "robotics_drones", "evidence": "confirmed", "quote": "one of more than 70 autonomous security robots developed by Knightscope", "report": 1340}
+      ],
+      "failure_mode": [
+        {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "It’s a new program for us and were still developing some protocols", "report": 1340}
+      ],
+      "harm_type": [
+        {"id": "security_safety", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "inadequate_oversight",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "7",
+    "risk_subdomain": "7.3",
+    "intent": "unintentional",
+    "cause_entity": "other",
+    "notes": "The injury came from the fight itself; coded minor because the robot's unconnected alert delayed outside help. Whether the robot itself would have changed the outcome is unclear."
+  },
+  {
+    "incident_id": 101,
+    "summary": "A Dutch tax authority algorithm used to screen childcare benefit claims wrongly labeled tens of thousands of families as fraudsters. Many affected families had lower incomes or immigrant backgrounds, and they were forced to repay money they did not owe.",
+    "technical_summary": "A self-learning risk-scoring model, deployed from 2013, vetted childcare benefit claims for fraud and treated not holding Dutch citizenship as a risk factor. Civil servants largely rubber-stamped its high-risk flags, producing repayment demands. The model was an opaque black box, offered little explanation, and gave families no meaningful route to contest it.",
+    "systems": ["Dutch tax authority self-learning risk-profiling algorithm for childcare benefit claims"],
+    "developers": [],
+    "deployers": ["Dutch Tax Authority"],
+    "tags": {
+      "sector": [
+        {"id": "government_services", "evidence": "confirmed", "quote": "they needed to file a claim with the Dutch tax authority", "report": 1575}
+      ],
+      "technology": [
+        {"id": "predictive_scoring", "evidence": "confirmed", "quote": "had used a self-learning algorithm to create risk profiles in an effort to spot child care benefits fraud", "report": 1863}
+      ],
+      "failure_mode": [
+        {"id": "bias_discrimination", "evidence": "confirmed", "quote": "The model saw not being a Dutch citizen as a risk factor.", "report": 1575},
+        {"id": "opacity_contestability", "evidence": "confirmed", "quote": "it was an opaque black box, with no transparency into its inner workings", "report": 1575},
+        {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "financial", "evidence": "confirmed", "quote": "Forced to pay back money they didn’t owe, many families were driven to financial ruin", "report": 1404},
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "The model saw not being a Dutch citizen as a risk factor.", "report": 1575},
+        {"id": "psychological", "evidence": "confirmed", "quote": "Others were left with lasting mental health issues", "report": 1404}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "confirmed", "quote": "were pushed into poverty because of exorbitant debts to the tax agency", "report": 1863}
+      ],
+      "affected_population": [
+        {"id": "low_income", "evidence": "confirmed", "quote": "Many of the victims had lower incomes", "report": 1575},
+        {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "a disproportionate number had ethnic minority or immigrant backgrounds", "report": 1575},
+        {"id": "migrants", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "bias_discrimination",
+    "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "Some victims committed suicide. More than a thousand children were taken into foster care.", "report": 1863},
+    "risk_domain": "1",
+    "risk_subdomain": "1.1",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Severity coded s4 because the same article reports suicides and child removals in the scandal, but the excerpts do not establish causation for each case. Developer listed as unknown in the AIID record."
+  },
+  {
+    "incident_id": 121,
+    "summary": "A Turkish-made Kargu-2 attack drone, reportedly used by forces backing Libya's Tripoli government, may have engaged retreating fighters in 2020 without a live operator link, according to a UN panel. The report does not say whether anyone was killed or injured.",
+    "technical_summary": "A loitering attack drone that can be operated manually or autonomously and was reportedly programmed to attack targets without a data link to its operator. Per the UN report, retreating fighters were hunted down and remotely engaged by unmanned combat aerial vehicles and loitering munitions. Casualties were not reported.",
+    "systems": ["STM Kargu-2 loitering munition / attack drone"],
+    "developers": ["STM"],
+    "deployers": ["Tripoli-based government forces"],
+    "tags": {
+      "sector": [
+        {"id": "military_defense", "evidence": "confirmed", "quote": "The Kargu-2 is an attack drone made by the Turkish company STM", "report": 2105}
+      ],
+      "technology": [
+        {"id": "robotics_drones", "evidence": "confirmed", "quote": "The Kargu-2 is an attack drone made by the Turkish company STM", "report": 2105},
+        {"id": "computer_vision", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "failure_mode": [
+        {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "were programmed to attack targets without requiring data connectivity between the operator and the munition", "report": 2104}
+      ],
+      "harm_type": [
+        {"id": "security_safety", "evidence": "confirmed", "quote": "were hunted down and remotely engaged by the unmanned combat aerial vehicles", "report": 2104},
+        {"id": "physical", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null},
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": []
+    },
+    "primary_failure_mode": "inadequate_oversight",
+    "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.2",
+    "intent": "intentional",
+    "cause_entity": "other",
+    "notes": "Casualties are unknown per the excerpts; severity is inferred from the reported attacks on fighters, not from confirmed injuries. Whether a human kept control at the point of attack is disputed."
+  },
+  {
+    "incident_id": 124,
+    "summary": "A widely used health-risk algorithm developed by Optum, used at a large academic hospital, scored Black patients as less in need of extra care than equally sick white patients. Because it predicted future costs rather than health needs, fewer Black patients were enrolled in complex-care programs.",
+    "technical_summary": "A risk-score model used to select patients for extra care programs. It predicted future health-care costs as a proxy for need, and because Black patients incurred lower costs at the same disease burden, they were scored as lower risk. Race was excluded as an input, but the cost proxy carried racial disparities into enrollment decisions.",
+    "systems": ["Optum commercial health risk-prediction algorithm for care management"],
+    "developers": ["Optum"],
+    "deployers": ["unnamed large academic hospital"],
+    "tags": {
+      "sector": [
+        {"id": "healthcare", "evidence": "confirmed", "quote": "Care for some of the sickest Americans is decided in part by algorithm", "report": 1450}
+      ],
+      "technology": [
+        {"id": "predictive_scoring", "evidence": "confirmed", "quote": "Such software is often tapped to recommend people for programs that offer extra support", "report": 1450}
+      ],
+      "failure_mode": [
+        {"id": "bias_discrimination", "evidence": "confirmed", "quote": "favored white patients over black patients with the same health burden", "report": 1450},
+        {"id": "misaligned_objective", "evidence": "confirmed", "quote": "how much patients would cost the health-care system in the future", "report": 2262}
+      ],
+      "harm_type": [
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "This had the effect of excluding people from the extra care program on the basis of race.", "report": 1450},
+        {"id": "physical", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "design_training", "evidence": "confirmed", "quote": "how much patients would cost the health-care system in the future", "report": 2262},
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "racial_ethnic_minorities", "evidence": "confirmed", "quote": "favored white patients over black patients with the same health burden", "report": 1450},
+        {"id": "patients", "evidence": "confirmed", "quote": "Those missing out on extra care potentially faced a greater chance of emergency room visits and hospital stays.", "report": 1450}
+      ]
+    },
+    "primary_failure_mode": "bias_discrimination",
+    "severity": {"id": "s2_moderate", "evidence": "confirmed", "quote": "This had the effect of excluding people from the extra care program on the basis of race.", "report": 1450},
+    "risk_domain": "1",
+    "risk_subdomain": "1.3",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Excerpts describe the hospital and vendor; the vendor's fix was in progress at reporting. Physical harm (ER visits, hospital stays) is described only as potential."
+  },
+  {
+    "incident_id": 148,
+    "summary": "Several AI-powered website accessibility overlay vendors allegedly claimed their products would deliver automated compliance with accessibility standards. Critics say those claims were false, leaving customers exposed to legal risk and disabled users still facing barriers.",
+    "technical_summary": "Third-party JavaScript overlays that were marketed as automatically making websites accessible and compliant with WCAG standards. Critics argue that overlays cannot correct underlying site code, so the claimed compliance and accessibility gains did not hold up for people using assistive technologies.",
+    "systems": ["AI accessibility overlay products (accessiBe, UserWay, Allyable, Accessus.ai, MaxAccess.io)"],
+    "developers": ["Accessus.ai", "Allyable", "MaxAccess.io", "UserWay", "accessiBe"],
+    "deployers": ["Accessus.ai", "Allyable", "MaxAccess.io", "UserWay", "accessiBe"],
+    "tags": {
+      "sector": [
+        {"id": "consumer_tech", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "other_unspecified", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "failure_mode": [
+        {"id": "robustness_failure", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "False claims at the expense of customers and persons with disabilities.", "report": 1499},
+        {"id": "financial", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null},
+        {"id": "governance", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "people_with_disabilities", "evidence": "confirmed", "quote": "False claims at the expense of customers and persons with disabilities.", "report": 1499},
+        {"id": "businesses", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "robustness_failure",
+    "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "4",
+    "risk_subdomain": "4.3",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Source is an advocacy site making allegations; the vendors' responses are not in the excerpt. The failure is mainly deceptive marketing, so the mechanism tags are inferred and the AI-technology tag is weakly supported."
+  },
+  {
+    "incident_id": 153,
+    "summary": "A driver using Tesla's Autopilot driver-assistance system ran a red light at high speed and struck a car, killing two people in Gardena, California, in 2019. Prosecutors charged the driver with vehicular manslaughter, reportedly the first felony case of its kind in the United States.",
+    "technical_summary": "A Tesla Model S with Autopilot, a partial driving-automation system that controls steering, speed and braking, was driving at about 74 mph. Crash data reportedly showed no brakes were used in the six minutes before impact. The system requires an attentive driver, and the case centers on the driver's supervision.",
+    "systems": ["Tesla Autopilot (Model S)"],
+    "developers": ["Tesla"],
+    "deployers": ["Tesla"],
+    "tags": {
+      "sector": [
+        {"id": "transportation", "evidence": "confirmed", "quote": "who ran a red light, slammed into another car and killed two people in 2019", "report": 1511}
+      ],
+      "technology": [
+        {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "The misuse of Autopilot, which can control steering, speed and braking", "report": 1511}
+      ],
+      "failure_mode": [
+        {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "that they cannot rely on them to control vehicles", "report": 1511}
+      ],
+      "harm_type": [
+        {"id": "physical", "evidence": "confirmed", "quote": "who ran a red light, slammed into another car and killed two people in 2019", "report": 1511}
+      ],
+      "lifecycle_stage": [
+        {"id": "use_misuse", "evidence": "confirmed", "quote": "The misuse of Autopilot, which can control steering, speed and braking", "report": 1511},
+        {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "road_users", "evidence": "confirmed", "quote": "who ran a red light, slammed into another car and killed two people in 2019", "report": 1511}
+      ]
+    },
+    "primary_failure_mode": "human_automation_interaction",
+    "severity": {"id": "s4_critical", "evidence": "confirmed", "quote": "who ran a red light, slammed into another car and killed two people in 2019", "report": 1511},
+    "risk_domain": "5",
+    "risk_subdomain": "5.1",
+    "intent": "unintentional",
+    "cause_entity": "human",
+    "notes": "The driver's supervision is the main cause in the charging narrative, and the driver has pleaded not guilty. Tesla states Autopilot needs active driver supervision. Driver is not named here."
+  },
+  {
+    "incident_id": 181,
+    "summary": "A BMW sedan made a prohibited left turn in San Francisco and collided with a driverless Cruise test vehicle in February 2022. The vehicle braked, but its bumper was damaged, and no one was injured. The BMW driver left the scene.",
+    "technical_summary": "A Cruise autonomous vehicle operating in driverless mode was stopped at a red light and began moving on a green light when a BMW turned across its path. The vehicle braked before contact. Its front bumper was damaged, and the other driver fled after no information was exchanged.",
+    "systems": ["Cruise autonomous vehicle (driverless test vehicle)"],
+    "developers": ["Cruise"],
+    "deployers": ["Cruise"],
+    "tags": {
+      "sector": [
+        {"id": "transportation", "evidence": "confirmed", "quote": "operating in driverless autonomous mode, was at a complete stop in response to a red light", "report": 1571}
+      ],
+      "technology": [
+        {"id": "autonomous_vehicle", "evidence": "confirmed", "quote": "A Cruise autonomous vehicle (\"Cruise AV\"), operating in driverless autonomous mode", "report": 1571}
+      ],
+      "failure_mode": [
+        {"id": "robustness_failure", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "harm_type": [
+        {"id": "property_operational", "evidence": "confirmed", "quote": "damaging the front right bumper of the Cruise AV", "report": 1571}
+      ],
+      "lifecycle_stage": [
+        {"id": "testing", "evidence": "confirmed", "quote": "Driverless Cruise autonomous vehicle involved in two-car collision", "report": 1572},
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "road_users", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "robustness_failure",
+    "severity": {"id": "s1_minor", "evidence": "confirmed", "quote": "damaging the front right bumper of the Cruise AV", "report": 1571},
+    "risk_domain": "7",
+    "risk_subdomain": "7.3",
+    "intent": "unintentional",
+    "cause_entity": "human",
+    "notes": "The report describes the BMW driver's prohibited turn as the cause; the AV's failure mode tag is a placeholder because no AV-specific defect is reported. The 'testing' stage quote is a headline, so treat as weak."
+  },
+  {
+    "incident_id": 190,
+    "summary": "According to former employees, ByteDance scraped videos and profiles from Instagram and Snapchat without consent and reposted them on the Flipagram app around 2017. The content was reportedly used to help train the For You recommendation algorithm for US users.",
+    "technical_summary": "Automated crawlers reportedly harvested short videos, usernames, profile pictures and descriptions from other platforms and created duplicate accounts on Flipagram, a TikTok predecessor. The scraped data was allegedly used to train the For You personalization algorithm on US content. Allegations rest on anonymous former employees and internal documents.",
+    "systems": ["For You recommendation algorithm (TikTok, Douyin)", "Flipagram"],
+    "developers": ["ByteDance"],
+    "deployers": ["ByteDance"],
+    "tags": {
+      "sector": [
+        {"id": "social_media", "evidence": "confirmed", "quote": "scraped short-form videos, usernames, profile pictures, and profile descriptions from Instagram, Snapchat, and other sources", "report": 1610}
+      ],
+      "technology": [
+        {"id": "recommender_ranking", "evidence": "confirmed", "quote": "were used to train the “For You” algorithm", "report": 1612}
+      ],
+      "failure_mode": [
+        {"id": "privacy_violation", "evidence": "confirmed", "quote": "scraped short-form videos, usernames, profile pictures, and profile descriptions from Instagram, Snapchat, and other sources", "report": 1610},
+        {"id": "ip_consent_violation", "evidence": "confirmed", "quote": "without users’ knowledge or consent", "report": 1610}
+      ],
+      "harm_type": [
+        {"id": "privacy", "evidence": "confirmed", "quote": "without users’ knowledge or consent", "report": 1610},
+        {"id": "intellectual_property", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "lifecycle_stage": [
+        {"id": "data", "evidence": "confirmed", "quote": "scraped short-form videos, usernames, profile pictures, and profile descriptions from Instagram, Snapchat, and other sources", "report": 1610},
+        {"id": "design_training", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "creators", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "privacy_violation",
+    "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "2",
+    "risk_subdomain": "2.1",
+    "intent": "intentional",
+    "cause_entity": "human",
+    "notes": "Allegations from anonymous former employees; ByteDance responded only that Flipagram was acquired and is not linked to current products, without directly denying scraping. Severity inferred from the reported scale of hundreds of thousands of accounts."
+  },
+  {
+    "incident_id": 197,
+    "summary": "A Facebook News Feed ranking bug reportedly ran for about six months, causing posts that should have been demoted, including repeat misinformation, to be boosted. The company says the bug had no meaningful long-term impact on its metrics and has been fixed.",
+    "technical_summary": "A software bug in the News Feed ranking system failed to apply downranking to flagged posts, including content from repeat misinformation offenders and some nudity, violence and state media. Engineers could not find the root cause and watched intermittent spikes until the bug was fixed in March.",
+    "systems": ["Facebook News Feed ranking and downranking system"],
+    "developers": ["Facebook"],
+    "deployers": ["Facebook"],
+    "tags": {
+      "sector": [
+        {"id": "social_media", "evidence": "confirmed", "quote": "exposed as much as half of all News Feed views to potential", "report": 1638}
+      ],
+      "technology": [
+        {"id": "recommender_ranking", "evidence": "confirmed", "quote": "exposed as much as half of all News Feed views to potential", "report": 1638}
+      ],
+      "failure_mode": [
+        {"id": "robustness_failure", "evidence": "confirmed", "quote": "We traced the root cause to a software bug and applied needed fixes", "report": 1638},
+        {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "Unable to find the root cause, the engineers watched the surge subside", "report": 1638}
+      ],
+      "harm_type": [
+        {"id": "misinformation", "evidence": "confirmed", "quote": "Instead of suppressing posts from repeat misinformation offenders", "report": 1638}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "confirmed", "quote": "the ranking issue was fixed on March 11th", "report": 1638}
+      ],
+      "affected_population": [
+        {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "robustness_failure",
+    "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "3",
+    "risk_subdomain": "3.2",
+    "intent": "unintentional",
+    "cause_entity": "ai",
+    "notes": "Meta disputes the scale of impact and says the bug had no meaningful long-term effect; the figures come from The Verge's reading of an internal report. Severity is coded on the contested realized harm."
+  },
+  {
+    "incident_id": 260,
+    "summary": "DHS software called ATLAS reportedly scans immigration records and can flag naturalized citizens for possible denaturalization under secret criteria. Documents obtained through FOIA show it draws on poorly managed databases, and advocates warn it may produce unfair results.",
+    "technical_summary": "A USCIS and DHS fraud-screening system that runs on cloud servers, mining federal databases and biometric data for derogatory information. It flags cases for potential fraud or security threats and can consider race, ethnicity and national origin in certain circumstances. Humans make the final determinations, but flags drive the workflow.",
+    "systems": ["ATLAS (USCIS/DHS immigration vetting and fraud-screening software)"],
+    "developers": ["US Citizenship and Immigration Services"],
+    "deployers": ["US Citizenship and Immigration Services", "US Department of Homeland Security"],
+    "tags": {
+      "sector": [
+        {"id": "government_services", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "technology": [
+        {"id": "predictive_scoring", "evidence": "confirmed", "quote": "can automatically flag naturalized Americans to potentially have their citizenship revoked based on secret criteria", "report": 1823},
+        {"id": "surveillance_analytics", "evidence": "confirmed", "quote": "the software mines various federal databases for derogatory information", "report": 1823}
+      ],
+      "failure_mode": [
+        {"id": "opacity_contestability", "evidence": "confirmed", "quote": "can automatically flag naturalized Americans to potentially have their citizenship revoked based on secret criteria", "report": 1823},
+        {"id": "bias_discrimination", "evidence": "confirmed", "quote": "considering an immigrant’s race, ethnicity, and national origin", "report": 1823}
+      ],
+      "harm_type": [
+        {"id": "civil_rights", "evidence": "confirmed", "quote": "considering an immigrant’s race, ethnicity, and national origin", "report": 1823},
+        {"id": "privacy", "evidence": "confirmed", "quote": "examining biometric information like fingerprints", "report": 1823}
+      ],
+      "lifecycle_stage": [
+        {"id": "deployment", "evidence": "confirmed", "quote": "to scan the records of millions of immigrants", "report": 1823},
+        {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+      ],
+      "affected_population": [
+        {"id": "migrants", "evidence": "confirmed", "quote": "to scan the records of millions of immigrants", "report": 1823},
+        {"id": "racial_ethnic_minorities", "evidence": "inferred", "quote": null, "report": null}
+      ]
+    },
+    "primary_failure_mode": "opacity_contestability",
+    "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+    "risk_domain": "1",
+    "risk_subdomain": "1.1",
+    "intent": "intentional",
+    "cause_entity": "ai",
+    "notes": "Excerpts describe flags and potential revocations, not confirmed revocations. Advocates' claims about intent and disparate impact are contested; the agency's view is not in the excerpts."
+  }
+]

@@ -1,0 +1,449 @@
+[
+ {
+  "incident_id": 1064,
+  "summary": "Scammers promoted a fake \"Bank of Cyprus Trading AI Platform\" using a fabricated video of the bank's CEO and the BBC logo, promising guaranteed monthly returns. The bank denied any link and warned customers about AI-generated scams.",
+  "technical_summary": "A fraud network used a fabricated, apparently AI-generated video of the bank's CEO, fake social media images and misleading BBC branding in online ads to lure people to a bogus automated trading platform. No victims or losses are reported in the excerpt.",
+  "systems": ["AI-generated deepfake video and fabricated images"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["Unidentified scam network"],
+  "tags": {
+    "sector": [
+      {"id": "finance", "evidence": "confirmed", "quote": "The Bank of Cyprus said on Thursday it is taking proactive measures to prevent online scams", "report": 5172}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "misleading advertisements featuring a fabricated video in which Bank of Cyprus CEO", "report": 5172}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "The fraudulent AI platform marketed as the 'Bank of Cyprus Trading AI Platform', promises to earn users a guaranteed €15,000 a month", "report": 5172}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "The Bank of Cyprus has been actively warning its customers about fraudsters who are increasingly using advanced technology", "report": 5172},
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "No confirmed victims in the cited report; severity reflects an active fraud campaign."
+ },
+ {
+  "incident_id": 1450,
+  "summary": "A South Florida man allegedly showed a sheriff's deputy an AI-generated video of people breaking into the deputy's patrol car. Surveillance footage showed nothing happened, and the man was arrested on charges including fabricating evidence.",
+  "technical_summary": "A roughly three-second video appearing to show two people entering a patrol vehicle was presented as evidence. Store surveillance and a vehicle check showed no break-in, and investigators concluded the video was AI-fabricated. Police said the man also posted about the encounter seeking viral attention.",
+  "systems": ["AI video generation tool (unspecified)"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["An individual suspect (unnamed)"],
+  "tags": {
+    "sector": [
+      {"id": "law_enforcement", "evidence": "confirmed", "quote": "A South Florida man was arrested after showing an A.I.-generated video to a deputy at a store in Lake Mary last month", "report": 7133}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "A South Florida man was arrested after showing an A.I.-generated video to a deputy at a store in Lake Mary last month", "report": 7133}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "deputies later concluded that the cell phone video had been fabricated", "report": 7133}
+    ],
+    "harm_type": [
+      {"id": "property_operational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Suspect's name omitted; allegations were reported and charges are pending."
+ },
+ {
+  "incident_id": 1101,
+  "summary": "Meta's stand-alone AI app included a public Discover feed, and reporters found many users appeared to have posted very personal chats, some with phone numbers and email addresses, apparently without realizing they were public. Meta says sharing is opt-in.",
+  "technical_summary": "Users' conversations with Meta's chatbot could be posted to a public feed via a share-then-post flow. Reports found medical, legal, relationship and contact details surfaced, suggesting the interface and labelling confused some users about visibility.",
+  "systems": ["Meta AI app Discover feed"],
+  "developers": ["Meta"],
+  "deployers": ["Meta"],
+  "tags": {
+    "sector": [
+      {"id": "social_media", "evidence": "confirmed", "quote": "Today, scores of users are posting their often cringe-making conversations about relationships, identity and spirituality with Meta's AI chatbot to the app's public feed", "report": 5320}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "Today, scores of users are posting their often cringe-making conversations about relationships, identity and spirituality with Meta's AI chatbot to the app's public feed", "report": 5320}
+    ],
+    "failure_mode": [
+      {"id": "human_automation_interaction", "evidence": "confirmed", "quote": "sometimes seemingly without knowing their musings can be seen by others", "report": 5320},
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "some even including a person's phone number and email address when they asked for help drafting a letter to a judge", "report": 5323}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "some even including a person's phone number and email address when they asked for help drafting a letter to a judge", "report": 5323}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "users_consumers", "evidence": "confirmed", "quote": "sometimes seemingly without knowing their musings can be seen by others", "report": 5320}
+    ]
+  },
+  "primary_failure_mode": "human_automation_interaction",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "2",
+  "risk_subdomain": "2.1",
+  "intent": "unintentional",
+  "cause_entity": "other",
+  "notes": "Meta says chats are private by default; whether users understood sharing is a design question."
+ },
+ {
+  "incident_id": 404,
+  "summary": "ProPublica tested an AI aggression detector sold for schools and other sites and found it often flagged laughing, coughing and cheering as aggression, while missing some real screams. False alarms were especially common for some female students.",
+  "technical_summary": "A machine-learning classifier converts audio into features and predicts verbal aggression against a threshold. Testing showed frequent false positives for benign vocalizations, misses for certain screams and quiet anger, and triggering linked to pitch and vocal strain, with more false alerts for some female students.",
+  "systems": ["Sound Intelligence aggression detection on Louroe microphones"],
+  "developers": ["Sound Intelligence", "Louroe Electronics"],
+  "deployers": ["Pinecrest Academy Horizon", "Rock Hill Schools"],
+  "tags": {
+    "sector": [
+      {"id": "education", "evidence": "confirmed", "quote": "an aggression detector that's used in hundreds of schools, health care facilities, banks, stores and prisons worldwide", "report": 2284}
+    ],
+    "technology": [
+      {"id": "predictive_scoring", "evidence": "confirmed", "quote": "a machine-learning algorithm that uses those features to predict verbal aggression", "report": 2286}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The algorithm frequently produced false positives (false findings of aggression) for sounds such as laughing, coughing, cheering and loud discussions.", "report": 2286},
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "Some individuals we tested, particularly female high school students, tended to trigger false positives while singing, laughing and speaking.", "report": 2286}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "testing", "evidence": "confirmed", "quote": "We first tested the device in simulated situations to measure its performance in real-world scenarios", "report": 2286},
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "students", "evidence": "confirmed", "quote": "collected spontaneous and simulated vocalizations from high school students", "report": 2286}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "7",
+  "risk_subdomain": "7.3",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Independent test findings; no specific harm to students is documented in the excerpts."
+ },
+ {
+  "incident_id": 450,
+  "summary": "Kenyan workers paid under $2 an hour labeled graphic text about sexual abuse and violence to train OpenAI's ChatGPT safety filter, and reported lasting psychological trauma. The contractor ended the work months early; the workers later sought stronger protections.",
+  "technical_summary": "OpenAI outsourced labeling of toxic text to build a classifier that detects violence, hate speech and sexual abuse. Annotators at Sama read graphic material for low pay with reportedly inadequate psychological support, and Sama cancelled the contract early. Sama disputed parts of the accounts.",
+  "systems": ["ChatGPT safety and content-moderation classifier"],
+  "developers": ["OpenAI"],
+  "deployers": ["OpenAI", "Sama"],
+  "tags": {
+    "sector": [
+      {"id": "employment", "evidence": "confirmed", "quote": "OpenAI used outsourced Kenyan laborers earning less than $2 per hour", "report": 2510}
+    ],
+    "technology": [
+      {"id": "content_moderation", "evidence": "confirmed", "quote": "feed an AI with labeled examples of violence, hate speech, and sexual abuse", "report": 2510},
+      {"id": "llm_chatbot", "evidence": "confirmed", "quote": "OpenAI used outsourced Kenyan laborers earning less than $2 per hour", "report": 2510}
+    ],
+    "failure_mode": [
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "misaligned_objective", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "psychological", "evidence": "confirmed", "quote": "The work’s traumatizing nature ultimately led Sama to cancel all its OpenAI work in February 2022, eight months earlier than originally planned.", "report": 2547},
+      {"id": "economic_labor", "evidence": "confirmed", "quote": "OpenAI used outsourced Kenyan laborers earning less than $2 per hour", "report": 2510}
+    ],
+    "lifecycle_stage": [
+      {"id": "design_training", "evidence": "confirmed", "quote": "feed an AI with labeled examples of violence, hate speech, and sexual abuse", "report": 2510}
+    ],
+    "affected_population": [
+      {"id": "workers", "evidence": "confirmed", "quote": "OpenAI used outsourced Kenyan laborers earning less than $2 per hour", "report": 2510}
+    ]
+  },
+  "primary_failure_mode": "inadequate_oversight",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "6",
+  "risk_subdomain": "6.2",
+  "intent": "other",
+  "cause_entity": "human",
+  "notes": "Workers' accounts are reported; Sama disputed aspects of them."
+ },
+ {
+  "incident_id": 732,
+  "summary": "Cornell researchers found that OpenAI's Whisper speech-to-text system sometimes invents whole phrases, including violent language and fake websites, especially for people who speak with long pauses such as those with speech impairments. About 1% of transcriptions were affected.",
+  "technical_summary": "In tests of over 13,000 speech clips, about 1% of Whisper transcriptions contained entirely hallucinated phrases, some violent or containing invented personal details or fake URLs. Hallucinations were more likely for speakers with longer pauses, such as people with aphasia. OpenAI has since reduced the rate.",
+  "systems": ["OpenAI Whisper"],
+  "developers": ["OpenAI"],
+  "deployers": ["Companies using Whisper"],
+  "tags": {
+    "sector": [
+      {"id": "science_research", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "speech_recognition", "evidence": "confirmed", "quote": "OpenAI's Whisper -- an artificial intelligence-powered speech recognition system", "report": 3953}
+    ],
+    "failure_mode": [
+      {"id": "hallucination", "evidence": "confirmed", "quote": "researchers found that roughly 1% of Whisper's audio transcriptions contained entire hallucinated phrases", "report": 3953},
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "sometimes conjuring up violent language, invented personal information and fake websites that could be repurposed for phishing attempts", "report": 3953},
+      {"id": "bias_discrimination", "evidence": "confirmed", "quote": "Whisper is more likely to hallucinate when analyzing speech from people who speak with longer pauses between their words, such as those with speech impairments", "report": 3953}
+    ],
+    "harm_type": [
+      {"id": "no_harm_near_miss", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "testing", "evidence": "confirmed", "quote": "Researchers ran more than 13,000 speech clips into Whisper.", "report": 3953}
+    ],
+    "affected_population": [
+      {"id": "people_with_disabilities", "evidence": "confirmed", "quote": "Whisper is more likely to hallucinate when analyzing speech from people who speak with longer pauses between their words, such as those with speech impairments", "report": 3953}
+    ]
+  },
+  "primary_failure_mode": "hallucination",
+  "severity": {"id": "s0_none", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Research finding of potential harm; no realized harm is described."
+ },
+ {
+  "incident_id": 964,
+  "summary": "The Los Angeles Times removed its new AI-powered \"Insights\" feature from an opinion column after it generated a counterpoint that softened the Ku Klux Klan's history. The owner admitted he had not seen the content until after it was taken down.",
+  "technical_summary": "A Perplexity-built feature generated opposing perspectives for opinion pieces. On a column about the Klan it produced text framing the 1920s Klan as a response to societal change rather than a hate movement, and it also mislabelled another piece's political leaning. The output was removed within hours.",
+  "systems": ["Los Angeles Times Insights feature"],
+  "developers": ["Perplexity"],
+  "deployers": ["Los Angeles Times"],
+  "tags": {
+    "sector": [
+      {"id": "news_publishing", "evidence": "confirmed", "quote": "The Los Angeles Times' billionaire owner, who unveiled an AI tool that generates opposing perspectives to be displayed on opinion stories", "report": 5294}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "was unaware the new tool had created pro-KKK arguments less than 24 hours after it launched", "report": 5294},
+      {"id": "inadequate_oversight", "evidence": "confirmed", "quote": "he had seen neither the piece nor the AI response", "report": 5294}
+    ],
+    "harm_type": [
+      {"id": "misinformation", "evidence": "confirmed", "quote": "the divergent views generated by the Times' AI produced a softer vision of the far-right group", "report": 5294},
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "harmful_content",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.1",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Content was removed within hours; reach and impact are not quantified."
+ },
+ {
+  "incident_id": 1446,
+  "summary": "During KBS's livestream of the Artemis II launch, its AI translation subtitles rendered the aerospace term \"pitch\" as a Korean slur. KBS apologized and said it would strengthen profanity filtering for AI captions.",
+  "technical_summary": "A real-time AI translation system mistook phonetically similar aviation terms for English and Korean profanity because it lacked the aerospace context. The subtitle appeared live with no human review before display. KBS removed it and promised stronger filters.",
+  "systems": ["KBS real-time AI translation subtitles"],
+  "developers": ["Generative AI developers"],
+  "deployers": ["Korean Broadcasting System (KBS)"],
+  "tags": {
+    "sector": [
+      {"id": "news_publishing", "evidence": "confirmed", "quote": "Korea's major broadcast channel KBS issued a public apology on Thursday", "report": 7566}
+    ],
+    "technology": [
+      {"id": "translation_nlp", "evidence": "confirmed", "quote": "The channel's AI translation mistakenly translated the English aerospace term", "report": 7566}
+    ],
+    "failure_mode": [
+      {"id": "robustness_failure", "evidence": "confirmed", "quote": "The AI-generated subtitles failed to grasp the aerospace context", "report": 7565},
+      {"id": "harmful_content", "evidence": "confirmed", "quote": "accidental AI-generated profanity in its subtitles during the channel's YouTube livestream for the Artemis II launch", "report": 7566},
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "reputational", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "general_public", "evidence": "confirmed", "quote": "streamed live to millions around the world", "report": 7565}
+    ]
+  },
+  "primary_failure_mode": "robustness_failure",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "1",
+  "risk_subdomain": "1.2",
+  "intent": "unintentional",
+  "cause_entity": "ai",
+  "notes": "Offensive subtitles reached live viewers; KBS apologized."
+ },
+ {
+  "incident_id": 575,
+  "summary": "Dozens of apparently AI-generated nonsense books flooded Amazon's Kindle Unlimited young adult romance bestseller list. Amazon appeared to take action, but many titles stayed on sale, raising concerns for legitimate authors.",
+  "technical_summary": "Automated or AI-generated book content was published in bulk and apparently pushed up the rankings, likely for click-farm payouts based on pages read. Ranking and publishing controls failed to filter it before the lists were affected.",
+  "systems": ["Amazon Kindle Unlimited bestseller ranking"],
+  "developers": ["unknown"],
+  "deployers": ["unknown"],
+  "tags": {
+    "sector": [
+      {"id": "retail_commerce", "evidence": "confirmed", "quote": "Kindle Unlimited young adult romance bestseller list was filled with dozens of AI-generated books of nonsense on Monday and Tuesday", "report": 3238},
+      {"id": "entertainment_arts", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "technology": [
+      {"id": "llm_chatbot", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "recommender_ranking", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "but the episode shows that people are spamming AI-generated nonsense to the platform and are finding a way to monetize it", "report": 3238},
+      {"id": "inadequate_oversight", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "harm_type": [
+      {"id": "economic_labor", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "creators", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "users_consumers", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s1_minor", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "3",
+  "risk_subdomain": "3.2",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Financial impact on authors is feared rather than quantified."
+ },
+ {
+  "incident_id": 927,
+  "summary": "Scammers used AI to clone the voice of Italy's defence minister and phoned prominent business leaders asking for money to free kidnapped journalists. One businessman wired nearly one million euros, which police later found and froze.",
+  "technical_summary": "Fraudsters combined spoofed government numbers with a cloned voice of the minister to claim urgent ransom funds would be reimbursed by the central bank. At least one target made two transfers to foreign accounts before the fraud was discovered; investigators traced the money to a Dutch account.",
+  "systems": ["AI voice cloning tool (unspecified)"],
+  "developers": ["Synthetic audio generation technology developers"],
+  "deployers": ["Unknown scammers posing as the defence minister"],
+  "tags": {
+    "sector": [
+      {"id": "finance", "evidence": "confirmed", "quote": "wired to a foreign bank account by a leading businessman after he fell victim to an artificial intelligence scam", "report": 4643}
+    ],
+    "technology": [
+      {"id": "voice_synthesis", "evidence": "confirmed", "quote": "Fraudsters used AI to mimic the voice of Italian Defence Minister Guido Crosetto", "report": 4643}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "Fraudsters used AI to mimic the voice of Italian Defence Minister Guido Crosetto", "report": 4643}
+    ],
+    "harm_type": [
+      {"id": "financial", "evidence": "confirmed", "quote": "wired to a foreign bank account by a leading businessman after he fell victim to an artificial intelligence scam", "report": 4643}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "businesses", "evidence": "confirmed", "quote": "a scam that recently targeted some of Italy's best-known entrepreneurs and professionals", "report": 4688},
+      {"id": "public_figures", "evidence": "inferred", "quote": null, "report": null}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s2_moderate", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Funds were reportedly frozen after tracing, which reduces the net loss."
+ },
+ {
+  "incident_id": 368,
+  "summary": "The Israeli military reportedly used a smartphone app called Blue Wolf and face-scanning cameras to photograph Palestinians in the West Bank, match them to a large database, and flag whether they should be detained or arrested. Soldiers reportedly competed to collect the most photos.",
+  "technical_summary": "Facial recognition integrated with smartphones and cameras matched captured faces to a database of Palestinians and returned colour-coded alerts to soldiers. The database was built by photographing thousands of people, including children and the elderly, with unit-level incentives.",
+  "systems": ["Blue Wolf", "Hebron Smart City camera network"],
+  "developers": ["AnyVision"],
+  "deployers": ["Israel Defense Forces"],
+  "tags": {
+    "sector": [
+      {"id": "military_defense", "evidence": "confirmed", "quote": "The Israeli military has deployed an extensive facial recognition program to track Palestinians in the Israeli-occupied West Bank", "report": 2152}
+    ],
+    "technology": [
+      {"id": "facial_recognition", "evidence": "confirmed", "quote": "The Israeli military has deployed an extensive facial recognition program to track Palestinians in the Israeli-occupied West Bank", "report": 2152},
+      {"id": "surveillance_analytics", "evidence": "confirmed", "quote": "conducting a broad surveillance effort in the occupied West Bank to monitor Palestinians by integrating facial recognition with a growing network of cameras", "report": 2151}
+    ],
+    "failure_mode": [
+      {"id": "privacy_violation", "evidence": "confirmed", "quote": "which takes photos of Palestinians and stores them in a large-scale database", "report": 2152}
+    ],
+    "harm_type": [
+      {"id": "privacy", "evidence": "confirmed", "quote": "which takes photos of Palestinians and stores them in a large-scale database", "report": 2152},
+      {"id": "civil_rights", "evidence": "confirmed", "quote": "The app then has a colour-coded system that indicates whether the person photographed should be arrested or allowed to pass", "report": 2153}
+    ],
+    "lifecycle_stage": [
+      {"id": "deployment", "evidence": "confirmed", "quote": "The surveillance initiative, rolled out over the past two years", "report": 2151}
+    ],
+    "affected_population": [
+      {"id": "racial_ethnic_minorities", "evidence": "inferred", "quote": null, "report": null},
+      {"id": "children", "evidence": "confirmed", "quote": "soldiers competed last year in photographing Palestinians, including children and the elderly, with prizes for the most pictures collected by each unit", "report": 2151},
+      {"id": "older_adults", "evidence": "confirmed", "quote": "soldiers competed last year in photographing Palestinians, including children and the elderly, with prizes for the most pictures collected by each unit", "report": 2151}
+    ]
+  },
+  "primary_failure_mode": "privacy_violation",
+  "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.1",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Based on accounts of former soldiers; the military acknowledged the program only in a brochure."
+ },
+ {
+  "incident_id": 990,
+  "summary": "A Mississippi school district educator was arrested for allegedly using AI to create sexually explicit videos of students, with images taken from social media. Police said the students neither agreed to nor knew about the videos.",
+  "technical_summary": "Investigators found AI-generated videos depicting multiple students in sexual acts on a school laptop and drive, made from children's social media photos. A district filter flagged the content. The suspect allegedly admitted generating videos but said they were not sexual. Charges are pending.",
+  "systems": ["AI video generation tools (unspecified)"],
+  "developers": ["Deepfake technology developers"],
+  "deployers": ["A school district employee (unnamed)"],
+  "tags": {
+    "sector": [
+      {"id": "education", "evidence": "confirmed", "quote": "authorities arrested 30-year-old Corinth School District educator", "report": 4973}
+    ],
+    "technology": [
+      {"id": "image_video_generation", "evidence": "confirmed", "quote": "videos, generated by artificial intelligence (AI), of multiple students engaging in sexual activity", "report": 4973}
+    ],
+    "failure_mode": [
+      {"id": "malicious_use", "evidence": "confirmed", "quote": "videos, generated by artificial intelligence (AI), of multiple students engaging in sexual activity", "report": 4973},
+      {"id": "ip_consent_violation", "evidence": "confirmed", "quote": "at no time did these victims willingly produce any images or know that their pictures were being manipulated in such a way", "report": 4974}
+    ],
+    "harm_type": [
+      {"id": "sexual_exploitation", "evidence": "confirmed", "quote": "videos, generated by artificial intelligence (AI), of multiple students engaging in sexual activity", "report": 4973},
+      {"id": "child_safety", "evidence": "confirmed", "quote": "The ages of the children featured in the videos ranged from 14 to 16.", "report": 4974},
+      {"id": "privacy", "evidence": "confirmed", "quote": "Images of the children came from social media, according to the affidavit.", "report": 4974}
+    ],
+    "lifecycle_stage": [
+      {"id": "use_misuse", "evidence": "inferred", "quote": null, "report": null}
+    ],
+    "affected_population": [
+      {"id": "children", "evidence": "confirmed", "quote": "The ages of the children featured in the videos ranged from 14 to 16.", "report": 4974},
+      {"id": "students", "evidence": "confirmed", "quote": "videos, generated by artificial intelligence (AI), of multiple students engaging in sexual activity", "report": 4973}
+    ]
+  },
+  "primary_failure_mode": "malicious_use",
+  "severity": {"id": "s3_severe", "evidence": "inferred", "quote": null, "report": null},
+  "risk_domain": "4",
+  "risk_subdomain": "4.3",
+  "intent": "intentional",
+  "cause_entity": "human",
+  "notes": "Allegations only; the accused is not named here and charges are pending."
+ }
+]
