@@ -3,7 +3,7 @@
 {"batch": "b023", "incident_id": 505, "dimension": "harm_type", "tag": "physical", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b023", "incident_id": 505, "dimension": "affected_population", "tag": "users_consumers", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b023", "incident_id": 505, "dimension": "severity", "tag": "s4_critical", "action": "downgrade", "reason": "private_name", "old": null}
-{"batch": "b027", "incident_id": 71, "dimension": "lifecycle_stage", "tag": "testing", "action": "downgrade", "reason": "not_found", "old": "The Google AV test driver saw the bus approaching in the left side mirror"}
+{"batch": "b027", "incident_id": 71, "dimension": "lifecycle_stage", "tag": "testing", "action": "reattribute", "old_report": 1262, "new_report": 1269}
 {"batch": "b055", "incident_id": 1721, "dimension": "sector", "tag": "elections_politics", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b055", "incident_id": 1721, "dimension": "failure_mode", "tag": "malicious_use", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b058", "incident_id": 1518, "dimension": "technology", "tag": "voice_synthesis", "action": "downgrade", "reason": "private_name", "old": null}
@@ -15,3 +15,9 @@
 {"batch": "b059", "incident_id": 1607, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b069", "incident_id": 1527, "dimension": "technology", "tag": "image_video_generation", "action": "downgrade", "reason": "private_name", "old": null}
 {"batch": "b069", "incident_id": 1527, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b076", "incident_id": 766, "dimension": "harm_type", "tag": "misinformation", "action": "downgrade", "reason": "not_found", "old": "AI-generated images that falsely depicted Taylor Swift and her fans endorsing his campaign for president"}
+{"batch": "b076", "incident_id": 766, "dimension": "affected_population", "tag": "public_figures", "action": "downgrade", "reason": "not_found", "old": "AI-generated images that falsely depicted Taylor Swift and her fans endorsing his campaign for president"}
+{"batch": "b077", "incident_id": 524, "dimension": "failure_mode", "tag": "malicious_use", "action": "downgrade", "reason": "private_name", "old": null}
+{"batch": "b078", "incident_id": 878, "dimension": "failure_mode", "tag": "malicious_use", "action": "downgrade", "reason": "not_found", "old": "handed £17,000 to scammers who conned her with a deep fake in a pretend online romance"}
+{"batch": "b078", "incident_id": 878, "dimension": "harm_type", "tag": "financial", "action": "downgrade", "reason": "not_found", "old": "handed £17,000 to scammers who conned her with a deep fake in a pretend online romance"}
+{"batch": "b078", "incident_id": 878, "dimension": "severity", "tag": "s2_moderate", "action": "downgrade", "reason": "not_found", "old": "handed £17,000 to scammers who conned her with a deep fake in a pretend online romance"}

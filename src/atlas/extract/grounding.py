@@ -3,7 +3,8 @@
 Matching normalizes case, Unicode quotes/dashes, punctuation and whitespace on both sides, then requires the
 normalized quote to be a substring of the normalized report text. A failed quote blocks loading.
 
-``repair`` offers two transparent, logged fixes:
+``repair`` offers transparent, logged fixes:
+0. **reattribute** — the quote is verbatim in a *different* report of the same incident: cite that report;
 1. **snap** — if a near-verbatim match exists (rapidfuzz partial ratio ≥ 92 over the normalized text), the quote is
    replaced by the exact span from the report (e.g. the model fixed a typo or dropped a word);
 2. **downgrade** — otherwise the tag is kept but downgraded to ``inferred`` and its quote removed.
@@ -149,11 +150,18 @@ def repair(rec: IncidentRecord, report_texts: dict[int, str], private_names: lis
             continue
         action = None
         text = report_texts.get(tag.report) if tag.report is not None else None
-        if text is not None and not is_grounded(tag.quote, text):
-            snapped = snap(tag.quote, text)
-            if snapped:
-                action = {"action": "snap", "old": tag.quote, "new": snapped}
-                tag.quote = snapped
+        if text is None or not is_grounded(tag.quote, text):
+            # 1) verbatim in another report of the same incident → fix the attribution
+            other = next((rn for rn, t in report_texts.items() if rn != tag.report and is_grounded(tag.quote, t)), None)
+            if other is not None:
+                action = {"action": "reattribute", "old_report": tag.report, "new_report": other}
+                tag.report, text = other, report_texts[other]
+            # 2) near-verbatim in the cited report → snap to the exact span
+            elif text is not None:
+                snapped = snap(tag.quote, text)
+                if snapped:
+                    action = {"action": "snap", "old": tag.quote, "new": snapped}
+                    tag.quote = snapped
         if text is None or not is_grounded(tag.quote, text) or contains_private_name(tag.quote, private_names):
             why = "report_not_linked" if text is None else (
                 "private_name" if is_grounded(tag.quote, text) else "not_found")

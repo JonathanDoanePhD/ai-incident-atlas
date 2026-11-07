@@ -99,3 +99,12 @@ def test_heuristic_kind():
 def test_group_names_do_not_trigger_surname_matching():
     names = ["Employee of Department of Families Fairness and Housing"]
     assert not contains_private_name("Department of Families, Fairness and Housing (Victoria)", names)
+
+
+def test_repair_reattributes_quote_to_the_right_report():
+    r = _rec()
+    r, log = repair(r, {2: "unrelated text", 1: REPORT}, [])  # quotes cite report 1 → fine
+    assert log == []
+    r = _rec(severity={"id": "s4_critical", "evidence": "confirmed", "quote": "first known pedestrian fatality", "report": 2})
+    r, log = repair(r, {2: "unrelated text", 1: REPORT}, [])
+    assert r.severity.report == 1 and r.severity.evidence == "confirmed" and log[0]["action"] == "reattribute"
