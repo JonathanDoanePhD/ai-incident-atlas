@@ -46,7 +46,8 @@ interface Props {
   highlight: Set<number>;
   onHover: (n: IncidentNode | null) => void;
   onSelect: (n: IncidentNode | null) => void;
-  focusId: number | null;
+  /** Camera fly-to request; `seq` changes on every request so re-clicking the same star re-flies. */
+  focus: { id: number; seq: number } | null;
 }
 
 const SCALE = 55;
@@ -58,7 +59,7 @@ type Graph = InstanceType<typeof ForceGraph3D>;
 const linkEnd = (v: number | GNode) => (typeof v === 'object' ? v.id : v);
 
 export default function Constellation(props: Props) {
-  const { nodes, links, colorOf, sizeOf, visible, selected, highlight, onHover, onSelect, focusId } = props;
+  const { nodes, links, colorOf, sizeOf, visible, selected, highlight, onHover, onSelect, focus } = props;
   const el = useRef<HTMLDivElement>(null);
   const graph = useRef<Graph | null>(null);
   const cbs = useRef({ onHover, onSelect });
@@ -67,6 +68,9 @@ export default function Constellation(props: Props) {
   visibleRef.current = visible;
   const joined = useRef<GLink[]>([]);
   const fitted = useRef(false);
+  const baseOpacity = useRef(0.22);
+  const selectedRef = useRef(selected);
+  selectedRef.current = selected;
 
   /** Show/hide cached objects in place (never removes them from the scene). */
   const applyVisibility = () => {
@@ -139,7 +143,8 @@ export default function Constellation(props: Props) {
   useEffect(() => {
     joined.current = links.map((l) => ({ ...l }));
     // Denser views fade their links so structure stays readable (≈ 0.22 at 1,500 links, floor 0.05).
-    graph.current?.linkOpacity(Math.max(0.05, Math.min(0.22, (0.22 * 1500) / Math.max(links.length, 1))));
+    baseOpacity.current = Math.max(0.05, Math.min(0.22, (0.22 * 1500) / Math.max(links.length, 1)));
+    graph.current?.linkOpacity(selectedRef.current !== null ? 0.95 : baseOpacity.current);
     graph.current?.graphData({ nodes: gnodes, links: joined.current });
     applyVisibilitySoon();
     if (!fitted.current && graph.current) {
@@ -175,6 +180,27 @@ export default function Constellation(props: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [colorOf, highlight, selected]);
 
+  // ---- pulses: particles flow along the selected star's connections (both directions) ---------------
+  useEffect(() => {
+    const g = graph.current;
+    if (!g) return;
+    const vis = visibleRef.current;
+    const live = (l: GLink) => {
+      const a = linkEnd(l.source);
+      const b = linkEnd(l.target);
+      return selected !== null && (a === selected || b === selected) && vis.has(a) && vis.has(b);
+    };
+    // Particle opacity is scaled by link opacity (kept low so 7,800 links stay readable). While a star is
+    // selected, raise it: only the selected star's links are coloured opaque; all others stay ~transparent.
+    g.linkOpacity(selected !== null ? 0.95 : baseOpacity.current);
+    g.linkDirectionalParticles((l) => (live(l as GLink) ? 4 : 0))
+      .linkDirectionalParticleSpeed((l) => 0.004 + 0.012 * Math.max(0, (l as GLink).w - 0.3))
+      .linkDirectionalParticleWidth(3.4)
+      .linkDirectionalParticleResolution(8)
+      .linkDirectionalParticleColor(() => '#ffd479');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected, visible, links]);
+
   // ---- size (restyle only) ---------------------------------------------------------------------------
   useEffect(() => {
     graph.current?.nodeVal((n) => sizeOf((n as GNode).ref));
@@ -191,14 +217,24 @@ export default function Constellation(props: Props) {
   // ---- camera focus -----------------------------------------------------------------------------------
   useEffect(() => {
     const g = graph.current;
-    if (!g || focusId === null) return;
-    const n = gnodes.find((x) => x.id === focusId);
+    if (!g || focus === null) return;
+    const n = gnodes.find((x) => x.id === focus.id);
     if (!n) return;
-    const d = 70;
+    // Frame the star together with its connected neighbours, so the pulses along every link stay in view.
+    const byId = new Map(gnodes.map((x) => [x.id, x]));
+    let spread = 0;
+    for (const l of joined.current) {
+      const a = linkEnd(l.source);
+      const b = linkEnd(l.target);
+      if (a !== n.id && b !== n.id) continue;
+      const o = byId.get(a === n.id ? b : a);
+      if (o) spread = Math.max(spread, Math.hypot(o.x - n.x, o.y - n.y, o.z - n.z));
+    }
+    const d = Math.min(320, Math.max(90, spread * 2.4 + 40));
     const r = Math.hypot(n.x, n.y, n.z) || 1;
     const k = 1 + d / r;
     g.cameraPosition({ x: n.x * k, y: n.y * k, z: n.z * k }, { x: n.x, y: n.y, z: n.z }, 900);
-  }, [focusId, gnodes]);
+  }, [focus, gnodes]);
 
   return <div ref={el} className="constellation-canvas" aria-hidden="true" />;
 }

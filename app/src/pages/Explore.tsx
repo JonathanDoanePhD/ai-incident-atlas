@@ -26,7 +26,8 @@ export default function ExplorePage() {
   const [hover, setHover] = useState<IncidentNode | null>(null);
   const [selected, setSelected] = useState<IncidentNode | null>(null);
   const [legendFocus, setLegendFocus] = useState<string | null>(null);
-  const [focusId, setFocusId] = useState<number | null>(null);
+  const [focus, setFocus] = useState<{ id: number; seq: number } | null>(null);
+  const flyTo = useCallback((id: number) => setFocus((f) => ({ id, seq: (f?.seq ?? 0) + 1 })), []);
   const [playing, setPlaying] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   const [mouse, setMouse] = useState<[number, number]>([0, 0]);
@@ -126,7 +127,11 @@ export default function ExplorePage() {
     return () => window.clearInterval(id);
   }, [playing, y0, y1, setFilters]);
 
-  const onSelect = useCallback((n: IncidentNode | null) => setSelected(n), []);
+  // Clicking a star selects it and flies the camera to it; its connections then pulse.
+  const onSelect = useCallback((n: IncidentNode | null) => {
+    setSelected(n);
+    if (n) flyTo(n.id);
+  }, [flyTo]);
   const onHover = useCallback((n: IncidentNode | null) => setHover(n), []);
 
   const legendClick = (key: string) => {
@@ -163,7 +168,7 @@ export default function ExplorePage() {
         }}>
         {webgl ? (
           <Constellation nodes={nodes} links={links} colorOf={colorOf} sizeOf={sizeOf} visible={visible}
-            selected={sel?.id ?? null} highlight={highlight} onHover={onHover} onSelect={onSelect} focusId={focusId} />
+            selected={sel?.id ?? null} highlight={highlight} onHover={onHover} onSelect={onSelect} focus={focus} />
         ) : (
           <ListFallback nodes={nodes.filter((n) => visible.has(n.id))} />
         )}
@@ -266,7 +271,7 @@ export default function ExplorePage() {
             )}
             <div className="row">
               <Link className="btn primary" to={`/incident/${sel.id}`}>Open profile</Link>
-              <button type="button" className="btn" onClick={() => setFocusId(sel.id)}>Fly to</button>
+              <button type="button" className="btn" onClick={() => flyTo(sel.id)}>Fly to</button>
             </div>
             <h3>Connected in this view ({(neighbors.get(sel.id) ?? []).length})</h3>
             <ul className="neighbors">
@@ -277,7 +282,7 @@ export default function ExplorePage() {
                   const n = data!.byId.get(nb.id);
                   return n ? (
                     <li key={nb.id}>
-                      <button type="button" className="link" onClick={() => { setSelected(n); setFocusId(n.id); }}>
+                      <button type="button" className="link" onClick={() => { setSelected(n); flyTo(n.id); }}>
                         {n.t}
                       </button>
                       <span className="why">{edges?.explanations[nb.why]} · similarity {nb.w.toFixed(2)}</span>
