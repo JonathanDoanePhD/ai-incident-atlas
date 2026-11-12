@@ -31,3 +31,7 @@ n,exposure_prevalence,deff,age_range_years,mdd_sd_units_full_range
 8000,0.5,2.5,12-16 integer,0.251
 8000,0.7,1.5,12-16 integer,0.212
 8000,0.7,2.5,12-16 integer,0.273
+8607,0.772,1.5,"12-16 integer; mother (codebook n, p)",0.223
+8607,0.772,2.5,"12-16 integer; mother (codebook n, p)",0.288
+6436,0.677,1.5,"12-16 integer; father (codebook n, p)",0.231
+6436,0.677,2.5,"12-16 integer; father (codebook n, p)",0.299

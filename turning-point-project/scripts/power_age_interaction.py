@@ -62,6 +62,12 @@ def main():
             for deff in (1.5, 2.5):
                 rows.append({"n": n, "exposure_prevalence": p, "deff": deff, "age_range_years": "12-16 integer",
                              "mdd_sd_units_full_range": round(float(mdd(n, p, 4, deff, var_age=2.0, contrast=4)), 3)})
+    # Codebook-informed (univariate counts only): mother item n=8,607, 77% "very supportive";
+    # father item n=6,436, 68% "very supportive"
+    for label, n, p in (("mother (codebook n, p)", 8607, 0.772), ("father (codebook n, p)", 6436, 0.677)):
+        for deff in (1.5, 2.5):
+            rows.append({"n": n, "exposure_prevalence": p, "deff": deff, "age_range_years": "12-16 integer; " + label,
+                         "mdd_sd_units_full_range": round(float(mdd(n, p, 4, deff, var_age=2.0, contrast=4)), 3)})
     tab = pd.DataFrame(rows)
     print("PLANNING CALCULATION (assumed inputs, not data):")
     print(tab.to_string(index=False))

@@ -1,24 +1,35 @@
 # Variable mapping for paper 1 (NLSY97). analytic_name -> source column in the extract.
 #
-# `question` is the NLSY97 question name verified in the codebook during the 2026-11-12 audit
-# (docs/variable_dictionary_adolescent.csv). `source` must be the column header in YOUR
-# NLS Investigator extract (Investigator CSVs use reference numbers such as R0000100 by default;
-# the reference number for each question/round is shown in Investigator). Until a source is
-# filled in, it stays "TODO" and `load_extract` refuses to run - by design.
+# Verified 2026-11-12 against the official codebook (nlsy97_all_1997-2023.cdb from
+# https://nlsinfo.org/cohort-data/nlsy97_all_1997-2023.zip). `rnum` is the codebook reference
+# number; `source` is the matching CSV column header (reference number without the dot).
+# `codebook_n` gives the univariate counts printed in the codebook (no bivariate information).
 dataset: nlsy97
+release: "NLSY97 rounds 1-21 (1997-2023), all-variables file, VERSION_R21"
 variables:
-  id:              {question: PUBID, round: 1997, source: TODO}
-  age_1996:        {question: "CV_AGE_12/31/96", round: 1997, source: TODO}
-  sex:             {question: KEY_SEX, round: 1997, source: TODO, note: "verify name in Investigator; not in audit dictionary"}
-  mother_support:  {question: YSAQ-032, round: 1997, source: TODO, scale: "1 very, 2 somewhat, 3 not very supportive"}
-  father_support:  {question: YSAQ-053, round: 1997, source: TODO, scale: "1 very, 2 somewhat, 3 not very supportive"}
-  mother_support_scale: {question: FP_YMSUPP, round: 1997, source: TODO, scale: "0-32, two implied decimals"}
-  father_support_scale: {question: FP_YFSUPP, round: 1997, source: TODO, scale: "0-32, two implied decimals"}
-  household_structure:  {question: CV_YTH_REL_HH_CURRENT, round: 1997, source: TODO}
-  poverty_ratio:   {question: CV_HH_POV_RATIO, round: 1997, source: TODO, scale: "x100, two implied decimals"}
-  highest_grade_ever:  {question: CVC_HGC_EVER, round: latest, source: TODO}
-  highest_degree_ever: {question: CVC_HIGHEST_DEGREE_EVER, round: latest, source: TODO}
-  strata:          {question: VSTRAT, round: 1997, source: TODO}
-  psu:             {question: VPSU, round: 1997, source: TODO}
-  weight:          {question: "custom longitudinal weight (NLS weighting program) or SAMPLING_PANEL_WEIGHT", source: TODO,
-                    note: "choose per SAP section 6 after reading NLS weighting guidance"}
+  id:                   {question: PUBID, rnum: R00001.00, source: R0000100}
+  age_1996:             {question: "CV_AGE_12/31/96", rnum: R11940.00, source: R1194000, codebook_n: "12:1771 13:1807 14:1841 15:1874 16:1691"}
+  birth_year:           {question: "KEY!BDATE_Y", rnum: R05364.02, source: R0536402}
+  birth_month:          {question: "KEY!BDATE_M", rnum: R05364.01, source: R0536401}
+  sex:                  {question: "KEY!SEX", rnum: R05363.00, source: R0536300, scale: "1 male, 2 female"}
+  race_eth:             {question: "KEY!RACE_ETHNICITY", rnum: R14826.00, source: R1482600, scale: "1 Black, 2 Hispanic, 3 mixed race non-Hispanic, 4 non-Black non-Hispanic"}
+  mother_support:       {question: YSAQ-032, rnum: R03257.00, source: R0325700, scale: "1 very, 2 somewhat, 3 not very supportive",
+                         universe: "lives with mother/mother figure", codebook_n: "1:6646 2:1772 3:189; valid skip 374"}
+  father_support:       {question: YSAQ-053, rnum: R03275.00, source: R0327500, scale: "1 very, 2 somewhat, 3 not very supportive",
+                         universe: "lives with father/father figure", codebook_n: "1:4355 2:1785 3:296; valid skip 2541"}
+  mother_support_scale: {question: FP_YMSUPP, rnum: R14852.00, source: R1485200}
+  father_support_scale: {question: FP_YFSUPP, rnum: R14853.00, source: R1485300}
+  household_structure:  {question: CV_YTH_REL_HH_CURRENT, rnum: R12053.00, source: R1205300}
+  poverty_ratio:        {question: CV_HH_POV_RATIO, rnum: R12049.00, source: R1204900}
+  urban_rural:          {question: CV_URBAN-RURAL, rnum: R12175.00, source: R1217500}
+  mom_hgc_res:          {question: CV_HGC_RES_MOM, rnum: R13027.00, source: R1302700}
+  dad_hgc_res:          {question: CV_HGC_RES_DAD, rnum: R13026.00, source: R1302600}
+  hgc_1997:             {question: CV_HGC_EVER, rnum: R12044.00, source: R1204400, note: "grade completed at round 1; sensitivity S4 only"}
+  enroll_1997:          {question: CV_ENROLLSTAT, rnum: R12014.00, source: R1201400, note: "auxiliary for imputation"}
+  asvab_pct:            {question: ASVAB_MATH_VERBAL_SCORE_PCT, rnum: R98296.00, source: R9829600, note: "sensitivity S8 and imputation auxiliary only"}
+  highest_grade_ever:   {question: CVC_HGC_EVER, rnum: Z90838.00, source: Z9083800, note: "code 95 = ungraded -> missing; value is as of last interview (see last_round)"}
+  highest_degree_ever:  {question: CVC_HIGHEST_DEGREE_EVER, rnum: Z90839.00, source: Z9083900}
+  last_round:           {question: CVC_RND, rnum: Z90851.00, source: Z9085100, codebook_n: "round 21: 6569; rounds 14-21: 8297"}
+  strata:               {question: VSTRAT, rnum: R14897.00, source: R1489700}
+  psu:                  {question: VPSU, rnum: R14898.00, source: R1489800}
+  weight:               {question: SAMPLING_WEIGHT_CC, round: 1997, rnum: R12361.01, source: R1236101, note: "round-1 weight; 2 implied decimals"}

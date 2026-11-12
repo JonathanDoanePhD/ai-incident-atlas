@@ -3,9 +3,9 @@
 **Working title:** When does adult support matter most? Parental support across adolescence and
 educational attainment in the NLSY97.
 
-Status: draft v0.2 (2026-11-12). **Not yet preregistered.** No NLSY97 microdata have been
-downloaded or examined. Items marked **[verify]** must be confirmed in NLS Investigator before
-registration. The design choices below are flagged in `research_decision_log.md` (D-008 to D-012)
+Status: draft v0.3 (2026-11-12). **Not yet preregistered.** The NLSY97 public release was downloaded
+only to read its codebook; respondent-level data have not been opened. All variable identifiers below were
+verified in that codebook (`config/mappings/nlsy97.yaml` lists reference numbers and CSV columns). The design choices below are flagged in `research_decision_log.md` (D-008 to D-012)
 and were signed off by the PI on 2026-11-12.
 
 ## 1. Why this design
@@ -61,21 +61,21 @@ the life-course structured approach (`mishra2009`, `smith2015`); earnings and em
 
 ## 4. Variables
 
-| Role | Analytic name | NLSY97 question | Coding |
+| Role | Analytic name | NLSY97 question (reference no.) | Coding |
 |---|---|---|---|
-| Exposure | `mother_vs` | `YSAQ-032` (1997) | 1 if "very supportive"; 0 if "somewhat" or "not very" |
-| Exposure (Q2) | `father_vs` | `YSAQ-053` (1997) | as above |
-| Moderator | `age` | `CV_AGE_12/31/96` | integer 12–16, centred at 14 |
-| Outcome | `hgc` | `CVC_HGC_EVER` (latest round) | highest grade completed, 0–20 |
-| Outcome (exploratory) | `ba_plus` | `CVC_HIGHEST_DEGREE_EVER` | 1 if ≥ 4 (BA/BS or higher) |
-| Confounder | `pov` | `CV_HH_POV_RATIO` (1997) | household income-to-poverty ratio; log(1 + ratio) |
-| Confounder | `hh_struct` | `CV_YTH_REL_HH_CURRENT` (1997) | categories as coded; context, not deficit |
-| Confounder | `sex` | `KEY_SEX` **[verify]** | |
-| Confounder | `race_eth` | `KEY_RACE_ETHNICITY` **[verify]** | proxy for structural exposure to discrimination; aggregate reporting only |
-| Confounder | `parent_ed` | highest grade of residential parent(s) **[verify name]** | years |
-| Confounder | `urban` | `CV_URBAN-RURAL` (1997) **[verify]** | |
-| Design | `strata`, `psu` | `VSTRAT`, `VPSU` | |
-| Weight | `w` | **[verify]** custom weight for respondents in round 1 *and* the outcome round from the NLS weighting program; else `SAMPLING_PANEL_WEIGHT` | |
+| Exposure | `mother_vs` | `YSAQ-032` (R03257.00), 1997 | 1 if "very supportive"; 0 if "somewhat" or "not very". Universe: lives with mother/mother figure (codebook: 8,607 valid; 77% "very") |
+| Exposure (Q2) | `father_vs` | `YSAQ-053` (R03275.00), 1997 | as above. Universe: lives with father/father figure (6,436 valid; 68% "very") |
+| Moderator | `age` | `CV_AGE_12/31/96` (R11940.00) | integer 12–16, centred at 14 |
+| Outcome | `hgc` | `CVC_HGC_EVER` (Z90838.00) | highest grade completed, 0–20; code 95 ("ungraded", n = 18) → missing. **Observed only if the last interview (`CVC_RND`, Z90851.00) was round 14 (2010) or later**, when every respondent was at least 25; otherwise treated as missing and imputed (codebook: 8,297 respondents last interviewed in rounds 14–21) |
+| Outcome (exploratory) | `ba_plus` | `CVC_HIGHEST_DEGREE_EVER` (Z90839.00) | 1 if ≥ 4 (BA/BS or higher); same observation rule |
+| Confounder | `pov` | `CV_HH_POV_RATIO` (R12049.00), 1997 | household income-to-poverty ratio; log(1 + ratio) |
+| Confounder | `hh_struct` | `CV_YTH_REL_HH_CURRENT` (R12053.00), 1997 | categories as coded; context, not deficit |
+| Confounder | `sex` | `KEY!SEX` (R05363.00) | 1 male, 2 female |
+| Confounder | `race_eth` | `KEY!RACE_ETHNICITY` (R14826.00) | 4 categories as coded; proxy for structural exposure to discrimination; aggregate reporting only |
+| Confounder | `parent_ed` | `CV_HGC_RES_MOM` (R13027.00), `CV_HGC_RES_DAD` (R13026.00) | highest grade of residential mother and father; maximum of the two, missing-indicator for absent parent |
+| Confounder | `urban` | `CV_URBAN-RURAL` (R12175.00), 1997 | as coded |
+| Design | `strata`, `psu` | `VSTRAT` (R14897.00), `VPSU` (R14898.00) | |
+| Weight | `w` | `SAMPLING_WEIGHT_CC` 1997 (R12361.01) | round-1 weight (two implied decimals). Target population: U.S. youths aged 12–16 in 1997. Attrition handled by multiple imputation, not by re-weighting; a custom longitudinal weight from the NLS weighting program is sensitivity S6b |
 
 Missing-value codes −1 to −5 are recoded to NaN with reasons kept (`preprocessing.recode_missing`).
 Valid skips (−4) mark out-of-universe cases and are never imputed.
@@ -114,8 +114,9 @@ is sensitivity S2. Fractions of missing information are reported.
 - **SESOI**: |Δ| = 0.20 SD of `hgc`. Rationale: below this, a difference in association across
   adolescence would not plausibly change programme timing decisions, and it is comparable to
   small-to-modest meta-analytic mentoring effects (`dubois2011`, `raposa2019`). Signed off by the PI 2026-11-12 (D-011).
-- **Power**: with analytic n ≈ 6,000–8,000, exposure prevalence 0.5–0.7 and DEFF 1.5–2.5, the
-  minimum detectable age-16 vs age-12 difference is ≈ 0.19–0.32 SD (`scripts/power_age_interaction.py`, integer-age rows;
+- **Power**: using codebook counts (mother item n = 8,607, 77% "very supportive"; father item n = 6,436,
+  68%) and DEFF 1.5–2.5, the minimum detectable age-16 vs age-12 difference is ≈ 0.22–0.29 SD for mother support
+  and ≈ 0.23–0.30 SD for father support (`scripts/power_age_interaction.py`;
   planning assumptions, not data). Q1 is therefore **unlikely to detect a difference near the
   SESOI and may be unable to establish equivalence**. Results will be interpreted with this in mind,
   emphasising interval estimates.
@@ -135,6 +136,7 @@ is sensitivity S2. Fractions of missing information are reported.
 | S4 | Adjust additionally for grade in 1997 | age–grade confounding |
 | S5 | Ordinal exposure (3 levels) and the `FP_YMSUPP` scale | exposure coding |
 | S6 | Unweighted, design-ignorant model | influence of weights |
+| S6b | NLS custom longitudinal weight for respondents interviewed in round 1 and round ≥ 14, complete cases | attrition handling |
 | S7 | E-values for θ(14) and for Δ (via `rr_from_smd`) | unmeasured confounding (e.g. youth temperament) |
 | S8 | Add ASVAB as an (imperfect) prior-achievement proxy | reverse causation / selection on ability |
 
@@ -162,10 +164,11 @@ Grade-anchored version (H7, "freshman year"): association of school-adult suppor
 Threats: grade-11 items cover only students taking math that term and refer to a different teacher;
 grade-9 items were collected weeks into the transition. Comparison is of *grades*, not ages.
 
-## 12. Blocking items before registration
+## 12. Status of pre-registration items
 
-1. Confirm NLS (BLS) and NCES data terms permit AI-assisted processing, or arrange for a human
-   analyst to run the pipeline outside AI tools (**PI action**).
-2. Obtain institutional determination on human-subjects review (**PI action**).
-3. Verify all **[verify]** items and fill `config/mappings/nlsy97.yaml` with Investigator reference numbers.
-4. Read full texts of key mentoring meta-analyses for age-moderation results (the review is abstract-level).
+1. ~~Data terms~~: PI confirmed NLS (BLS) and NCES terms permit AI-assisted processing (D-012).
+2. ~~Human-subjects determination~~: PI reports it is not a barrier (D-015).
+3. ~~Variable verification~~: done against the round-21 codebook (2026-11-12).
+4. ~~SESOI~~: signed off (D-011).
+5. **Open:** read full texts of key mentoring meta-analyses for age-moderation results (the review is abstract-level). This informs the introduction, not the analysis.
+6. **Open:** register on OSF, then open the data.

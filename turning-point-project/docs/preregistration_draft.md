@@ -19,8 +19,8 @@ the SAP; this document records the commitments a registry asks for.
 
 - **Dataset:** NLSY97, U.S. Bureau of Labor Statistics; public-use release through round 21.
 - **Access:** free public download (NLS Investigator); no restricted variables used.
-- **Prior knowledge of the data:** Neither the PI nor the analysis code has accessed NLSY97
-  microdata as of this draft. The PI has read the published literature, including NLSY97-based
+- **Prior knowledge of the data:** Neither the PI nor the analysis code has opened NLSY97
+  respondent-level data as of this draft. The PI has read the published literature, including NLSY97-based
   studies; any such familiarity will be disclosed here before registration. Codebook metadata
   (question wording, universes, frequencies shown in codebooks) were read during the feasibility
   audit; codebook frequencies are univariate and do not reveal exposure–outcome relationships.
