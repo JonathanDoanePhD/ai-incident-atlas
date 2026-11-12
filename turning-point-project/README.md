@@ -7,8 +7,10 @@ A preregistration-first research programme on the developmental timing of suppor
 relationships and educational attainment. Principal investigator: Jonathan Doane, Ph.D.
 ([research portfolio](https://jonathandoanephd.github.io/research-portfolio/)).
 
-> **Status (2026-11-12): design phase. No empirical findings exist yet.** No survey microdata
-> have been downloaded or analysed. Synthetic data appear only in `tests/` for software testing.
+> **Status (2026-11-12): first results for paper 1** (`docs/results_paper1.md`). Parental support
+> reported at ages 12–16 is associated with about half a year more schooling, with no clear difference by
+> age at report. These are observational associations. Survey microdata stay outside git; synthetic data
+> appear only in `tests/`.
 
 ## What is here
 
@@ -61,12 +63,21 @@ tpp validate nlsy97 data/raw/nlsy97/extract.csv   # after filling config/mapping
 Data paths come from `TPP_DATA_DIR`, then `config/local.yaml` (copy `config/paths.example.yaml`),
 then `data/`. Microdata never enter git (`.gitignore`, `tpp check-repo`, and a unit test).
 
-## What is blocked, and on whom
+## Reproduce paper 1
 
-1. **PI**: confirm NLS (BLS) and NCES terms allow AI-assisted processing (Add Health's do not).
-2. **PI**: institutional determination on human-subjects review for public-use secondary data.
-3. Fill Investigator reference numbers in `config/mappings/nlsy97.yaml`; verify `[verify]` items in the SAP.
-4. Read full texts of key meta-analyses for age-moderation results; register the plan; then run the analysis.
+```bash
+# download https://nlsinfo.org/cohort-data/nlsy97_all_1997-2023.zip, then stream the 24 mapped
+# columns into data/raw/nlsy97/paper1_extract.csv (see docs/results_paper1.md, Verification)
+python scripts/run_paper1.py --m 40          # ~10 min; writes outputs/paper1_results.json
+python scripts/report_paper1.py              # figures + website/data/findings.js
+python scripts/crosscheck_variance.py        # jackknife check of standard errors
+```
+
+## Open items
+
+1. Paper 2: ages 8–11 vs 12–15 with PSID child-supplement "how close" items (needs a free PSID registration by the PI).
+2. Grade-9 companion study with HSLS:09.
+3. Read full texts of key mentoring meta-analyses; write the working paper.
 
 ## Licence and citation
 

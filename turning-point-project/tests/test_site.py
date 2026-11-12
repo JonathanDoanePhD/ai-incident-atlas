@@ -34,12 +34,18 @@ def test_evidence_matrix_rows_have_dois_logged_as_verified():
                 assert r["doi"].lower() in log, r["citation_key"]
 
 
-def test_generated_site_is_current_and_contains_no_findings():
+def test_site_data_has_no_findings_and_findings_are_aggregate_only():
     js = (ROOT / "website" / "data" / "site.js").read_text()
     data = json.loads(js[js.index("=") + 1:].rstrip().rstrip(";"))
     assert not any(k in data for k in ("findings", "estimates", "results"))
-    html = (ROOT / "website" / "index.html").read_text()
-    assert "No empirical findings yet" in html
+    f = ROOT / "website" / "data" / "findings.js"
+    if f.exists():  # generated only from outputs/paper1_results.json
+        txt = f.read_text()
+        fd = json.loads(txt[txt.index("=") + 1:].rstrip().rstrip(";"))
+        for p in fd["parents"].values():
+            for row in p["descriptives"]:
+                assert row["n_valid_exposure"] >= 10  # small-cell rule
+        assert "R0000100" not in txt and "pubid" not in txt.lower()  # no respondent identifiers
 
 
 def test_add_health_marked_excluded():

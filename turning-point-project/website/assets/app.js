@@ -233,3 +233,78 @@
   $("#pubCards").innerHTML = cards(D.publications);
   if (D.build) $("#buildInfo").textContent = ` · data built ${D.build.date}`;
 })();
+
+/* findings (only when outputs exist: data/findings.js from scripts/report_paper1.py) */
+(function () {
+  "use strict";
+  const F = window.FINDINGS;
+  if (!F) return;
+  const $ = (s) => document.querySelector(s);
+  const f2 = (x) => (x >= 0 ? "" : "−") + Math.abs(x).toFixed(2);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  $("#topNotice").innerHTML = `<strong>First results are in.</strong> The planned analysis of NLSY97 has been run. See
+    <a href="#findings">Findings</a>. These are adjusted associations from observational data, not causal effects.`;
+  let who = "mother", cat = false;
+  function chart(P) {
+    const pts = cat ? P.theta_categorical : P.theta;
+    const L = 56, R = 540, T = 20, B = 260;
+    const lo = Math.min(0, ...pts.map((p) => p.lo)) - 0.1, hi = Math.max(...pts.map((p) => p.hi)) + 0.1;
+    const X = (a) => L + (a - 12) / 4 * (R - L), Y = (v) => B - (v - lo) / (hi - lo) * (B - T);
+    let g = `<g class="axis"><line x1="${L}" y1="${B}" x2="${R}" y2="${B}"/><line x1="${L}" y1="${T}" x2="${L}" y2="${B}"/>`;
+    for (let a = 12; a <= 16; a++) g += `<text x="${X(a)}" y="${B + 16}" text-anchor="middle">${a}</text>`;
+    const step = (hi - lo) > 1.5 ? 0.5 : 0.25;
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) g += `<text x="${L - 6}" y="${Y(v) + 4}" text-anchor="end">${v.toFixed(2)}</text><line x1="${L}" x2="${R}" y1="${Y(v)}" y2="${Y(v)}" opacity=".3"/>`;
+    g += `<text x="${(L + R) / 2}" y="${B + 34}" text-anchor="middle">Age at report (as of 31 Dec 1996)</text>`;
+    g += `<text transform="translate(14 ${(T + B) / 2}) rotate(-90)" text-anchor="middle">Extra years of schooling</text></g>`;
+    g += `<line x1="${L}" x2="${R}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--muted)" stroke-dasharray="4 4"/>`;
+    if (!cat) {
+      g += `<path d="M${pts.map((p) => X(p.age) + "," + Y(p.hi)).join(" L")} L${pts.slice().reverse().map((p) => X(p.age) + "," + Y(p.lo)).join(" L")} Z" fill="var(--blue)" opacity=".15"/>`;
+      g += `<polyline fill="none" stroke="var(--blue)" stroke-width="3" points="${pts.map((p) => X(p.age) + "," + Y(p.est)).join(" ")}"/>`;
+    }
+    pts.forEach((p) => {
+      g += `<line x1="${X(p.age)}" x2="${X(p.age)}" y1="${Y(p.lo)}" y2="${Y(p.hi)}" stroke="var(--orange-bright)" stroke-width="2"/>`;
+      g += `<circle cx="${X(p.age)}" cy="${Y(p.est)}" r="5" fill="var(--orange-bright)"><title>Age ${p.age}: ${f2(p.est)} years (95% CI ${f2(p.lo)} to ${f2(p.hi)})</title></circle>`;
+    });
+    return g;
+  }
+  function render() {
+    const P = F.parents[who];
+    const d = P.delta, ds = P.delta_sd, eq = P.equivalence;
+    const t12 = P.theta[0], t16 = P.theta[4], t14 = P.theta[2];
+    const holm = F.holm[who];
+    const sensRows = Object.entries(P.sensitivity).map(([k, v]) =>
+      `<tr><td>${esc(k.replace(/_/g, " "))}</td><td>${f2(v.theta_14[0])} (${f2(v.theta_14[1])}, ${f2(v.theta_14[2])})</td><td>${f2(v.delta_16_vs_12[0])} (${f2(v.delta_16_vs_12[1])}, ${f2(v.delta_16_vs_12[2])})</td></tr>`).join("");
+    const desc = P.descriptives.map((r) => `<tr><td>${r.age_1996}</td><td>${r.n_valid_exposure}</td><td>${r.pct_very_supportive_weighted}%</td><td>${r.n_outcome_observed}</td><td>${r.mean_hgc_weighted_observed ?? "–"}</td></tr>`).join("");
+    $("#findingsBody").innerHTML = `
+      <div class="controls" role="group" aria-label="Choose parent">
+        <label class="chk"><input type="radio" name="fWho" value="mother" ${who === "mother" ? "checked" : ""}> Mother support (primary, Q1)</label>
+        <label class="chk"><input type="radio" name="fWho" value="father" ${who === "father" ? "checked" : ""}> Father support (secondary, Q2)</label>
+        <label class="chk"><input type="checkbox" id="fCat" ${cat ? "checked" : ""}> Show each age separately (sensitivity S1)</label>
+      </div>
+      <div class="sim">
+        <div class="card">
+          <h3>What we found</h3>
+          <p>Young people who called their ${who} <em>very supportive</em> in 1997 had completed, on average, about
+          <strong>${f2(t14.est)} more years</strong> of schooling by ages 25–44 (most were interviewed around age 40) than otherwise similar peers (age 14; 95% CI ${f2(t14.lo)} to ${f2(t14.hi)}), after adjusting for family income, parents' education, household type, sex, race/ethnicity and urban residence.</p>
+          <p><strong>Did it depend on age?</strong> Estimated association at age 12: ${f2(t12.est)}; at age 16: ${f2(t16.est)}.
+          Difference (16 vs 12): ${f2(d.estimate)} years (95% CI ${f2(d.ci_low)} to ${f2(d.ci_high)}), or ${f2(ds.estimate)} SD; Holm-adjusted p = ${holm.toFixed(2)}.</p>
+          <p><span class="pill hypothesis">Verdict</span> ${esc(eq.verdict)} (equivalence bound ±${F.sesoi_sd} SD; 90% CI ${f2(eq.ci90_low)} to ${f2(eq.ci90_high)} SD).</p>
+          <p class="small">Adjusted associations from observational data. An unmeasured confounder would need associations of about ${P.e_values.theta_14.point.toFixed(2)} (risk-ratio scale) with both support and schooling to explain away the age-14 association (E-value; ${P.e_values.theta_14.ci.toFixed(2)} for the CI limit).</p>
+        </div>
+        <svg viewBox="0 0 560 300" role="img" aria-label="Estimated association by age at report with 95% confidence intervals">${chart(P)}</svg>
+      </div>
+      <details><summary>Sample flow and descriptive table</summary>
+        <p class="small">Round-1 respondents: ${P.flow.round1_respondents}; in item universe (living with a ${who} figure): ${P.flow.in_item_universe};
+        valid answer: ${P.flow.valid_exposure}; attainment observed at a 2010+ interview: ${P.flow.outcome_observed_round14plus}; imputed: ${P.flow.outcome_imputed}.</p>
+        <div class="table-wrap"><table><thead><tr><th>Age</th><th>n</th><th>Very supportive (weighted)</th><th>Outcome observed</th><th>Mean grade completed (observed, weighted)</th></tr></thead><tbody>${desc}</tbody></table></div>
+      </details>
+      <details><summary>Sensitivity analyses (estimate, 95% CI, years of schooling)</summary>
+        <div class="table-wrap"><table><thead><tr><th>Analysis</th><th>Association at 14</th><th>Difference 16 vs 12</th></tr></thead><tbody>${sensRows}</tbody></table></div>
+        <p class="small">S5a uses a 1–3 ordinal score (per step); S5b the multi-item scale (per point, subsample). Scales differ from the binary primary exposure.</p>
+      </details>
+      <p class="small">Design: ${F.m} imputations, Taylor-linearised variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>`;
+    document.querySelectorAll('input[name="fWho"]').forEach((r) => r.addEventListener("change", () => { who = r.value; render(); }));
+    $("#fCat").addEventListener("change", (e) => { cat = e.target.checked; render(); });
+  }
+  render();
+})();

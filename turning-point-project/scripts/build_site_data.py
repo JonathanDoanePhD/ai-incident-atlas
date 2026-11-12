@@ -110,8 +110,8 @@ CONCEPTS = [
 STATUS = [
     dict(title="Literature review", state="done", text="87 works verified against Crossref (abstract-level). Gaps documented."),
     dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables catalogued."),
-    dict(title="Analysis plan", state="prog", text="Paper 1 design signed off (NLSY97). Next: variable checks, ethics determination and preregistration."),
-    dict(title="Findings", state="todo", text="None yet. Outcome analyses are blocked until preregistration (decision D-006)."),
+    dict(title="Analysis plan", state="done", text="Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."),
+    dict(title="Findings", state="prog", text="First results for paper 1: no clear age pattern for parental support between 12 and 16. See Findings."),
 ]
 
 E, H, U, X = "evidence", "hypothesis", "uncertain", "blocked"
@@ -214,20 +214,21 @@ METHODS = [
 ]
 
 FINDINGS_STEPS = [
-    dict(title="1. Data-use terms", state="todo", text="Confirm that NLS and NCES terms allow AI-assisted processing (Add Health's do not)."),
-    dict(title="2. Ethics determination", state="todo", text="Institutional determination on human-subjects review for public-use secondary data."),
-    dict(title="3. Preregistration", state="prog", text="Analysis plan drafted; register after PI sign-off and variable checks."),
-    dict(title="4. Extract and validate", state="todo", text="Build the NLSY97 extract; run validation and missing-data reports."),
-    dict(title="5. Primary analysis", state="todo", text="Run the registered model, sensitivity analyses and cross-check against R survey."),
-    dict(title="6. Publish results here", state="todo", text="Estimates with uncertainty intervals, whatever they show."),
+    dict(title="Plan frozen", state="done", text="File hashes committed before respondent-level data were opened."),
+    dict(title="Extract validated", state="done", text="24 variables; counts match the official codebook exactly."),
+    dict(title="Primary analysis", state="done", text="40 imputations, design-based variance, independent jackknife check."),
+    dict(title="Next: paper 2", state="todo", text="Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."),
+    dict(title="Next: grade 9", state="todo", text="HSLS:09 school-adult support in grade 9 vs grade 11."),
+    dict(title="Next: write-up", state="todo", text="Working paper from the results report."),
 ]
 
 PUBLICATIONS = [
     dict(title="Statistical analysis plan (paper 1)", text="Design, variables, model, missing data, SESOI, multiplicity and sensitivity analyses.", status="Draft v0.2", statusKind="hypothesis", link="../docs/statistical_analysis_plan.md", linkText="Read the plan"),
-    dict(title="Preregistration draft", text="OSF secondary-data template. Not yet submitted.", status="Draft", statusKind="hypothesis", link="../docs/preregistration_draft.md", linkText="Read the draft"),
+    dict(title="Frozen analysis plan record", text="Plan frozen by a timestamped commit with file hashes (not registered on OSF).", status="Frozen", statusKind="evidence", link="../docs/PLAN_FREEZE.md", linkText="See the freeze record"),
     dict(title="Literature review and evidence matrix", text="Abstract-level critical review of 87 verified works on turning points, mentoring, transitions and timing.", status="v0.1", statusKind="evidence", link="../docs/literature_review.md", linkText="Read the review"),
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
-    dict(title="Working paper: When does adult support matter most?", text="Will be written after the preregistered analysis.", status="Not started", statusKind="uncertain"),
+    dict(title="Results report (paper 1)", text="Primary estimates, sensitivity analyses, verification and deviations from the plan.", status="v1", statusKind="evidence", link="../docs/results_paper1.md", linkText="Read the results"),
+    dict(title="Working paper: When does adult support matter most?", text="To be written from the results report.", status="Not started", statusKind="uncertain"),
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
 ]
 

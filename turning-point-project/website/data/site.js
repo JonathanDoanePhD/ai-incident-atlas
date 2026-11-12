@@ -39,13 +39,13 @@ window.SITE_DATA = {
   },
   {
    "title": "Analysis plan",
-   "state": "prog",
-   "text": "Paper 1 design signed off (NLSY97). Next: variable checks, ethics determination and preregistration."
+   "state": "done",
+   "text": "Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."
   },
   {
    "title": "Findings",
-   "state": "todo",
-   "text": "None yet. Outcome analyses are blocked until preregistration (decision D-006)."
+   "state": "prog",
+   "text": "First results for paper 1: no clear age pattern for parental support between 12 and 16. See Findings."
   }
  ],
  "stages": [
@@ -2057,34 +2057,34 @@ window.SITE_DATA = {
  ],
  "findingsSteps": [
   {
-   "title": "1. Data-use terms",
-   "state": "todo",
-   "text": "Confirm that NLS and NCES terms allow AI-assisted processing (Add Health's do not)."
+   "title": "Plan frozen",
+   "state": "done",
+   "text": "File hashes committed before respondent-level data were opened."
   },
   {
-   "title": "2. Ethics determination",
-   "state": "todo",
-   "text": "Institutional determination on human-subjects review for public-use secondary data."
+   "title": "Extract validated",
+   "state": "done",
+   "text": "24 variables; counts match the official codebook exactly."
   },
   {
-   "title": "3. Preregistration",
-   "state": "prog",
-   "text": "Analysis plan drafted; register after PI sign-off and variable checks."
+   "title": "Primary analysis",
+   "state": "done",
+   "text": "40 imputations, design-based variance, independent jackknife check."
   },
   {
-   "title": "4. Extract and validate",
+   "title": "Next: paper 2",
    "state": "todo",
-   "text": "Build the NLSY97 extract; run validation and missing-data reports."
+   "text": "Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."
   },
   {
-   "title": "5. Primary analysis",
+   "title": "Next: grade 9",
    "state": "todo",
-   "text": "Run the registered model, sensitivity analyses and cross-check against R survey."
+   "text": "HSLS:09 school-adult support in grade 9 vs grade 11."
   },
   {
-   "title": "6. Publish results here",
+   "title": "Next: write-up",
    "state": "todo",
-   "text": "Estimates with uncertainty intervals, whatever they show."
+   "text": "Working paper from the results report."
   }
  ],
  "publications": [
@@ -2097,12 +2097,12 @@ window.SITE_DATA = {
    "linkText": "Read the plan"
   },
   {
-   "title": "Preregistration draft",
-   "text": "OSF secondary-data template. Not yet submitted.",
-   "status": "Draft",
-   "statusKind": "hypothesis",
-   "link": "../docs/preregistration_draft.md",
-   "linkText": "Read the draft"
+   "title": "Frozen analysis plan record",
+   "text": "Plan frozen by a timestamped commit with file hashes (not registered on OSF).",
+   "status": "Frozen",
+   "statusKind": "evidence",
+   "link": "../docs/PLAN_FREEZE.md",
+   "linkText": "See the freeze record"
   },
   {
    "title": "Literature review and evidence matrix",
@@ -2121,8 +2121,16 @@ window.SITE_DATA = {
    "linkText": "Read the audit"
   },
   {
+   "title": "Results report (paper 1)",
+   "text": "Primary estimates, sensitivity analyses, verification and deviations from the plan.",
+   "status": "v1",
+   "statusKind": "evidence",
+   "link": "../docs/results_paper1.md",
+   "linkText": "Read the results"
+  },
+  {
    "title": "Working paper: When does adult support matter most?",
-   "text": "Will be written after the preregistered analysis.",
+   "text": "To be written from the results report.",
    "status": "Not started",
    "statusKind": "uncertain"
   },
@@ -2136,6 +2144,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "be78813"
+  "commit": "a54c783"
  }
 };

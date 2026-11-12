@@ -34,7 +34,7 @@
     <p class="lede">When, how, and for whom do supportive relationships and developmental experiences shape young people's
       educational and life trajectories? This project tests that question against long-running national studies,
       with the analysis plan written before outcomes are examined.</p>
-    <div class="notice"><strong>No empirical findings yet.</strong> This site shows the research design, verified literature
+    <div class="notice" id="topNotice"><strong>No empirical findings yet.</strong> This site shows the research design, verified literature
       and dataset coverage. Charts labelled <em>illustrative</em> contain no data. Results will appear under
       <a href="#findings">Findings</a> only after a preregistered, reproducible analysis has been run and checked.</div>
     <div class="legend" aria-label="Label legend">
@@ -184,10 +184,10 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
   <div class="wrap">
     <div class="eyebrow">Research findings</div>
     <h2>Findings</h2>
-    <div class="notice"><strong>Nothing to report yet, by design.</strong> The primary analysis will run only after the
-      analysis plan is preregistered and the data extract is validated. When it does, this section will show the
-      estimated association of adult support with educational attainment across ages, with 95% confidence intervals,
-      including a null result if that is what the data show.</div>
+    <div id="findingsBody">
+      <div class="notice"><strong>Nothing to report yet, by design.</strong> The primary analysis runs only after the
+        analysis plan is frozen and the data extract is validated.</div>
+    </div>
     <div class="grid g3" id="findingsSteps"></div>
   </div>
 </section>
@@ -231,6 +231,7 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
 <footer><div class="wrap">The Turning Point Project · code MIT-licensed · content reflects work in progress and will change.
   <span id="buildInfo"></span></div></footer>
 <script src="data/site.js"></script>
+<script src="data/findings.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
