@@ -1,0 +1,35 @@
+[project]
+name = "turning-point"
+version = "0.1.0"
+description = "The Turning Point Project: developmental timing of supportive adult relationships and educational trajectories"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Jonathan Doane" }]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.11",
+  "statsmodels>=0.14",
+  "scikit-learn>=1.4",
+  "plotly>=5.18",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+stata = ["pyreadstat>=1.2"]   # reading .dta / .sav / .sas7bdat distributions
+dev = ["pytest>=8", "jupyter>=1.0"]
+
+[project.scripts]
+tpp = "turning_point.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

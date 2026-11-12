@@ -1,0 +1,11 @@
+digraph turning_point_dag {
+  rankdir=LR;
+  SES -> S; SES -> Y; SES -> P;
+  FAM -> S; FAM -> P; FAM -> Y;
+  U -> S; U -> P; U -> Y;
+  P -> S; P -> Y;
+  S -> I; S -> E; S -> Y; I -> Y; E -> Y;
+  AGE -> S; COH -> S; COH -> Y;
+  Y -> R; S -> R;
+  U [label="Unmeasured (latent)", style=dashed];
+}

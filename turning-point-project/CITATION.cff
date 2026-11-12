@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software or its documentation, please cite it as below."
+title: "The Turning Point Project: research software and documentation"
+abstract: "Reproducible infrastructure for studying when supportive adult relationships are associated with young people's educational trajectories."
+authors:
+  - family-names: Doane
+    given-names: Jonathan
+version: 0.1.0
+date-released: 2026-11-12
+license: MIT
+type: software

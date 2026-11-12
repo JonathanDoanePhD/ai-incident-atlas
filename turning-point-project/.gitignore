@@ -1,0 +1,19 @@
+# Never commit survey microdata, even public-use files: licences restrict redistribution
+# and Add Health / NCES terms forbid re-identification attempts. Only README files are tracked.
+data/raw/*
+data/processed/*
+!data/raw/README.md
+!data/processed/README.md
+*.dta
+*.sav
+*.sas7bdat
+*.por
+*.NLSY97
+*.zip
+config/local.yaml
+outputs/private/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Turning Point Project</title>
+<meta name="description" content="When, how, and for whom do supportive relationships and developmental experiences shape young people's future trajectories? A transparent, preregistration-first research programme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{const t=localStorage.getItem('tpp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#overview"><span class="dot" aria-hidden="true"></span>The Turning Point Project</a>
+    <nav class="main" aria-label="Sections">
+      <a href="#overview">Overview</a><a href="#timeline">Timeline</a><a href="#factors">Factors</a>
+      <a href="#datasets">Datasets</a><a href="#evidence">Evidence</a><a href="#methods">Methods</a>
+      <a href="#findings">Findings</a><a href="#publications">Publications</a><a href="#about">About</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle colour theme">Theme</button>
+  </div>
+</header>
+
+<main id="main">
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="wrap">
+    <div class="eyebrow">Research programme · in progress</div>
+    <h1>When does adult support matter most?</h1>
+    <p class="lede">When, how, and for whom do supportive relationships and developmental experiences shape young people's
+      educational and life trajectories? This project tests that question against long-running national studies,
+      with the analysis plan written before outcomes are examined.</p>
+    <div class="notice"><strong>No empirical findings yet.</strong> This site shows the research design, verified literature
+      and dataset coverage. Charts labelled <em>illustrative</em> contain no data. Results will appear under
+      <a href="#findings">Findings</a> only after a preregistered, reproducible analysis has been run and checked.</div>
+    <div class="legend" aria-label="Label legend">
+      <span><span class="pill evidence">Evidence</span> verified published research</span>
+      <span><span class="pill hypothesis">Hypothesis</span> a claim we will test</span>
+      <span><span class="pill uncertain">Uncertain</span> open or contested</span>
+      <span><span class="pill blocked">Not testable here</span> beyond available data</span>
+    </div>
+    <h2>Four questions that sound alike but are not</h2>
+    <p>A single "turning point age" conflates four different ideas. Evidence for one is not evidence for the others.</p>
+    <div class="grid g4" id="conceptCards"></div>
+    <h2 style="margin-top:2rem">Where the project stands</h2>
+    <div class="grid g4 status-grid" id="statusGrid"></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="eyebrow">Developmental timeline</div>
+    <h2>Explore candidate developmental windows</h2>
+    <p>Each window is a <span class="pill hypothesis">Hypothesis</span>. Select one to see what published research
+      says, what remains open, and which datasets actually observe young people at those ages.</p>
+    <div class="stages" role="tablist" aria-label="Developmental stages" id="stageTabs"></div>
+    <div class="stage-detail card" role="tabpanel" id="stagePanel" tabindex="0" aria-live="polite"></div>
+    <h3>Which datasets observe these ages?</h3>
+    <p class="small">Bars show the ages at which each study interviewed its sample (from the dataset audit). The highlighted band is the selected window.</p>
+    <div id="coverage" role="img" aria-label="Age coverage of candidate datasets"></div>
+    <details><summary>Coverage as a table</summary><div class="table-wrap"><table id="coverageTable"></table></div></details>
+  </div>
+</section>
+
+<!-- FACTORS -->
+<section id="factors">
+  <div class="wrap">
+    <div class="eyebrow">Explore the factors</div>
+    <h2>A conceptual and causal map</h2>
+    <p>Select a factor to see its role in the first study, example constructs, and which datasets measure it. Toggle the
+      paths to compare the pathways we hope to estimate with the confounding paths that make estimation hard.
+      Arrows encode <em>assumptions</em>, not findings.</p>
+    <div class="controls" role="group" aria-label="Path display">
+      <label class="chk"><input type="radio" name="pathMode" value="causal" checked> Hypothesised pathways</label>
+      <label class="chk"><input type="radio" name="pathMode" value="confound"> Confounding and selection paths</label>
+      <label class="chk"><input type="radio" name="pathMode" value="all"> All</label>
+    </div>
+    <div class="framework">
+      <svg class="fw-svg" id="fwSvg" viewBox="0 0 720 440" role="group" aria-label="Conceptual framework diagram"></svg>
+      <div class="card" id="fwPanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DATASETS -->
+<section id="datasets">
+  <div class="wrap">
+    <div class="eyebrow">Dataset feasibility</div>
+    <h2>Which studies can answer which questions?</h2>
+    <p>Each entry is drawn from documentation fetched during the audit. Items we could not verify are marked as such.</p>
+    <div class="controls">
+      <label>Must observe age<select id="dsAge"><option value="">Any</option></select></label>
+      <label>Access<select id="dsAccess"><option value="">Any</option><option value="public">Public-use available</option></select></label>
+    </div>
+    <div class="grid g2" id="datasetCards"></div>
+    <div class="notice info" id="dsRecommendation"></div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section id="evidence">
+  <div class="wrap">
+    <div class="eyebrow">Evidence matrix</div>
+    <h2>Verified literature</h2>
+    <p>Every entry was checked against its Crossref DOI record. Summaries are from abstracts unless marked otherwise and
+      are not a substitute for reading the full paper.</p>
+    <div class="controls">
+      <label>Search<input type="search" id="evSearch" placeholder="author, topic, method…"></label>
+      <label>Study type<select id="evType"><option value="">All</option></select></label>
+      <label class="chk"><input type="checkbox" id="evTiming"> Only timing-relevant</label>
+      <span class="count" id="evCount" aria-live="polite"></span>
+    </div>
+    <div class="table-wrap" style="max-height:560px"><table id="evTable"></table></div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section id="methods">
+  <div class="wrap">
+    <div class="eyebrow">Methods</div>
+    <h2>Why timing is hard to measure</h2>
+    <p>Suppose adult support helps every young person by the same amount at every age. Can a survey still make it
+      <em>look</em> as if support matters more at some ages? Yes, if who receives support changes with age. Adjust the
+      sliders to see how.</p>
+    <div class="notice"><strong>Illustrative — no data.</strong> This is a two-equation textbook model of selection and
+      measurement error, not an estimate from any study.</div>
+    <div class="sim">
+      <div class="card">
+        <label for="simBeta">True effect of support (same at every age): <output id="oBeta"></output></label>
+        <input type="range" id="simBeta" min="0" max="0.6" step="0.05" value="0.3">
+        <label for="simA12">Selection at age 12 (how much an unmeasured trait like sociability drives who gets support): <output id="oA12"></output></label>
+        <input type="range" id="simA12" min="0" max="1.5" step="0.1" value="0.2">
+        <label for="simA18">Selection at age 18: <output id="oA18"></output></label>
+        <input type="range" id="simA18" min="0" max="1.5" step="0.1" value="1.0">
+        <label for="simG">Effect of that trait on the outcome: <output id="oG"></output></label>
+        <input type="range" id="simG" min="0" max="0.8" step="0.05" value="0.4">
+        <label for="simRel">Reliability of the support measure: <output id="oRel"></output></label>
+        <input type="range" id="simRel" min="0.4" max="1" step="0.05" value="0.8">
+        <p class="small" id="simText"></p>
+      </div>
+      <svg id="simSvg" viewBox="0 0 560 330" role="img" aria-labelledby="simTitle simDesc">
+        <title id="simTitle">Illustrative: true versus observed association by age</title>
+        <desc id="simDesc">Lines compare a constant true effect with the association a naive regression would report.</desc>
+      </svg>
+    </div>
+    <details><summary>The model behind the sliders</summary>
+      <p>Outcome Y = β·S + γ·U + ε; support S = α(a)·U + ν, with U, ν, ε independent standard normal and α(a) linear in age
+      between the two slider values. The observed support measure is S* = S + m with reliability r. The slope of Y on S*
+      is r·(β + γ·α(a)/(α(a)² + 1)). Even with a constant β, the slope varies with age whenever α(a) does.
+      Adjusting for good measures of U removes the bias; that is why the analysis plan adjusts for <em>pre-exposure</em>
+      engagement and achievement, and reports sensitivity analyses for what remains unmeasured.</p>
+    </details>
+
+    <h2 style="margin-top:2.4rem">Analysis plan at a glance</h2>
+    <div class="grid g3" id="methodCards"></div>
+    <h3>Life-course models we will compare</h3>
+    <p>When the same support measure is repeated, we compare nested models (the life-course "structured approach"):</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Model</th><th>What it says</th><th>Hypothesis</th></tr></thead>
+      <tbody>
+        <tr><td>Critical period</td><td>Support only matters in one window</td><td>H1–H4</td></tr>
+        <tr><td>Sensitive periods</td><td>Support matters in every window, more in some</td><td>H1–H4 (weaker form)</td></tr>
+        <tr><td>Accumulation</td><td>Each period of support adds equally; duration matters, not timing</td><td>H6</td></tr>
+        <tr><td>Mobility</td><td>Gaining or losing support matters</td><td>H7 (transitions)</td></tr>
+        <tr><td>Saturated</td><td>Any pattern; the benchmark the others are tested against</td><td>—</td></tr>
+      </tbody></table></div>
+    <h3>Reproduce the work</h3>
+    <pre class="card" style="overflow-x:auto"><code>git clone &lt;repository&gt;
+cd turning-point-project
+python -m venv .venv &amp;&amp; . .venv/bin/activate
+pip install -e ".[dev,stata]"
+pytest                          # software tests (synthetic data only)
+python scripts/build_site_data.py   # rebuild this site's data from docs/</code></pre>
+  </div>
+</section>
+
+<!-- FINDINGS -->
+<section id="findings">
+  <div class="wrap">
+    <div class="eyebrow">Research findings</div>
+    <h2>Findings</h2>
+    <div class="notice"><strong>Nothing to report yet, by design.</strong> The primary analysis will run only after the
+      analysis plan is preregistered and the data extract is validated. When it does, this section will show the
+      estimated association of adult support with educational attainment across ages, with 95% confidence intervals,
+      including a null result if that is what the data show.</div>
+    <div class="grid g3" id="findingsSteps"></div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="wrap">
+    <div class="eyebrow">Publications</div>
+    <h2>Papers, plans and materials</h2>
+    <div class="grid g2" id="pubCards"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About the researcher</div>
+    <h2>Jonathan Doane, Ph.D.</h2>
+    <div class="grid g2">
+      <div>
+        <p>Jonathan Doane is a mathematician (Ph.D., universal algebra), applied AI researcher, data scientist and
+          educational leader. His work spans machine learning, predictive modeling, NLP, statistical analysis and AI
+          evaluation, alongside AI curriculum development, instructor leadership and evaluation of educational programs.</p>
+        <p>He began his own mathematics education in remedial algebra and went on to a doctorate. Teachers and mentors
+          changed what he believed he could do. That experience motivates this project. It is not evidence for it.
+          The project is designed so that its conclusions do not depend on that story.</p>
+        <p><a class="btn" href="https://jonathandoanephd.github.io/research-portfolio/">Research portfolio</a></p>
+      </div>
+      <div class="card">
+        <h3>Guiding idea</h3>
+        <p style="font-size:1.15rem">“Your roots are part of your story. They don't determine how far you can grow.”</p>
+        <h3>Independence statement</h3>
+        <p class="small">The researcher hopes to found an evidence-based youth mentoring organization. To keep that hope from
+          shaping results, the primary analysis is specified before outcomes are examined, a smallest effect size of
+          interest makes null results informative, and all preregistered results will be reported.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">The Turning Point Project · code MIT-licensed · content reflects work in progress and will change.
+  <span id="buildInfo"></span></div></footer>
+<script src="data/site.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Research decision log
+
+Each entry: date, decision, alternatives considered, reason, and whether it can be revisited.
+Decisions that change the research question are flagged **[needs PI sign-off]**.
+
+| ID | Date | Decision | Alternatives | Reason | Status |
+|---|---|---|---|---|---|
+| D-001 | 2026-11-12 | Host the project as `turning-point-project/` inside the existing `ai-incident-atlas` repository on branch `claude/hopeful-meitner-7n06qq`. | Create a new repository. | The working session can write only to this repository; creating repositories was out of scope and needs explicit authorisation. The folder is self-contained (own `pyproject.toml`, tests, `.gitignore`) and can be split out with `git subtree split -P turning-point-project`. | Revisit: move to its own repo **[needs PI action]** |
+| D-002 | 2026-11-12 | Implement design-based variance (Taylor linearisation, with-replacement PSU approximation) in-house on top of statsmodels. | Python `samplics`; call R `survey` via rpy2. | Keeps the stack pure Python with few dependencies. Validated by unit tests against statsmodels' cluster-robust estimator and by a Monte Carlo coverage test. Before publication, cross-check primary estimates against R `survey` or Stata `svy`. | Open: cross-check pending |
+| D-003 | 2026-11-12 | Primary age-moderation model: exposure × restricted cubic spline of age (3–4 knots, Harrell placement), with age bands as a pre-specified sensitivity analysis. | Linear interaction only; GAM with penalised smooths. | Splines avoid assuming linear change in the association while keeping a small, prespecifiable number of parameters for a design-adjusted Wald test. | Revisit after feasibility of age range is known |
+| D-004 | 2026-11-12 | No composite "turning point score"; no equal domain weights. | Weighted index across the 8 domains. | No construct-validity basis for a composite; it would hide which domain drives any association. | Final |
+| D-005 | 2026-11-12 | Change-point methods only with ≥ 6 repeated observations of a construct per person (code enforces `min_obs=6`). | Apply to 3–5 wave series. | With few waves a slope change is not distinguishable from noise or measurement error. | Revisit per dataset |
+| D-006 | 2026-11-12 | Outcome analyses are blocked until (a) the SAP is preregistered and (b) an institutional determination on human-subjects review is recorded. Data ingestion and validation (distributions, missingness) may proceed before then. | Explore outcomes first. | Prevents analytic flexibility from shaping the confirmatory question. | Final |
+| D-007 | 2026-11-12 | Website is a dependency-free static site (HTML/CSS/JS) built from `docs/` by `scripts/build_site_data.py`; not deployed. | React/Vite app; Plotly CDN. | GitHub Pages compatible, fast, accessible, and the site's content cannot drift from the documents. Deployment needs explicit authorisation. | Deploy **[needs PI authorisation]** |

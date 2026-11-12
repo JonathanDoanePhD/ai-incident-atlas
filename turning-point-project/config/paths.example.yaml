@@ -1,0 +1,4 @@
+# Copy to config/local.yaml (git-ignored) and edit, or set the TPP_DATA_DIR environment variable.
+# All paths may be absolute or relative to the project root.
+data_dir: data            # contains raw/ and processed/
+outputs_dir: outputs
