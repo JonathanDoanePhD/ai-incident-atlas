@@ -52,7 +52,7 @@ graph LR
 |---|---|---|---|
 | Confounding by family resources | SES affects both access to supportive adults and attainment | Adjust for pre-exposure income/poverty, parent education, household structure | Measured with error; residual confounding likely |
 | Selection on the young person (reverse causation) | Engaged, high-achieving youth attract and keep mentors and teachers' attention | Adjust for *pre-exposure* achievement and engagement; never adjust for post-exposure values | Unmeasured `U` (sociability) — E-values; negative-control outcomes if available |
-| Time-varying confounding | Engagement at t affects support at t+1 and is itself affected by support at t | If repeated exposure is analysed, use g-methods (inverse-probability-weighted marginal structural models) rather than conditioning on intermediate engagement | Requires correct exposure models and positivity |
+| Time-varying confounding | Engagement at t affects support at t+1 and is itself affected by support at t | If repeated exposure is analyzed, use g-methods (inverse-probability-weighted marginal structural models) rather than conditioning on intermediate engagement | Requires correct exposure models and positivity |
 | Age–cohort–period confounding | In single-cohort studies with a range of baseline ages, age at baseline is collinear with birth year and grade | Adjust for grade where possible; report that age effects are identified only under the assumption of no cohort differences within a ~5-year birth window | Not testable within one cohort |
 | Measurement non-comparability across ages | Items may be asked differently at different ages, or mean different things to a 12- and 17-year-old | Use only identically worded items for timing contrasts; test measurement invariance for multi-item scales | Invariance tests have limited power |
 | Retrospective onset reports | "How old were you when this relationship began?" reported years later | Treat onset analyses as secondary; consider recall-error sensitivity analyses | Survivorship: only relationships remembered as important are reported |
@@ -62,7 +62,7 @@ graph LR
 
 ## What would support causal claims
 
-- **Randomised mentoring trials** that enrol across ages and report effects by age (see
+- **Randomized mentoring trials** that enroll across ages and report effects by age (see
   `literature_review.md`; most trials are not powered for age moderation).
 - **Quasi-experiments** that move the *age at exposure* for reasons unrelated to the young person,
   such as age-at-move designs in housing-mobility research.

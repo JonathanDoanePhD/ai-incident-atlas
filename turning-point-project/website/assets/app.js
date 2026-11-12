@@ -242,8 +242,7 @@
   const $ = (s) => document.querySelector(s);
   const f2 = (x) => (x >= 0 ? "" : "−") + Math.abs(x).toFixed(2);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  $("#topNotice").innerHTML = `<strong>Results from four planned analyses in three national cohorts are in.</strong> None found reliable evidence that support
-    earlier in childhood or adolescence carries more long-run weight. See <a href="#findings">Findings</a>. These are adjusted associations from observational data, not causal effects.`;
+
   let who = "mother", cat = false;
   function chart(P) {
     const pts = cat ? P.theta_categorical : P.theta;
@@ -369,7 +368,7 @@
         <div class="table-wrap"><table><thead><tr><th>Analysis</th><th>Association at 14</th><th>Difference 16 vs 12</th></tr></thead><tbody>${sensRows}</tbody></table></div>
         <p class="small">S5a uses a 1–3 ordinal score (per step); S5b the multi-item scale (per point, subsample). Scales differ from the binary primary exposure.</p>
       </details>
-      <p class="small">Design: ${F.m} imputations, Taylor-linearised variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
+      <p class="small">Design: ${F.m} imputations, Taylor-linearized variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
       ${F.b2 ? b2Block(F.b2) : ""}
       ${F.p2 ? p2Block(F.p2) : ""}
       ${F.accum ? accumBlock(F.accum) : ""}`;

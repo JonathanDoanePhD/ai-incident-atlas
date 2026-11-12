@@ -14,9 +14,9 @@ socioeconomic trajectories?
 
 | Concept | Question it answers | Evidence that can address it |
 |---|---|---|
-| A. Developmental sensitivity | Is a stage especially *responsive* to a given input? | Randomised or quasi-experimental variation in the *age at exposure* (e.g. age-at-move designs, trials that randomise or stratify by age). Observational age-by-exposure interactions are at best suggestive. |
+| A. Developmental sensitivity | Is a stage especially *responsive* to a given input? | Randomized or quasi-experimental variation in the *age at exposure* (e.g. age-at-move designs, trials that randomize or stratify by age). Observational age-by-exposure interactions are at best suggestive. |
 | B. Decision significance | Does a transition or decision have unusually large downstream consequences? | Longitudinal data around institutional transitions (e.g. course-taking at grade 9), with designs that handle selection into choices. |
-| C. Intervention opportunity | Is intervening at a stage practical, reachable and cost-effective? | Programme delivery data, costs, take-up, trial effect sizes by age; not answerable from survey associations. |
+| C. Intervention opportunity | Is intervening at a stage practical, reachable and cost-effective? | Program delivery data, costs, take-up, trial effect sizes by age; not answerable from survey associations. |
 | D. Observed trajectory change | Did a person's measured trajectory bend? | Dense repeated measures of the same construct; growth/change-point models. Describes change, does not explain it. |
 
 A finding about one of these is not a finding about the others. For example, a larger
@@ -46,14 +46,14 @@ public-use dataset (see the feasibility column). Only the narrowed confirmatory 
 > after adjustment for pre-exposure family and structural characteristics?
 
 This narrows "supportive adults" to **parents** (D-009, signed off by the PI 2026-11-12), because no usable
-adolescent cohort repeats a nonparental-mentor measure across ages in a way this project may analyse
+adolescent cohort repeats a nonparental-mentor measure across ages in a way this project may analyze
 (Add Health is excluded by its AI-use policy, D-008). Full plan: `statistical_analysis_plan.md`.
 
 ### Feasibility summary by hypothesis (from the audits)
 
 | Hypothesis | Best available design | Strength |
 |---|---|---|
-| H1 vs H2 (8–11 vs 12–15) | PSID-CDS 2002/2007 identical "how close" items (mother, favourite teachers, other adults) → TAS/PSID attainment; FFCWS ages 9 vs 15 as replication | Weak–moderate: small overlap subsample; one measure per window |
+| H1 vs H2 (8–11 vs 12–15) | PSID-CDS 2002/2007 identical "how close" items (mother, favorite teachers, other adults) → TAS/PSID attainment; FFCWS ages 9 vs 15 as replication | Weak–moderate: small overlap subsample; one measure per window |
 | H2 vs H3 (12–15 vs 16–18) | NLSY97 round-1 support × age 12–16 | Moderate for associations; age confounded with cohort and co-residence |
 | H4 (18–24) | Not credibly testable for adult support with audited public data | — |
 | H5 (individualised timing) | Heterogeneity analyses in NLSY97 (exploratory, underpowered) | Weak |

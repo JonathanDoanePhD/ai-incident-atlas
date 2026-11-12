@@ -42,7 +42,7 @@ ages outside 12–16, or about what would happen if support were changed (concep
 |---|---|---|
 | Round-1 respondents | 8,984 | 8,984 |
 | In item universe (living with a parent figure of that sex) | 8,610 | 6,443 |
-| Valid answer (analysed) | 8,607 | 6,436 |
+| Valid answer (analyzed) | 8,607 | 6,436 |
 | Attainment observed at a 2010+ interview (age ≥ 25) | 7,838 | 5,816 |
 | Attainment imputed | 769 | 620 |
 | Fraction of missing information (Δ) | 0.08 | 0.11 |
@@ -103,7 +103,7 @@ are not evidence of differences between groups.
 - **Extraction:** counts in the 24-column extract match the codebook exactly for the exposure items,
   age, last-interview round and sex. Extract SHA-256 `462bc6f1…1f90` (manifest in `data/processed/`, git-ignored).
 - **Variance:** a delete-one-PSU jackknife (`scripts/crosscheck_variance.py`), which shares no variance
-  code with the main estimator, reproduces the linearised standard errors to three decimals
+  code with the main estimator, reproduces the linearized standard errors to three decimals
   (ratio 1.000 for both θ(14) and Δ).
 - **Estimator:** unit tests include agreement with statsmodels' cluster-robust variance and a Monte
   Carlo bias and coverage check (`tests/test_modeling.py`).
@@ -117,7 +117,7 @@ are not evidence of differences between groups.
 | 2 | Cross-check estimates against R `survey` | R not available; the `samplics` package fails on this numpy version. Replaced by an independent JK2 jackknife | Agreement to 3 decimals |
 | 3 | S6b custom longitudinal weight | Not run: NLS custom weights come from an online tool not available offline | One planned sensitivity analysis missing |
 | 4 | Exploratory: life-course models of 1997–2000 items; earnings and employment | Not run (variables not extracted) | Exploratory only |
-| 5 | Implementation details not spelled out in the plan | Subpopulations analysed by domain estimation (zero weight outside, full design kept). PMM imputation (statsmodels MICE, k = 5); some household-type dummies are constant in a sample and are dropped from models. S3 universe model: age, age², sex, race/ethnicity, urban, poverty (with missing indicators) | None on primary estimates |
+| 5 | Implementation details not spelled out in the plan | Subpopulations analyzed by domain estimation (zero weight outside, full design kept). PMM imputation (statsmodels MICE, k = 5); some household-type dummies are constant in a sample and are dropped from models. S3 universe model: age, age², sex, race/ethnicity, urban, poverty (with missing indicators) | None on primary estimates |
 | 6 | Bug found during checking | The item-universe flag compared against a misspelled missing-code label, so S3 was initially a no-op and the flow counts were wrong. Fixed and fully re-run before this report. The reported n for S5b counted padding rows; corrected | Primary results unaffected |
 
 ## Limitations

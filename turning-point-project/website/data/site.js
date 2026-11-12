@@ -17,7 +17,7 @@ window.SITE_DATA = {
    "id": "C",
    "title": "Intervention opportunity",
    "question": "Is intervening at this stage practical, reachable and cost-effective?",
-   "evidence": "Programme delivery, take-up, costs and trial effects by age. Surveys cannot answer it."
+   "evidence": "Program delivery, take-up, costs and trial effects by age. Surveys cannot answer it."
   },
   {
    "id": "D",
@@ -35,7 +35,7 @@ window.SITE_DATA = {
   {
    "title": "Dataset audit",
    "state": "done",
-   "text": "12 longitudinal studies audited from official documentation; 150 variables catalogued."
+   "text": "12 longitudinal studies audited from official documentation; 150 variables cataloged."
   },
   {
    "title": "Analysis plan",
@@ -77,7 +77,7 @@ window.SITE_DATA = {
    "open": [
     {
      "label": "uncertain",
-     "text": "Neighbourhood exposure is not the same as a supportive adult relationship; whether the same age pattern holds for relationships is untested."
+     "text": "Neighborhood exposure is not the same as a supportive adult relationship; whether the same age pattern holds for relationships is untested."
     },
     {
      "label": "blocked",
@@ -150,7 +150,7 @@ window.SITE_DATA = {
     {
      "label": "evidence",
      "cite": "Heller et al., 2017",
-     "text": "Becoming a Man, a school-based programme for adolescent boys, raised graduation rates in a randomised trial; the authors found no positive evidence that a generic mentoring effect explained it."
+     "text": "Becoming a Man, a school-based program for adolescent boys, raised graduation rates in a randomized trial; the authors found no positive evidence that a generic mentoring effect explained it."
     }
    ],
    "open": [
@@ -184,7 +184,7 @@ window.SITE_DATA = {
    "open": [
     {
      "label": "blocked",
-     "text": "No audited public dataset this project may analyse repeats a measure of adult support through ages 18–24."
+     "text": "No audited public dataset this project may analyze repeats a measure of adult support through ages 18–24."
     }
    ],
    "feasibility": "NLSY97 and TAS observe these ages, but comparable support measures are sparse."
@@ -467,10 +467,10 @@ window.SITE_DATA = {
     "y": 30,
     "domain": "Domain 8",
     "paperRole": "Confounder (adjusted)",
-    "description": "Income, neighbourhood poverty, school resources and discrimination shape both access to supportive adults and educational opportunity.",
+    "description": "Income, neighborhood poverty, school resources and discrimination shape both access to supportive adults and educational opportunity.",
     "constructs": [
      "household income-to-poverty ratio",
-     "neighbourhood poverty",
+     "neighborhood poverty",
      "school resources",
      "discrimination"
     ],
@@ -2032,7 +2032,7 @@ window.SITE_DATA = {
  "methods": [
   {
    "title": "Survey-weighted models",
-   "text": "Design-based variance by Taylor linearisation (NLSY97 strata and PSUs) or replicate weights (HSLS:09), validated against reference estimators and by simulation."
+   "text": "Design-based variance by Taylor linearization (NLSY97 strata and PSUs) or replicate weights (HSLS:09), validated against reference estimators and by simulation."
   },
   {
    "title": "Timing model",
@@ -2044,7 +2044,7 @@ window.SITE_DATA = {
   },
   {
    "title": "Multiplicity",
-   "text": "One primary and one secondary confirmatory test (Holm). Everything else is labelled exploratory."
+   "text": "One primary and one secondary confirmatory test (Holm). Everything else is labeled exploratory."
   },
   {
    "title": "Sensitivity",
@@ -2052,7 +2052,7 @@ window.SITE_DATA = {
   },
   {
    "title": "Ethics",
-   "text": "De-identified secondary data only; no microdata in the repository; small-cell suppression; no individual-level prediction or labelling."
+   "text": "De-identified secondary data only; no microdata in the repository; small-cell suppression; no individual-level prediction or labeling."
   }
  ],
  "findingsSteps": [
@@ -2180,6 +2180,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "398232e"
+  "commit": "cf9be13"
  }
 };

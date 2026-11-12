@@ -3,7 +3,7 @@
 Every citation key used in the site content below must exist in docs/references.bib; the build
 fails otherwise (and tests/test_site.py checks it). Dataset text comes from the audit CSVs;
 the only hand-entered dataset fields are approximate age ranges for the coverage chart (grade-
-to-age conversions are ours and are labelled approximate on the site).
+to-age conversions are ours and are labeled approximate on the site).
 """
 from __future__ import annotations
 
@@ -102,14 +102,14 @@ CONCEPTS = [
     dict(id="B", title="Decision significance", question="Does a transition or choice have unusually large downstream consequences?",
          evidence="Longitudinal data around transitions, with designs that handle who makes which choice."),
     dict(id="C", title="Intervention opportunity", question="Is intervening at this stage practical, reachable and cost-effective?",
-         evidence="Programme delivery, take-up, costs and trial effects by age. Surveys cannot answer it."),
+         evidence="Program delivery, take-up, costs and trial effects by age. Surveys cannot answer it."),
     dict(id="D", title="Observed trajectory change", question="Did a measured trajectory actually bend?",
          evidence="Dense repeated measures of the same construct. Describes change; does not explain it."),
 ]
 
 STATUS = [
     dict(title="Literature review", state="done", text="87 works verified against Crossref; full texts of 10 key works checked for age effects."),
-    dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables catalogued."),
+    dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables cataloged."),
     dict(title="Analysis plan", state="done", text="Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."),
     dict(title="Findings", state="prog", text="Four analyses, three cohorts, ages 6–17: no reliable sign that earlier support carries more long-run weight; duration looks more important than timing."),
 ]
@@ -123,7 +123,7 @@ STAGES = [
              dict(label=E, cite="chetty2018", text="Across movers, outcomes improved roughly linearly with each childhood year spent in a better area: evidence of accumulated exposure rather than one window (working-paper abstract; verify against the published article)."),
              dict(label=E, cite="cunha2007", text="Skill-formation models: skills built earlier raise the payoff of later investment (dynamic complementarity)."),
          ],
-         open=[dict(label=U, text="Neighbourhood exposure is not the same as a supportive adult relationship; whether the same age pattern holds for relationships is untested."),
+         open=[dict(label=U, text="Neighborhood exposure is not the same as a supportive adult relationship; whether the same age pattern holds for relationships is untested."),
                dict(label=X, text="Adolescent-start cohorts (NLSY97, HSLS:09, ELS:2002) cannot observe these ages.")],
          feasibility="Best public option: PSID-CDS 2002 vs 2007 identical 'how close' items, for a small overlapping subsample (paper 2)."),
     dict(hid="H2", name="Early adolescence", ages=[12, 15],
@@ -142,7 +142,7 @@ STAGES = [
          evidence=[
              dict(label=E, cite="roorda2011", text="In a meta-analysis, associations of teacher–student relationships with engagement and achievement were stronger in higher grades overall, though negative relationships mattered more in primary school (correlational)."),
              dict(label=E, cite="fruiht2013", text="In Add Health, mentors who became important after high school were associated with the most attainment; teacher mentors were the strongest predictors (retrospective, observational)."),
-             dict(label=E, cite="heller2017", text="Becoming a Man, a school-based programme for adolescent boys, raised graduation rates in a randomised trial; the authors found no positive evidence that a generic mentoring effect explained it."),
+             dict(label=E, cite="heller2017", text="Becoming a Man, a school-based program for adolescent boys, raised graduation rates in a randomized trial; the authors found no positive evidence that a generic mentoring effect explained it."),
          ],
          open=[dict(label=U, text="Associations closer in time to the outcome may be larger for reasons unrelated to sensitivity (proximity, selection).")],
          feasibility="NLSY97 (to age 16 at round 1), HSLS:09 grade 11 and ELS:2002 grade 12 observe these ages."),
@@ -150,7 +150,7 @@ STAGES = [
          hypothesis="Experiences around ages 18–24 can substantially alter trajectories through education, work and independence.",
          evidence=[dict(label=E, cite="fruiht2013", text="The same Add Health study found post-high-school mentors associated with the highest attainment."),
                    dict(label=E, cite="cunha2010", text="For noncognitive skills, later investment can substitute for earlier investment more readily than for cognitive skills.")],
-         open=[dict(label=X, text="No audited public dataset this project may analyse repeats a measure of adult support through ages 18–24.")],
+         open=[dict(label=X, text="No audited public dataset this project may analyze repeats a measure of adult support through ages 18–24.")],
          feasibility="NLSY97 and TAS observe these ages, but comparable support measures are sparse."),
     dict(hid="H6/H7", name="Duration and transitions", ages=[12, 18],
          hypothesis="Consistency and duration of support (H6), and support around institutional transitions (H7), may matter more than chronological age.",
@@ -165,8 +165,8 @@ STAGES = [
 FRAMEWORK = {
     "nodes": [
         dict(id="ses", label="Structural\nconditions", x=20, y=30, domain="Domain 8", paperRole="Confounder (adjusted)",
-             description="Income, neighbourhood poverty, school resources and discrimination shape both access to supportive adults and educational opportunity.",
-             constructs=["household income-to-poverty ratio", "neighbourhood poverty", "school resources", "discrimination"]),
+             description="Income, neighborhood poverty, school resources and discrimination shape both access to supportive adults and educational opportunity.",
+             constructs=["household income-to-poverty ratio", "neighborhood poverty", "school resources", "discrimination"]),
         dict(id="fam", label="Family\nenvironment", x=20, y=150, domain="Domain 3", paperRole="Confounder (adjusted) and moderator (exploratory)",
              description="Household structure, stability and economic hardship are treated as contexts, not deficits.",
              constructs=["household structure", "economic hardship", "family stability", "caregiver involvement"]),
@@ -205,12 +205,12 @@ FRAMEWORK = {
 }
 
 METHODS = [
-    dict(title="Survey-weighted models", text="Design-based variance by Taylor linearisation (NLSY97 strata and PSUs) or replicate weights (HSLS:09), validated against reference estimators and by simulation."),
+    dict(title="Survey-weighted models", text="Design-based variance by Taylor linearization (NLSY97 strata and PSUs) or replicate weights (HSLS:09), validated against reference estimators and by simulation."),
     dict(title="Timing model", text="Support × age interaction; the age-16 vs age-12 contrast is tested for difference and for equivalence against a smallest effect size of interest."),
     dict(title="Missing data", text="Survey missing codes are kept by reason; multiple imputation (m = 40) pooled by Rubin's rules; complete-case sensitivity analysis."),
-    dict(title="Multiplicity", text="One primary and one secondary confirmatory test (Holm). Everything else is labelled exploratory."),
+    dict(title="Multiplicity", text="One primary and one secondary confirmatory test (Holm). Everything else is labeled exploratory."),
     dict(title="Sensitivity", text="Age as categories, selection into co-residence, grade adjustment, alternative exposure codings, E-values for unmeasured confounding."),
-    dict(title="Ethics", text="De-identified secondary data only; no microdata in the repository; small-cell suppression; no individual-level prediction or labelling."),
+    dict(title="Ethics", text="De-identified secondary data only; no microdata in the repository; small-cell suppression; no individual-level prediction or labeling."),
 ]
 
 FINDINGS_STEPS = [
@@ -247,7 +247,7 @@ RECOMMENDATION = ("<strong>Design choice for paper 1:</strong> NLSY97 asks the s
 NODE_PATTERNS = {
     "support": r"support|close|teacher|mentor|counsel|warm|adult",
     "identity": r"expect|aspir|efficacy|control|mastery|self",
-    "engage": r"engag|belong|course|enrol",
+    "engage": r"engag|belong|course|enroll",
     "fam": r"famil|household|structure|parent ed",
     "ses": r"income|pover|ses|neighbo",
     "prior": r"achiev|test score|assessment|prior",

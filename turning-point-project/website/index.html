@@ -4,39 +4,64 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Turning Point Project</title>
-<meta name="description" content="When, how, and for whom do supportive relationships and developmental experiences shape young people's future trajectories? A transparent, preregistration-first research programme.">
+<meta name="description" content="When, how, and for whom do supportive relationships and developmental experiences shape young people's future trajectories? A transparent, preregistration-first research program.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
 <script>try{const t=localStorage.getItem('tpp-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#overview"><span class="dot" aria-hidden="true"></span>The Turning Point Project</a>
+    <a class="brand" href="#overview"><img src="assets/img/fox-head.webp" alt="" width="30" height="30">The Turning Point Project</a>
     <nav class="main" aria-label="Sections">
       <a href="#overview">Overview</a><a href="#timeline">Timeline</a><a href="#factors">Factors</a>
       <a href="#datasets">Datasets</a><a href="#evidence">Evidence</a><a href="#methods">Methods</a>
       <a href="#findings">Findings</a><a href="#publications">Publications</a><a href="#about">About</a>
     </nav>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle colour theme">Theme</button>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">Theme</button>
   </div>
 </header>
 
 <main id="main">
 <!-- OVERVIEW -->
-<section id="overview">
-  <div class="wrap">
-    <div class="eyebrow">Research programme · in progress</div>
-    <h1>When does adult support matter most?</h1>
-    <p class="lede">When, how, and for whom do supportive relationships and developmental experiences shape young people's
-      educational and life trajectories? This project tests that question against long-running national studies,
-      with the analysis plan written before outcomes are examined.</p>
-    <div class="notice" id="topNotice"><strong>No empirical findings yet.</strong> This site shows the research design, verified literature
-      and dataset coverage. Charts labelled <em>illustrative</em> contain no data. Results will appear under
-      <a href="#findings">Findings</a> only after a preregistered, reproducible analysis has been run and checked.</div>
+<section id="overview" style="padding-top:0">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Research program · Jonathan D. Doane, Ph.D.</div>
+        <h1>When does adult support matter most?</h1>
+        <p class="lede">When, how, and for whom do supportive relationships shape young people's educational trajectories?
+          Four pre-planned analyses of three national U.S. cohorts, spanning ages 6 to 17, put the idea of a single
+          turning-point age to the test.</p>
+        <p style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem">
+          <a class="btn" href="#findings">See the findings</a>
+          <a class="btn ghost" href="../manuscripts/working_paper_v2.md">Read the working paper</a>
+        </p>
+      </div>
+      <canvas id="heroGeo" width="760" height="760" aria-hidden="true"></canvas>
+    </div>
+    <div class="credit">©2026 Jonathan D. Doane <img src="assets/img/fox-head.webp" alt="" width="26" height="26"></div>
+  </div>
+  <div class="wrap" style="padding-top:2.4rem">
+    <div class="grid g2" style="align-items:start">
+      <div class="card">
+        <h3>Latest updates</h3>
+        <ul class="updates">
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Working paper v2</strong> brings all four analyses together.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Ages 6–9 vs 10–14</strong> (NLSY79 Children and Young Adults): no middle-childhood window.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Grade 9 vs grade 11</strong> (HSLS:09): freshman-year teacher support no more predictive.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Timing vs duration</strong> (NLSY97): consistent with accumulation.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Full-text check</strong> of mentoring meta-analyses: no significant age effects.</span></li>
+        </ul>
+      </div>
+      <div class="notice" id="topNotice" style="margin:0"><strong>Results from four planned analyses in three national cohorts are in.</strong>
+        None found reliable evidence that support earlier in childhood or adolescence carries more long-run weight.
+        These are adjusted associations from observational data, not causal effects. Charts labeled <em>illustrative</em> contain no data.</div>
+    </div>
     <div class="legend" aria-label="Label legend">
       <span><span class="pill evidence">Evidence</span> verified published research</span>
       <span><span class="pill hypothesis">Hypothesis</span> a claim we will test</span>
@@ -70,13 +95,13 @@
 <!-- FACTORS -->
 <section id="factors">
   <div class="wrap">
-    <div class="eyebrow">Explore the factors</div>
-    <h2>A conceptual and causal map</h2>
+    <div class="section-head"><div><div class="eyebrow">Explore the factors</div>
+    <h2>A conceptual and causal map</h2></div><img src="assets/img/fox-network.webp" alt="" width="110" height="110" loading="lazy"></div>
     <p>Select a factor to see its role in the first study, example constructs, and which datasets measure it. Toggle the
       paths to compare the pathways we hope to estimate with the confounding paths that make estimation hard.
       Arrows encode <em>assumptions</em>, not findings.</p>
     <div class="controls" role="group" aria-label="Path display">
-      <label class="chk"><input type="radio" name="pathMode" value="causal" checked> Hypothesised pathways</label>
+      <label class="chk"><input type="radio" name="pathMode" value="causal" checked> Hypothesized pathways</label>
       <label class="chk"><input type="radio" name="pathMode" value="confound"> Confounding and selection paths</label>
       <label class="chk"><input type="radio" name="pathMode" value="all"> All</label>
     </div>
@@ -182,8 +207,8 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
 <!-- FINDINGS -->
 <section id="findings">
   <div class="wrap">
-    <div class="eyebrow">Research findings</div>
-    <h2>Findings</h2>
+    <div class="section-head"><div><div class="eyebrow">Research findings</div>
+    <h2>Findings</h2></div><img src="assets/img/fox-chart.webp" alt="" width="120" height="110" loading="lazy"></div>
     <div id="findingsBody">
       <div class="notice"><strong>Nothing to report yet, by design.</strong> The primary analysis runs only after the
         analysis plan is frozen and the data extract is validated.</div>
@@ -204,8 +229,8 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
-    <div class="eyebrow">About the researcher</div>
-    <h2>Jonathan Doane, Ph.D.</h2>
+    <div class="section-head"><div><div class="eyebrow">About the researcher</div>
+    <h2>Jonathan Doane, Ph.D.</h2></div><img src="assets/img/fox-standing.webp" alt="Low-poly orange fox, the researcher's brand mark" width="110" height="110" loading="lazy"></div>
     <div class="grid g2">
       <div>
         <p>Jonathan Doane is a mathematician (Ph.D., universal algebra), applied AI researcher, data scientist and
@@ -228,10 +253,11 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
   </div>
 </section>
 </main>
-<footer><div class="wrap">The Turning Point Project · code MIT-licensed · content reflects work in progress and will change.
-  <span id="buildInfo"></span></div></footer>
+<footer><div class="wrap"><img src="assets/img/fox-head.webp" alt="" width="28" height="28">
+  <span>©2026 Jonathan D. Doane · The Turning Point Project · code MIT-licensed · work in progress<span id="buildInfo"></span></span></div></footer>
 <script src="data/site.js"></script>
 <script src="data/findings.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/hero.js"></script>
 </body>
 </html>

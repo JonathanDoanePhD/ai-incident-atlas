@@ -4,7 +4,7 @@
 
 ## Abstract
 
-**Background.** Programmes for young people are often justified by appeals to developmental windows:
+**Background.** Programs for young people are often justified by appeals to developmental windows:
 periods, such as middle childhood or the first year of high school, when supportive adults are thought to
 matter most. Evidence that the long-run payoff of support differs by age is scarce.
 **Methods.** We ran four pre-planned analyses, each frozen before its data were opened, in three national
@@ -18,7 +18,7 @@ for a very supportive parent (NLSY97), and 1–2 percentage points of bachelor's
 in early adolescence (CYA). No study found reliable evidence that support measured *earlier* carried more
 weight. The only estimate pointing that way (fathers in NLSY97) was statistically equivalent to no difference. Age 16 vs 12: +0.26 years for mothers (−0.21 to 0.74), −0.18 for fathers (−0.64 to 0.27;
 equivalent within ±0.2 SD). Grade 11 vs grade 9: +1.3 points (−0.4 to 3.1; equivalent within ±3 points). Ages 6–9
-vs 10–14: −1.7 points (−3.9 to 0.6), favouring early adolescence. Each additional year of maternal support in
+vs 10–14: −1.7 points (−3.9 to 0.6), favoring early adolescence. Each additional year of maternal support in
 1997–2000 was associated with 0.22 more grades completed, and equal weighting of years was not rejected.
 **Conclusions.** Across cohorts, adults, measures and age ranges, these data do not support a narrow early window,
 including the freshman year, for supportive relationships. They are more consistent with support that matters
@@ -34,13 +34,13 @@ of heightened plasticity and opportunity for intervention (Dahl et al., 2018), b
 adolescent development found concrete evidence mostly lacking (Fuhrmann et al., 2015).
 
 The clearest evidence on the timing of environmental exposure comes from housing mobility. Moving to a
-lower-poverty neighbourhood before age 13 improved college attendance and earnings in the Moving to Opportunity
+lower-poverty neighborhood before age 13 improved college attendance and earnings in the Moving to Opportunity
 experiment, while moving as an adolescent did not (Chetty et al., 2016). Quasi-experimental estimates suggest roughly
-linear gains per childhood year of exposure (Chetty & Hendren, 2018). Skill-formation models emphasise that early skills
+linear gains per childhood year of exposure (Chetty & Hendren, 2018). Skill-formation models emphasize that early skills
 raise returns to later investment (Cunha & Heckman, 2007), while later investment can substitute for earlier investment,
 particularly for noncognitive skills (Cunha et al., 2010).
 
-For supportive relationships the evidence on timing is thinner. Mentoring programmes show small-to-modest average
+For supportive relationships the evidence on timing is thinner. Mentoring programs show small-to-modest average
 benefits (DuBois et al., 2002; Raposa et al., 2019), with the most benefit in relationships lasting a year or longer
 (Grossman & Rhodes, 2002). Teacher–student relationship quality is associated with engagement and achievement, more strongly
 in higher grades (Roorda et al., 2011). The transition to high school is a documented point of disruption (Benner & Graham, 2009),
@@ -54,7 +54,7 @@ between mean sample age (range about 9–16) and effect size, and called this so
 and youth-initiated mentoring found no significant age differences either (Van Dam et al., 2018; van Dam et al., 2021). Within one
 school-based mentoring trial, impacts did not differ reliably between elementary and secondary students (Herrera et al., 2011), as reported in the publicly released trial report,. A meta-analysis of teacher–student relationships found one association
 stronger in secondary than primary school, with the other four equal (Roorda et al., 2017). Between-study age comparisons are
-confounded with programme type, and none compares early childhood with adolescence. Individual-level data with
+confounded with program type, and none compares early childhood with adolescence. Individual-level data with
 comparable measures at different ages are therefore needed.
 
 We ask whether the long-run association of the *same* measure of adult support differs by when it was measured,
@@ -70,7 +70,7 @@ respondent-level data were opened. The plans were not registered with a public r
 verified in official codebooks, and extracts were checked against codebook frequencies. Missing outcome and covariate
 values were multiply imputed by chained equations with predictive mean matching (White et al., 2011) and pooled by Rubin's
 rules (Rubin, 1987). Each primary contrast was tested both for difference from zero and for equivalence within a
-pre-set smallest effect size of interest. Unmeasured confounding was summarised with E-values where relevant
+pre-set smallest effect size of interest. Unmeasured confounding was summarized with E-values where relevant
 (VanderWeele & Ding, 2017). Reporting follows STROBE where applicable (von Elm et al., 2007).
 
 ## 3. Study 1: parental support at ages 12–16 (NLSY97)
@@ -82,7 +82,7 @@ supportive = 1. Moderator: age on 31 December 1996 (12–16). Outcome: highest g
 only if last interviewed in 2010 or later (age ≥ 25). Covariates (1997): log income-to-poverty ratio, household
 structure, residential parents' education, sex, race/ethnicity, urban residence.
 
-**Analysis.** Survey-weighted linear regression with a support × age interaction; Taylor-linearised variance with
+**Analysis.** Survey-weighted linear regression with a support × age interaction; Taylor-linearized variance with
 the public strata and PSUs (117 design degrees of freedom); m = 40. Primary contrast Δ = θ(16) − θ(12), Holm-adjusted
 across mothers and fathers; equivalence bound ±0.20 SD. A paired-PSU jackknife reproduced the standard errors to three
 decimals.
@@ -145,7 +145,7 @@ Four analyses, three cohorts, two kinds of adults (parents and teachers), severa
 consistent answer. Supportive relationships are modestly associated with later educational attainment, and **no
 analysis found reliable evidence that support measured earlier carries more weight than support measured later**. The
 one estimate in that direction (fathers, age 12 vs 16) was statistically equivalent to no difference. Elsewhere the point
-estimates favoured the later measurement: early adolescence over middle childhood, grade 11 over grade 9, and age 16
+estimates favored the later measurement: early adolescence over middle childhood, grade 11 over grade 9, and age 16
 over 12 for mothers. For
 fathers in NLSY97 and for teachers in HSLS:09, the data rule out differences larger than the pre-set bounds.
 
@@ -168,13 +168,13 @@ those with adult outcomes. The plans were frozen privately in a public repositor
 These results cannot show that mentoring works or when to deliver it. They do weaken the case for concentrating support at
 one early age, including the freshman year, on the grounds that it will pay off more there. They are consistent with
 designing for durable relationships that continue across transitions, and with offering support whenever young people can
-be reached. Tests of timing for mentors will require designs that vary when relationships begin, ideally randomised.
+be reached. Tests of timing for mentors will require designs that vary when relationships begin, ideally randomized.
 
 ## Data, code and disclosure
 
 All data are public (BLS: NLSY97 and NLSY79; NCES: HSLS:09). Code, frozen plans with file hashes, variable mappings and
 full results are in the project repository; no respondent-level data are redistributed. The author hopes to found a youth
-mentoring organisation, which creates an interest in particular findings; analysis plans were fixed before data were
+mentoring organization, which creates an interest in particular findings; analysis plans were fixed before data were
 examined to limit that influence. Analysis code and drafting were assisted by an AI system; the author is responsible for
 the content.
 

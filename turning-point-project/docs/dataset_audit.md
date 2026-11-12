@@ -265,7 +265,7 @@ The deciding question is whether supportive-adult measures are repeated at compa
 **2. Paper 1b or 2: HSLS:09, the 9th-grade transition and school-based adults**
 - Data: `S1TALKPROB`, `X1SCHOOLBEL`, the teacher items `S1MTCH*`/`S1STCH*` versus `S2MTCH*`/`S2STCH*`, and counselor contact.
 - Outcome: `X6HIGHDEG` and `X4ATPRLVLA`.
-- Method: BRR weights. Treat the 9th-versus-11th contrast as stage-specific, not causal, and use the repeated teacher items, with selection into course-taking modelled, for the formal timing test.
+- Method: BRR weights. Treat the 9th-versus-11th contrast as stage-specific, not causal, and use the repeated teacher items, with selection into course-taking modeled, for the formal timing test.
 
 **3. ELS:2002**
 - Out-of-cohort replication of the HSLS 10th/12th-grade school-adult contrasts. Attainment to 2012.

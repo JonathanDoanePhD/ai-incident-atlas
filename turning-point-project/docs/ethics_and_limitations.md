@@ -6,7 +6,7 @@ Status: draft v0.1.
 
 - **Secondary data only, public-use first.** Paper 1 is designed to use de-identified public-use
   files. Restricted-use files (e.g. geocodes, full Add Health samples) would require the data
-  steward's licence, a security plan, and institutional approval; none are requested yet.
+  steward's license, a security plan, and institutional approval; none are requested yet.
 - **No microdata in the repository.** `.gitignore` excludes `data/raw/` and `data/processed/`
   and common survey file formats; `tpp check-repo` and a unit test fail if any are tracked.
 - **Data stewards' AI-use terms.** Add Health's Conditions of Use forbid processing its data
@@ -31,14 +31,14 @@ Status: draft v0.1.
 - Family circumstances (household structure, caregiver substance use, poverty) are contexts.
   Reporting will avoid deficit language and will not present household structure as a cause
   without a design that supports that.
-- Demographic and equity variables are analysed only in aggregate.
+- Demographic and equity variables are analyzed only in aggregate.
 - Misclassification risk: if findings were ever used to target services, false negatives would
-  deny support and false positives could stigmatise. Any future targeting should favour
+  deny support and false positives could stigmatise. Any future targeting should favor
   universal or self-referral access over prediction-based gatekeeping.
 
 ## Independence from the motivating narrative
 
-The researcher's goal of founding a mentoring organisation creates a conflict of interest toward
+The researcher's goal of founding a mentoring organization creates a conflict of interest toward
 finding that mentoring matters and that a particular window (e.g. freshman year) matters. Safeguards:
 preregistration of the primary contrast before outcome data are examined; reporting all
 preregistered results regardless of direction; an explicit smallest effect size of interest so
@@ -50,8 +50,8 @@ School- or community-based research with minors would need, at minimum: IRB revi
 guardian permission and child assent; district research approval; FERPA-compliant handling of
 education records; a data management and security plan; mandated-reporter protocols for mentors and
 researchers; mentor screening (background checks) and training; and procedures for withdrawal and
-data destruction. A trial of a mentoring programme should be registered (e.g. on a public registry)
-before enrolment.
+data destruction. A trial of a mentoring program should be registered (e.g. on a public registry)
+before enrollment.
 
 ## Known limitations of the overall design
 
@@ -61,4 +61,4 @@ before enrolment.
    more engaged youth into supportive relationships.
 4. Public-use files sometimes omit variables or subsamples available in restricted files.
 5. The cohorts studied (born 1980s–1990s) grew up in different institutional contexts than
-   young people today; transportability to current programme populations is uncertain.
+   young people today; transportability to current program populations is uncertain.

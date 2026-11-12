@@ -15,7 +15,7 @@ consistent support in every year. Reports in different years correlate only 0.27
 ## Sample
 
 Aged 12–14 in 1996: 5,419; complete four-round exposure history: 3,870;
-complete covariates and observed outcome (analysed): 2,566.
+complete covariates and observed outcome (analyzed): 2,566.
 
 ## Per-round coefficients (all four rounds in one model; grades completed)
 

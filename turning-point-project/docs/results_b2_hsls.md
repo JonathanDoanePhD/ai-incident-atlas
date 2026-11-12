@@ -43,7 +43,7 @@ The items measure perceived teaching more than a close relationship.
 | Student records | 23,503 |
 | Responded in grade 9 and grade 11 (longitudinal weight > 0) | 18,623 |
 | Answered grade-9 math-teacher items | 16,617 |
-| Answered math-teacher items in both grades (analysed) | 14,259 |
+| Answered math-teacher items in both grades (analyzed) | 14,259 |
 | Degree outcome observed (postsecondary records) | 10,592 |
 | Degree outcome imputed | 3,667 |
 
@@ -72,7 +72,7 @@ high in grade 9 only −1.6 (−5.4, +2.1), high in grade 11 only +1.9 (−1.4, 
   replicate-to-full weight ratios) identifies standard BRR without a Fay factor, determined before any outcome model.
 - Plan hash unchanged (`docs/PLAN_FREEZE_B2.md`).
 - Deviation: the logistic sensitivity analysis (S3) used the first 5 of 20 imputations to limit runtime.
-- Each replicate re-standardises the support scores with its own weights (full replication of the standardisation step).
+- Each replicate re-standardizes the support scores with its own weights (full replication of the standardization step).
 - The replicate-weight SE for grade-9 support is close to a robust non-survey SE (design effect ≈ 0.93 in complete cases), plausible for a predictor that varies mostly within schools.
 
 ## Limitations

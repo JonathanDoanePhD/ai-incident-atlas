@@ -37,16 +37,16 @@ Timing enters in three different ways, which we model differently:
 
 ## Domains, constructs and actionability
 
-| Domain | Example constructs | Role in paper 1 | Actionable by a mentoring programme? |
+| Domain | Example constructs | Role in paper 1 | Actionable by a mentoring program? |
 |---|---|---|---|
 | Identity and agency | self-efficacy, locus of control, expectations, aspirations | Mediator (not adjusted for in total-effect models) | Partly |
 | Supportive adults | parent support, teacher connectedness, nonparental mentors, counsellor contact | **Exposure** | Yes (mentors), indirectly (teachers) |
 | Family environment | household structure, economic hardship, stability, conflict | Confounder / moderator (context, not deficit) | No (context) |
 | School engagement | achievement, attendance, belonging, persistence | Pre-exposure levels: confounders; post-exposure: mediators | Partly |
-| Peers and community | friendship quality, participation, neighbourhood | Confounder / moderator | Partly |
+| Peers and community | friendship quality, participation, neighborhood | Confounder / moderator | Partly |
 | Psychological development | well-being, regulation, coping | Confounder (baseline) / secondary outcome | Partly |
 | Transitions and opportunities | grade-9 transition, course selection, postsecondary planning | Timing anchor (H7) | Yes (navigation support) |
-| Structural conditions | income, neighbourhood poverty, school resources, discrimination | Confounder / moderator | No (context), but shape programme design |
+| Structural conditions | income, neighborhood poverty, school resources, discrimination | Confounder / moderator | No (context), but shape program design |
 
 ## Language commitments
 
@@ -55,4 +55,4 @@ Timing enters in three different ways, which we model differently:
   is largely mediated by economic resources, stability and other factors, and is not assumed to be
   causal.
 - We describe *associations* unless a design supports more.
-- Outputs are population-level. Nothing here is a tool for scoring or labelling an individual child.
+- Outputs are population-level. Nothing here is a tool for scoring or labeling an individual child.

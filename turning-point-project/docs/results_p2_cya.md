@@ -29,7 +29,7 @@ outcome, or if what matters is warmth that persists. The design cannot distingui
 |---|---|
 | Children in the CYA | 11,551 |
 | Born 1979–1995 | 9,270 |
-| Praise reported in both windows (analysed) | 6,190 children of 3,138 mothers |
+| Praise reported in both windows (analyzed) | 6,190 children of 3,138 mothers |
 | Outcome observed (last YA interview at age ≥ 25) | 5,680 |
 | Outcome imputed | 510 |
 | Closeness reported in both windows | 3,989 |
@@ -66,7 +66,7 @@ Exposure patterns (low/high at 6–9, 10–14): {'00': 3292, '01': 832, '10': 83
 
 ## Caveats
 
-Mother-reported praise may partly reflect the child's behaviour and achievement (reverse causation). The
+Mother-reported praise may partly reflect the child's behavior and achievement (reverse causation). The
 windows differ in distance to the outcome. The CYA describes children of a 1979 cohort of young women, and children
 born to younger mothers are over-represented among those old enough for adult outcomes. Window boundary is
 age 10, not 12. No strata/PSU in public NLSY79 files: inference clusters on mother only.

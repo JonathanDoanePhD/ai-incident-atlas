@@ -3,7 +3,7 @@
 **When, how, and for whom do supportive relationships and developmental experiences shape young
 people's future trajectories?**
 
-A preregistration-first research programme on the developmental timing of supportive adult
+A preregistration-first research program on the developmental timing of supportive adult
 relationships and educational attainment. Principal investigator: Jonathan Doane, Ph.D.
 ([research portfolio](https://jonathandoanephd.github.io/research-portfolio/)).
 
@@ -21,7 +21,7 @@ relationships and educational attainment. Principal investigator: Jonathan Doane
 | Literature | `docs/literature_review.md` (abstract-level critical review), `docs/evidence_matrix.csv` (87 works), `docs/references.bib`, `docs/citation_verification_log.jsonl` (Crossref record for every DOI), `docs/references_unverified.md` |
 | Data feasibility | `docs/dataset_audit.md` (NLSY97, Add Health, HSLS:09, ELS:2002), `docs/dataset_audit_early_childhood.md` (PSID-CDS/TAS, NLSY79 CYA, FFCWS, ECLS-K, ECLS-K:2011, SECCYD, UK cohorts), comparison CSVs, `docs/variable_dictionary*.{md,csv}` (150 documented variables), `config/datasets.yaml` |
 | Design | `docs/research_questions.md`, `docs/conceptual_framework.md`, `docs/causal_framework.md` + `causal_dag.dot`, `docs/statistical_analysis_plan.md`, `docs/preregistration_draft.md`, `docs/ethics_and_limitations.md`, `docs/research_decision_log.md` |
-| Code | `src/turning_point/`: ingestion with provenance manifests, validation (ranges, identifiers, microdata-in-git guard), missing-code recoding that keeps reasons, scale scoring/reliability, survey-weighted GLMs (Taylor linearisation and replicate weights), restricted cubic splines, age-moderation models, equivalence tests, Rubin pooling, Holm/BH, E-values, life-course structured-approach model comparison, guarded change-point estimation, grouped CV and subgroup calibration, provenance-stamped Plotly figures, CLI |
+| Code | `src/turning_point/`: ingestion with provenance manifests, validation (ranges, identifiers, microdata-in-git guard), missing-code recoding that keeps reasons, scale scoring/reliability, survey-weighted GLMs (Taylor linearization and replicate weights), restricted cubic splines, age-moderation models, equivalence tests, Rubin pooling, Holm/BH, E-values, life-course structured-approach model comparison, guarded change-point estimation, grouped CV and subgroup calibration, provenance-stamped Plotly figures, CLI |
 | Tests | `tests/`: 38 tests incl. agreement with statsmodels' cluster-robust variance, a Monte Carlo bias/coverage check of the primary estimator, life-course model recovery, and site/citation integrity |
 | Website | `website/`: dependency-free static site (GitHub Pages compatible), generated data in `website/data/site.js` |
 | Planning | `scripts/power_age_interaction.py` → `outputs/design_power_age_interaction.csv` (assumed inputs, not data) |
@@ -88,6 +88,6 @@ python scripts/render_manuscript.py manuscripts/working_paper_v2.src.md manuscri
 2. Read the closed-access works flagged in `docs/fulltext_age_moderation.md` (e.g. DuBois et al. 2011) through a library.
 3. Peer feedback on working paper v2.
 
-## Licence and citation
+## License and citation
 
 Code: MIT (`LICENSE`). Cite via `CITATION.cff`. Survey data are © their stewards and are not redistributed.
