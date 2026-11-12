@@ -30,7 +30,7 @@ window.SITE_DATA = {
   {
    "title": "Literature review",
    "state": "done",
-   "text": "87 works verified against Crossref (abstract-level). Gaps documented."
+   "text": "87 works verified against Crossref; full texts of 10 key works checked for age effects."
   },
   {
    "title": "Dataset audit",
@@ -45,7 +45,7 @@ window.SITE_DATA = {
   {
    "title": "Findings",
    "state": "prog",
-   "text": "Two studies, two cohorts: no sign that support measured earlier in adolescence (age 12 vs 16; grade 9 vs 11) carries more long-run weight."
+   "text": "Four analyses, three cohorts, ages 6–17: no reliable sign that earlier support carries more long-run weight; duration looks more important than timing."
   }
  ],
  "stages": [
@@ -307,7 +307,7 @@ window.SITE_DATA = {
   },
   {
    "name": "PSID Child Development Supplement (original CDS 1997/2002/2007) + Transition into Adulthood Supplement (TAS)",
-   "steward": "Candidate for paper 2 (ages 8–11 vs 12–15)",
+   "steward": "Candidate replication (needs registration)",
    "population": "Children aged 0-12 in 1997 in PSID families (up to two per family), nationally representative U.S. family panel incl. 1997 immigrant refresher",
    "n": "CDS-I: 3,563 children in 2,394 families (88% response; 2,380 child households in response-rate section); CDS-II: 2,907…",
    "waves": "CDS 1997, 2002-03, 2007-08; TAS 2005-2015 biennial (original CDS cohort), 2017+ steady-state biennial (all PSID members 18-28); core PSID biennial",
@@ -326,7 +326,7 @@ window.SITE_DATA = {
   },
   {
    "name": "NLSY79 Children and Young Adults (NLSCYA)",
-   "steward": "Accumulation models (H6)",
+   "steward": "Paper 2 (ages 6–9 vs 10–14)",
    "population": "All biological children of female NLSY79 respondents (NLSY79 women were 14-21 on 31 Dec 1978); with weights, representative of children born to that national sample of women, not of a U.S. birth cohort",
    "n": "1986: 5,255 children born to 2,922 interviewed mothers; 4,971 children interviewed. 11,551 children identified as born…",
    "waves": "Child: 1986, 1988, ..., 2014 biennial (16 child rounds through 2020 incl. limited 2016/2018 mother reports); Young Adult: 1994-2020 biennial (14 rounds)",
@@ -2072,9 +2072,19 @@ window.SITE_DATA = {
    "text": "40 imputations, design-based variance, independent jackknife check."
   },
   {
-   "title": "Next: paper 2",
+   "title": "Paper 2",
+   "state": "done",
+   "text": "Ages 6–9 vs 10–14 with NLSY79 Children and Young Adults (mother-reported praise and closeness)."
+  },
+  {
+   "title": "Accumulation",
+   "state": "done",
+   "text": "NLSY97 four-year support histories: duration fits as well as timing."
+  },
+  {
+   "title": "Next: replication",
    "state": "todo",
-   "text": "Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."
+   "text": "PSID child supplement (needs free registration) and Add Health by a human analyst, if desired."
   },
   {
    "title": "Grade 9 vs 11",
@@ -2084,7 +2094,7 @@ window.SITE_DATA = {
   {
    "title": "Working paper",
    "state": "done",
-   "text": "Version 1 written from the results report (see Publications)."
+   "text": "Version 2 brings all four analyses together (see Publications)."
   }
  ],
  "publications": [
@@ -2103,6 +2113,14 @@ window.SITE_DATA = {
    "statusKind": "evidence",
    "link": "../docs/PLAN_FREEZE.md",
    "linkText": "See the freeze record"
+  },
+  {
+   "title": "Full-text check: age in mentoring meta-analyses",
+   "text": "Ten open full texts read; no meta-analysis found significant age moderation.",
+   "status": "v1",
+   "statusKind": "evidence",
+   "link": "../docs/fulltext_age_moderation.md",
+   "linkText": "Read the check"
   },
   {
    "title": "Literature review and evidence matrix",
@@ -2137,12 +2155,20 @@ window.SITE_DATA = {
    "linkText": "Read the results"
   },
   {
-   "title": "Working paper: When does adult support matter most?",
-   "text": "Parental support across adolescence and educational attainment in the NLSY97. Not peer reviewed.",
+   "title": "Working paper v2: evidence from three U.S. cohorts",
+   "text": "All four analyses (NLSY97, HSLS:09, NLSY79 Children and Young Adults, accumulation). Not peer reviewed.",
+   "status": "v2",
+   "statusKind": "evidence",
+   "link": "../manuscripts/working_paper_v2.md",
+   "linkText": "Read the paper"
+  },
+  {
+   "title": "Results report (paper 2)",
+   "text": "Maternal praise and closeness at ages 6–9 vs 10–14 and bachelor's attainment.",
    "status": "v1",
    "statusKind": "evidence",
-   "link": "../manuscripts/working_paper_v1.md",
-   "linkText": "Read the paper"
+   "link": "../docs/results_p2_cya.md",
+   "linkText": "Read the results"
   },
   {
    "title": "Conference presentation",
@@ -2154,6 +2180,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "f67dff6"
+  "commit": "398232e"
  }
 };

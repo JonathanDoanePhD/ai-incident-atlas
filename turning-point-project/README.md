@@ -7,12 +7,12 @@ A preregistration-first research programme on the developmental timing of suppor
 relationships and educational attainment. Principal investigator: Jonathan Doane, Ph.D.
 ([research portfolio](https://jonathandoanephd.github.io/research-portfolio/)).
 
-> **Status (2026-11-12): two studies complete.** Paper 1 (`docs/results_paper1.md`, working paper
-> `manuscripts/working_paper_v1.md`): parental support reported at ages 12–16 is associated with about half a
-> year more schooling, with no clear difference by age at report. Study B2 (`docs/results_b2_hsls.md`):
-> grade-9 math-teacher support was no more predictive of a bachelor's degree than grade-11 support. These are
-> observational associations. Survey microdata stay outside git; synthetic data
-> appear only in `tests/`.
+> **Status (2026-11-12): four pre-planned analyses complete; working paper v2**
+> (`manuscripts/working_paper_v2.md`). Across NLSY97 (ages 12–16), HSLS:09 (grade 9 vs 11) and NLSY79 Children and
+> Young Adults (ages 6–9 vs 10–14), no analysis found reliable evidence that support measured earlier carries more
+> long-run weight. An NLSY97 four-year analysis is consistent with accumulation. These are observational
+> associations. Results: `docs/results_paper1.md`, `docs/results_b2_hsls.md`, `docs/results_p2_cya.md`,
+> `docs/results_p1e_accumulation.md`; full-text check of meta-analyses: `docs/fulltext_age_moderation.md`.
 
 ## What is here
 
@@ -75,13 +75,18 @@ python scripts/report_paper1.py              # figures + website/data/findings.j
 python scripts/crosscheck_variance.py        # jackknife check of standard errors
 python scripts/render_manuscript.py manuscripts/working_paper_v1.src.md manuscripts/working_paper_v1.md
 python scripts/run_b2_hsls.py --m 20          # study B2 (HSLS:09 extract in data/raw/hsls09/)
+python scripts/extract_nls.py <cya zip> nlscya_all_1979-2020.csv config/mappings/nlsy79cya_spec.json cya data/raw/nlsy79cya/cya_extract.csv
+python scripts/extract_nls.py <nlsy79 zip> nlsy79_all_1979-2022.csv config/mappings/nlsy79cya_spec.json n79 data/raw/nlsy79cya/n79_extract.csv
+python scripts/run_p2_cya.py --m 20           # paper 2
+python scripts/run_p1e_accumulation.py        # NLSY97 accumulation addendum
+python scripts/render_manuscript.py manuscripts/working_paper_v2.src.md manuscripts/working_paper_v2.md
 ```
 
 ## Open items
 
-1. Paper 2: ages 8–11 vs 12–15 with PSID child-supplement "how close" items (needs a free PSID registration by the PI).
-2. Add study B2 to the working paper (v2).
-3. Read full texts of key mentoring meta-analyses.
+1. Replicate the childhood comparison in PSID child-supplement data (needs a free PSID registration by the PI).
+2. Read the closed-access works flagged in `docs/fulltext_age_moderation.md` (e.g. DuBois et al. 2011) through a library.
+3. Peer feedback on working paper v2.
 
 ## Licence and citation
 

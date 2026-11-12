@@ -264,3 +264,21 @@ The more defensible working hypotheses combine three ideas:
 - **Not a systematic review:** This review did not follow PRISMA. There was no registered protocol, no double screening, no risk-of-bias assessment and no exhaustive search of PsycINFO, ERIC, Web of Science or Scopus. Publication bias and selective inclusion are possible. In particular, the search may have missed other studies on the age at which mentoring began.
 - **Gray literature excluded:** Chicago Consortium on-track reports and the MDRC and P/PV program reports were left out of the main evidence base. See `references_unverified.md`.
 - **Organizational note:** Statistics quoted here must be checked against primary sources before use in any external, funder or public material. Nothing here concerns individual participants.
+
+
+## Addendum (2026-11-12): full-text check of age moderation
+
+The review above was written from abstracts. Open full texts were then read for 10 works (details, verbatim quotes
+and locations: `fulltext_age_moderation.md` and `.csv`). Main points:
+
+- No meta-analysis that tested age found significant moderation of mentoring effects (`dubois2002`, `raposa2019`,
+  `vandam2018`, `vandam2021`). Non-significant tilts point in different directions.
+- Programme samples cover mean ages of roughly 9–16, and natural-mentor samples 13–24. No full text compares early
+  childhood with adolescence.
+- Relationship length did not predict effects across programmes (`dubois2002`, `raposa2019`). Within one school-based
+  trial, longer matches went with larger gains, but the authors note this may reflect selection (`herrera2011`, public
+  trial report).
+- `roorda2017` (full text) finds only one of five teacher–student associations stronger in secondary school. This
+  qualifies the age-graded pattern cited above from `roorda2011` (abstract only).
+- Not accessible as legal open full text: `dubois2011`, `christensen2020`, `grossman2002` (publisher blocks automated
+  access; likely readable in a browser), `fruiht2013`, `schwartz2013`, `rhodes2006`, `roorda2011`, `allen2018`.

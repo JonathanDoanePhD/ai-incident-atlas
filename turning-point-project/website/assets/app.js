@@ -242,8 +242,8 @@
   const $ = (s) => document.querySelector(s);
   const f2 = (x) => (x >= 0 ? "" : "−") + Math.abs(x).toFixed(2);
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  $("#topNotice").innerHTML = `<strong>First results are in.</strong> The planned analysis of NLSY97 has been run. See
-    <a href="#findings">Findings</a>. These are adjusted associations from observational data, not causal effects.`;
+  $("#topNotice").innerHTML = `<strong>Results from four planned analyses in three national cohorts are in.</strong> None found reliable evidence that support
+    earlier in childhood or adolescence carries more long-run weight. See <a href="#findings">Findings</a>. These are adjusted associations from observational data, not causal effects.`;
   let who = "mother", cat = false;
   function chart(P) {
     const pts = cat ? P.theta_categorical : P.theta;
@@ -266,6 +266,44 @@
       g += `<circle cx="${X(p.age)}" cy="${Y(p.est)}" r="5" fill="var(--orange-bright)"><title>Age ${p.age}: ${f2(p.est)} years (95% CI ${f2(p.lo)} to ${f2(p.hi)})</title></circle>`;
     });
     return g;
+  }
+  function forest(rows, lo, hi, axisLabel, band) {
+    const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
+    const L = 150, R = 520, Y0 = 30, H = 46, X = (v) => L + (v - lo) / (hi - lo) * (R - L);
+    let g = `<line x1="${X(0)}" x2="${X(0)}" y1="12" y2="${Y0 + H * rows.length}" stroke="var(--muted)" stroke-dasharray="4 4"/>`;
+    if (band) g += `<rect x="${X(-band)}" y="${Y0 + H * (rows.length - 1) - 16}" width="${X(band) - X(-band)}" height="32" fill="var(--blue)" opacity=".1"/>`;
+    rows.forEach(([lab, r], i) => {
+      const y = Y0 + H * i;
+      g += `<text x="${L - 10}" y="${y + 4}" text-anchor="end" font-size="13" fill="var(--ink)">${lab}</text>`;
+      g += `<line x1="${X(r.ci_low)}" x2="${X(r.ci_high)}" y1="${y}" y2="${y}" stroke="var(--orange-bright)" stroke-width="2.5"/>`;
+      g += `<circle cx="${X(r.estimate)}" cy="${y}" r="6" fill="var(--orange-bright)"><title>${lab}: ${pp(r.estimate)} points (95% CI ${pp(r.ci_low)} to ${pp(r.ci_high)})</title></circle>`;
+    });
+    for (let v = Math.ceil(lo * 50) / 50; v <= hi + 1e-9; v += 0.02) g += `<text x="${X(v)}" y="${Y0 + H * rows.length + 6}" text-anchor="middle" font-size="11" fill="var(--muted)">${Math.abs(v) < 1e-9 ? "0" : pp(v)}</text>`;
+    g += `<text x="${(L + R) / 2}" y="${Y0 + H * rows.length + 24}" text-anchor="middle" font-size="11" fill="var(--muted)">${axisLabel}</text>`;
+    return `<svg viewBox="0 0 560 ${Y0 + H * rows.length + 34}" role="img" aria-label="${axisLabel}">${g}</svg>`;
+  }
+  function p2Block(Q) {
+    const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
+    const P = Q.praise;
+    return `<h3 style="margin-top:2rem">Middle childhood vs early adolescence (NLSY79 Children and Young Adults)</h3>
+      <div class="sim"><div class="card">
+        <p>For ${Q.flow.praise_both_windows.toLocaleString()} children of ${Q.flow.praise_mothers.toLocaleString()} mothers, mothers reported how often they praised their child, every two years.
+        1 SD more praise at <strong>ages 6–9</strong> went with <strong>${pp(P.beta_6_9.estimate)} points</strong> in the chance of a bachelor's degree
+        (${pp(P.beta_6_9.ci_low)} to ${pp(P.beta_6_9.ci_high)}). At <strong>ages 10–14</strong>: <strong>${pp(P.beta_10_14.estimate)}</strong> (${pp(P.beta_10_14.ci_low)} to ${pp(P.beta_10_14.ci_high)}).</p>
+        <p><span class="pill hypothesis">Verdict</span> ${esc(Q.equivalence.verdict)}: difference ${pp(P.delta_C_minus_D.estimate)} points (${pp(P.delta_C_minus_D.ci_low)} to ${pp(P.delta_C_minus_D.ci_high)}).
+        No support for a middle-childhood window. If anything, early adolescence carries more.</p>
+        <p class="small">Closeness (secondary): 6–9 ${pp(Q.close.beta_6_9.estimate)}, 10–14 ${pp(Q.close.beta_10_14.estimate)} points. Both windows in one model; adjusted for mother's education and AFQT,
+        childhood income and poverty, birth order, mother's age at birth, sex, race/ethnicity, birth year. ${Q.m} imputations; clustered by mother.
+        Full report: <a href="../docs/results_p2_cya.md">results_p2_cya.md</a>.</p>
+      </div>${forest([["Ages 6–9", P.beta_6_9], ["Ages 10–14", P.beta_10_14], ["Difference (6–9 − 10–14)", P.delta_C_minus_D]], -0.04, 0.04,
+        "Percentage points of BA attainment per SD of maternal praise (shaded: ±" + 100 * Q.sesoi + " band)", Q.sesoi)}</div>`;
+  }
+  function accumBlock(A) {
+    return `<h3 style="margin-top:2rem">Does timing or duration matter? (NLSY97, exploratory)</h3>
+      <div class="card"><p>Among ${A.n.toLocaleString()} youths aged 12–14 in 1996 with four yearly reports (1997–2000), each additional year with a
+      <em>very supportive</em> mother went with <strong>${A.slope.estimate.toFixed(2)} more grades completed</strong> (95% CI ${A.slope.ci_low.toFixed(2)} to ${A.slope.ci_high.toFixed(2)}).
+      A test that every year counts equally did not reject that idea (p = ${A.wald.p.toFixed(2)}): consistent with <strong>accumulation</strong>.</p>
+      <p class="small">Exploratory, complete cases. Full report: <a href="../docs/results_p1e_accumulation.md">results_p1e_accumulation.md</a>.</p></div>`;
   }
   function b2Block(B) {
     const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
@@ -332,7 +370,9 @@
         <p class="small">S5a uses a 1–3 ordinal score (per step); S5b the multi-item scale (per point, subsample). Scales differ from the binary primary exposure.</p>
       </details>
       <p class="small">Design: ${F.m} imputations, Taylor-linearised variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
-      ${F.b2 ? b2Block(F.b2) : ""}`;
+      ${F.b2 ? b2Block(F.b2) : ""}
+      ${F.p2 ? p2Block(F.p2) : ""}
+      ${F.accum ? accumBlock(F.accum) : ""}`;
     document.querySelectorAll('input[name="fWho"]').forEach((r) => r.addEventListener("change", () => { who = r.value; render(); }));
     $("#fCat").addEventListener("change", (e) => { cat = e.target.checked; render(); });
   }
