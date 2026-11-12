@@ -110,7 +110,7 @@ CONCEPTS = [
 STATUS = [
     dict(title="Literature review", state="done", text="87 works verified against Crossref (abstract-level). Gaps documented."),
     dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables catalogued."),
-    dict(title="Analysis plan", state="prog", text="Paper 1 plan drafted (NLSY97). Awaiting PI sign-off, data-terms check and preregistration."),
+    dict(title="Analysis plan", state="prog", text="Paper 1 design signed off (NLSY97). Next: variable checks, ethics determination and preregistration."),
     dict(title="Findings", state="todo", text="None yet. Outcome analyses are blocked until preregistration (decision D-006)."),
 ]
 

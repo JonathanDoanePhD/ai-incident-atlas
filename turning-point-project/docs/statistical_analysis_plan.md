@@ -6,7 +6,7 @@ educational attainment in the NLSY97.
 Status: draft v0.2 (2026-11-12). **Not yet preregistered.** No NLSY97 microdata have been
 downloaded or examined. Items marked **[verify]** must be confirmed in NLS Investigator before
 registration. The design choices below are flagged in `research_decision_log.md` (D-008 to D-012)
-and require PI sign-off because they narrow the research question.
+and were signed off by the PI on 2026-11-12.
 
 ## 1. Why this design
 
@@ -113,7 +113,7 @@ is sensitivity S2. Fractions of missing information are reported.
 - **Effect sizes**: θ(a) in years of schooling and in SD units of `hgc` (weighted SD), with 95% CIs.
 - **SESOI**: |Δ| = 0.20 SD of `hgc`. Rationale: below this, a difference in association across
   adolescence would not plausibly change programme timing decisions, and it is comparable to
-  small-to-modest meta-analytic mentoring effects (`dubois2011`, `raposa2019`). **[PI to confirm]**
+  small-to-modest meta-analytic mentoring effects (`dubois2011`, `raposa2019`). Signed off by the PI 2026-11-12 (D-011).
 - **Power**: with analytic n ≈ 6,000–8,000, exposure prevalence 0.5–0.7 and DEFF 1.5–2.5, the
   minimum detectable age-16 vs age-12 difference is ≈ 0.19–0.32 SD (`scripts/power_age_interaction.py`, integer-age rows;
   planning assumptions, not data). Q1 is therefore **unlikely to detect a difference near the
@@ -168,5 +168,4 @@ grade-9 items were collected weeks into the transition. Comparison is of *grades
    analyst to run the pipeline outside AI tools (**PI action**).
 2. Obtain institutional determination on human-subjects review (**PI action**).
 3. Verify all **[verify]** items and fill `config/mappings/nlsy97.yaml` with Investigator reference numbers.
-4. Confirm SESOI (**PI decision**).
-5. Read full texts of key mentoring meta-analyses for age-moderation results (the review is abstract-level).
+4. Read full texts of key mentoring meta-analyses for age-moderation results (the review is abstract-level).

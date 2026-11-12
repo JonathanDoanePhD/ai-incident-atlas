@@ -40,7 +40,7 @@ window.SITE_DATA = {
   {
    "title": "Analysis plan",
    "state": "prog",
-   "text": "Paper 1 plan drafted (NLSY97). Awaiting PI sign-off, data-terms check and preregistration."
+   "text": "Paper 1 design signed off (NLSY97). Next: variable checks, ethics determination and preregistration."
   },
   {
    "title": "Findings",
@@ -2136,6 +2136,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "989725b"
+  "commit": "be78813"
  }
 };

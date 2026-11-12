@@ -45,7 +45,7 @@ public-use dataset (see the feasibility column). Only the narrowed confirmatory 
 > parent in 1997 and highest grade completed by around age 40 differ with age at report (12–16),
 > after adjustment for pre-exposure family and structural characteristics?
 
-This narrows "supportive adults" to **parents** (D-009, needs PI sign-off), because no usable
+This narrows "supportive adults" to **parents** (D-009, signed off by the PI 2026-11-12), because no usable
 adolescent cohort repeats a nonparental-mentor measure across ages in a way this project may analyse
 (Add Health is excluded by its AI-use policy, D-008). Full plan: `statistical_analysis_plan.md`.
 

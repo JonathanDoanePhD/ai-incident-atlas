@@ -24,7 +24,7 @@ relationships and educational attainment. Principal investigator: Jonathan Doane
 
 ## Key decisions so far (details in `docs/research_decision_log.md`)
 
-- **Paper 1** (pending PI sign-off): NLSY97 — does the association between a youth's report of a very
+- **Paper 1** (signed off by the PI 2026-11-12): NLSY97 — does the association between a youth's report of a very
   supportive parent at ages 12–16 (1997) and highest grade completed (~age 40) differ by age at report?
   Difference *and* equivalence (SESOI 0.20 SD) are tested; "inconclusive" is a pre-allowed outcome.
 - **Add Health is excluded**: its Conditions of Use forbid processing its data with AI tools (verified 2026-11-12).
@@ -65,9 +65,8 @@ then `data/`. Microdata never enter git (`.gitignore`, `tpp check-repo`, and a u
 
 1. **PI**: confirm NLS (BLS) and NCES terms allow AI-assisted processing (Add Health's do not).
 2. **PI**: institutional determination on human-subjects review for public-use secondary data.
-3. **PI**: sign off on D-009 (narrowing to parental support) and D-011 (SESOI).
-4. Fill Investigator reference numbers in `config/mappings/nlsy97.yaml`; verify `[verify]` items in the SAP.
-5. Read full texts of key meta-analyses for age-moderation results; register the plan; then run the analysis.
+3. Fill Investigator reference numbers in `config/mappings/nlsy97.yaml`; verify `[verify]` items in the SAP.
+4. Read full texts of key meta-analyses for age-moderation results; register the plan; then run the analysis.
 
 ## Licence and citation
 

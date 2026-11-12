@@ -6,11 +6,10 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --blue:#5eb4ea; --blue-soft:#12324a; --orange:#ffad66; --orange-bright:#ff9a3d; --orange-soft:#3a2614;
-  --bg:#0b1522; --panel:#111f30; --ink:#eaf2f5; --muted:#a9b8c5; --line:#294053; --ok:#5fd39a; --warn:#f2bf6b; --bad:#ff7d8f;
+  --bg:#0b1522; --panel:#111f30; --ink:#eaf2f5; --muted:#a9b8c5; --line:#294053; --ok:#5fd39a; --warn:#f2bf6b; --bad:#ff7d8f; color-scheme:dark;
 }}
-:root[data-theme="dark"]{
-  --blue:#5eb4ea; --blue-soft:#12324a; --orange:#ffad66; --orange-bright:#ff9a3d; --orange-soft:#3a2614;
-  --bg:#0b1522; --panel:#111f30; --ink:#eaf2f5; --muted:#a9b8c5; --line:#294053; --ok:#5fd39a; --warn:#f2bf6b; --bad:#ff7d8f;
+XX:#5eb4ea; --blue-soft:#12324a; --orange:#ffad66; --orange-bright:#ff9a3d; --orange-soft:#3a2614;
+  --bg:#0b1522; --panel:#111f30; --ink:#eaf2f5; --muted:#a9b8c5; --line:#294053; --ok:#5fd39a; --warn:#f2bf6b; --bad:#ff7d8f; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -23,8 +22,9 @@ a{color:var(--blue)} a:hover{color:var(--orange)}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
 .skip{position:absolute;left:-999px;top:0;background:var(--panel);padding:.5rem 1rem;z-index:10}
 .skip:focus{left:1rem}
-.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-header.site{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;gap:1rem;min-height:58px;flex-wrap:wrap}
 .brand{font-family:Inter,Arial,sans-serif;font-weight:800;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:.5rem}
 .brand .dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--blue) 50%,var(--orange-bright) 50%)}
