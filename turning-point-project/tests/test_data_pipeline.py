@@ -81,3 +81,10 @@ def test_project_registry_loads_all_datasets():
         assert spec.missing_codes and all(isinstance(k, int) for k in spec.missing_codes)
     nlsy = DatasetSpec.from_registry("nlsy97")
     assert nlsy.strata_var == "VSTRAT" and nlsy.psu_var == "VPSU"
+
+
+def test_nlsy97_mapping_is_fully_verified():
+    from turning_point.ingestion import load_mapping
+    m = load_mapping("nlsy97")
+    assert m and not any(v is None or str(v).startswith("TODO") for v in m.values())
+    assert all(len(v) == 8 and v[0] in "RSTUZ" for v in m.values())  # CSV reference-number headers

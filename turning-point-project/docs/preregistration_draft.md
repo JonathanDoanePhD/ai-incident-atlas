@@ -23,7 +23,9 @@ the SAP; this document records the commitments a registry asks for.
   respondent-level data as of this draft. The PI has read the published literature, including NLSY97-based
   studies; any such familiarity will be disclosed here before registration. Codebook metadata
   (question wording, universes, frequencies shown in codebooks) were read during the feasibility
-  audit; codebook frequencies are univariate and do not reveal exposure–outcome relationships.
+  audit. On 2026-11-12 the public all-variables release was downloaded and only its codebook file
+  (`.cdb`) was extracted and read; respondent-level data files were not opened. Codebook frequencies
+  are univariate and do not reveal exposure–outcome relationships.
 - **Data-access timestamp:** to be recorded at download (SHA-256 via `tpp validate`).
 
 ## Variables
