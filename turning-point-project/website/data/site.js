@@ -45,7 +45,7 @@ window.SITE_DATA = {
   {
    "title": "Findings",
    "state": "prog",
-   "text": "First results for paper 1: no clear age pattern for parental support between 12 and 16. See Findings."
+   "text": "Two studies, two cohorts: no sign that support measured earlier in adolescence (age 12 vs 16; grade 9 vs 11) carries more long-run weight."
   }
  ],
  "stages": [
@@ -122,8 +122,8 @@ window.SITE_DATA = {
      "text": "No study compares the same supportive relationship begun in grade 9 with the same relationship begun at another age."
     },
     {
-     "label": "hypothesis",
-     "text": "Paper 1 tests whether the association of parental support with attainment differs between ages 12 and 16."
+     "label": "uncertain",
+     "text": "Paper 1 found no clear difference between ages 12 and 16 in the association of parental support with attainment. See Findings."
     }
    ],
    "feasibility": "NLSY97 round 1 covers ages 12–16 with one identically worded parental-support item."
@@ -221,8 +221,8 @@ window.SITE_DATA = {
      "text": "These model comparisons lose power when exposures at different ages are highly correlated, as support usually is."
     },
     {
-     "label": "hypothesis",
-     "text": "Companion study: HSLS:09 school-adult support in grade 9 vs grade 11."
+     "label": "uncertain",
+     "text": "Our HSLS:09 study found grade-9 math-teacher support no more predictive of a BA than grade-11 support (difference within ±3 points). See Findings."
     }
    ],
    "feasibility": "NLSY79 CYA (biennial HOME items) and NLSY97 1997–2000 repeated items allow accumulation models."
@@ -2077,9 +2077,9 @@ window.SITE_DATA = {
    "text": "Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."
   },
   {
-   "title": "Next: grade 9",
-   "state": "todo",
-   "text": "HSLS:09 school-adult support in grade 9 vs grade 11."
+   "title": "Grade 9 vs 11",
+   "state": "done",
+   "text": "HSLS:09 companion study run from its own frozen plan."
   },
   {
    "title": "Working paper",
@@ -2121,6 +2121,14 @@ window.SITE_DATA = {
    "linkText": "Read the audit"
   },
   {
+   "title": "Results report (grade 9 vs 11)",
+   "text": "HSLS:09 math-teacher support in grade 9 vs grade 11 and bachelor's attainment.",
+   "status": "v1",
+   "statusKind": "evidence",
+   "link": "../docs/results_b2_hsls.md",
+   "linkText": "Read the results"
+  },
+  {
    "title": "Results report (paper 1)",
    "text": "Primary estimates, sensitivity analyses, verification and deviations from the plan.",
    "status": "v1",
@@ -2146,6 +2154,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "b76204d"
+  "commit": "f67dff6"
  }
 };

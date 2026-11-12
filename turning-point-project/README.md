@@ -7,9 +7,11 @@ A preregistration-first research programme on the developmental timing of suppor
 relationships and educational attainment. Principal investigator: Jonathan Doane, Ph.D.
 ([research portfolio](https://jonathandoanephd.github.io/research-portfolio/)).
 
-> **Status (2026-11-12): first results for paper 1** (`docs/results_paper1.md`). Parental support
-> reported at ages 12–16 is associated with about half a year more schooling, with no clear difference by
-> age at report. These are observational associations. Survey microdata stay outside git; synthetic data
+> **Status (2026-11-12): two studies complete.** Paper 1 (`docs/results_paper1.md`, working paper
+> `manuscripts/working_paper_v1.md`): parental support reported at ages 12–16 is associated with about half a
+> year more schooling, with no clear difference by age at report. Study B2 (`docs/results_b2_hsls.md`):
+> grade-9 math-teacher support was no more predictive of a bachelor's degree than grade-11 support. These are
+> observational associations. Survey microdata stay outside git; synthetic data
 > appear only in `tests/`.
 
 ## What is here
@@ -71,13 +73,15 @@ then `data/`. Microdata never enter git (`.gitignore`, `tpp check-repo`, and a u
 python scripts/run_paper1.py --m 40          # ~10 min; writes outputs/paper1_results.json
 python scripts/report_paper1.py              # figures + website/data/findings.js
 python scripts/crosscheck_variance.py        # jackknife check of standard errors
+python scripts/render_manuscript.py manuscripts/working_paper_v1.src.md manuscripts/working_paper_v1.md
+python scripts/run_b2_hsls.py --m 20          # study B2 (HSLS:09 extract in data/raw/hsls09/)
 ```
 
 ## Open items
 
 1. Paper 2: ages 8–11 vs 12–15 with PSID child-supplement "how close" items (needs a free PSID registration by the PI).
-2. Grade-9 companion study with HSLS:09.
-3. Read full texts of key mentoring meta-analyses; write the working paper.
+2. Add study B2 to the working paper (v2).
+3. Read full texts of key mentoring meta-analyses.
 
 ## Licence and citation
 

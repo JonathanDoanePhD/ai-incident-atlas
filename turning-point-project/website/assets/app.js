@@ -267,6 +267,35 @@
     });
     return g;
   }
+  function b2Block(B) {
+    const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
+    const L = 150, R = 520, Y0 = 30, H = 46;
+    const rows = [["Grade 9 (fall 2009)", B.theta9], ["Grade 11 (spring 2012)", B.theta11], ["Difference (11 − 9)", B.diff]];
+    const lo = -0.03, hi = 0.04, X = (v) => L + (v - lo) / (hi - lo) * (R - L);
+    let g = `<line x1="${X(0)}" x2="${X(0)}" y1="12" y2="${Y0 + H * 3}" stroke="var(--muted)" stroke-dasharray="4 4"/>`;
+    g += `<rect x="${X(-B.sesoi)}" y="${Y0 + H * 2 - 16}" width="${X(B.sesoi) - X(-B.sesoi)}" height="32" fill="var(--blue)" opacity=".1"/>`;
+    rows.forEach(([lab, r], i) => {
+      const y = Y0 + H * i;
+      g += `<text x="${L - 10}" y="${y + 4}" text-anchor="end" font-size="13" fill="var(--ink)">${lab}</text>`;
+      g += `<line x1="${X(r.ci_low)}" x2="${X(r.ci_high)}" y1="${y}" y2="${y}" stroke="var(--orange-bright)" stroke-width="2.5"/>`;
+      g += `<circle cx="${X(r.estimate)}" cy="${y}" r="6" fill="var(--orange-bright)"><title>${lab}: ${pp(r.estimate)} points (95% CI ${pp(r.ci_low)} to ${pp(r.ci_high)})</title></circle>`;
+    });
+    [-0.02, 0, 0.02, 0.04].forEach((v) => (g += `<text x="${X(v)}" y="${Y0 + H * 3 + 6}" text-anchor="middle" font-size="11" fill="var(--muted)">${v === 0 ? "0" : pp(v)}</text>`));
+    g += `<text x="${(L + R) / 2}" y="${Y0 + H * 3 + 24}" text-anchor="middle" font-size="11" fill="var(--muted)">Percentage points of BA attainment per SD of support (shaded: ±${100 * B.sesoi} equivalence band)</text>`;
+    return `<h3 style="margin-top:2rem">Freshman year: grade 9 vs grade 11 (HSLS:09)</h3>
+      <div class="sim"><div class="card">
+        <p>Among ${B.flow["math_items_both_grades (analytic)"].toLocaleString()} students who rated their math teacher in both grades, 1 SD higher perceived support in
+        <strong>grade 9</strong> went with <strong>${pp(B.theta9.estimate)} points</strong> in the chance of a bachelor's degree by 2021
+        (95% CI ${pp(B.theta9.ci_low)} to ${pp(B.theta9.ci_high)}). In <strong>grade 11</strong>: <strong>${pp(B.theta11.estimate)}</strong> (${pp(B.theta11.ci_low)} to ${pp(B.theta11.ci_high)}).</p>
+        <p><span class="pill hypothesis">Verdict</span> ${esc(B.equivalence.verdict)}: the grade 11 − grade 9 difference is ${pp(B.diff.estimate)} points, inside ±${100 * B.sesoi}.
+        Grade 9 was not more predictive; if anything, slightly less.</p>
+        <p class="small">Exploratory: agreeing in grade 9 that "there is a teacher or other adult in school I can talk to about problems" went with
+        ${pp(B.talk9.estimate)} points per SD (${pp(B.talk9.ci_low)} to ${pp(B.talk9.ci_high)}). No grade-11 version exists, so it cannot test timing.</p>
+        <p class="small">Adjusted for grade-9 math score, SES, family structure, sex, race/ethnicity, locale. ${B.m} imputations; 200 BRR replicate weights.
+        Different teachers in each grade. Full report: <a href="../docs/results_b2_hsls.md">results_b2_hsls.md</a>.</p>
+      </div>
+      <svg viewBox="0 0 560 200" role="img" aria-label="Grade 9 and grade 11 associations with 95% confidence intervals">${g}</svg></div>`;
+  }
   function render() {
     const P = F.parents[who];
     const d = P.delta, ds = P.delta_sd, eq = P.equivalence;
@@ -302,7 +331,8 @@
         <div class="table-wrap"><table><thead><tr><th>Analysis</th><th>Association at 14</th><th>Difference 16 vs 12</th></tr></thead><tbody>${sensRows}</tbody></table></div>
         <p class="small">S5a uses a 1–3 ordinal score (per step); S5b the multi-item scale (per point, subsample). Scales differ from the binary primary exposure.</p>
       </details>
-      <p class="small">Design: ${F.m} imputations, Taylor-linearised variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>`;
+      <p class="small">Design: ${F.m} imputations, Taylor-linearised variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
+      ${F.b2 ? b2Block(F.b2) : ""}`;
     document.querySelectorAll('input[name="fWho"]').forEach((r) => r.addEventListener("change", () => { who = r.value; render(); }));
     $("#fCat").addEventListener("change", (e) => { cat = e.target.checked; render(); });
   }

@@ -111,7 +111,7 @@ STATUS = [
     dict(title="Literature review", state="done", text="87 works verified against Crossref (abstract-level). Gaps documented."),
     dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables catalogued."),
     dict(title="Analysis plan", state="done", text="Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."),
-    dict(title="Findings", state="prog", text="First results for paper 1: no clear age pattern for parental support between 12 and 16. See Findings."),
+    dict(title="Findings", state="prog", text="Two studies, two cohorts: no sign that support measured earlier in adolescence (age 12 vs 16; grade 9 vs 11) carries more long-run weight."),
 ]
 
 E, H, U, X = "evidence", "hypothesis", "uncertain", "blocked"
@@ -135,7 +135,7 @@ STAGES = [
              dict(label=E, cite="yeager2018", text="Interventions that work for children often fail with middle adolescents unless they fit adolescents' need for status and respect."),
          ],
          open=[dict(label=U, text="No study compares the same supportive relationship begun in grade 9 with the same relationship begun at another age."),
-               dict(label=H, text="Paper 1 tests whether the association of parental support with attainment differs between ages 12 and 16.")],
+               dict(label=U, text="Paper 1 found no clear difference between ages 12 and 16 in the association of parental support with attainment. See Findings.")],
          feasibility="NLSY97 round 1 covers ages 12–16 with one identically worded parental-support item."),
     dict(hid="H3", name="Late adolescence", ages=[16, 18],
          hypothesis="Experiences around ages 16–18 are especially consequential for persistence, career decisions and postsecondary pathways.",
@@ -158,7 +158,7 @@ STAGES = [
                    dict(label=E, cite="neild2008", text="Ninth-grade outcomes add to the prediction of dropout beyond earlier characteristics (predictive, not causal)."),
                    dict(label=E, cite="mishra2009", text="The life-course structured approach compares critical-period, sensitive-period and accumulation models against a saturated model.")],
          open=[dict(label=U, cite="smith2015", text="These model comparisons lose power when exposures at different ages are highly correlated, as support usually is."),
-               dict(label=H, text="Companion study: HSLS:09 school-adult support in grade 9 vs grade 11.")],
+               dict(label=U, text="Our HSLS:09 study found grade-9 math-teacher support no more predictive of a BA than grade-11 support (difference within ±3 points). See Findings.")],
          feasibility="NLSY79 CYA (biennial HOME items) and NLSY97 1997–2000 repeated items allow accumulation models."),
 ]
 
@@ -218,7 +218,7 @@ FINDINGS_STEPS = [
     dict(title="Extract validated", state="done", text="24 variables; counts match the official codebook exactly."),
     dict(title="Primary analysis", state="done", text="40 imputations, design-based variance, independent jackknife check."),
     dict(title="Next: paper 2", state="todo", text="Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."),
-    dict(title="Next: grade 9", state="todo", text="HSLS:09 school-adult support in grade 9 vs grade 11."),
+    dict(title="Grade 9 vs 11", state="done", text="HSLS:09 companion study run from its own frozen plan."),
     dict(title="Working paper", state="done", text="Version 1 written from the results report (see Publications)."),
 ]
 
@@ -227,6 +227,7 @@ PUBLICATIONS = [
     dict(title="Frozen analysis plan record", text="Plan frozen by a timestamped commit with file hashes (not registered on OSF).", status="Frozen", statusKind="evidence", link="../docs/PLAN_FREEZE.md", linkText="See the freeze record"),
     dict(title="Literature review and evidence matrix", text="Abstract-level critical review of 87 verified works on turning points, mentoring, transitions and timing.", status="v0.1", statusKind="evidence", link="../docs/literature_review.md", linkText="Read the review"),
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
+    dict(title="Results report (grade 9 vs 11)", text="HSLS:09 math-teacher support in grade 9 vs grade 11 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_b2_hsls.md", linkText="Read the results"),
     dict(title="Results report (paper 1)", text="Primary estimates, sensitivity analyses, verification and deviations from the plan.", status="v1", statusKind="evidence", link="../docs/results_paper1.md", linkText="Read the results"),
     dict(title="Working paper: When does adult support matter most?", text="Parental support across adolescence and educational attainment in the NLSY97. Not peer reviewed.", status="v1", statusKind="evidence", link="../manuscripts/working_paper_v1.md", linkText="Read the paper"),
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
