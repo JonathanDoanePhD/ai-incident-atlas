@@ -219,7 +219,7 @@ FINDINGS_STEPS = [
     dict(title="Primary analysis", state="done", text="40 imputations, design-based variance, independent jackknife check."),
     dict(title="Next: paper 2", state="todo", text="Ages 8–11 vs 12–15 with PSID child-supplement 'how close' items."),
     dict(title="Next: grade 9", state="todo", text="HSLS:09 school-adult support in grade 9 vs grade 11."),
-    dict(title="Next: write-up", state="todo", text="Working paper from the results report."),
+    dict(title="Working paper", state="done", text="Version 1 written from the results report (see Publications)."),
 ]
 
 PUBLICATIONS = [
@@ -228,7 +228,7 @@ PUBLICATIONS = [
     dict(title="Literature review and evidence matrix", text="Abstract-level critical review of 87 verified works on turning points, mentoring, transitions and timing.", status="v0.1", statusKind="evidence", link="../docs/literature_review.md", linkText="Read the review"),
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
     dict(title="Results report (paper 1)", text="Primary estimates, sensitivity analyses, verification and deviations from the plan.", status="v1", statusKind="evidence", link="../docs/results_paper1.md", linkText="Read the results"),
-    dict(title="Working paper: When does adult support matter most?", text="To be written from the results report.", status="Not started", statusKind="uncertain"),
+    dict(title="Working paper: When does adult support matter most?", text="Parental support across adolescence and educational attainment in the NLSY97. Not peer reviewed.", status="v1", statusKind="evidence", link="../manuscripts/working_paper_v1.md", linkText="Read the paper"),
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
 ]
 

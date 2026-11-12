@@ -2082,9 +2082,9 @@ window.SITE_DATA = {
    "text": "HSLS:09 school-adult support in grade 9 vs grade 11."
   },
   {
-   "title": "Next: write-up",
-   "state": "todo",
-   "text": "Working paper from the results report."
+   "title": "Working paper",
+   "state": "done",
+   "text": "Version 1 written from the results report (see Publications)."
   }
  ],
  "publications": [
@@ -2130,9 +2130,11 @@ window.SITE_DATA = {
   },
   {
    "title": "Working paper: When does adult support matter most?",
-   "text": "To be written from the results report.",
-   "status": "Not started",
-   "statusKind": "uncertain"
+   "text": "Parental support across adolescence and educational attainment in the NLSY97. Not peer reviewed.",
+   "status": "v1",
+   "statusKind": "evidence",
+   "link": "../manuscripts/working_paper_v1.md",
+   "linkText": "Read the paper"
   },
   {
    "title": "Conference presentation",
@@ -2144,6 +2146,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-12",
-  "commit": "a54c783"
+  "commit": "b76204d"
  }
 };
