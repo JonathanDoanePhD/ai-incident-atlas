@@ -1,0 +1,24 @@
+# Variable mapping for paper 1 (NLSY97). analytic_name -> source column in the extract.
+#
+# `question` is the NLSY97 question name verified in the codebook during the 2026-11-12 audit
+# (docs/variable_dictionary_adolescent.csv). `source` must be the column header in YOUR
+# NLS Investigator extract (Investigator CSVs use reference numbers such as R0000100 by default;
+# the reference number for each question/round is shown in Investigator). Until a source is
+# filled in, it stays "TODO" and `load_extract` refuses to run - by design.
+dataset: nlsy97
+variables:
+  id:              {question: PUBID, round: 1997, source: TODO}
+  age_1996:        {question: "CV_AGE_12/31/96", round: 1997, source: TODO}
+  sex:             {question: KEY_SEX, round: 1997, source: TODO, note: "verify name in Investigator; not in audit dictionary"}
+  mother_support:  {question: YSAQ-032, round: 1997, source: TODO, scale: "1 very, 2 somewhat, 3 not very supportive"}
+  father_support:  {question: YSAQ-053, round: 1997, source: TODO, scale: "1 very, 2 somewhat, 3 not very supportive"}
+  mother_support_scale: {question: FP_YMSUPP, round: 1997, source: TODO, scale: "0-32, two implied decimals"}
+  father_support_scale: {question: FP_YFSUPP, round: 1997, source: TODO, scale: "0-32, two implied decimals"}
+  household_structure:  {question: CV_YTH_REL_HH_CURRENT, round: 1997, source: TODO}
+  poverty_ratio:   {question: CV_HH_POV_RATIO, round: 1997, source: TODO, scale: "x100, two implied decimals"}
+  highest_grade_ever:  {question: CVC_HGC_EVER, round: latest, source: TODO}
+  highest_degree_ever: {question: CVC_HIGHEST_DEGREE_EVER, round: latest, source: TODO}
+  strata:          {question: VSTRAT, round: 1997, source: TODO}
+  psu:             {question: VPSU, round: 1997, source: TODO}
+  weight:          {question: "custom longitudinal weight (NLS weighting program) or SAMPLING_PANEL_WEIGHT", source: TODO,
+                    note: "choose per SAP section 6 after reading NLS weighting guidance"}

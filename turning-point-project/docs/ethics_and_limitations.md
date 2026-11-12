@@ -9,6 +9,11 @@ Status: draft v0.1.
   steward's licence, a security plan, and institutional approval; none are requested yet.
 - **No microdata in the repository.** `.gitignore` excludes `data/raw/` and `data/processed/`
   and common survey file formats; `tpp check-repo` and a unit test fail if any are tracked.
+- **Data stewards' AI-use terms.** Add Health's Conditions of Use forbid processing its data
+  (public-use included) with LLM/AI tools, naming Claude; Add Health is therefore excluded from
+  this project's AI-assisted workflow (decision D-008). No AI-use policy was found for NLS (BLS) or
+  NCES data, but the PI must confirm current terms before any microdata are processed with AI
+  assistance (D-012). If terms prohibit it, a human analyst runs the same code outside AI tools.
 - **No re-identification.** Data-use terms for these studies prohibit attempts to identify
   respondents. We will not link files to outside data at the individual level, and the website
   will show only model estimates and aggregate tabulations with small-cell suppression

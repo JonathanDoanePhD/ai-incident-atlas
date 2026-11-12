@@ -1,0 +1,16 @@
+# Variable mapping for the companion grade-9 vs grade-11 analysis (HSLS:09 public-use, PETS/PEAR release).
+# NCES public CSVs use the variable names below as column headers; verify against the codebook
+# shipped with the download before replacing TODO with the same name.
+dataset: hsls09
+variables:
+  id:                 {question: STU_ID, source: TODO, note: "verify id variable name in public CSV"}
+  talk_school_adult_g9: {question: S1TALKPROB, source: TODO, scale: "1 strongly agree - 4 strongly disagree"}
+  math_tchr_interest_g9: {question: S1MTCHINTRST, source: TODO}
+  math_tchr_interest_g11: {question: S2MTCHINTRST, source: TODO, note: "codebook marks as repeat of S1; universe = students in math in spring 2012"}
+  school_belonging_g9: {question: X1SCHOOLBEL, source: TODO}
+  ses_g9:             {question: X1SES, source: TODO}
+  poverty185_g9:      {question: X1POVERTY185, source: TODO}
+  parent_pattern_g9:  {question: X1PARPATTERN, source: TODO}
+  highest_degree:     {question: X6HIGHDEG, source: TODO}
+  weight:             {question: W4W1STU, source: TODO, note: "base-year to second follow-up longitudinal; confirm correct weight for X6 outcomes"}
+  # 200 BRR replicate weights W4W1STU001..W4W1STU200 are loaded separately; confirm method/Fay factor in the DFD.

@@ -73,3 +73,11 @@ def test_small_cell_suppression():
 
 def test_repository_tracks_no_microdata():
     assert git_tracked_data_files(PROJECT_ROOT) == []
+
+
+def test_project_registry_loads_all_datasets():
+    for key in ("nlsy97", "hsls09", "els2002"):
+        spec = DatasetSpec.from_registry(key)
+        assert spec.missing_codes and all(isinstance(k, int) for k in spec.missing_codes)
+    nlsy = DatasetSpec.from_registry("nlsy97")
+    assert nlsy.strata_var == "VSTRAT" and nlsy.psu_var == "VPSU"

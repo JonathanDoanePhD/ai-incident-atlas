@@ -167,6 +167,66 @@ def fit_survey_glm(X: pd.DataFrame, y: pd.Series, *, family: str = "gaussian",
                      df_resid=float(n_psu - n_strata), family=family, n=n, n_psu=n_psu, n_strata=n_strata)
 
 
+# --------------------------------------------------------------------------- replicate weights
+def replicate_variance(full_estimate: np.ndarray, replicate_estimates: np.ndarray, *, method: str = "brr",
+                       fay_rho: float = 0.0, jk_factor: float | None = None) -> np.ndarray:
+    """Covariance of estimates from replicate-weight re-estimation.
+
+    ``replicate_estimates`` is (R, p): the statistic recomputed with each replicate weight.
+    BRR/Fay: V = 1/(R (1-rho)^2) * sum_r (theta_r - theta)(theta_r - theta)'.
+    JK1: V = (R-1)/R * sum_r (...). Generic: V = jk_factor * sum_r (...).
+    Use the method and Fay coefficient stated in the study's documentation (e.g. the HSLS:09 and
+    ELS:2002 data file documentation); do not assume them.
+    """
+    th = np.atleast_1d(np.asarray(full_estimate, float))
+    reps = np.asarray(replicate_estimates, float).reshape(-1, th.size)
+    R = reps.shape[0]
+    d = reps - th
+    ss = d.T @ d
+    if jk_factor is not None:
+        return jk_factor * ss
+    if method == "brr":
+        return ss / (R * (1 - fay_rho) ** 2)
+    if method == "jk1":
+        return (R - 1) / R * ss
+    raise ValueError("method must be 'brr' or 'jk1' (or pass jk_factor)")
+
+
+def fit_glm_replicate(X: pd.DataFrame, y: pd.Series, full_weight: pd.Series, replicate_weights: pd.DataFrame, *,
+                      family: str = "gaussian", method: str = "brr", fay_rho: float = 0.0,
+                      df: float | None = None) -> SurveyFit:
+    """Weighted GLM with replicate-weight variance (for public files that suppress strata/PSU)."""
+    fam = FAMILIES[family]
+    Xa, ya = X.to_numpy(float), np.asarray(y, float)
+    fit = lambda w: sm.GLM(ya, Xa, family=fam, var_weights=np.asarray(w, float)).fit().params  # noqa: E731
+    beta = fit(full_weight)
+    reps = np.vstack([fit(replicate_weights[c]) for c in replicate_weights.columns])
+    cov = replicate_variance(beta, reps, method=method, fay_rho=fay_rho)
+    names = list(X.columns)
+    R = replicate_weights.shape[1]
+    return SurveyFit(params=pd.Series(beta, index=names), cov=pd.DataFrame(cov, index=names, columns=names),
+                     df_resid=float(df if df is not None else R), family=family, n=len(ya), n_psu=R, n_strata=0)
+
+
+# --------------------------------------------------------------------------- equivalence
+def equivalence_test(estimate: float, se: float, sesoi: float, df: float = np.inf, alpha: float = 0.05) -> dict:
+    """Two one-sided tests (TOST) that |effect| < sesoi; also the (1-2alpha) CI used for the decision."""
+    t_lo = (estimate + sesoi) / se
+    t_hi = (estimate - sesoi) / se
+    p = max(stats.t.sf(t_lo, df), stats.t.cdf(t_hi, df))
+    tcrit = stats.t.ppf(1 - alpha, df)
+    lo, hi = estimate - tcrit * se, estimate + tcrit * se
+    if p < alpha:
+        verdict = "equivalent (difference smaller than SESOI)"
+    elif lo > sesoi or hi < -sesoi:
+        verdict = "non-equivalent (difference larger than SESOI)"
+    elif lo > 0 or hi < 0:
+        verdict = "different from zero, equivalence undetermined"
+    else:
+        verdict = "inconclusive"
+    return {"p_tost": float(p), "ci90_low": float(lo), "ci90_high": float(hi), "verdict": verdict}
+
+
 # --------------------------------------------------------------------------- age moderation
 @dataclass
 class AgeModerationResult:

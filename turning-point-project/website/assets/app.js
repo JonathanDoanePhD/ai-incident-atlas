@@ -62,7 +62,7 @@
       <p><strong>Hypothesis.</strong> ${esc(s.hypothesis)}</p>
       <div class="grid g2"><div><h4>What published research says</h4><ul>${list(s.evidence)}</ul></div>
       <div><h4>What remains open</h4><ul>${list(s.open)}</ul>
-      <h4>Datasets observing these ages</h4><p>${cover.length ? cover.map((c) => `<span class="pill uncertain">${esc(c)}</span>`).join("") : "None among those audited."}</p>
+      <h4>Audited datasets observing these ages</h4><p>${cover.length ? cover.map((c) => `<span class="pill uncertain">${esc(c)}</span>`).join("") : "None among those audited."}</p>
       <p class="small">${esc(s.feasibility || "")}</p></div></div>`;
     $("#stagePanel").setAttribute("aria-labelledby", "stage-tab-" + i);
     renderCoverage(s);
@@ -218,7 +218,9 @@
     g += `<text x="${L + 6}" y="${T + 10}" fill="var(--bad)" font-size="11" font-weight="700">ILLUSTRATIVE – NO DATA</text>`;
     s.innerHTML = g;
     $("#simText").textContent = `The true effect is ${v.simBeta.toFixed(2)} at every age, but the naive association runs from ${naive[0].toFixed(2)} at 12 to ${naive[6].toFixed(2)} at 18. ` +
-      (Math.abs(naive[6] - naive[0]) > 0.05 ? "A survey would wrongly suggest that timing matters." : "Here selection barely changes with age, so the naive line is flat (though still biased).");
+      (Math.abs(naive[6] - naive[0]) > 0.05 ? "A survey would wrongly suggest that timing matters." :
+        Math.abs(naive[0] - v.simBeta) > 0.02 ? "Selection barely changes with age, so the line is flat, but it is shifted away from the true effect." :
+        "Here confounding and measurement error happen to cancel out. Real data give no way to know whether they do.");
   }
   ids.forEach((i) => $("#" + i).addEventListener("input", sim));
   sim();

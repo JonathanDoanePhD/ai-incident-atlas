@@ -25,8 +25,8 @@ from scipy import stats
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 
-def mdd(n, p, age_range, deff=2.0, r2=0.2, alpha=0.05, power=0.8, contrast=None):
-    var_age = age_range**2 / 12  # uniform ages
+def mdd(n, p, age_range, deff=2.0, r2=0.2, alpha=0.05, power=0.8, contrast=None, var_age=None):
+    var_age = age_range**2 / 12 if var_age is None else var_age  # continuous uniform ages by default
     se = np.sqrt(deff * (1 - r2)) / np.sqrt(n * p * (1 - p) * var_age)
     contrast = age_range if contrast is None else contrast
     return (stats.norm.ppf(1 - alpha / 2) + stats.norm.ppf(power)) * contrast * se
@@ -52,10 +52,16 @@ def main():
     a = ap.parse_args()
     rows = []
     for n in (2000, 4000, 6000, 8000):
-        for p in (0.3, 0.5):
+        for p in (0.3, 0.5, 0.7):
             for deff in (1.5, 2.5):
                 rows.append({"n": n, "exposure_prevalence": p, "deff": deff, "age_range_years": 5,
                              "mdd_sd_units_full_range": round(float(mdd(n, p, 5, deff)), 3)})
+    # NLSY97 round-1 layout: integer ages 12..16 (discrete uniform, Var = 2), contrast age 16 vs 12
+    for n in (6000, 8000):
+        for p in (0.5, 0.7):
+            for deff in (1.5, 2.5):
+                rows.append({"n": n, "exposure_prevalence": p, "deff": deff, "age_range_years": "12-16 integer",
+                             "mdd_sd_units_full_range": round(float(mdd(n, p, 4, deff, var_age=2.0, contrast=4)), 3)})
     tab = pd.DataFrame(rows)
     print("PLANNING CALCULATION (assumed inputs, not data):")
     print(tab.to_string(index=False))

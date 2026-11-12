@@ -39,14 +39,26 @@ public-use dataset (see the feasibility column). Only the narrowed confirmatory 
 | H6 | Cumulative support (duration/consistency) matters more than onset age | Testable with life-course model comparison (accumulation vs. critical/sensitive period) where the same support measure is repeated. |
 | H7 | Transitions matter regardless of age | Grade-based cohorts (HSLS:09: grade 9 baseline; ELS:2002: grade 10) allow transition-anchored, but not age-anchored, comparisons. |
 
-## Proposed primary question for paper 1
+## Primary question for paper 1 (after the feasibility audit)
 
-Final wording depends on the dataset audit and is fixed in `statistical_analysis_plan.md`. Working form:
+> Among U.S. adolescents in the NLSY97, does the association between reporting a very supportive
+> parent in 1997 and highest grade completed by around age 40 differ with age at report (12–16),
+> after adjustment for pre-exposure family and structural characteristics?
 
-> Among U.S. adolescents in a nationally representative cohort, does the association between
-> [verified measure of supportive adult relationships] and educational attainment in early
-> adulthood vary with the age (or school stage) at which support is measured or begins,
-> after adjustment for pre-exposure family, school and individual characteristics?
+This narrows "supportive adults" to **parents** (D-009, needs PI sign-off), because no usable
+adolescent cohort repeats a nonparental-mentor measure across ages in a way this project may analyse
+(Add Health is excluded by its AI-use policy, D-008). Full plan: `statistical_analysis_plan.md`.
+
+### Feasibility summary by hypothesis (from the audits)
+
+| Hypothesis | Best available design | Strength |
+|---|---|---|
+| H1 vs H2 (8–11 vs 12–15) | PSID-CDS 2002/2007 identical "how close" items (mother, favourite teachers, other adults) → TAS/PSID attainment; FFCWS ages 9 vs 15 as replication | Weak–moderate: small overlap subsample; one measure per window |
+| H2 vs H3 (12–15 vs 16–18) | NLSY97 round-1 support × age 12–16 | Moderate for associations; age confounded with cohort and co-residence |
+| H4 (18–24) | Not credibly testable for adult support with audited public data | — |
+| H5 (individualised timing) | Heterogeneity analyses in NLSY97 (exploratory, underpowered) | Weak |
+| H6 (accumulation) | NLSY79 CYA HOME items repeated biennially (ages 6–14); NLSY97 1997–2000 repeated items | Moderate, with highly correlated exposures (`smith2015`) |
+| H7 (transitions, grade 9) | HSLS:09 grade 9 vs 11; ELS:2002 grade 10 vs 12 | Weak–moderate: different teachers/universes across grades |
 
 ## Secondary and exploratory questions
 

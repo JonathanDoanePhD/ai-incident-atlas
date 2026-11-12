@@ -39,18 +39,32 @@ class DatasetSpec:
 
     @classmethod
     def from_registry(cls, key: str, registry: Mapping | None = None) -> "DatasetSpec":
+        """Build from a registry entry. Accepts the flat schema (``weight_vars``, ``strata_var``,
+        ``psu_var``) or the nested ``design: {strata, psu, weights}`` schema used in
+        ``config/datasets.yaml``. Only integer-keyed missing codes are kept."""
         reg = registry if registry is not None else load_yaml("datasets.yaml").get("datasets", {})
         if key not in reg:
             raise KeyError(f"Dataset {key!r} not in registry; known: {sorted(reg)}")
         e = dict(reg[key])
-        codes = {int(k): str(v) for k, v in (e.get("missing_codes") or {}).items()}
-        weights = e.get("weight_vars") or []
+        codes = {}
+        for k, v in (e.get("missing_codes") or {}).items():
+            try:
+                codes[int(k)] = str(v)
+            except (TypeError, ValueError):
+                continue  # notes or list-valued width-dependent codes
+        design = e.get("design") or {}
+        weights = e.get("weight_vars") or design.get("weights") or []
         if isinstance(weights, str):
             weights = [weights]
-        return cls(name=key, access=e.get("access", "unknown"), id_var=e.get("id_var"),
-                   missing_codes=codes, weight_vars=list(weights),
-                   strata_var=e.get("strata_var"), psu_var=e.get("psu_var"),
-                   documentation_url=e.get("documentation_url"), notes=e.get("notes", ""))
+        elif isinstance(weights, dict):
+            weights = [w for w in weights.values() if isinstance(w, str)]
+        access = e.get("access", "unknown")
+        if isinstance(access, dict):
+            access = access.get("level", "unknown")
+        return cls(name=key, access=str(access), id_var=e.get("id_var"), missing_codes=codes,
+                   weight_vars=list(weights), strata_var=e.get("strata_var") or design.get("strata"),
+                   psu_var=e.get("psu_var") or design.get("psu"),
+                   documentation_url=e.get("documentation_url"), notes=str(e.get("notes", "")))
 
 
 def sha256_file(path: str | Path, chunk: int = 1 << 20) -> str:

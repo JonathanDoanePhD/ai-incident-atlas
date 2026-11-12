@@ -116,3 +116,29 @@ def test_e_value_known_values():
 def test_holm_adjustment():
     adj = adjust_pvalues([0.01, 0.04, 0.03], "holm")
     assert np.allclose(adj, [0.03, 0.06, 0.06])
+
+
+def test_replicate_variance_formulas():
+    from turning_point.modeling import replicate_variance
+    reps = np.array([[1.0], [3.0]])
+    assert replicate_variance([2.0], reps, method="brr")[0, 0] == pytest.approx(1.0)
+    assert replicate_variance([2.0], reps, method="brr", fay_rho=0.5)[0, 0] == pytest.approx(4.0)
+    assert replicate_variance([2.0], reps, method="jk1")[0, 0] == pytest.approx(1.0)
+
+
+def test_replicate_fit_matches_point_estimates():
+    from turning_point.modeling import fit_glm_replicate
+    rng = np.random.default_rng(4)
+    df = age_moderation_sample(n_strata=4)
+    X = sm.add_constant(df[["support", "cov"]])
+    reps = pd.DataFrame({f"r{i}": df["w"] * rng.uniform(0.5, 1.5, len(df)) for i in range(20)})
+    fit = fit_glm_replicate(X, df["y"], df["w"], reps)
+    ref = fit_survey_glm(X, df["y"], weights=df["w"])
+    assert np.allclose(fit.params, ref.params) and np.all(fit.se > 0)
+
+
+def test_equivalence_test_verdicts():
+    from turning_point.modeling import equivalence_test
+    assert equivalence_test(0.01, 0.02, 0.1)["verdict"].startswith("equivalent")
+    assert equivalence_test(0.0, 0.2, 0.1)["verdict"] == "inconclusive"
+    assert equivalence_test(0.5, 0.05, 0.1)["verdict"].startswith("non-equivalent")

@@ -1,0 +1,205 @@
+# Turning Point Project: adolescent-start dataset registry
+# Audit date: 2026-11-12. Every identifier below was read from documentation
+# fetched during the audit (see docs/dataset_audit.md and
+# docs/variable_dictionary_adolescent.csv). Anything not verified is null,
+# with a note. Early-childhood datasets (PSID-CDS, NLSY79 CYA, ECLS-K, FFCWS)
+# are audited separately and are not included here.
+#
+# Data never goes in this repository. Download to a scratch or secure
+# location outside the repo.
+
+datasets:
+
+  nlsy97:
+    name: National Longitudinal Survey of Youth 1997 (NLSY97)
+    sponsor: U.S. Bureau of Labor Statistics, National Longitudinal Surveys program
+    access:
+      level: public-use
+      cost: none
+      account_required: false   # Investigator: "It is not necessary to get an account to browse data, but an account is necessary to save datasets online."
+      restricted_components: "Geocode files (state, county, MSA, college codes): ResearchDataGov Standard Application Process; US researchers only; BLS confidentiality agreement"
+      ai_use_policy: null       # not found during audit; check before analysis
+    documentation_url: https://www.nlsinfo.org/content/cohorts/nlsy97
+    documentation_urls:
+      sample: https://www.nlsinfo.org/content/cohorts/nlsy97/intro-to-the-sample/nlsy97-sample-introduction
+      missing_data: https://www.nlsinfo.org/content/cohorts/nlsy97/using-and-understanding-the-data/item-nonresponse-interview-timings
+      weights_design: https://www.nlsinfo.org/content/cohorts/nlsy97/using-and-understanding-the-data/sample-weights-design-effects
+      attitudes_and_relationships: https://www.nlsinfo.org/content/cohorts/nlsy97/topical-guide/attitudes/attitude-and-noncognitive-skills-measures
+      expectations: https://www.nlsinfo.org/content/cohorts/nlsy97/topical-guide/attitudes/expectations
+      attainment: https://www.nlsinfo.org/content/cohorts/nlsy97/topical-guide/education/educational-status-attainment
+      investigator_guide: https://www.nlsinfo.org/content/access-data-investigator/investigator-user-guide
+    download_instructions: >
+      Option A (recommended by NLS): build a custom extract in NLS Investigator
+      (https://www.nlsinfo.org/investigator/pages/search). Choose study NLSY97, search by
+      question name (e.g. YSAQ-032) or title, tag variables, then use Download (Basic or
+      Advanced) to get a .dat/.csv with Stata/SPSS/SAS/R read-in programs. A free account
+      (email + password) is only needed to save tagsets/downloads. Option B: the full cohort
+      zip (475 MB; .dat, .csv, .cdb codebook, .sas, .R, .sdf, tagset) at direct_download_url.
+    direct_download_url: https://nlsinfo.org/cohort-data/nlsy97_all_1997-2023.zip
+    direct_download_check: "HEAD 200, 475,462,343 bytes, last-modified 2026-01-23 (checked 2026-11-12)"
+    missing_codes:
+      -1: refusal
+      -2: don't know
+      -3: invalid skip
+      -4: valid skip
+      -5: non-interview
+    design:
+      strata: VSTRAT      # R14897.00, round 1
+      psu: VPSU           # R14898.00, round 1
+      weights:
+        cross_section_by_round: SAMPLING_WEIGHT_CC
+        panel_rounds_1_to_N: SAMPLING_PANEL_WEIGHT
+        mortality_adjusted: MORTADJ_SAMPWEIGHT
+        legacy_rounds_1_2: [SAMPLING_WEIGHT, CS_SAMPLING_WEIGHT]
+      notes: "Stata example from NLS: svyset [pweight=WTVAR], strata(vstrat) psu(vpsu) singleunit(scaled). NLS custom weighting program is recommended for multi-round subsets."
+    cohort:
+      birth_years: [1980, 1984]
+      baseline_n: 8984
+      age_at_round1_note: "CV_AGE_12/31/96 ranges 12-16; age at round-1 interview 12-18 (sample-introduction page; cohort index page says 12-17)"
+      rounds: "Annual 1997-2011 (rounds 1-15), biennial 2013-2023 (rounds 16-21)"
+
+  addhealth_public:
+    name: National Longitudinal Study of Adolescent to Adult Health (Add Health), public-use
+    sponsor: Carolina Population Center, UNC Chapel Hill
+    access:
+      level: public-use subset (restricted-use by contract)
+      cost: "public-use: no charge"
+      account_required: true   # Dataverse requires a Dataset Terms form; ICPSR/DSDR requires a MyData account
+      ai_use_policy: >
+        PROHIBITIVE. Add Health Conditions of Use: "Large language models (LLMs) and other AI
+        tools (e.g., ChatGPT, Claude AI, Microsoft Copilot, Google Gemini) may not be used to
+        manage, process, or analyze data distributed by Add Health. This policy applies to both
+        public-use and restricted-use data." LLM use is allowed only with public documentation,
+        codebooks and study-level metadata. Any project pipeline that involves Claude must not
+        touch Add Health individual-level data.
+      policy_url: https://addhealth.cpc.unc.edu/conditions-of-use/
+    documentation_url: https://addhealth.cpc.unc.edu/documentation/data-documentation/
+    documentation_urls:
+      public_use: https://addhealth.cpc.unc.edu/data/public-use-data-sets/
+      faq: https://addhealth.cpc.unc.edu/about/frequently-asked-questions/
+      wave1_codebooks: https://addhealth.cpc.unc.edu/wp-content/uploads/docs/data/codebooks/Wave-I-In-Home-Interview-Data.zip
+      wave3_codebooks: https://addhealth.cpc.unc.edu/wp-content/uploads/docs/data/codebooks/Wave-III-In-Home-Interview-Data.zip
+      wave3_mentor_coded: https://addhealth.cpc.unc.edu/wp-content/uploads/docs/data/codebooks/mentor.pdf
+      codebook_explorer: https://data.cpc.unc.edu/codebooks/2   # TLS verification failed from audit machine
+    download_instructions: >
+      Public-use data are distributed by (1) Add Health Dataverse
+      (https://dataverse.unc.edu/dataverse/addhealth; sign Dataset Terms form), (2) ICPSR/DSDR
+      study 21600 (https://www.icpsr.umich.edu/web/ICPSR/studies/21600; MyData login), or (3) ARDA.
+      Neither Dataverse (TLS failure) nor ICPSR (HTTP 403) was reachable from the audit machine,
+      so no file was inspected. Under the AI-use policy, a human analyst must download and
+      analyze these data outside any LLM-assisted workflow.
+    direct_download_url: null   # none verified
+    missing_codes:
+      note: "Reserve codes observed in Wave I-IV codebooks (restricted full-sample files); width-dependent"
+      refused: [6, 96, 996, 9996]
+      legitimate_skip: [7, 97]
+      dont_know: [8, 98]
+      not_applicable: [9, 99]
+      missing: "!"
+    design:
+      strata: null    # restricted file uses REGION; public-use name unverified
+      psu: null       # restricted file uses PSUSCID; public-use name unverified
+      weights: null   # restricted: GSWGT3, GSWGT3_2 (Wave III); public-use names unverified
+      notes: "FAQ: 'Guidelines for Analyzing Add Health Data' refers to variables from the restricted-use data. Public-use design variable names need a manual check."
+    cohort:
+      birth_years: null   # not verified
+      baseline_n_public: 6504
+      public_n_by_wave: {I: 6504, II: 4834, III: 4882, IV: 5114, V: 4196, VI: 3937}
+      baseline_n_restricted: 20745
+      waves: {I: "1994-95", II: "1996", III: "2001-02", IV: "2008", V: "2016-18", VI: "2022-25"}
+
+  hsls09:
+    name: High School Longitudinal Study of 2009 (HSLS:09)
+    sponsor: National Center for Education Statistics (NCES)
+    access:
+      level: public-use (restricted-use license for full detail and geocodes)
+      cost: none
+      account_required: false   # public zips download directly; DataLab UI checks a terms-agreement flag
+      terms_note: "Text of DataLab online-codebook terms not captured; needs manual check"
+      restricted_license_info: https://nces.ed.gov/statprog/instruct.asp
+      ai_use_policy: null   # not found during audit
+    documentation_url: https://nces.ed.gov/surveys/hsls09/hsls09_data.asp
+    documentation_urls:
+      overview: https://nces.ed.gov/surveys/hsls09/
+      survey_design: https://nces.ed.gov/surveys/hsls09/surveydesign.asp
+      online_codebook: https://nces.ed.gov/datalab/onlinecodebook
+      codebook_zip: https://nces.ed.gov/datalab/files/zip/OnlineCodebook/HSLS_2009-16_PETS_Pear_v1_0_CodeBook_RecordFileLayout.zip
+    download_instructions: >
+      Download the public-use CSV zip directly (direct_download_url, 348 MB; student and school
+      files for base year through 2016 plus PETS/SR and PEAR 2021). Codebook and record layouts
+      are in the codebook zip. The NCES DataLab API lists files per format:
+      GET https://nces.ed.gov/datalab/api/v1/onlinecodebook/session/guid?surveyId=37&surveyYear=2021&versionNumber=1
+      then GET .../onlinecodebook/session/{sessionId}/file/data/{format} (7=CSV, 5=R, 4=Stata).
+    direct_download_url: https://nces.ed.gov/datalab/files/zip/OnlineCodebook/HSLS_2009-16_PETS_Pear_v1_0_CSV_Datasets.zip
+    direct_download_check: "HEAD 200, 347,561,891 bytes, last-modified 2024-10-09 (checked 2026-11-12)"
+    missing_codes:
+      -1: don't know
+      -3: carry-through missing
+      -4: item not administered (abbreviated interview)
+      -5: data suppressed (public-use)
+      -6: component not applicable
+      -7: item legitimate skip/NA
+      -8: unit non-response
+      -9: missing
+    design:
+      strata: null   # STRAT_ID exists but is suppressed (-5) on the public-use file
+      psu: null      # PSU exists but is suppressed (-5) on the public-use file
+      weights:
+        base_year: W1STUDENT
+        by_f1_longitudinal: W2W1STU
+        by_f2_longitudinal: W4W1STU
+        by_f1_u13_f2: W4W1W2W3STU
+        pear: W6PEAR
+      replicate_weights: "200 BRR replicates per weight, suffix 001-200 (e.g., W1STUDENT001-W1STUDENT200)"
+    cohort:
+      grade_at_baseline: 9
+      baseline_records: 23503
+      baseline_respondents_computed: 21444   # 23,503 minus 2,059 base-year unit non-response
+      schools: 944
+      waves: {base_year: "fall 2009", first_follow_up: "spring 2012", update: "2013", hs_transcripts: "2013-14", second_follow_up: "2016", ps_transcripts: "2017-18", pear: "through June 2021"}
+
+  els2002:
+    name: Education Longitudinal Study of 2002 (ELS:2002)
+    sponsor: National Center for Education Statistics (NCES)
+    access:
+      level: public-use (restricted-use license for HS transcripts detail and identifiers)
+      cost: none
+      account_required: false
+      terms_note: "Text of DataLab online-codebook terms not captured; needs manual check"
+      ai_use_policy: null   # not found during audit
+    documentation_url: https://nces.ed.gov/surveys/els2002/
+    documentation_urls:
+      survey_design: https://nces.ed.gov/surveys/els2002/surveydesign.asp
+      online_codebook: https://nces.ed.gov/datalab/onlinecodebook
+      codebook_zip: https://nces.ed.gov/datalab/files/zip/OnlineCodebook/ELS_2002-12_v1_0_CodeBook_RecordFileLayout.zip
+    download_instructions: >
+      Download the public-use student CSV zip directly (direct_download_url, 17.8 MB); BRR
+      replicate weights are in a separate zip (brr_download_url, 134 MB). DataLab API:
+      session/guid?surveyId=11&surveyYear=2012&versionNumber=1, then file/data/7 for CSV.
+    direct_download_url: https://nces.ed.gov/datalab/files/zip/OnlineCodebook/ELS_2002-12_PETS_v1_0_Student_CSV_Datasets.zip
+    brr_download_url: https://nces.ed.gov/datalab/files/zip/OnlineCodebook/ELS_2002-12_PETS_v1_0_Student_BRR_CSV_Datasets.zip
+    direct_download_check: "HEAD 200, 17,793,083 bytes (student CSV); 134,116,641 bytes (BRR); last-modified 2023-09-15 (checked 2026-11-12)"
+    missing_codes:
+      -1: don't know
+      -2: refused
+      -3: item legitimate skip/NA
+      -4: nonrespondent
+      -5: out of range (also used for suppressed values on public-use)
+      -6: multiple response
+      -7: partial interview-breakoff / not administered (abbreviated interview)
+      -8: survey component legitimate skip/NA
+      -9: missing
+    design:
+      strata: STRAT_ID
+      psu: PSU
+      weights:
+        base_year: BYSTUWT
+        by_f1_panel: F1PNLWT
+        by_f3_panel: F3BYPNLWT
+        f1_f3_panel: F3F1PNLWT
+      replicate_weights: "200 BRR replicates per family (e.g., BYSTU1-200, F1PNL1-200, F3BYP1-200)"
+    cohort:
+      grade_at_baseline: 10
+      baseline_records: 16197
+      schools: 750
+      waves: {base_year: "2002", first_follow_up: "2004", hs_transcripts: "2005", second_follow_up: "2006", third_follow_up: "2012", ps_transcripts: "2013"}
