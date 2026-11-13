@@ -14,6 +14,9 @@ Status: draft v0.1.
   this project's AI-assisted workflow (decision D-008). No AI-use policy was found for NLS (BLS) or
   NCES data, but the PI must confirm current terms before any microdata are processed with AI
   assistance (D-012). If terms prohibit it, a human analyst runs the same code outside AI tools.
+- **Confirmed (2026-11-13, D-023):** the PI reports that BLS and NCES public-use terms do not mention AI-assisted processing and
+  that the PI's institution accepts the use of Claude to process these public-use data. PSID's terms also prohibit AI processing,
+  so PSID is excluded (D-021), as is Add Health (D-008).
 - **No re-identification.** Data-use terms for these studies prohibit attempts to identify
   respondents. We will not link files to outside data at the individual level, and the website
   will show only model estimates and aggregate tabulations with small-cell suppression
@@ -21,7 +24,8 @@ Status: draft v0.1.
 - **IRB status.** Whether analysis of public-use, de-identified secondary data is "not human
   subjects research", exempt, or requires review is an institutional determination. It must be
   obtained from the researcher's institution (or an independent IRB) and recorded in
-  `research_decision_log.md` before outcome analyses begin. Do not assume either answer.
+  `research_decision_log.md` before outcome analyses begin. Do not assume either answer. **Status:** recorded by the PI
+  (D-015, D-023).
 
 ## Framing and harms
 
