@@ -13,7 +13,7 @@ Claude from public documentation only. A person runs them, outside AI tools.
 
 | Study | Plan | Script and command |
 |---|---|---|
-| A3 Add Health mentor onset | `docs/sap_addhealth_mentor_timing.md` | see `docs/addhealth_human_analyst_checklist.md` |
+| A3 Add Health mentor onset | `docs/sap_addhealth_mentor_timing.md` | see `docs/addhealth_human_analyst_checklist.md` — **run completed locally by the PI 2026-11-13 (D-032); results kept local** |
 | R1 PSID closeness 8–11 vs 12–15 | `docs/sap_psid_childhood_replication.md` | `python scripts/psid_offline/run_psid_closeness_timing.py --data <PSID Data Center CSV/Stata export> --edu ER34548 [more education vars] --sex <sex var> --birthyear <year-born var> --out <folder>` |
 | R2 FFCWS age 9 vs 15 | `docs/sap_ffcws_age9_age15.md` | `python scripts/ffcws_offline/run_ffcws_age9_age15.py --files <baseline file> <year-9 file> <year-15 file> <year-22 file> --out <folder>` |
 

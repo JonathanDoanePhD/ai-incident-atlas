@@ -25,3 +25,12 @@ analyzed, this is a pre-run amendment, not a deviation. Hashes after the amendme
 34df45aaddfa1be05f35994193bf35b5c5de7ef0ff88b282a0a8b4cd9d652e1c  docs/sap_addhealth_mentor_timing.md
 e858bc4debc389fab6bfe794c582c13e581ed500f653753311399a58bcc440ab  scripts/addhealth_offline/run_addhealth_mentor_timing.py
 ```
+
+## Run record
+
+- **2026-11-13:** run completed locally by the PI with the script at commit 919f052. Its SHA-256 (e858bc4d…) matches amendment 1.
+- **Data:** Add Health public-use Waves I, III and IV, weighted with GSWGT134.
+- **Results:** kept on the PI's machine.
+- **PI's interpretation (D-032):** onset at 14–17 was slightly higher than onset before 14 in adjusted BA attainment.
+  - The difference was not significant at α = .05.
+  - Equivalence within ±5 percentage points was supported.
