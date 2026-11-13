@@ -84,7 +84,7 @@ python scripts/render_manuscript.py manuscripts/working_paper_v2.src.md manuscri
 
 ## Open items
 
-1. PSID and Add Health prohibit AI processing (D-008, D-021). Any replication with them must be run by a human analyst outside AI tools.
+1. PSID and Add Health prohibit AI processing (D-008, D-021). Study A3 (Add Health mentor-onset age) is ready for a **human** run outside AI tools: `docs/sap_addhealth_mentor_timing.md`, `scripts/addhealth_offline/`, `docs/addhealth_human_analyst_checklist.md`.
 2. Remaining closed-access works: Christensen et al. 2020 and Fruiht & Wray-Lake 2013 (see `docs/fulltext_age_moderation.md`).
 3. Peer feedback on working paper v2.
 
