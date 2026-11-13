@@ -1,6 +1,6 @@
 # Supportive relationships at different ages and later educational attainment: observational analyses in six U.S. cohorts
 
-**Jonathan Doane, Ph.D.** · Working paper v4, 13 November 2026 · Revised after an independent methodological review · Not peer reviewed
+**Jonathan Doane, Ph.D.** · Working paper v4, 13 November 2026 · Approved by the author · Revised after an independent methodological review · Not peer reviewed
 
 > **Changes from v2.** v3 corrects overstated conclusions, describes the analysis plans accurately (frozen locally, not externally
 > preregistered), reports estimates from re-runs with a corrected random-number seed, separates the constructs studied, reframes
