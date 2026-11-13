@@ -80,12 +80,12 @@ two ways that limit what they can show. The adults studied are parents and math 
 
 **Table 1.** Constructs analyzed (full comparison: `docs/construct_validity.md`).
 
-| Study | Construct | Informant | Adult | Ages at measurement | Onset observed | Duration observed |
-|---|---|---|---|---|---|---|
-| 1 NLSY97 | "Very supportive" global rating | Youth | Resident mother / father | 12–16 (one report) | No | No |
-| 2 HSLS:09 | Perceived math-teacher fairness and teaching | Student | That term's math teacher (usually different in each grade) | Fall grade 9; spring grade 11 | No | No |
-| 3 NLSY79 Children and Young Adults | Praise frequency (behavior) | Mother | Mother | 6–9 and 10–14 (biennial) | No | No |
-| 4 NLSY97 1997–2000 | Repeated "very supportive" ratings | Youth | Mother | 12–17 (four annual reports) | No | Repeated ratings only |
+| Study | Construct | Informant | Adult | Ages at measurement | Exposure years; outcome | Onset observed | Duration observed |
+|---|---|---|---|---|---|---|---|
+| 1 NLSY97 | "Very supportive" global rating | Youth | Resident mother / father | 12–16 (one report) | 1997; highest grade at last interview, 2010–2024 (most at ages 39–44) | No | No |
+| 2 HSLS:09 | Perceived math-teacher fairness and teaching | Student | That term's math teacher (usually different in each grade) | Fall grade 9; spring grade 11 | 2009, 2012; degree by June 2021 (about age 25) | No | No |
+| 3 NLSY79 Children and Young Adults | Praise frequency (behavior) | Mother | Mother | 6–9 and 10–14 (biennial) | 1986–2010; degree at last interview at age ≥ 25, through 2020 | No | No |
+| 4 NLSY97 1997–2000 | Repeated "very supportive" ratings | Youth | Mother | 12–17 (four annual reports) | 1997–2000; as Study 1 | No | Repeated ratings only |
 
 ## 2. General methods
 
@@ -109,6 +109,10 @@ with E-values [@vanderweele2017]. Reporting follows STROBE [@vonelm2007]; the co
 
 Sample sizes were fixed by the cohorts. Before analysis, Study 1's minimum detectable age-16 vs age-12 difference was estimated at
 about 0.22–0.30 SD, so it was not powered to detect differences near its 0.20 SD margin. Participant flow is in Appendix A.
+Participant characteristics, missing data per variable and unadjusted estimates are in `docs/strobe_tables.md`. Unadjusted associations
+were larger than adjusted ones, as expected from confounding by family background. Unadjusted timing contrasts were near zero or slightly
+favored the earlier measurement in Studies 1 and 3, so the adjusted tendency toward later measurement in those studies depends partly on
+covariate adjustment.
 
 **Reproduction in R.** The confirmatory survey estimates of Studies 1 and 2 (primary and complete-case) were re-estimated independently
 in R with the `survey` and `mitools` packages, from the same analysis-ready data. All 30 quantities agreed to within 10⁻¹¹
@@ -218,7 +222,10 @@ with birth year, household composition and distance to the outcome. Outcomes wer
 handled under a missing-at-random assumption. NLS custom longitudinal weights left Study 1's estimates essentially unchanged; some planned
 exploratory analyses were not run. The survey estimates were reproduced in R from the same analysis-ready data, but no second analyst has yet
 replicated the data preparation. Studies 5–7 are reported only as the author's qualitative interpretations, so readers cannot check their
-estimates. Plans were frozen locally rather than registered externally.
+estimates. Plans were frozen locally rather than registered externally. Each cohort represents a defined U.S. population: youths aged
+12–16 in 1997 (Studies 1 and 4), ninth-graders in fall 2009 (Study 2), children born 1979–1995 to a national cohort of women born
+1957–1964 (Study 3), and, for Studies 5–7, adolescents in grades 7–12 in 1994–95, PSID families' children, and children born in large
+U.S. cities in 1998–2000. Results may not generalize to other countries, later cohorts or formal mentoring programs.
 
 ## 5. Conclusion
 
@@ -231,7 +238,7 @@ and for studies that measure when relationships begin, how long they last, and h
 
 Studies 1–4 use public data (BLS: NLSY97, NLSY79; NCES: HSLS:09). Studies 5–7 use Add Health public-use, PSID and Future of Families data,
 analyzed by the author outside AI tools under those providers' terms. Code, frozen plans with file hashes, variable mappings, full results for
-Studies 1–4 and the audit are in the project repository; no respondent-level data are redistributed. Funding: [to be stated by the author]. The author hopes to found a youth mentoring organization, which creates an
+Studies 1–4 and the audit are in the project repository; no respondent-level data are redistributed. Funding: no external funding. The author hopes to found a youth mentoring organization, which creates an
 interest in particular findings. Analysis code and drafting were assisted by an AI system; the author is responsible for the content.
 
 ## Appendix A. Participant flow (Studies 1–4)

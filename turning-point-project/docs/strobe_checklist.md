@@ -16,16 +16,16 @@ with its supporting documents.
 - **No:** missing.
 - **n/a:** not applicable.
 
-Draft by Claude; **the PI reviews and approves.**
+Drafted by Claude; **approved by the PI on 2026-11-13.**
 
 | # | Item | Status | Where | Gap / action |
 |---|---|---|---|---|
 | 1a | Design named in title or abstract | Yes | Title ("observational analyses"); Abstract | — |
-| 1b | Informative, balanced abstract | Yes | Abstract | Revisit after adding author-run results (done in this revision) |
+| 1b | Informative, balanced abstract | Yes | Abstract | Revised for v3.1 |
 | 2 | Background and rationale | Yes | §1 | — |
 | 3 | Objectives and prespecified hypotheses | Yes | §1 (four questions); §2 Plans; SAPs | — |
 | 4 | Study design, early in paper | Yes | Abstract Methods; §2 | — |
-| 5 | Setting: locations, dates of recruitment, exposure, follow-up, data collection | Partly | Abstract; Table 1; §3 | Paper lacks survey years and outcome-measurement years per study. **Action:** add a Table 1 column with cohort birth years, exposure years and outcome year |
+| 5 | Setting: locations, dates of recruitment, exposure, follow-up, data collection | Yes | Table 1 (exposure years; outcome) | Done 2026-11-13 |
 | 6a | Eligibility, sources, selection; follow-up methods | Supp. | Results docs "Sample" sections; SAPs | **Action:** Appendix A flow table (added in this revision) |
 | 6b | Matching | n/a | — | — |
 | 7 | Define outcomes, exposures, confounders, effect modifiers | Partly | Table 1 (exposures); Table 2 header (outcomes); SAPs | Covariates were not listed in the paper. **Action:** covariate sentence in §2 (added in this revision) |
@@ -41,34 +41,23 @@ Draft by Claude; **the PI reviews and approves.**
 | 13a | Numbers at each stage | Supp. → Yes | Results docs; **Appendix A (added)** | — |
 | 13b | Reasons for non-participation at each stage | Partly | Appendix A row labels | Reasons are implied by the stage names, which is acceptable for secondary data |
 | 13c | Flow diagram | Partly | Appendix A tables | A table substitutes for a diagram; a diagram is optional |
-| 14a | Characteristics of participants (demographic, clinical, social); exposures and confounders | **No** | — | No descriptive table of covariates by study. **Action (Claude can do):** weighted descriptive table per study from the existing analysis files |
-| 14b | Number with missing data for each variable | Partly | Outcome-imputed counts only (Appendix A) | Covariate missingness not reported. **Action (Claude can do):** missingness table per study |
-| 14c | Follow-up time | Partly | Table 1 / §3 (outcome ages) | Covered by the item 5 action |
-| 15 | Outcome events or summary measures over time | Supp. | Results docs (BA share, SD of schooling) | Fold into the 14a table |
-| 16a | Unadjusted and adjusted estimates with CIs; confounders adjusted for | Partly | Table 2 (adjusted only) | Unadjusted estimates not reported. **Action (Claude can do):** unadjusted versions of the primary models |
+| 14a | Characteristics of participants (demographic, clinical, social); exposures and confounders | Yes | `docs/strobe_tables.md` (cited in §2) | Done 2026-11-13 (`scripts/strobe_tables.py`) |
+| 14b | Number with missing data for each variable | Yes | `docs/strobe_tables.md` | Done 2026-11-13 |
+| 14c | Follow-up time | Yes | Table 1 | Done 2026-11-13 |
+| 15 | Outcome events or summary measures over time | Yes | `docs/strobe_tables.md` (observed outcome means and shares) | — |
+| 16a | Unadjusted and adjusted estimates with CIs; confounders adjusted for | Yes | `docs/strobe_tables.md`; §2 summary sentence | Done 2026-11-13. Unadjusted timing contrasts near zero or favoring earlier measurement in Studies 1 and 3 are reported in the paper |
 | 16b | Category boundaries for continuous variables | Yes | Table 1; SAPs | — |
 | 16c | Relative risk translated to absolute risk | n/a | Linear probability and linear models already report absolute differences | — |
 | 17 | Other analyses (subgroups, interactions, sensitivity) | Yes | §3; results docs | — |
 | 18 | Key results with reference to objectives | Yes | §4 opening | — |
 | 19 | Limitations, including bias direction and magnitude | Yes | §4 list; §4.2 | — |
 | 20 | Cautious overall interpretation | Yes | §4; §5 | — |
-| 21 | Generalizability | Partly | §4.2 (single cohorts, U.S.) | Could state the target populations explicitly. **Action:** one sentence |
-| 22 | Funding and role of funders | **No** | — | **PI to supply** (e.g., "No external funding" if true). The disclosure of the planned mentoring organization is present |
+| 21 | Generalizability | Yes | §4.2 | Done 2026-11-13 |
+| 22 | Funding and role of funders | Yes | Data, code and disclosure | "No external funding" (PI, 2026-11-13) |
 
-## Summary of open actions
+## Status
 
-**Done in this revision (2026-11-13):**
-- covariate sentence (item 7)
-- study-size sentence (item 10)
-- Appendix A participant flow (items 6a, 12c, 13a)
+**Complete. Approved by the PI on 2026-11-13** (D-041). All applicable items are reported in the paper or in documents it cites.
 
-**Claude can do next, as descriptive reporting only with no new inference:**
-- weighted participant characteristics (item 14a)
-- covariate missingness (item 14b)
-- unadjusted estimates (item 16a)
-- survey-year column (items 5 and 14c)
-- generalizability sentence (item 21)
-
-**PI only:**
-- funding statement (item 22)
-- final approval of this checklist
+- **Optional item:** a graphical flow diagram (13c). Appendix A provides the flow as tables.
+- **Out of scope:** Studies 5–7 are reported qualitatively by the author.

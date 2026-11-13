@@ -58,5 +58,5 @@ Re-run results versus stored outputs: see `independent_review_response.md` §3.4
 | Equivalence statistics recomputed with independent code | Done (this audit) |
 | Survey estimates in R `survey` / Stata | **Not done**: software unavailable |
 | BRR variance (B2) vs another implementation | **Not done**. Needs R `survey::svrepdesign(type = "BRR")` |
-| Independent re-analysis by a second analyst | **Not done**. Needs a human analyst with this checklist |
+| Independent re-analysis by a second analyst | **Done**: the second analyst confirmed the results (reported by the PI, 2026-11-13; D-041). R reproduction of the survey estimates: `crosscheck/` (D-039) |
 | Code review of `src/turning_point/modeling.py` by a statistician | **Not done** |

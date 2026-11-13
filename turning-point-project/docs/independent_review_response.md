@@ -23,7 +23,9 @@ R or Stata, a second human analyst, the unrun custom-weight sensitivity analysis
 > **Status update (2026-11-13, later the same day).**
 > - **Done:** R reproduction (all 30 quantities agree; D-039); custom-weight sensitivity S6b (D-033); STROBE checklist drafted for PI
 >   approval (D-040); human-run studies A3, R1 and R2 run by the PI (D-032 and D-034 to D-036); all closed-access articles read (D-031).
-> - **Outstanding:** the second analyst's replication (recruited, D-038), and the PI's final acceptance of the audit.
+> - **Second analyst:** confirmed the results, as reported by the PI (D-041).
+>
+> **Audit accepted by the PI on 2026-11-13 (D-041).**
 
 ## 2. Files and code inspected
 
@@ -194,9 +196,9 @@ stays the plan's m = 20 run. Across all four runs the TOST p ranged from .030 to
 | Need | Why it can't be done here | What is required |
 |---|---|---|
 | Survey estimates in R `survey` or Stata `svy` | **Done 2026-11-13** (`crosscheck/`; D-039). Originally: not installed | Run P1 with `svydesign(ids=~VPSU, strata=~VSTRAT, weights=~w, nest=TRUE)`; B2 with `svrepdesign(type="BRR")` on W2W1STU001–200 |
-| Second analyst | Recruited by the PI 2026-11-13 (D-038); replication pending. Single AI analyst | A human statistician re-implements from the plans and the reproducibility checklist |
+| Second analyst | **Confirmed the results** (reported by the PI 2026-11-13; D-041). Originally: single AI analyst | A human statistician re-implements from the plans and the reproducibility checklist |
 | S6b custom-weight sensitivity | **Done 2026-11-13** (D-033). Originally: needs NLS online tool | PI downloads weights for `data/processed/nlsy97_s6b_ids.txt`; run `scripts/run_paper1_s6b.py` |
-| STROBE checklist | **Drafted 2026-11-13** (`docs/strobe_checklist.md`; D-040); PI approval and funding statement pending. Originally: not yet written | Complete before submission |
+| STROBE checklist | **Complete and approved 2026-11-13** (`docs/strobe_checklist.md`, `docs/strobe_tables.md`; D-040–D-042). Originally: not yet written | Complete before submission |
 | Human-run studies (A3, R1, R2) | **Run by the PI 2026-11-13** (D-032, D-034–D-036). Data terms prohibit AI | Human analyst, outside AI tools |
 | Closed-access articles | **All read 2026-11-13** (PI-supplied copies; D-029, D-031). Originally: no legal copy | `docs/article_retrieval_protocol.md` |
 
@@ -211,7 +213,7 @@ stays the plan's m = 20 run. Across all four runs the TOST p ranged from .030 to
 > loss of support and stable family characteristics could not be distinguished. The findings argue against assuming a narrow early window
 > for parental and teacher support, and for studies that measure when relationships begin, how long they last, and how good they are.
 
-## 9. Proposed next study (not started; to begin only after this audit is accepted)
+## 9. Proposed next study (audit accepted 2026-11-13; planning may begin, see D-041 on registration)
 
 **Distinguishing duration, stability, quality and timing of supportive relationships.**
 
