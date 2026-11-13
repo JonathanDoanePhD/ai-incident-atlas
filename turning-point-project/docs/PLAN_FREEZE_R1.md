@@ -16,4 +16,5 @@ dbb47e1fc50c43a8400d0384e8d8c8aba7bd690c261d0e35ad16d85c8c5a7d6f  docs/human_run
   - Associations were more positive at 8–11 for mothers and teachers, and at 12–15 for other adults.
   - None was significant after Holm adjustment.
   - None was equivalent within ±3 percentage points.
-- **Pending confirmation:** that each unadjusted 95% CI includes 0, which is what the script's own label requires.
+- **Confirmed by the PI (2026-11-13):** the script printed "inconclusive" for all three comparisons, so each unadjusted 95% CI includes 0.
+  The printed plan SHA-256 (7d6f6ccb…) matches the frozen SAP.

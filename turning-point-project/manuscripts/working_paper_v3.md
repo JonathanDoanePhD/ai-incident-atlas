@@ -1,22 +1,28 @@
-# Supportive relationships at different ages and later educational attainment: four observational analyses in three U.S. cohorts
+# Supportive relationships at different ages and later educational attainment: observational analyses in six U.S. cohorts
 
-**Jonathan Doane, Ph.D.** · Working paper v3, 13 November 2026 · Revised after an independent methodological review · Not peer reviewed
+**Jonathan Doane, Ph.D.** · Working paper v3.1, 13 November 2026 · Revised after an independent methodological review · Not peer reviewed
 
 > **Changes from v2.** v3 corrects overstated conclusions, describes the analysis plans accurately (frozen locally, not externally
 > preregistered), reports estimates from re-runs with a corrected random-number seed, separates the constructs studied, reframes
 > the equivalence tests and the accumulation analysis, and fixes bibliographic errors. Details: `docs/independent_review_response.md`.
+> **v3.1 (same day).** Adds three analyses run by the author outside AI tools (Add Health, PSID, Future of Families; reported
+> qualitatively), the NLS custom-weight sensitivity analysis, an independent R reproduction of the survey estimates, a STROBE checklist
+> with covariate, study-size and participant-flow reporting, and full-text corrections to the literature summary.
 
 ## Abstract
 
 **Background.** Youth programs often appeal to developmental windows, ages when supportive adults are thought to matter most.
 Evidence that the long-run association of support with outcomes differs by age is scarce.
-**Methods.** We analyzed three national U.S. cohorts. Each analysis followed a written plan committed with file hashes to a public
+**Methods.** We analyzed six U.S. cohorts. Each analysis followed a written plan committed with file hashes to a public
 repository before its data were opened. These are locally frozen plans, not external preregistrations, and three of the four
 were written after the first study's results were known. (1) NLSY97: adolescents' reports of a very supportive mother or father, asked
 identically at ages 12–16, and highest grade completed around age 40. (2) HSLS:09: ratings of the current math teacher in grade 9 and
 grade 11 (usually different teachers), and bachelor's-degree attainment by 2021. (3) NLSY79 Children and Young Adults: mothers' reports of
 praise at child ages 6–9 and 10–14, and bachelor's attainment. (4) NLSY97, exploratory: four annual support reports, 1997–2000.
-All analyses vary **age or grade at measurement**, not the age at which relationships began, and none concerns mentoring.
+These four vary **age or grade at measurement**, not the age at which relationships began, and none concerns mentoring. Three further
+analyses were run by the author outside AI tools, as the data providers require, and are reported qualitatively: (5) Add Health, age at
+which a natural mentor first became important (before 14 vs 14–17); (6) PSID Child Development Supplement, children's closeness to
+mother, favorite teachers and other adults at 8–11 vs 12–15; (7) Future of Families, closeness to mother at 9 vs 15.
 **Results.** Reported support was modestly associated with later attainment. A very supportive mother at age 14 was associated with
 +0.47 years of schooling (0.31 to 0.63), and similarly for fathers. In early adolescence, 1 SD more maternal praise was associated with
 +1.5 percentage points in bachelor's attainment. Contrasts across ages or grades were imprecise and not statistically
@@ -24,11 +30,15 @@ significant: age 16 vs 12, mothers +0.28 years (−0.20 to 0.75) and fathers −
 (−0.2 to +3.2); ages 6–9 vs 10–14, −1.6 points (−3.9 to +0.8). Equivalence tests met their prespecified margins for fathers and for
 grade 9 vs 11, but those margins were as large as the associations themselves. In the exploratory analysis, more years of reported
 support went with more schooling (0.22 grades per year, 0.14 to 0.31). That pattern was described equally well by
-"supportive in all four years" and by "any loss of support".
-**Conclusions.** In these data, support measured earlier in childhood or adolescence was not more strongly associated with later
-attainment than support measured later, and point estimates mostly favored later measurement. The analyses do not show that
-developmental timing is irrelevant. Nonlinear and moderate timing differences cannot be excluded, ages of relationship onset were not
-observed, and the cumulative-support pattern may reflect stable family characteristics rather than accumulating exposure.
+"supportive in all four years" and by "any loss of support". In the author-run analyses, no timing contrast was statistically
+significant. Mentors who first became important at 14–17 were associated with slightly higher bachelor's attainment than mentors
+from before 14, and differences larger than 5 percentage points were ruled out. The PSID and Future of Families contrasts were
+inconclusive, with point estimates for mothers favoring the earlier window.
+**Conclusions.** In these data, no timing contrast showed support or mentoring at earlier ages to be more strongly associated with
+later attainment than at later ages, and point estimates did not consistently favor either. For natural mentors, onset before 14 was
+not associated with a meaningful advantage over onset at 14–17. The analyses do not show that developmental timing is irrelevant.
+Nonlinear and moderate timing differences cannot be excluded, mentor onset was reported retrospectively, and the cumulative-support
+pattern may reflect stable family characteristics rather than accumulating exposure.
 
 ## 1. Introduction
 
@@ -89,7 +99,32 @@ multiply imputed by chained equations with predictive mean matching (White et al
 the imputation random-number generator had not been seeded, so results were re-run with an explicit seed. Re-runs are now byte-identical,
 and estimates differ from those in v2 only by Monte Carlo error (Table 2 footnote). Each primary contrast was tested for difference from zero
 (two-sided, α = .05) and for equivalence within a prespecified margin by two one-sided tests (90% CI). Unmeasured confounding was summarized
-with E-values (VanderWeele & Ding, 2017). Reporting follows STROBE where applicable (von Elm et al., 2007); a formal STROBE checklist has not yet been completed.
+with E-values (VanderWeele & Ding, 2017). Reporting follows STROBE (von Elm et al., 2007); the completed checklist is `docs/strobe_checklist.md`.
+
+**Covariates and study size.** Models adjusted for background characteristics measured before or at the first exposure:
+- **Study 1 and Study 4:** sex, race/ethnicity, household poverty ratio, urban residence, parental education and household structure.
+- **Study 2:** sex, race/ethnicity, socioeconomic status, two-parent household, grade-9 mathematics score and school locale.
+- **Study 3:** child sex, race/ethnicity, birth-year group, birth order, mother's age at birth, mother's education and AFQT
+  percentile, and family income and poverty in childhood.
+
+Sample sizes were fixed by the cohorts. Before analysis, Study 1's minimum detectable age-16 vs age-12 difference was estimated at
+about 0.22–0.30 SD, so it was not powered to detect differences near its 0.20 SD margin. Participant flow is in Appendix A.
+
+**Reproduction in R.** The confirmatory survey estimates of Studies 1 and 2 (primary and complete-case) were re-estimated independently
+in R with the `survey` and `mitools` packages, from the same analysis-ready data. All 30 quantities agreed to within 10⁻¹¹
+(`crosscheck/`). Data preparation and imputation were not re-implemented; a second analyst's replication is in progress.
+
+**Analyses run by the author.** Add Health, PSID and the Future of Families study restrict AI processing of their data. For these studies,
+plans and analysis scripts were written with AI assistance from public documentation only, frozen with file hashes, and run by the author
+on a personal computer outside AI tools. The author's interpretations are reported here; no numerical estimates were shared with AI tools.
+- **Study 5 (Add Health, public-use Waves I, III and IV).** Exposure: age at which a nonparental adult who "made an important positive
+  difference" first became important, reported at Wave III. Primary contrast: onset before 14 vs 14–17. Outcome: bachelor's degree by
+  Wave IV. Margin: ±5 percentage points.
+- **Study 6 (PSID Child Development Supplement 2002 and 2007).** Exposure: the child's own report of being extremely close to their
+  mother, favorite teachers and other adults, at 8–11 and at 12–15. Outcome: bachelor's degree by age 25 or later. Margin: ±3 points,
+  with Holm adjustment across the three adults.
+- **Study 7 (Future of Families and Child Wellbeing Study).** Exposure: extremely close to mother at age 9 and at age 15. Outcome: any
+  postsecondary education or training by 22. Margin: ±3 points.
 
 **What the equivalence margins mean.** The margins (±0.20 SD in Study 1; ±3 percentage points per SD in Studies 2–3) were set before the data
 were seen. They turned out to be as large as or larger than the associations being compared. Equivalence therefore rules out only differences
@@ -138,18 +173,31 @@ The analyzed youths were more advantaged than those excluded for incomplete hist
 unchanged. A stable family characteristic measured with error would produce the same pattern as cumulative exposure. **These data do not
 demonstrate a cumulative effect of support.**
 
+**Studies 5–7 (run and interpreted by the author; no estimates shown).**
+- **Study 5 (Add Health):** bachelor's attainment was slightly higher when a natural mentor first became important at 14–17 than before
+  14. The difference was not statistically significant, and equivalence within ±5 percentage points was supported.
+- **Study 6 (PSID):** associations were more positive at 8–11 for mothers and favorite teachers, and at 12–15 for other adults. No
+  difference was significant after Holm adjustment, and none was shown equivalent within ±3 points. All three are inconclusive.
+- **Study 7 (Future of Families):** the association of closeness to mother with postsecondary participation was more positive at age 9
+  than at 15. The difference was not significant and equivalence was not shown. It is inconclusive.
+
 ## 4. Discussion
 
-Across four observational analyses, reported support from parents, and from math teachers in grade 11, was modestly associated with later
-educational attainment. We found no evidence that support measured earlier carried more weight than support measured later, and point
-estimates mostly favored later measurement. This is weak evidence against a strong early-window hypothesis for these constructs. It is not
-evidence that timing does not matter:
+Across these observational analyses, reported support from parents, and from math teachers in grade 11, was modestly associated with later
+educational attainment. No timing contrast was statistically significant. In Studies 1–3, point estimates mostly favored later measurement.
+In the author's replications with children's own reports (Studies 6–7), estimates for mothers favored the earlier window, so the direction
+is not consistent. The one analysis of when a natural mentor became important (Study 5) ruled out an advantage of more than 5 percentage
+points for onset before 14 over onset at 14–17. This agrees with the full text of the only earlier study of mentor timing, which found no
+difference between mentors from before and during high school (Fruiht & Wray-Lake, 2013). This is weak evidence against a strong early-window
+hypothesis for these constructs. It is not evidence that timing does not matter:
 
 1. The prespecified contrasts were imprecise, and the equivalence margins were as large as the associations compared.
 2. Linear contrasts can miss nonlinear age patterns.
-3. We observed age at measurement, not age at relationship onset or relationship duration.
+3. Except in Study 5, we observed age at measurement, not age at relationship onset or relationship duration. Study 5's onset ages
+   were reported retrospectively, in early adulthood.
 4. Later measurements are closer to educational decisions, so larger later associations may reflect proximity rather than sensitivity.
-5. The adults were parents and teachers, not mentors.
+5. Apart from Study 5's natural mentors, the adults were parents and teachers, not mentors; none of the studies concerns formal
+   mentoring programs.
 
 The repeated-report analysis shows that consistently reported support goes with more schooling. It cannot separate accumulation, stability,
 loss of support, and stable family characteristics. All results are observational: more capable or easier-going young people may both elicit
@@ -167,22 +215,54 @@ require designs that vary when relationships begin, ideally randomized.
 
 All four analyses are observational, use single-informant measures, and vary age at measurement within single cohorts, where age is entangled
 with birth year, household composition and distance to the outcome. Outcomes were measured at different ages across studies. Attrition was
-handled under a missing-at-random assumption. One planned sensitivity analysis (NLS custom longitudinal weights) and some planned exploratory
-analyses were not run. Survey estimates have not been reproduced in R or Stata, and no second analyst has replicated the work. Plans were frozen
-locally rather than registered externally.
+handled under a missing-at-random assumption. NLS custom longitudinal weights left Study 1's estimates essentially unchanged; some planned
+exploratory analyses were not run. The survey estimates were reproduced in R from the same analysis-ready data, but no second analyst has yet
+replicated the data preparation. Studies 5–7 are reported only as the author's qualitative interpretations, so readers cannot check their
+estimates. Plans were frozen locally rather than registered externally.
 
 ## 5. Conclusion
 
-In three U.S. cohorts, adult support reported at different ages was modestly associated with later education. Support measured earlier was not
-more strongly associated with outcomes than support measured later. These results do not establish that developmental timing is irrelevant, and
+In six U.S. cohorts, adult support reported at different ages was modestly associated with later education. Support measured, or mentoring
+begun, earlier was not more strongly associated with outcomes than support measured or mentoring begun later. These results do not establish that developmental timing is irrelevant, and
 they do not show that support has cumulative causal effects. They argue against assuming a narrow early window for parental and teacher support,
 and for studies that measure when relationships begin, how long they last, and how good they are.
 
 ## Data, code and disclosure
 
-All data are public (BLS: NLSY97, NLSY79; NCES: HSLS:09). Code, frozen plans with file hashes, variable mappings, full results and the audit are
-in the project repository; no respondent-level data are redistributed. The author hopes to found a youth mentoring organization, which creates an
+Studies 1–4 use public data (BLS: NLSY97, NLSY79; NCES: HSLS:09). Studies 5–7 use Add Health public-use, PSID and Future of Families data,
+analyzed by the author outside AI tools under those providers' terms. Code, frozen plans with file hashes, variable mappings, full results for
+Studies 1–4 and the audit are in the project repository; no respondent-level data are redistributed. Funding: [to be stated by the author]. The author hopes to found a youth mentoring organization, which creates an
 interest in particular findings. Analysis code and drafting were assisted by an AI system; the author is responsible for the content.
+
+## Appendix A. Participant flow (Studies 1–4)
+
+| Study 1 NLSY97 | Mothers | Fathers |
+|---|---|---|
+| Round-1 respondents | 8,984 | 8,984 |
+| In item universe (living with a parent figure of that sex) | 8,610 | 6,443 |
+| Valid answer (analyzed) | 8,607 | 6,436 |
+| Attainment observed at an interview in 2010 or later (age ≥ 25) | 7,838 | 5,816 |
+| Attainment imputed (m = 40) | 769 | 620 |
+
+| Study 2 HSLS:09 | n |
+|---|---|
+| Student records | 23,503 |
+| Responded in grades 9 and 11 (longitudinal weight > 0) | 18,623 |
+| Rated math teacher in both grades (analyzed) | 14,259 |
+| Degree observed / imputed (m = 20) | 10,592 / 3,667 |
+
+| Study 3 NLSY79 Children and Young Adults | n |
+|---|---|
+| Children | 11,551 |
+| Born 1979–1995 | 9,270 |
+| Praise reported in both windows (analyzed) | 6,190 children of 3,138 mothers |
+| Outcome observed (age ≥ 25) / imputed (m = 20) | 5,680 / 510 |
+
+| Study 4 NLSY97 accumulation | n |
+|---|---|
+| Aged 12–14 in 1996 | 5,419 |
+| Mother-support item answered in all four rounds, 1997–2000 | 3,870 |
+| Complete covariates and observed outcome (analyzed) | 2,566 |
 
 ## References
 

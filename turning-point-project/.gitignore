@@ -2,6 +2,7 @@
 # and Add Health / NCES terms forbid re-identification attempts. Only README files are tracked.
 data/raw/*
 data/processed/*
+data/crosscheck/*
 !data/raw/README.md
 !data/processed/README.md
 *.dta

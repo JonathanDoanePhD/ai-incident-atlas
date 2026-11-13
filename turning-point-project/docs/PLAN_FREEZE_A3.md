@@ -34,3 +34,5 @@ e858bc4debc389fab6bfe794c582c13e581ed500f653753311399a58bcc440ab  scripts/addhea
 - **PI's interpretation (D-032):** onset at 14–17 was slightly higher than onset before 14 in adjusted BA attainment.
   - The difference was not significant at α = .05.
   - Equivalence within ±5 percentage points was supported.
+- **Confirmed by the PI (2026-11-13):** the printed plan SHA-256 is e79ae369…, the originally frozen SAP. This is expected for a
+  919f052 checkout, which predates amendment 1's wording change to the SAP weight row. The script's analysis is unaffected.

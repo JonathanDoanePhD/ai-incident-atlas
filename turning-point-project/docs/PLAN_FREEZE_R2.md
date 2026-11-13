@@ -16,3 +16,4 @@ dbb47e1fc50c43a8400d0384e8d8c8aba7bd690c261d0e35ad16d85c8c5a7d6f  docs/human_run
   - The closeness association was more positive at age 9 than at age 15.
   - The difference was not significant.
   - Equivalence within ±3 percentage points was not established.
+- **Confirmed by the PI (2026-11-13):** the printed plan SHA-256 (d3b37153…) matches the frozen SAP.

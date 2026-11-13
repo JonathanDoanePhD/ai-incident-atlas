@@ -1,0 +1,25 @@
+Independent R cross-check of confirmatory survey estimates
+Run: 2026-11-13 19:00 UTC | R version 4.3.3 (2024-02-29) | survey 4.2.1 | mitools 2.4
+
+Quantities compared: 30; passed: 30 (tolerance 1e-06 relative)
+Largest |estimate difference|: 2.2e-14; largest relative SE difference: 2.4e-14; largest |CI-limit difference|: 2.5e-14
+Largest |df difference| (pooled Barnard-Rubin df): 3.2e-12
+Note: mitools::MIcombine's own df variant differs from the published Barnard-Rubin df by up to 0.86 df (no effect on estimates or SEs).
+
+Prespecified contrasts (R estimate, 95% CI | Python estimate):
+  Paper 1 NLSY97  mother primary (MI)          theta_14            0.4706 (  0.3088,   0.6325) |    0.4706  PASS
+  Paper 1 NLSY97  mother primary (MI)          delta_16_vs_12      0.2750 ( -0.1984,   0.7484) |    0.2750  PASS
+  Paper 1 NLSY97  mother S2 complete cases     theta_14            0.4706 (  0.2901,   0.6510) |    0.4706  PASS
+  Paper 1 NLSY97  mother S2 complete cases     delta_16_vs_12      0.2101 ( -0.3921,   0.8124) |    0.2101  PASS
+  Paper 1 NLSY97  father primary (MI)          theta_14            0.4725 (  0.2976,   0.6474) |    0.4725  PASS
+  Paper 1 NLSY97  father primary (MI)          delta_16_vs_12     -0.1907 ( -0.6546,   0.2732) |   -0.1907  PASS
+  Paper 1 NLSY97  father S2 complete cases     theta_14            0.4589 (  0.2493,   0.6685) |    0.4589  PASS
+  Paper 1 NLSY97  father S2 complete cases     delta_16_vs_12      0.2255 ( -0.2868,   0.7377) |    0.2255  PASS
+  B2 HSLS:09      primary (MI)                 theta9             -0.0022 ( -0.0139,   0.0094) |   -0.0022  PASS
+  B2 HSLS:09      primary (MI)                 theta11             0.0129 ( -0.0009,   0.0267) |    0.0129  PASS
+  B2 HSLS:09      primary (MI)                 diff_11_minus_9     0.0151 ( -0.0021,   0.0323) |    0.0151  PASS
+  B2 HSLS:09      S2 complete cases            theta9             -0.0039 ( -0.0170,   0.0091) |   -0.0039  PASS
+  B2 HSLS:09      S2 complete cases            theta11             0.0174 (  0.0015,   0.0332) |    0.0174  PASS
+  B2 HSLS:09      S2 complete cases            diff_11_minus_9     0.0213 (  0.0002,   0.0424) |    0.0213  PASS
+
+RESULT: all quantities agree within tolerance.
