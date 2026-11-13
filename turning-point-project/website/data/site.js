@@ -108,7 +108,7 @@ window.SITE_DATA = {
     {
      "label": "evidence",
      "cite": "Yeager et al., 2019",
-     "text": "A brief online growth-mindset intervention improved grades among lower-achieving students in a national experiment (grade of delivery to be confirmed from the full text)."
+     "text": "A brief online growth-mindset intervention delivered to 12,490 ninth-graders improved grades among lower-achieving students in a national experiment."
     },
     {
      "label": "evidence",
@@ -2195,6 +2195,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-13",
-  "commit": "e8a644e"
+  "commit": "75c3510"
  }
 };

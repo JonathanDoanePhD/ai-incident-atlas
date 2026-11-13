@@ -134,7 +134,7 @@ STAGES = [
          evidence=[
              dict(label=U, cite="fuhrmann2015", text="A review of adolescent sensitive periods concluded that concrete evidence for them is mostly lacking."),
              dict(label=E, cite="benner2009", text="Adolescents doing well before the high-school transition showed disruptions in psychological functioning and grades across it, and many continued to struggle."),
-             dict(label=E, cite="yeager2019", text="A brief online growth-mindset intervention improved grades among lower-achieving students in a national experiment (grade of delivery to be confirmed from the full text)."),
+             dict(label=E, cite="yeager2019", text="A brief online growth-mindset intervention delivered to 12,490 ninth-graders improved grades among lower-achieving students in a national experiment."),
              dict(label=E, cite="yeager2018", text="Interventions that work for children often fail with middle adolescents unless they fit adolescents' need for status and respect."),
          ],
          open=[dict(label=U, text="No study compares the same supportive relationship begun in grade 9 with the same relationship begun at another age."),

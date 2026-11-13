@@ -84,9 +84,15 @@ python scripts/render_manuscript.py manuscripts/working_paper_v2.src.md manuscri
 
 ## Open items
 
-1. PSID and Add Health prohibit AI processing (D-008, D-021). Study A3 (Add Health mentor-onset age) is ready for a **human** run outside AI tools: `docs/sap_addhealth_mentor_timing.md`, `scripts/addhealth_offline/`, `docs/addhealth_human_analyst_checklist.md`.
-2. Remaining closed-access works: Christensen et al. 2020 and Fruiht & Wray-Lake 2013 (see `docs/fulltext_age_moderation.md`).
-3. Peer feedback on working paper v2.
+Prepared and waiting on someone else (see `docs/human_run_checklist.md`):
+
+| Item | What is ready | Who acts |
+|---|---|---|
+| A3 Add Health: age a mentor became important | plan, script, checklist | human analyst, outside AI tools |
+| R1 PSID: closeness at 8–11 vs 12–15 (mother, teachers, other adults) | plan, script | human analyst, outside AI tools |
+| R2 FFCWS: closeness at 9 vs 15 | plan, script | human analyst (or Claude, with ICPSR's written permission) |
+| Paper 1 S6b: NLS custom weights | ID list `data/processed/nlsy97_s6b_ids.txt`, script `scripts/run_paper1_s6b.py` | PI downloads weights at nlsinfo.org/weights/nlsy97; Claude runs |
+| Closed articles (Fruiht & Wray-Lake 2013, Christensen et al. 2020, and others) | `docs/article_retrieval_protocol.md`, extraction form, email template | PI obtains legal copies; Claude extracts |
 
 ## License and citation
 
