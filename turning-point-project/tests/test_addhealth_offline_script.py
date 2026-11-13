@@ -13,7 +13,7 @@ def _mod():
     m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
 
 
-def test_runs_on_synthetic_files(tmp_path):
+def _write_fixtures(tmp_path, weight_col="GSWGT134"):
     rng = np.random.default_rng(0); n = 3000
     aid = np.arange(n) + 100000
     pd.DataFrame({"AID": aid, "BIO_SEX": rng.integers(1, 3, n), "H1GI1Y": rng.integers(76, 83, n), "IYEAR": 95,
@@ -24,10 +24,27 @@ def test_runs_on_synthetic_files(tmp_path):
     pd.DataFrame({"AID": aid, "H3MN1": mn1, "H3MN2": np.where(mn1 == 1, rng.integers(1, 22, n), 97),
                   "H3MN6": np.where(mn1 == 1, rng.integers(0, 24, n), 97), "H3MN8": rng.integers(1, 10, n)}).to_csv(tmp_path / "w3.csv", index=False)
     pd.DataFrame({"AID": aid, "H4ED2": rng.integers(1, 14, n)}).to_csv(tmp_path / "w4.csv", index=False)
-    pd.DataFrame({"AID": aid, "CLUSTER2": rng.integers(1, 120, n), "GSWGT4_2": rng.uniform(200, 3000, n)}).to_csv(tmp_path / "wt.csv", index=False)
+    pd.DataFrame({"AID": aid, "CLUSTER2": rng.integers(1, 120, n), weight_col: rng.uniform(200, 3000, n)}).to_csv(tmp_path / "wt.csv", index=False)
+
+
+def _run(tmp_path):
     m = _mod()
     m.main(["--w1", str(tmp_path / "w1.csv"), "--w3", str(tmp_path / "w3.csv"), "--w4", str(tmp_path / "w4.csv"),
             "--weights", str(tmp_path / "wt.csv"), "--out", str(tmp_path / "out")])
+
+
+def test_runs_on_synthetic_files(tmp_path):
+    _write_fixtures(tmp_path)
+    _run(tmp_path)
     E = pd.read_csv(tmp_path / "out" / "a3_estimates.csv")
     assert {"primary (ref: onset 14-17)", "S1 unweighted", "S4 cut at 12 (before 12 vs 12-17)"} <= set(E["analysis"])
-    assert "GSWGT4_2" in (tmp_path / "out" / "a3_results.txt").read_text()
+    assert "GSWGT134" in (tmp_path / "out" / "a3_results.txt").read_text()
+
+
+
+def test_requires_longitudinal_weight(tmp_path):
+    """No silent fallback to another weight (plan amendment D-030)."""
+    import pytest
+    _write_fixtures(tmp_path, weight_col="GSWGT4_2")
+    with pytest.raises(ValueError, match="GSWGT134"):
+        _run(tmp_path)

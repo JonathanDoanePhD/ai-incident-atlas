@@ -53,7 +53,7 @@ defined by the Wave III mentor items:
 | Family income | `PA55` | thousands of dollars; log(1 + x); missing → median + indicator |
 | Grades, Wave I | `H1ED11`–`H1ED14` | 1 A … 4 D or lower; 5+ → missing; GPA = 5 − mean (sensitivity only) |
 | Cluster | `CLUSTER2` | public-use cluster (Guidelines, Table 3.3); no strata in public use |
-| Weight | `GSWGT134` if present in the public Wave IV weights file; else `GSWGT4_2` | the script reports which it used |
+| Weight | `GSWGT134` (Waves I, III, IV longitudinal weight) from the public Wave IV weights file; the script stops if it is absent | amended 2026-11-13 before any run (D-030); the frozen version fell back to `GSWGT4_2` |
 
 ## Model
 
