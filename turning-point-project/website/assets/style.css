@@ -152,3 +152,7 @@ footer img{width:28px;height:28px}
   .section-head img{width:80px}
 }
 @media (prefers-reduced-motion:reduce){.hero canvas{animation:none}}
+
+/* keep filter controls inside narrow screens (long option labels) */
+.controls label{min-width:0;max-width:100%}
+.controls select,.controls input[type=search]{max-width:100%}

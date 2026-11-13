@@ -307,6 +307,26 @@
       characteristics and measurement error can produce the same pattern, so <strong>cumulative effects are not demonstrated</strong>.</p>
       <p class="small">Exploratory, complete cases. Full report: <a href="../docs/results_p1e_accumulation.md">results_p1e_accumulation.md</a>.</p></div>`;
   }
+  function authorRunBlock() {
+    return `<h3 style="margin-top:2rem">Analyses run by the author outside AI tools (Add Health, PSID, Future of Families)</h3>
+      <div class="notice info">These data providers restrict AI processing, so the author ran the frozen analysis scripts on a personal computer and
+      reports only the author's interpretation. <strong>No estimates are shown.</strong></div>
+      <div class="grid g3">
+        <div class="card"><h4>When a natural mentor first became important (Add Health)</h4>
+          <p>Bachelor's attainment was slightly higher when the mentor became important at 14–17 than before 14. Not statistically significant;
+          differences larger than 5 percentage points were ruled out (equivalence shown).</p>
+          <p><span class="pill evidence">Equivalent within ±5 points</span></p>
+          <p class="small">Onset age reported retrospectively in early adulthood.</p></div>
+        <div class="card"><h4>Children's closeness at 8–11 vs 12–15 (PSID)</h4>
+          <p>Associations with a bachelor's degree were more positive at 8–11 for mothers and favorite teachers, and at 12–15 for other adults.
+          None significant after Holm adjustment; none shown equivalent within ±3 points.</p>
+          <p><span class="pill uncertain">Inconclusive</span></p></div>
+        <div class="card"><h4>Closeness to mother at 9 vs 15 (Future of Families)</h4>
+          <p>The association with postsecondary education or training by 22 was more positive at 9 than at 15. Not significant; equivalence within
+          ±3 points not shown.</p>
+          <p><span class="pill uncertain">Inconclusive</span></p></div>
+      </div>`;
+  }
   function b2Block(B) {
     const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
     const L = 150, R = 520, Y0 = 30, H = 46;
@@ -372,10 +392,11 @@
         <div class="table-wrap"><table><thead><tr><th>Analysis</th><th>Association at 14</th><th>Difference 16 vs 12</th></tr></thead><tbody>${sensRows}</tbody></table></div>
         <p class="small">S5a uses a 1–3 ordinal score (per step); S5b the multi-item scale (per point, subsample). Scales differ from the binary primary exposure.</p>
       </details>
-      <p class="small">Design: ${F.m} imputations, Taylor-linearized variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife. Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
+      <p class="small">Design: ${F.m} imputations, Taylor-linearized variance with ${F.design_df} design degrees of freedom, cross-checked by jackknife and reproduced in R (survey package). Full report: <a href="../docs/results_paper1.md">results_paper1.md</a>.</p>
       ${F.b2 ? b2Block(F.b2) : ""}
       ${F.p2 ? p2Block(F.p2) : ""}
-      ${F.accum ? accumBlock(F.accum) : ""}`;
+      ${F.accum ? accumBlock(F.accum) : ""}
+      ${authorRunBlock()}`;
     document.querySelectorAll('input[name="fWho"]').forEach((r) => r.addEventListener("change", () => { who = r.value; render(); }));
     $("#fCat").addEventListener("change", (e) => { cat = e.target.checked; render(); });
   }

@@ -230,6 +230,18 @@ window.FINDINGS = {
       -0.066,
       0.805
      ]
+    },
+    "S6b_custom_longitudinal_weight_complete_case": {
+     "theta_14": [
+      0.474,
+      0.293,
+      0.654
+     ],
+     "delta_16_vs_12": [
+      0.206,
+      -0.399,
+      0.81
+     ]
     }
    },
    "exploratory": {
@@ -490,6 +502,18 @@ window.FINDINGS = {
       -0.005,
       -0.455,
       0.445
+     ]
+    },
+    "S6b_custom_longitudinal_weight_complete_case": {
+     "theta_14": [
+      0.462,
+      0.251,
+      0.673
+     ],
+     "delta_16_vs_12": [
+      0.246,
+      -0.268,
+      0.76
      ]
     }
    },

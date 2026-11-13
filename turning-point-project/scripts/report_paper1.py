@@ -37,6 +37,11 @@ def main():
             t = tab(rows)
             sens[key] = {q: [round(t.loc[q, "estimate"], 3), round(t.loc[q, "ci_low"], 3), round(t.loc[q, "ci_high"], 3)]
                          for q in ("theta_14", "delta_16_vs_12")}
+        s6b = ROOT / "outputs" / "paper1_s6b_results.json"
+        if s6b.exists():
+            t = tab(json.loads(s6b.read_text())[who]["estimates"])
+            sens["S6b_custom_longitudinal_weight_complete_case"] = {q: [round(t.loc[q, "estimate"], 3), round(t.loc[q, "ci_low"], 3), round(t.loc[q, "ci_high"], 3)]
+                                                                     for q in ("theta_14", "delta_16_vs_12")}
         site["parents"][who] = {
             "flow": A["flow"], "sd": A["sd_hgc_weighted_observed"], "descriptives": A["descriptives_by_age"],
             "theta": [{"age": a, "est": prim.loc[f"theta_{a}", "estimate"], "lo": prim.loc[f"theta_{a}", "ci_low"],

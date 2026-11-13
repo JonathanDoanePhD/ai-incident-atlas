@@ -30,7 +30,7 @@ window.SITE_DATA = {
   {
    "title": "Literature review",
    "state": "done",
-   "text": "88 works checked against Crossref; 13 read in full or via a trial report, 64 abstract only. Audited Nov 2026."
+   "text": "88 works checked against Crossref; 20 read in full, including every article on the retrieval list. Audited Nov 2026."
   },
   {
    "title": "Dataset audit",
@@ -44,8 +44,8 @@ window.SITE_DATA = {
   },
   {
    "title": "Findings",
-   "state": "prog",
-   "text": "Four observational analyses: modest positive associations; age and grade contrasts imprecise. Timing differences are not ruled out. Under independent review."
+   "state": "done",
+   "text": "Seven observational analyses in six cohorts: modest positive associations; no timing contrast significant. Audit accepted; reproduced in R; confirmed by a second analyst."
   }
  ],
  "stages": [
@@ -2170,9 +2170,9 @@ window.SITE_DATA = {
    "linkText": "Read the results"
   },
   {
-   "title": "Working paper v3 (revised after independent review)",
-   "text": "All four analyses with corrected, more cautious conclusions. Not peer reviewed.",
-   "status": "v3",
+   "title": "Working paper v3.1 (approved after independent review)",
+   "text": "Seven analyses in six cohorts, including three run by the author outside AI tools. Not peer reviewed.",
+   "status": "v3.1",
    "statusKind": "evidence",
    "link": "../manuscripts/working_paper_v3.md",
    "linkText": "Read the paper"
@@ -2194,6 +2194,22 @@ window.SITE_DATA = {
    "linkText": "Read the results"
   },
   {
+   "title": "STROBE checklist and tables",
+   "text": "Reporting checklist for observational studies, with participant characteristics, missing data and unadjusted estimates.",
+   "status": "Approved",
+   "statusKind": "evidence",
+   "link": "../docs/strobe_checklist.md",
+   "linkText": "Read the checklist"
+  },
+  {
+   "title": "Independent R reproduction",
+   "text": "Survey estimates re-estimated in R (survey, mitools) from the same analysis-ready data; all 30 quantities agree.",
+   "status": "Passed",
+   "statusKind": "evidence",
+   "link": "../crosscheck/README.md",
+   "linkText": "See the cross-check"
+  },
+  {
    "title": "Conference presentation",
    "text": "Planned after the working paper.",
    "status": "Not started",
@@ -2203,6 +2219,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-13",
-  "commit": "3bc6c95"
+  "commit": "baf1ace"
  }
 };

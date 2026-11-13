@@ -111,10 +111,10 @@ CONCEPTS = [
 ]
 
 STATUS = [
-    dict(title="Literature review", state="done", text="88 works checked against Crossref; 13 read in full or via a trial report, 64 abstract only. Audited Nov 2026."),
+    dict(title="Literature review", state="done", text="88 works checked against Crossref; 20 read in full, including every article on the retrieval list. Audited Nov 2026."),
     dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables cataloged."),
     dict(title="Analysis plans", state="done", text="Frozen as hashed commits in a public repository before each dataset was opened. Not externally preregistered."),
-    dict(title="Findings", state="prog", text="Four observational analyses: modest positive associations; age and grade contrasts imprecise. Timing differences are not ruled out. Under independent review."),
+    dict(title="Findings", state="done", text="Seven observational analyses in six cohorts: modest positive associations; no timing contrast significant. Audit accepted; reproduced in R; confirmed by a second analyst."),
 ]
 
 E, H, U, X = "evidence", "hypothesis", "uncertain", "blocked"
@@ -235,9 +235,11 @@ PUBLICATIONS = [
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
     dict(title="Results report (grade 9 vs 11)", text="HSLS:09 math-teacher support in grade 9 vs grade 11 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_b2_hsls.md", linkText="Read the results"),
     dict(title="Results report (paper 1)", text="Primary estimates, sensitivity analyses, verification and deviations from the plan.", status="v1", statusKind="evidence", link="../docs/results_paper1.md", linkText="Read the results"),
-    dict(title="Working paper v3 (revised after independent review)", text="All four analyses with corrected, more cautious conclusions. Not peer reviewed.", status="v3", statusKind="evidence", link="../manuscripts/working_paper_v3.md", linkText="Read the paper"),
+    dict(title="Working paper v3.1 (approved after independent review)", text="Seven analyses in six cohorts, including three run by the author outside AI tools. Not peer reviewed.", status="v3.1", statusKind="evidence", link="../manuscripts/working_paper_v3.md", linkText="Read the paper"),
     dict(title="Independent review response and audit", text="Every issue found, verification results, corrections, and remaining limitations.", status="Nov 2026", statusKind="evidence", link="../docs/independent_review_response.md", linkText="Read the audit"),
     dict(title="Results report (paper 2)", text="Maternal praise and closeness at ages 6–9 vs 10–14 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_p2_cya.md", linkText="Read the results"),
+    dict(title="STROBE checklist and tables", text="Reporting checklist for observational studies, with participant characteristics, missing data and unadjusted estimates.", status="Approved", statusKind="evidence", link="../docs/strobe_checklist.md", linkText="Read the checklist"),
+    dict(title="Independent R reproduction", text="Survey estimates re-estimated in R (survey, mitools) from the same analysis-ready data; all 30 quantities agree.", status="Passed", statusKind="evidence", link="../crosscheck/README.md", linkText="See the cross-check"),
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
 ]
 
