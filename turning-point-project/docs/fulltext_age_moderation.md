@@ -406,3 +406,86 @@ works better at a particular age, and the largest one finds favorable effects fr
 recur as the more important features, with the caveat that longer relationships are partly self-selected. Age enters mainly
 through duration: relationships with older adolescents end sooner (`grossman2002`), so programs serving them need to work harder to
 sustain matches.
+
+## Addendum (2026-11-13, second batch): five PI-supplied articles
+
+These PDFs were supplied by the PI under `docs/article_retrieval_protocol.md`. They are not redistributed or committed.
+
+### roorda2011 — Roorda, Koomen, Spilt & Oort (2011), *Review of Educational Research*
+
+- **Version read:** accepted manuscript. Check page-specific details against the published version before quoting.
+- **Age coding:** average grade level (continuous; preschool = −1) and primary vs secondary school, in meta-regression.
+- **Result:** "All associations, except negative relationships and engagement, were significantly influenced by average grade level.
+  Unexpectedly, the effect sizes were larger in studies conducted in higher grades." But "negative aspects of the TSR have more
+  impact on primary than on secondary school students" (Discussion).
+- **Cautions:**
+  - The authors note that most secondary-school studies used student reports for both the relationship and engagement, which can
+    inflate associations in higher grades.
+  - Studies of negative relationships span only preschool to grade 7.
+  - Primary studies are mostly correlational.
+- **Takeaway:** the only age-moderation result in this batch, and it points against a simple "younger is better" story. It is
+  between-study meta-regression of associations, so it speaks to where associations are larger, not to developmental sensitivity.
+
+### heller2017 — Heller et al., Becoming a Man (read as NBER Working Paper 21178, 2015)
+
+- **Version read:** the 2015 working paper, not the 2017 QJE article. Numbers may differ in the published version.
+- **Samples:** study 1, 2,740 male 7th–10th graders; study 2, 2,064 male 9th–10th graders, both in Chicago.
+- **Results:** arrests fell 28–35% during the program, but the effect did not persist afterward. In study 1, graduation rose
+  6–9 percentage points (12–19%).
+- **Mechanism:** the authors find "no positive evidence" that the effects reflect a generic mentoring effect.
+- **Age:** no age or grade heterogeneity is reported.
+- **Takeaway:** strong causal evidence of an *intervention opportunity* in grades 7–10. It says nothing about whether the same
+  program would work better or worse at other ages.
+
+### schwartz2013 — Schwartz, Rhodes, Spencer & Grossman (2013), *American Journal of Community Psychology*
+
+- **Version read:** author's personal copy.
+- **Sample:** National Guard Youth ChalleNGe. Quantitative N = 1,173, ages 16–18, all high-school dropouts, followed for 38 months.
+- **Duration:** "more enduring mentoring relationships were associated with increased retention of educational, vocational, and
+  behavioral outcomes 3 years following entry into the study". This used propensity scores and 2SLS for relationships lasting
+  more than 21 months; duration is not randomized.
+- **Who stays in contact:** youth-selected mentors were more likely to remain in contact (OR 1.99 at 21 months, 1.82 at 38 months),
+  as were same-race mentors (OR 3.44).
+- **Age:** not tested, since the sample is narrow by design.
+- **Takeaway:** relationships can be built and sustained with late adolescents who have already left school. This is evidence of
+  an intervention opportunity late in adolescence, consistent with duration mattering more than age.
+
+### rhodes2006 — Rhodes, Spencer, Keller, Liang & Noam (2006), *Journal of Community Psychology*
+
+- **Version read:** a scanned copy, extracted with OCR. Quotations were checked against context.
+- **Content:** theory only. The model proposes that mentoring works through socioemotional, cognitive and identity processes,
+  moderated by relationship duration and quality.
+- **Developmental-stage propositions:**
+  - "the effects of mentoring are likely to depend upon the age and circumstance of the youth".
+  - Giving youth choice over activities "might be more important when mentoring adolescents versus younger children".
+  - "Relatively little research differentiates the characteristics and outcomes of mentoring relationships for different-aged
+    youth", apart from the higher early-termination risk for 13–16-year-olds.
+- **Takeaway:** the leading model of youth mentoring frames age as a moderator of *how* mentoring works, not of *whether* it works,
+  and states that the evidence was thin.
+
+### mirandachan2016 — Miranda-Chan, Fruiht, Dubon & Wray-Lake (2016), *American Journal of Community Psychology*
+
+- **Data source:** confirmed as Add Health public-use Waves I, III and IV. Analytic n = 2,495, of whom 1,350 were mentored.
+  - Reading a published article that used Add Health is consistent with D-008, which excludes AI processing of the *data*.
+- **Exposure:** a Wave III retrospective report that a nonparental adult made "an important positive difference … since you were 14".
+  The analysis was restricted to mentors who became important at ages 12–22.
+- **Results:**
+  - Educational attainment: standardized b = .267.
+  - Criminal activity: OR 0.81 (95% CI 0.65–1.00).
+  - Small associations with well-being and relationship satisfaction; none with job satisfaction.
+- **Age:** timing is not compared. The opening claim that adolescence "may be" when nonfamilial adults are most influential is
+  asserted, not tested.
+- **Limitations:**
+  - Few covariates, with no prior achievement.
+  - No controls for duration or closeness (acknowledged by the authors).
+  - Retrospective attribution (acknowledged by the authors).
+  - Survey weights are not described.
+
+### Updated synthesis (second batch)
+
+- **No developmental sensitivity:** none of the five articles shows that supportive adults matter more at a particular age.
+- **Teacher–student relationships:** the one tested moderator, grade level in Roorda (2011), runs toward *larger* associations in
+  higher grades. The exception is negative relationships, which matter more in primary school. Shared-informant bias may explain
+  part of this.
+- **Programs:** the program studies again point to duration (Schwartz 2013) and to feasible interventions in grades 7–10
+  (Heller) and at 16–18 (Schwartz). These are intervention opportunities, not evidence of developmental windows.

@@ -45,8 +45,9 @@ between earlier and later investment falls at later stages for cognitive skills 
 
 For supportive relationships the evidence on timing is thinner. Mentoring programs show small-to-modest average benefits
 (DuBois et al., 2002; Raposa et al., 2019). In one program, benefits were concentrated in relationships lasting a year or longer, although match length
-was not randomized (Grossman & Rhodes, 2002). Teacher–student relationship quality is associated with engagement and achievement (Roorda et al., 2011); in
-an updated meta-analysis, only the link between positive relationships and engagement was stronger in secondary than in primary school
+was not randomized (Grossman & Rhodes, 2002). Teacher–student relationship quality is associated with engagement and achievement, with larger associations in studies of
+higher grades, except that negative relationships mattered more in primary school; the authors caution that secondary-school studies
+mostly relied on students reporting both measures (Roorda et al., 2011). In an updated meta-analysis, only the link between positive relationships and engagement was stronger in secondary than in primary school
 (Roorda et al., 2017). The transition to high school is a documented point of disruption (Benner & Graham, 2009), and ninth-grade outcomes predict dropout
 (Neild et al., 2008). One study of when natural mentors became important found the strongest association for mentors who became important after
 high school. Timing there was reported retrospectively, and post-high-school mentors partly reflect continued education (Fruiht & Wray-Lake, 2013).

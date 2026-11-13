@@ -286,3 +286,19 @@ and locations: `fulltext_age_moderation.md` and `.csv`). Main points:
   (2002) found that age predicts how long matches last (13–16 year olds' matches ended sooner) and that benefits concentrate in
   matches of a year or more. Rhodes et al. (2005) found youth age unrelated to relationship quality, while longer matches had
   higher quality. Details: `fulltext_age_moderation.md`.
+
+## Addendum (2026-11-13): second batch of full texts
+
+The PI supplied five further articles: Roorda 2011, Heller (NBER 2015 version), Schwartz 2013, Rhodes 2006 and Miranda-Chan 2016.
+Details are in `fulltext_age_moderation.md`.
+
+- **Roorda (2011):** found teacher–student relationship associations *larger* in higher grades, except that negative relationships
+  mattered more in primary school.
+- **Heller:** confirms Becoming a Man served grades 7–10 and 9–10.
+- **Schwartz (2013):** shows durable mentoring of 16–18-year-old dropouts.
+- **Rhodes (2006):** treats age as a theorized but untested moderator.
+- **Miranda-Chan (2016):** used Add Health and did not compare timing.
+
+None changes the bottom line: the literature documents intervention opportunities across adolescence but does not establish an
+age-graded sensitivity to supportive adults. The highest-priority unread work remains Fruiht & Wray-Lake (2013), the only study of
+mentor timing.
