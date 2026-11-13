@@ -78,6 +78,7 @@ Figures: `outputs/paper1_effect_by_age_mother.html`, `outputs/paper1_effect_by_a
 | S5a ordinal exposure (per step) | MI | 0.42 (0.27, 0.57) | 0.26 (-0.15, 0.66) |
 | S5b multi-item scale (per point, subsample) | 5214 | 0.07 (0.04, 0.09) | 0.04 (-0.04, 0.11) |
 | S6 unweighted, no design | MI | 0.40 (0.25, 0.55) | 0.11 (-0.31, 0.53) |
+| S6b NLS custom longitudinal weight, complete cases (run 2026-11-13) | 5232 | 0.47 (0.29, 0.65) | 0.21 (-0.40, 0.81) |
 | S8 + ASVAB percentile | MI | 0.35 (0.19, 0.51) | 0.34 (-0.09, 0.78) |
 
 Exploratory (mother): below poverty line Δ = 0.75 (-0.22, 1.72); at/above Δ = 0.16 (-0.36, 0.68); BA-or-higher log-odds at 14 = 0.42 (SE 0.08), Δ = 0.44 (SE 0.24).
@@ -94,6 +95,7 @@ Exploratory (mother): below poverty line Δ = 0.75 (-0.22, 1.72); at/above Δ = 
 | S5a ordinal exposure (per step) | MI | 0.37 (0.23, 0.52) | -0.24 (-0.59, 0.11) |
 | S5b multi-item scale (per point, subsample) | 3953 | 0.04 (0.01, 0.07) | -0.05 (-0.14, 0.04) |
 | S6 unweighted, no design | MI | 0.42 (0.27, 0.57) | -0.33 (-0.76, 0.10) |
+| S6b NLS custom longitudinal weight, complete cases (run 2026-11-13) | 3955 | 0.46 (0.25, 0.67) | 0.25 (-0.27, 0.76) |
 | S8 + ASVAB percentile | MI | 0.39 (0.24, 0.54) | -0.01 (-0.44, 0.42) |
 
 Exploratory (father): below poverty line Δ = -0.68 (-1.88, 0.52); at/above Δ = -0.15 (-0.65, 0.35); BA-or-higher log-odds at 14 = 0.41 (SE 0.07), Δ = -0.15 (SE 0.20).
@@ -117,7 +119,7 @@ are not evidence of differences between groups.
 |---|---|---|---|
 | 1 | Register the plan (OSF) | PI chose not to use OSF. The plan was frozen by a timestamped branch commit with file hashes. The git tag could not be pushed (proxy refused) | Weaker public verifiability; same content |
 | 2 | Cross-check estimates against R `survey` | R not available; the `samplics` package fails on this numpy version. Replaced by an independent JK2 jackknife | Agreement to 3 decimals |
-| 3 | S6b custom longitudinal weight | Not run: NLS custom weights come from an online tool not available offline | One planned sensitivity analysis missing |
+| 3 | S6b custom longitudinal weight | Run 2026-11-13 after the PI downloaded weights for the 8,297 IDs (D-033). The custom weight is nearly proportional to the round-1 weight (r = 0.998; ratio 1.00–1.20), so S6b reproduces S2 complete cases. The fathers' positive Δ, unlike the negative primary MI estimate, comes from the complete-case restriction, not the weight | None on primary estimates |
 | 4 | Exploratory: life-course models of 1997–2000 items; earnings and employment | Not run (variables not extracted) | Exploratory only |
 | 5 | Implementation details not spelled out in the plan | Subpopulations analyzed by domain estimation (zero weight outside, full design kept). PMM imputation (statsmodels MICE, k = 5); some household-type dummies are constant in a sample and are dropped from models. S3 universe model: age, age², sex, race/ethnicity, urban, poverty (with missing indicators) | None on primary estimates |
 | 6 | Bug found during checking | The item-universe flag compared against a misspelled missing-code label, so S3 was initially a no-op and the flow counts were wrong. Fixed and fully re-run before this report. The reported n for S5b counted padding rows; corrected | Primary results unaffected |
