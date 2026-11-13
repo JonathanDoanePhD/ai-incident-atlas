@@ -84,7 +84,7 @@ window.SITE_DATA = {
      "text": "Adolescent-start cohorts (NLSY97, HSLS:09, ELS:2002) cannot observe these ages."
     }
    ],
-   "feasibility": "Best public option: PSID-CDS 2002 vs 2007 identical 'how close' items, for a small overlapping subsample (paper 2)."
+   "feasibility": "Tested in paper 2 with the NLSY79 Children and Young Adults (ages 6–9 vs 10–14). PSID is excluded by its AI-use policy."
   },
   {
    "hid": "H2",
@@ -307,13 +307,13 @@ window.SITE_DATA = {
   },
   {
    "name": "PSID Child Development Supplement (original CDS 1997/2002/2007) + Transition into Adulthood Supplement (TAS)",
-   "steward": "Candidate replication (needs registration)",
+   "steward": "Excluded: AI-use policy",
    "population": "Children aged 0-12 in 1997 in PSID families (up to two per family), nationally representative U.S. family panel incl. 1997 immigrant refresher",
    "n": "CDS-I: 3,563 children in 2,394 families (88% response; 2,380 child households in response-rate section); CDS-II: 2,907…",
    "waves": "CDS 1997, 2002-03, 2007-08; TAS 2005-2015 biennial (original CDS cohort), 2017+ steady-state biennial (all PSID members 18-28); core PSID biennial",
    "support": "PCG-reported Parental Warmth (CDS-I G37a-f; CDS-II/III E13a-g with 2 items dropped and 3 added); HOME-SF; child-reported (ages 8+ in CDS-II; 10+ in CDS-III) closeness to mother, father, stepparents, favorite teachers, other adults outside school (H5a-h) and who the close adults are incl. mentor, coach (H6); child-reported talk with mother/father (H4); TAS… Repeated comparably: partial",
    "outcome": "Yes: TAS G5 grade completed (e.g., TA230990), constructed Enrollment Status (TA232392, 10 statuses incl. 4-yr grad), degree items; core PSID individual-file YEARS COMPLETED EDUCATION (e.g., ER34548…",
-   "access": "Free; registration required to download CDS/TAS via the CDS-TAS Data Center; restricted data (e.g., geocode) require application with IRB-approved data protection plan (FAQ: doctoral-level faculty, others case by case)",
+   "access": "Free with registration, but PSID's Conditions of Use prohibit using AI programs and large language models with PSID data. Excluded from this project's workflow; a human analyst could run a replication.",
    "limitations": "Only two child self-report waves (2002, 2007) five years apart, so within-person contrast of ~8-11 vs ~12-15 exists only for children aged ~8-10 in 2002 (born ~1992-1994): small subsample; CDS-I child interview did not include closeness items; PCG warmth items changed between CDS-I and CDS-II; age at each wave varies by birth year (age and period confounded within cohort); attrition 3,563 -> 1,506 by CDS-III (partly by design: aged-out children)",
    "verified": true,
    "doc_url": "https://psidtest.isr.umich.edu/CDS/Guide/Documents.aspx",
@@ -322,7 +322,7 @@ window.SITE_DATA = {
     0,
     39
    ],
-   "public": true
+   "public": false
   },
   {
    "name": "NLSY79 Children and Young Adults (NLSCYA)",
@@ -1033,10 +1033,10 @@ window.SITE_DATA = {
    "study_type": "meta-analysis",
    "population": "Youth mentoring program evaluations",
    "design_or_method": "Meta-analysis and review",
-   "key_finding": "Abstract (partial, via Semantic Scholar) states the report uses meta-analysis to assess typical effectiveness and conditions for optimal outcomes and presents a developmental model of mentoring; specific effect sizes and age moderation NOT read - verify against full text.",
-   "age_or_timing_relevant": "partial",
+   "key_finding": "73 evaluations (1999-2010). Modest average effect. Age coded in four groups (<8, 8-10, 11-14, 15-18): not among moderators associated with effect size; favorable effects within each age group; authors conclude benefits are not confined to a particular stage of development. Larger effects with higher-risk youth, more male youth, mentor advocacy/teaching roles, interest-based matching.",
+   "age_or_timing_relevant": "yes",
    "limitations": "Only partial abstract available; no quantitative claims made here.",
-   "evidence_level_read": "abstract (semanticscholar)"
+   "evidence_level_read": "full_text"
   },
   {
    "citation_key": "raposa2019",
@@ -1108,10 +1108,10 @@ window.SITE_DATA = {
    "study_type": "RCT",
    "population": "1,138 BBBS applicants (mean age 12.25)",
    "design_or_method": "Secondary analysis of RCT by match duration",
-   "key_finding": "Relationships lasting a year or longer showed the most improvements; very early terminations were associated with decrements; older adolescents and abuse-exposed or referred youth were more likely to be in early-terminating matches.",
+   "key_finding": "Within the Big Brothers Big Sisters trial (N = 1,138, ages 10-16), benefits concentrated in matches lasting 12+ months; matches ending within 3 months were followed by declines in self-worth and perceived scholastic competence. Matches with 13-16 year olds were 65% more likely to end each period than with 10-12 year olds (2-year vs ~1.25-year expected length).",
    "age_or_timing_relevant": "yes",
-   "limitations": "Duration is not randomized (selection); older age linked to early termination.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Duration not randomized (2SLS used to address selection); program sample",
+   "evidence_level_read": "full_text"
   },
   {
    "citation_key": "christensen2020",
@@ -2027,6 +2027,21 @@ window.SITE_DATA = {
    "age_or_timing_relevant": "yes",
    "limitations": "Framework.",
    "evidence_level_read": "abstract (pubmed)"
+  },
+  {
+   "citation_key": "rhodes2005",
+   "authors_short": "Rhodes et al.",
+   "year": "2005",
+   "title": "Promoting Successful Youth Mentoring Relationships: A Preliminary Screening Questionnaire",
+   "journal": "The Journal of Primary Prevention",
+   "doi": "10.1007/s10935-005-1849-8",
+   "study_type": "observational longitudinal",
+   "population": "Big Brothers Big Sisters youth in a national evaluation (N = 347; ages 9.4-15.9, mean 12.1)",
+   "design_or_method": "Youth-reported relationship-quality scales; 18-month follow-up",
+   "key_finding": "Youth age (median split) was unrelated to relationship quality; longer matches (13-19 months) reported higher quality on all four scales than 1-6 month matches.",
+   "age_or_timing_relevant": "yes",
+   "limitations": "Duration not randomized; youth in longer matches may differ; program sample",
+   "evidence_level_read": "full_text"
   }
  ],
  "methods": [
@@ -2084,7 +2099,7 @@ window.SITE_DATA = {
   {
    "title": "Next: replication",
    "state": "todo",
-   "text": "PSID child supplement (needs free registration) and Add Health by a human analyst, if desired."
+   "text": "PSID and Add Health prohibit AI processing; a human analyst could replicate with them outside AI tools."
   },
   {
    "title": "Grade 9 vs 11",
@@ -2116,7 +2131,7 @@ window.SITE_DATA = {
   },
   {
    "title": "Full-text check: age in mentoring meta-analyses",
-   "text": "Ten open full texts read; no meta-analysis found significant age moderation.",
+   "text": "Thirteen full texts read, including DuBois et al. (2011): no meta-analysis found age moderation; age mainly affects how long matches last.",
    "status": "v1",
    "statusKind": "evidence",
    "link": "../docs/fulltext_age_moderation.md",
@@ -2177,9 +2192,9 @@ window.SITE_DATA = {
    "statusKind": "uncertain"
   }
  ],
- "recommendation": "<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
+ "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
-  "date": "2026-11-12",
-  "commit": "cf9be13"
+  "date": "2026-11-13",
+  "commit": "e8a644e"
  }
 };

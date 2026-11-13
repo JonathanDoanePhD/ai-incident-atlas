@@ -84,8 +84,8 @@ python scripts/render_manuscript.py manuscripts/working_paper_v2.src.md manuscri
 
 ## Open items
 
-1. Replicate the childhood comparison in PSID child-supplement data (needs a free PSID registration by the PI).
-2. Read the closed-access works flagged in `docs/fulltext_age_moderation.md` (e.g. DuBois et al. 2011) through a library.
+1. PSID and Add Health prohibit AI processing (D-008, D-021). Any replication with them must be run by a human analyst outside AI tools.
+2. Remaining closed-access works: Christensen et al. 2020 and Fruiht & Wray-Lake 2013 (see `docs/fulltext_age_moderation.md`).
 3. Peer feedback on working paper v2.
 
 ## License and citation

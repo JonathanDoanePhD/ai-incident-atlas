@@ -48,12 +48,16 @@ and ninth-grade outcomes predict dropout [@neild2008]. The one study we found on
 important found the strongest association for mentors who became important after high school [@fruiht2013].
 
 Reading the full texts of the meta-analyses that tested age gives the same picture: age has not reliably moderated
-mentoring effects. In DuBois et al. [@dubois2002], effects for late childhood/early adolescence and middle/late
+mentoring effects. The largest, covering 73 evaluations, coded age as under 8, 8–10, 11–14 and 15–18, found favorable effects in
+every group, and concluded that benefits are "not confined to a particular stage of development" [@dubois2011]. In DuBois et al. [@dubois2002], effects for late childhood/early adolescence and middle/late
 adolescence did not differ significantly (d = .17 vs .13). Raposa et al. [@raposa2019] found no significant association
 between mean sample age (range about 9–16) and effect size, and called this somewhat surprising. Meta-analyses of natural
 and youth-initiated mentoring found no significant age differences either [@vandam2018; @vandam2021]. Within one
 school-based mentoring trial, impacts did not differ reliably between elementary and secondary students [@herrera2011], as reported in the publicly released trial report,. A meta-analysis of teacher–student relationships found one association
-stronger in secondary than primary school, with the other four equal [@roorda2017]. Between-study age comparisons are
+stronger in secondary than primary school, with the other four equal [@roorda2017]. Age does matter for how long relationships last. In the Big Brothers Big Sisters trial, matches with
+13–16 year olds ended sooner than matches with 10–12 year olds, and benefits concentrated in matches lasting a year or more
+[@grossman2002]. Within a program, youth age was unrelated to relationship quality, while longer matches had higher quality
+[@rhodes2005]. Between-study age comparisons are
 confounded with program type, and none compares early childhood with adolescence. Individual-level data with
 comparable measures at different ages are therefore needed.
 
@@ -167,7 +171,8 @@ those with adult outcomes. The plans were frozen privately in a public repositor
 
 These results cannot show that mentoring works or when to deliver it. They do weaken the case for concentrating support at
 one early age, including the freshman year, on the grounds that it will pay off more there. They are consistent with
-designing for durable relationships that continue across transitions, and with offering support whenever young people can
+designing for durable relationships that continue across transitions, with extra effort to sustain matches with older adolescents,
+whose relationships tend to end sooner [@grossman2002], and with offering support whenever young people can
 be reached. Tests of timing for mentors will require designs that vary when relationships begin, ideally randomized.
 
 ## Data, code and disclosure

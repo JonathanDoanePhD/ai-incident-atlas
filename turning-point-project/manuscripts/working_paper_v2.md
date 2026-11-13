@@ -48,12 +48,16 @@ and ninth-grade outcomes predict dropout (Neild et al., 2008). The one study we 
 important found the strongest association for mentors who became important after high school (Fruiht & Wray-Lake, 2013).
 
 Reading the full texts of the meta-analyses that tested age gives the same picture: age has not reliably moderated
-mentoring effects. In DuBois et al. (DuBois et al., 2002), effects for late childhood/early adolescence and middle/late
+mentoring effects. The largest, covering 73 evaluations, coded age as under 8, 8–10, 11–14 and 15–18, found favorable effects in
+every group, and concluded that benefits are "not confined to a particular stage of development" (DuBois et al., 2011). In DuBois et al. (DuBois et al., 2002), effects for late childhood/early adolescence and middle/late
 adolescence did not differ significantly (d = .17 vs .13). Raposa et al. (Raposa et al., 2019) found no significant association
 between mean sample age (range about 9–16) and effect size, and called this somewhat surprising. Meta-analyses of natural
 and youth-initiated mentoring found no significant age differences either (Van Dam et al., 2018; van Dam et al., 2021). Within one
 school-based mentoring trial, impacts did not differ reliably between elementary and secondary students (Herrera et al., 2011), as reported in the publicly released trial report,. A meta-analysis of teacher–student relationships found one association
-stronger in secondary than primary school, with the other four equal (Roorda et al., 2017). Between-study age comparisons are
+stronger in secondary than primary school, with the other four equal (Roorda et al., 2017). Age does matter for how long relationships last. In the Big Brothers Big Sisters trial, matches with
+13–16 year olds ended sooner than matches with 10–12 year olds, and benefits concentrated in matches lasting a year or more
+(Grossman & Rhodes, 2002). Within a program, youth age was unrelated to relationship quality, while longer matches had higher quality
+(Rhodes et al., 2005). Between-study age comparisons are
 confounded with program type, and none compares early childhood with adolescence. Individual-level data with
 comparable measures at different ages are therefore needed.
 
@@ -167,7 +171,8 @@ those with adult outcomes. The plans were frozen privately in a public repositor
 
 These results cannot show that mentoring works or when to deliver it. They do weaken the case for concentrating support at
 one early age, including the freshman year, on the grounds that it will pay off more there. They are consistent with
-designing for durable relationships that continue across transitions, and with offering support whenever young people can
+designing for durable relationships that continue across transitions, with extra effort to sustain matches with older adolescents,
+whose relationships tend to end sooner (Grossman & Rhodes, 2002), and with offering support whenever young people can
 be reached. Tests of timing for mentors will require designs that vary when relationships begin, ideally randomized.
 
 ## Data, code and disclosure
@@ -194,6 +199,8 @@ Dahl, R. E., Allen, N. B., Wilbrecht, L., & Suleiman, A. B. (2018). Importance o
 
 DuBois, D. L., Holloway, B. E., Valentine, J. C., & Cooper, H. (2002). Effectiveness of Mentoring Programs for Youth: A Meta‐Analytic Review. *American Journal of Community Psychology*, *30*(2), 157–197. https://doi.org/10.1023/a:1014628810714
 
+DuBois, D. L., Portillo, N., Rhodes, J. E., Silverthorn, N., & Valentine, J. C. (2011). How Effective Are Mentoring Programs for Youth? A Systematic Assessment of the Evidence. *Psychological Science in the Public Interest*, *12*(2), 57–91. https://doi.org/10.1177/1529100611414806
+
 Elder, G. H. (1998). The Life Course as Developmental Theory. *Child Development*, *69*(1), 1–12. https://doi.org/10.1111/j.1467-8624.1998.tb06128.x
 
 Fruiht, V. M., & Wray-Lake, L. (2013). The Role of Mentor Type and Timing in Predicting Educational Attainment. *Journal of Youth and Adolescence*, *42*(9), 1459–1472. https://doi.org/10.1007/s10964-012-9817-0
@@ -209,6 +216,8 @@ Mishra, G., Nitsch, D., Black, S., De Stavola, B., Kuh, D., & Hardy, R. (2009). 
 Neild, R. C., Stoner-Eby, S., & Furstenberg, F. (2008). Connecting Entrance and Departure: The Transition to Ninth Grade and High School Dropout. *Education and Urban Society*, *40*(5), 543–569. https://doi.org/10.1177/0013124508316438
 
 Raposa, E. B., Rhodes, J., Stams, G. J. J. M., Card, N., Burton, S., Schwartz, S., Sykes, L. A. Y., Kanchewa, S., Kupersmidt, J., & Hussain, S. (2019). The Effects of Youth Mentoring Programs: A Meta-analysis of Outcome Studies. *Journal of Youth and Adolescence*, *48*(3), 423–443. https://doi.org/10.1007/s10964-019-00982-8
+
+Rhodes, J., Reddy, R., Roffman, J., & Grossman, J. B. (2005). Promoting Successful Youth Mentoring Relationships: A Preliminary Screening Questionnaire. *The Journal of Primary Prevention*, *26*(2), 147–167. https://doi.org/10.1007/s10935-005-1849-8
 
 Roorda, D. L., Jak, S., Zee, M., Oort, F. J., & Koomen, H. M. Y. (2017). Affective Teacher–Student Relationships and Students' Engagement and Achievement: A Meta-Analytic Update and Test of the Mediating Role of Engagement. *School Psychology Review*, *46*(3), 239–261. https://doi.org/10.17105/spr-2017-0035.v46-3
 

@@ -1,3 +1,7 @@
+> **Update 2026-11-13:** PSID's public-use Conditions of Use prohibit using AI programs and large language models with PSID data
+> (decision D-021). PSID is therefore excluded from this project's AI-assisted workflow, and paper 2 uses the NLSY79 Children and
+> Young Adults instead (D-017).
+
 # Dataset audit: cohorts that start before adolescence
 
 Audit date: 2026-11-12. Scope: longitudinal datasets that begin before age 8 and follow children toward adulthood, judged on whether they could test the Turning Point hypotheses:

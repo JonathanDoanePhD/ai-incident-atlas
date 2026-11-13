@@ -51,7 +51,7 @@ DATASET_META = [
     ("HSLS:09", "HSLS:09", (14, 26), True, "Companion study (grade 9 vs 11)"),
     ("ELS:2002", "ELS:2002", (15, 26), True, "Replication option (grade 10 vs 12)"),
     ("Add Health", "Add Health", (12, 45), False, "Excluded: AI-use policy"),
-    ("PSID", "PSID-CDS/TAS", (0, 39), True, "Candidate replication (needs registration)"),
+    ("PSID", "PSID-CDS/TAS", (0, 39), False, "Excluded: AI-use policy"),
     ("NLSY79 Children", "NLSY79 CYA", (0, 50), True, "Paper 2 (ages 6–9 vs 10–14)"),
     ("Future of Families", "FFCWS", (0, 22), True, "Replication (ages 9, 15, 22)"),
     ("NICHD", "SECCYD", (0, 15), False, "No adult outcome found"),
@@ -88,6 +88,9 @@ def build_datasets() -> list[dict]:
         else:
             raise KeyError(f"dataset {prefix!r} not found in audit CSVs")
         d.update(short=short, ages=list(ages), public=public)
+        if short == "PSID-CDS/TAS":
+            d["access"] = ("Free with registration, but PSID's Conditions of Use prohibit using AI programs and large language models with "
+                           "PSID data. Excluded from this project's workflow; a human analyst could run a replication.")
         if short == "Add Health":
             d["access"] = ("Public-use and restricted files exist, but Add Health's AI and LLM Use Policy forbids processing its "
                            "data with AI tools such as Claude (public-use included). Excluded from this project's workflow.")
@@ -125,7 +128,7 @@ STAGES = [
          ],
          open=[dict(label=U, text="Neighborhood exposure is not the same as a supportive adult relationship; whether the same age pattern holds for relationships is untested."),
                dict(label=X, text="Adolescent-start cohorts (NLSY97, HSLS:09, ELS:2002) cannot observe these ages.")],
-         feasibility="Best public option: PSID-CDS 2002 vs 2007 identical 'how close' items, for a small overlapping subsample (paper 2)."),
+         feasibility="Tested in paper 2 with the NLSY79 Children and Young Adults (ages 6–9 vs 10–14). PSID is excluded by its AI-use policy."),
     dict(hid="H2", name="Early adolescence", ages=[12, 15],
          hypothesis="Experiences around ages 12–15 are especially consequential for identity, belonging, agency and engagement.",
          evidence=[
@@ -219,7 +222,7 @@ FINDINGS_STEPS = [
     dict(title="Primary analysis", state="done", text="40 imputations, design-based variance, independent jackknife check."),
     dict(title="Paper 2", state="done", text="Ages 6–9 vs 10–14 with NLSY79 Children and Young Adults (mother-reported praise and closeness)."),
     dict(title="Accumulation", state="done", text="NLSY97 four-year support histories: duration fits as well as timing."),
-    dict(title="Next: replication", state="todo", text="PSID child supplement (needs free registration) and Add Health by a human analyst, if desired."),
+    dict(title="Next: replication", state="todo", text="PSID and Add Health prohibit AI processing; a human analyst could replicate with them outside AI tools."),
     dict(title="Grade 9 vs 11", state="done", text="HSLS:09 companion study run from its own frozen plan."),
     dict(title="Working paper", state="done", text="Version 2 brings all four analyses together (see Publications)."),
 ]
@@ -227,7 +230,7 @@ FINDINGS_STEPS = [
 PUBLICATIONS = [
     dict(title="Statistical analysis plan (paper 1)", text="Design, variables, model, missing data, SESOI, multiplicity and sensitivity analyses.", status="Draft v0.2", statusKind="hypothesis", link="../docs/statistical_analysis_plan.md", linkText="Read the plan"),
     dict(title="Frozen analysis plan record", text="Plan frozen by a timestamped commit with file hashes (not registered on OSF).", status="Frozen", statusKind="evidence", link="../docs/PLAN_FREEZE.md", linkText="See the freeze record"),
-    dict(title="Full-text check: age in mentoring meta-analyses", text="Ten open full texts read; no meta-analysis found significant age moderation.", status="v1", statusKind="evidence", link="../docs/fulltext_age_moderation.md", linkText="Read the check"),
+    dict(title="Full-text check: age in mentoring meta-analyses", text="Thirteen full texts read, including DuBois et al. (2011): no meta-analysis found age moderation; age mainly affects how long matches last.", status="v1", statusKind="evidence", link="../docs/fulltext_age_moderation.md", linkText="Read the check"),
     dict(title="Literature review and evidence matrix", text="Abstract-level critical review of 87 verified works on turning points, mentoring, transitions and timing.", status="v0.1", statusKind="evidence", link="../docs/literature_review.md", linkText="Read the review"),
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
     dict(title="Results report (grade 9 vs 11)", text="HSLS:09 math-teacher support in grade 9 vs grade 11 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_b2_hsls.md", linkText="Read the results"),
@@ -237,10 +240,10 @@ PUBLICATIONS = [
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
 ]
 
-RECOMMENDATION = ("<strong>Design choice for paper 1:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 "
-                  "in the same year and follows attainment to about age 40. It cannot study nonparental mentors. HSLS:09 supports a "
-                  "grade-9 vs grade-11 companion study, and PSID-CDS/TAS is the best public option for comparing ages 8–11 with 12–15. "
-                  "Add Health is excluded because its terms forbid AI-assisted processing. Ages on the chart are approximate; "
+RECOMMENDATION = ("<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 "
+                  "and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. "
+                  "The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). "
+                  "Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; "
                   "grade-to-age conversions are ours.")
 
 

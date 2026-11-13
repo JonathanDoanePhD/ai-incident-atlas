@@ -280,5 +280,9 @@ and locations: `fulltext_age_moderation.md` and `.csv`). Main points:
   trial report).
 - `roorda2017` (full text) finds only one of five teacher–student associations stronger in secondary school. This
   qualifies the age-graded pattern cited above from `roorda2011` (abstract only).
-- Not accessible as legal open full text: `dubois2011`, `christensen2020`, `grossman2002` (publisher blocks automated
-  access; likely readable in a browser), `fruiht2013`, `schwartz2013`, `rhodes2006`, `roorda2011`, `allen2018`.
+- Not accessible as legal open full text: `christensen2020`, `fruiht2013`, `schwartz2013`, `rhodes2006`, `roorda2011`, `allen2018`.
+- **Update 2026-11-13:** the PI supplied full texts of `dubois2011`, `grossman2002` and `rhodes2005`. DuBois et al. (2011) coded age as
+  <8, 8–10, 11–14 and 15–18 and found age unrelated to effect size, with favorable effects in every age group. Grossman and Rhodes
+  (2002) found that age predicts how long matches last (13–16 year olds' matches ended sooner) and that benefits concentrate in
+  matches of a year or more. Rhodes et al. (2005) found youth age unrelated to relationship quality, while longer matches had
+  higher quality. Details: `fulltext_age_moderation.md`.

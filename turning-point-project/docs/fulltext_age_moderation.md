@@ -354,3 +354,55 @@ Only social studies differed between groups, and only at p < .10.
    The literature review's statements about these four should stay labelled as abstract-level until the full texts are read through library access.
 
 **Implication for the project.** The full texts do not support a claim that formal mentoring "works better" at one developmental stage. They are also too narrow in age range, and too confounded with program type, to rule such a claim out. That supports the project's choice to test stage differences directly in individual-level data, using prespecified moderation within the same design and measures, rather than inferring them from cross-study comparisons.
+
+
+## Addendum (2026-11-13): three works read from copies supplied by the PI
+
+### dubois2011 — DuBois, Portillo, Rhodes, Silverthorn & Valentine (2011), *Psychological Science in the Public Interest*
+
+- **Access:** PDF supplied by the PI (not redistributed).
+- **Age tested:** yes. Developmental stage was coded as "Age group (<8 years old, 8–10 years old, 11–14 years old, 15–18 years
+  old)" (Table 1).
+- **Result:** age was not among the moderators associated with differences in effect size (Table 2 lists only those that were).
+  The text states that "participation in a mentoring program had a favorable effect on youth within each of the four age groups
+  that we considered" (section on generalizability of effectiveness).
+- **Authors' summary:** "From a developmental standpoint, benefits of participation in mentoring programs are apparent from
+  early childhood to adolescence and thus not confined to a particular stage of development" (Summary, p. 57).
+- **Duration:** positive effects also "extended to programs with a relatively brief duration (i.e., less than 6 months)."
+- **Other moderators** (individually associated with larger effects): youth with prior problem behavior, more male youth, higher
+  individual/environmental risk, mentor background fit, interest-based matching, and youth *not* in single-parent households.
+  The single-parent moderator did not hold up independently of the other moderators.
+- **Takeaway:** across 73 evaluations, mentoring effects did not depend on age group. This is the strongest program-level
+  evidence against a single best age.
+
+### rhodes2005 — Rhodes, Reddy, Roffman & Grossman (2005), *Journal of Primary Prevention*
+
+- **Access:** PDF supplied by the PI (not redistributed). Crossref-verified 2026-11-13.
+- **Sample:** 347 Big Brothers Big Sisters youth, ages 9.4–15.9 (mean 12.1).
+- **Age:** "Neither age nor gender of the youth showed a consistent relationship with the scales" of relationship quality, and a
+  median-split MANOVA found no age differences (Results).
+- **Duration:** youth in matches of 13–19 months reported significantly more positive relationship quality on all four scales than
+  youth in 1–6 month matches (MANOVA, Tukey post hoc).
+- **Takeaway:** within a program, relationship quality tracks duration, not the young person's age. Duration is not randomized.
+
+### grossman2002 — Grossman & Rhodes (2002), *American Journal of Community Psychology*
+
+- **Access:** PDF supplied by the PI (not redistributed).
+- **Sample:** 1,138 Big Brothers Big Sisters applicants in the randomized trial, ages 10–16 (mean 12.25), surveyed at baseline and 18 months.
+- **Duration:** "Adolescents in relationships that lasted a year or longer reported the largest number of improvements, with
+  progressively fewer effects emerging among youth who were in relationships that terminated earlier" (Abstract). Youth in matches
+  that ended within the first 3 months showed significant declines in global self-worth and perceived scholastic competence
+  (Table I). The pattern largely held in two-stage least squares models that treat match length as endogenous (Table II).
+- **Age:** age predicted *duration*, not benefit: "matches involving 13–16 year olds were 65% more likely to break up in each period
+  than matches with 10–12 year olds"; "if the match of a younger adolescent lasted for two years, then the match of a similar, but
+  older, adolescent would last for a year and a quarter" (Results, predictors of duration).
+- **Takeaway:** this is an *intervention-opportunity* finding (concept C), not a developmental-sensitivity finding. Sustaining a
+  relationship is harder with older adolescents, and what predicts benefit is sustaining it.
+
+### Updated synthesis
+
+With DuBois et al. (2011) now read in full, the program evidence is consistent: no meta-analysis finds that mentoring
+works better at a particular age, and the largest one finds favorable effects from under 8 to 18. Duration and relationship quality
+recur as the more important features, with the caveat that longer relationships are partly self-selected. Age enters mainly
+through duration: relationships with older adolescents end sooner (`grossman2002`), so programs serving them need to work harder to
+sustain matches.
