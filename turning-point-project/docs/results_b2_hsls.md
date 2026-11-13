@@ -1,5 +1,7 @@
 # Results: study B2 (grade 9 vs grade 11, HSLS:09)
 
+> **Audit note (2026-11-13).** Numbers below are from the original (v2) run. Authoritative numbers are the seeded re-runs in `outputs/*.json` and `outputs/primary_estimands.csv`; interpretation is corrected in `docs/independent_review_response.md` and `manuscripts/working_paper_v3.md`. Equivalence is borderline. The ±3-point margin is about three times the grade-11 association, the TOST p varied from .030 to .045 across imputation runs, and two sensitivity analyses favored grade 11 at p < .05. Read "equivalent" as "no large difference", not "no difference".
+
 **Perceived math-teacher support at the start of high school and in grade 11, and bachelor's-degree
 attainment by June 2021**
 

@@ -74,7 +74,7 @@ def impute(s, m, seed):
     data = s[cols].copy()
     data["logw"] = np.log(s["w"])
     np.random.seed(seed)
-    md = MICEData(data, k_pmm=5)
+    md = MICEData(data, k_pmm=5, rng=seed)  # seed the imputation RNG explicitly (np.random.seed is ignored by statsmodels >= 0.14 MICEData)
     md.update_all(10)
     imps = []
     for _ in range(m):

@@ -3,16 +3,16 @@
 **When, how, and for whom do supportive relationships and developmental experiences shape young
 people's future trajectories?**
 
-A preregistration-first research program on the developmental timing of supportive adult
+A research program, with analysis plans frozen locally before data access (not externally preregistered), on the developmental timing of supportive adult
 relationships and educational attainment. Principal investigator: Jonathan Doane, Ph.D.
 ([research portfolio](https://jonathandoanephd.github.io/research-portfolio/)).
 
-> **Status (2026-11-12): four pre-planned analyses complete; working paper v2**
-> (`manuscripts/working_paper_v2.md`). Across NLSY97 (ages 12–16), HSLS:09 (grade 9 vs 11) and NLSY79 Children and
-> Young Adults (ages 6–9 vs 10–14), no analysis found reliable evidence that support measured earlier carries more
-> long-run weight. An NLSY97 four-year analysis is consistent with accumulation. These are observational
-> associations. Results: `docs/results_paper1.md`, `docs/results_b2_hsls.md`, `docs/results_p2_cya.md`,
-> `docs/results_p1e_accumulation.md`; full-text check of meta-analyses: `docs/fulltext_age_moderation.md`.
+> **Status (2026-11-13): under independent methodological review.** See `docs/independent_review_response.md` (audit),
+> `manuscripts/working_paper_v3.md` (corrected paper), `outputs/primary_estimands.csv` (estimates) and
+> `docs/reproducibility_checklist.md`. In brief: reported support from parents (and grade-11 math teachers) was modestly associated with later
+> education. Comparisons across ages or grades of measurement were imprecise, and none showed earlier-measured support carrying more weight.
+> These data cannot show that timing is irrelevant, and cumulative effects are not demonstrated. Observational associations only.
+> Not ready for public release.
 
 ## What is here
 

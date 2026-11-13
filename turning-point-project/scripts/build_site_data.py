@@ -111,10 +111,10 @@ CONCEPTS = [
 ]
 
 STATUS = [
-    dict(title="Literature review", state="done", text="87 works verified against Crossref; full texts of 10 key works checked for age effects."),
+    dict(title="Literature review", state="done", text="88 works checked against Crossref; 13 read in full or via a trial report, 64 abstract only. Audited Nov 2026."),
     dict(title="Dataset audit", state="done", text="12 longitudinal studies audited from official documentation; 150 variables cataloged."),
-    dict(title="Analysis plan", state="done", text="Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."),
-    dict(title="Findings", state="prog", text="Four analyses, three cohorts, ages 6–17: no reliable sign that earlier support carries more long-run weight; duration looks more important than timing."),
+    dict(title="Analysis plans", state="done", text="Frozen as hashed commits in a public repository before each dataset was opened. Not externally preregistered."),
+    dict(title="Findings", state="prog", text="Four observational analyses: modest positive associations; age and grade contrasts imprecise. Timing differences are not ruled out. Under independent review."),
 ]
 
 E, H, U, X = "evidence", "hypothesis", "uncertain", "blocked"
@@ -221,7 +221,7 @@ FINDINGS_STEPS = [
     dict(title="Extract validated", state="done", text="24 variables; counts match the official codebook exactly."),
     dict(title="Primary analysis", state="done", text="40 imputations, design-based variance, independent jackknife check."),
     dict(title="Paper 2", state="done", text="Ages 6–9 vs 10–14 with NLSY79 Children and Young Adults (mother-reported praise and closeness)."),
-    dict(title="Accumulation", state="done", text="NLSY97 four-year support histories: duration fits as well as timing."),
+    dict(title="Accumulation", state="done", text="NLSY97 four-year histories: cumulative, stability and loss-of-support models cannot be separated."),
     dict(title="Next: replication", state="todo", text="PSID and Add Health prohibit AI processing; a human analyst could replicate with them outside AI tools."),
     dict(title="Grade 9 vs 11", state="done", text="HSLS:09 companion study run from its own frozen plan."),
     dict(title="Working paper", state="done", text="Version 2 brings all four analyses together (see Publications)."),
@@ -229,13 +229,14 @@ FINDINGS_STEPS = [
 
 PUBLICATIONS = [
     dict(title="Statistical analysis plan (paper 1)", text="Design, variables, model, missing data, SESOI, multiplicity and sensitivity analyses.", status="Draft v0.2", statusKind="hypothesis", link="../docs/statistical_analysis_plan.md", linkText="Read the plan"),
-    dict(title="Frozen analysis plan record", text="Plan frozen by a timestamped commit with file hashes (not registered on OSF).", status="Frozen", statusKind="evidence", link="../docs/PLAN_FREEZE.md", linkText="See the freeze record"),
+    dict(title="Frozen analysis plan record", text="Plans frozen by timestamped commits with file hashes in the project repository. Not an external preregistration.", status="Frozen", statusKind="evidence", link="../docs/PLAN_FREEZE.md", linkText="See the freeze record"),
     dict(title="Full-text check: age in mentoring meta-analyses", text="Thirteen full texts read, including DuBois et al. (2011): no meta-analysis found age moderation; age mainly affects how long matches last.", status="v1", statusKind="evidence", link="../docs/fulltext_age_moderation.md", linkText="Read the check"),
     dict(title="Literature review and evidence matrix", text="Abstract-level critical review of 87 verified works on turning points, mentoring, transitions and timing.", status="v0.1", statusKind="evidence", link="../docs/literature_review.md", linkText="Read the review"),
     dict(title="Dataset feasibility audits", text="Adolescent-start and early-childhood cohorts compared on age coverage, measures, design and access.", status="v0.1", statusKind="evidence", link="../docs/dataset_audit.md", linkText="Read the audit"),
     dict(title="Results report (grade 9 vs 11)", text="HSLS:09 math-teacher support in grade 9 vs grade 11 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_b2_hsls.md", linkText="Read the results"),
     dict(title="Results report (paper 1)", text="Primary estimates, sensitivity analyses, verification and deviations from the plan.", status="v1", statusKind="evidence", link="../docs/results_paper1.md", linkText="Read the results"),
-    dict(title="Working paper v2: evidence from three U.S. cohorts", text="All four analyses (NLSY97, HSLS:09, NLSY79 Children and Young Adults, accumulation). Not peer reviewed.", status="v2", statusKind="evidence", link="../manuscripts/working_paper_v2.md", linkText="Read the paper"),
+    dict(title="Working paper v3 (revised after independent review)", text="All four analyses with corrected, more cautious conclusions. Not peer reviewed.", status="v3", statusKind="evidence", link="../manuscripts/working_paper_v3.md", linkText="Read the paper"),
+    dict(title="Independent review response and audit", text="Every issue found, verification results, corrections, and remaining limitations.", status="Nov 2026", statusKind="evidence", link="../docs/independent_review_response.md", linkText="Read the audit"),
     dict(title="Results report (paper 2)", text="Maternal praise and closeness at ages 6–9 vs 10–14 and bachelor's attainment.", status="v1", statusKind="evidence", link="../docs/results_p2_cya.md", linkText="Read the results"),
     dict(title="Conference presentation", text="Planned after the working paper.", status="Not started", statusKind="uncertain"),
 ]

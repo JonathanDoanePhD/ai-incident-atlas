@@ -1,0 +1,32 @@
+study,plan,estimand,role,unit,estimate,se,df,ci95_low,ci95_high,p_two_sided,p_adjusted_holm,sesoi,ci90_low,ci90_high,p_tost,equivalence_verdict,note
+P1 NLSY97,statistical_analysis_plan.md,theta(12): mother very supportive vs not,secondary (descriptive),years of schooling,0.33311,0.133677,109.038078,0.068168,0.598051,0.014211,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(13): mother very supportive vs not,secondary (descriptive),years of schooling,0.401866,0.093295,109.336157,0.216966,0.586767,3.6e-05,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(14): mother very supportive vs not,secondary (descriptive),years of schooling,0.470623,0.081646,107.586489,0.308781,0.632466,0.0,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(15): mother very supportive vs not,secondary (descriptive),years of schooling,0.53938,0.108424,105.838256,0.324416,0.754344,3e-06,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(16): mother very supportive vs not,secondary (descriptive),years of schooling,0.608137,0.154832,105.669972,0.301156,0.915118,0.000153,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,"Delta = theta(16) - theta(12), mother",primary (Q1),years of schooling,0.275027,0.238791,106.923457,-0.198351,0.748406,0.251992,0.503984,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,"Delta in SD units, mother (equivalence test)",primary equivalence (H1b),SD of highest grade completed,0.08832,0.076683,106.923457,-0.063697,0.240337,0.251992,,0.2,-0.038915,0.215555,0.074109,not shown,SD = 3.114 treated as fixed
+P1 NLSY97,statistical_analysis_plan.md,theta(12): father very supportive vs not,secondary (descriptive),years of schooling,0.567836,0.139763,105.141864,0.290716,0.844956,9.4e-05,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(13): father very supportive vs not,secondary (descriptive),years of schooling,0.520152,0.101203,107.600368,0.319542,0.720762,1e-06,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(14): father very supportive vs not,secondary (descriptive),years of schooling,0.472468,0.088223,106.882212,0.297573,0.647362,0.0,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(15): father very supportive vs not,secondary (descriptive),years of schooling,0.424783,0.110261,102.125879,0.206083,0.643483,0.000204,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,theta(16): father very supportive vs not,secondary (descriptive),years of schooling,0.377099,0.152856,99.681099,0.073826,0.680372,0.015329,,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,"Delta = theta(16) - theta(12), father",secondary confirmatory (Q2),years of schooling,-0.190737,0.233803,99.42524,-0.654629,0.273154,0.416563,0.503984,,,,,,
+P1 NLSY97,statistical_analysis_plan.md,"Delta in SD units, father (equivalence test)",primary equivalence (H1b),SD of highest grade completed,-0.062071,0.076086,99.42524,-0.213035,0.088892,0.416563,,0.2,-0.188399,0.064256,0.03644,equivalent within margin,SD = 3.073 treated as fixed
+B2 HSLS:09,sap_hsls09_grade9.md,theta9: grade-9 math-teacher support (per SD),secondary,probability of BA,-0.002222,0.005895,121.525971,-0.013892,0.009448,0.706914,,,,,,,
+B2 HSLS:09,sap_hsls09_grade9.md,theta11: grade-11 math-teacher support (per SD),secondary,probability of BA,0.012871,0.006983,141.957673,-0.000934,0.026676,0.067396,,,,,,,
+B2 HSLS:09,sap_hsls09_grade9.md,theta11 - theta9,primary,probability of BA,0.015093,0.008724,150.685228,-0.002145,0.032331,0.085684,,0.03,0.000654,0.029532,0.044786,equivalent within margin,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"beta(6-9), praise (per SD)",secondary,probability of BA,-0.000461,0.007032,886.948816,-0.014262,0.013341,0.947786,,,,,,,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"beta(10-14), praise (per SD)",secondary,probability of BA,0.015198,0.007111,427.528523,0.001221,0.029175,0.03314,,,,,,,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"Delta = beta(6-9) - beta(10-14), praise",primary,probability of BA,-0.015659,0.012042,474.553924,-0.03932,0.008003,0.194096,0.351031,0.03,-0.035504,0.004187,0.117131,not shown,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"beta(6-9), closeness (per SD)",secondary,probability of BA,0.007788,0.007297,1694.502822,-0.006524,0.022101,0.285984,,,,,,,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"beta(10-14), closeness (per SD)",secondary,probability of BA,0.024487,0.007712,1069.962849,0.009353,0.03962,0.001541,,,,,,,
+P2 NLSY79 CYA,sap_nlsy79cya_childhood.md,"Delta = beta(6-9) - beta(10-14), closeness",secondary exposure,probability of BA,-0.016698,0.012319,1294.500639,-0.040867,0.00747,0.175516,0.351031,0.03,-0.036976,0.00358,0.140231,not shown,
+P1E NLSY97 1997-2000,sap_nlsy97_accumulation.md,"count of years 'very supportive' (0-4), per year",primary exploratory,grades completed,0.222702,0.043985,117.0,0.135592,0.309812,2e-06,,,,,,,complete cases n = 2566; design df 117
+P1E NLSY97 1997-2000,sap_nlsy97_accumulation.md,Wald F: equal coefficients across rounds (accumulation restriction),primary exploratory test,F,0.83396,,"3,115",,,0.477871,,,,,,,non-rejection is not evidence of accumulation
+P1 NLSY97 (post-hoc audit),none (audit),"Wald F: theta equal at all five ages, mother",post-hoc audit,F,1.674681,,"4,114",,,0.160687,,,,,,,complete cases n = 5232
+P1 NLSY97 (post-hoc audit),none (audit),"Wald F: theta equal at all five ages, father",post-hoc audit,F,2.177399,,"4,114",,,0.075932,,,,,,,complete cases n = 3955
+P1E NLSY97 (post-hoc audit),none (audit),Wald F: pattern means equal within count (strict accumulation),post-hoc audit,F,1.880841,,"11,107",,,0.04977,,,,,,,
+P2 NLSY79 CYA (post-hoc audit),none (audit),"Delta (praise), one report per window (first)",post-hoc audit,probability of BA,-0.024151,0.010547,,-0.044832,-0.00347,,,,,,,,complete cases n = 5375
+P2 NLSY79 CYA (post-hoc audit),none (audit),"Delta (praise), two reports per window (first two; children with >=2 in each)",post-hoc audit,probability of BA,-0.016766,0.016295,,-0.048722,0.015191,,,,,,,,complete cases n = 3513
+P2 NLSY79 CYA (post-hoc audit),none (audit),"Delta (praise), all reports (primary scoring), complete cases",post-hoc audit,probability of BA,-0.022352,0.011903,,-0.045691,0.000986,,,,,,,,complete cases n = 5375

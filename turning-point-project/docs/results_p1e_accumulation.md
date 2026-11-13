@@ -1,5 +1,7 @@
 # Results: accumulation vs timing in the NLSY97 (exploratory addendum)
 
+> **Audit note (2026-11-13).** Numbers below are from the original (v2) run. Authoritative numbers are the seeded re-runs in `outputs/*.json` and `outputs/primary_estimands.csv`; interpretation is corrected in `docs/independent_review_response.md` and `manuscripts/working_paper_v3.md`. Non-rejection of equal weights is not evidence for accumulation. A post-hoc audit found that "very supportive in all four years" or "any loss of support" describes the data as well or better, and that a stable family characteristic measured with error would produce the same pattern. Cumulative effects are **not** demonstrated.
+
 Plan: `docs/sap_nlsy97_accumulation.md` (frozen before the 1998–2000 items were extracted; `docs/PLAN_FREEZE_P1E.md`).
 Exploratory; survey-weighted with design-based variance; complete cases.
 

@@ -60,8 +60,8 @@ def reference(e):
     else:
         auth = names[0] if names else "Anonymous"
     title = e.get("title", "").rstrip(".").rstrip("*").rstrip()
-    if e["_type"] == "book" or (not e.get("journal") and e.get("publisher")):
-        s = f"{', '.join(names[:-1]) + ', & ' + names[-1] if len(names) > 1 else (names[0] if names else 'Anonymous')} ({e.get('year', 'n.d.')}). *{title}*. {e.get('publisher', '')}."
+    if e["_type"] in ("book", "techreport") or (not e.get("journal") and (e.get("publisher") or e.get("institution"))):
+        s = f"{', '.join(names[:-1]) + ', & ' + names[-1] if len(names) > 1 else (names[0] if names else 'Anonymous')} ({e.get('year', 'n.d.')}). *{title}*. {e.get('publisher') or e.get('institution', '')}."
         return s + (f" https://doi.org/{e['doi']}" if e.get("doi") else "")
     venue = e.get("journal") or e.get("booktitle") or e.get("publisher", "")
     vol = e.get("volume", "")

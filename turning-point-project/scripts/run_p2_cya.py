@@ -99,7 +99,7 @@ def zstd(x):
 def impute(s, cols, m, seed):
     from statsmodels.imputation.mice import MICEData
     np.random.seed(seed)
-    md = MICEData(s[cols].copy(), k_pmm=5); md.update_all(10)
+    md = MICEData(s[cols].copy(), k_pmm=5, rng=seed); md.update_all(10)  # explicit RNG seed (audit fix)
     out = []
     for _ in range(m):
         md.update_all(5); x = md.data.copy(); x.index = s.index

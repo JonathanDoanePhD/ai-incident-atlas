@@ -100,7 +100,7 @@ def impute(sample: pd.DataFrame, who: str, m: int, seed: int) -> list[pd.DataFra
     data = data.loc[:, (data.fillna(0) != 0).any() | data.isna().any()]
     data.columns = [c.replace("-", "_") for c in data.columns]
     np.random.seed(seed)
-    md = MICEData(data, k_pmm=5)
+    md = MICEData(data, k_pmm=5, rng=seed)  # seed the imputation RNG explicitly (np.random.seed is ignored by statsmodels >= 0.14 MICEData)
     md.update_all(10)
     imps = []
     for _ in range(m):

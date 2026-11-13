@@ -30,7 +30,7 @@ window.SITE_DATA = {
   {
    "title": "Literature review",
    "state": "done",
-   "text": "87 works verified against Crossref; full texts of 10 key works checked for age effects."
+   "text": "88 works checked against Crossref; 13 read in full or via a trial report, 64 abstract only. Audited Nov 2026."
   },
   {
    "title": "Dataset audit",
@@ -38,14 +38,14 @@ window.SITE_DATA = {
    "text": "12 longitudinal studies audited from official documentation; 150 variables cataloged."
   },
   {
-   "title": "Analysis plan",
+   "title": "Analysis plans",
    "state": "done",
-   "text": "Paper 1 plan (NLSY97) frozen by a timestamped commit before the data were opened."
+   "text": "Frozen as hashed commits in a public repository before each dataset was opened. Not externally preregistered."
   },
   {
    "title": "Findings",
    "state": "prog",
-   "text": "Four analyses, three cohorts, ages 6–17: no reliable sign that earlier support carries more long-run weight; duration looks more important than timing."
+   "text": "Four observational analyses: modest positive associations; age and grade contrasts imprecise. Timing differences are not ruled out. Under independent review."
   }
  ],
  "stages": [
@@ -940,7 +940,7 @@ window.SITE_DATA = {
    "title": "Positive Youth Development, Participation in Community Youth Development Programs, and Community Contributions of Fifth-Grade Adolescents: Findings From the First Wave Of the 4-H Study of Positive Youth Development",
    "journal": "The Journal of Early Adolescence",
    "doi": "10.1177/0272431604272461",
-   "study_type": "observational longitudinal",
+   "study_type": "cross-sectional",
    "population": "4-H Study of PYD, 1,700 fifth graders and 1,117 parents",
    "design_or_method": "Wave 1 cross-sectional SEM",
    "key_finding": "Found five first-order factors (Five Cs) converging on a second-order PYD construct; PYD and youth development program participation independently related to youth contribution.",
@@ -1021,7 +1021,7 @@ window.SITE_DATA = {
    "key_finding": "Modest or small benefit for the average youth; effects larger with more best practices and strong mentor-youth relationships; youth from environmental risk/disadvantage most likely to benefit; poorly implemented programs may harm youth with personal vulnerabilities.",
    "age_or_timing_relevant": "partial",
    "limitations": "Age moderation not reported in abstract.",
-   "evidence_level_read": "abstract (crossref)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "dubois2011",
@@ -1035,8 +1035,8 @@ window.SITE_DATA = {
    "design_or_method": "Meta-analysis and review",
    "key_finding": "73 evaluations (1999-2010). Modest average effect. Age coded in four groups (<8, 8-10, 11-14, 15-18): not among moderators associated with effect size; favorable effects within each age group; authors conclude benefits are not confined to a particular stage of development. Larger effects with higher-risk youth, more male youth, mentor advocacy/teaching roles, interest-based matching.",
    "age_or_timing_relevant": "yes",
-   "limitations": "Only partial abstract available; no quantitative claims made here.",
-   "evidence_level_read": "full_text"
+   "limitations": "Full text (PI copy) read. Age is a between-study moderator test (no significant association); per-age-group estimates not given in main text.",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "raposa2019",
@@ -1051,7 +1051,7 @@ window.SITE_DATA = {
    "key_finding": "Statistically significant overall effect in the medium/moderate range relative to universal prevention benchmarks; larger effects for programs with more male youth, more male mentors or helping-profession mentors, and shorter meetings, and for questionnaire/self-report evaluations; authors urge realism about modest impact.",
    "age_or_timing_relevant": "partial",
    "limitations": "Abstract does not report age as a significant moderator; whether age was tested must be checked in full text.",
-   "evidence_level_read": "abstract (pubmed)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "grossman1998",
@@ -1105,13 +1105,13 @@ window.SITE_DATA = {
    "title": "The Test of Time: Predictors and Effects of Duration in Youth Mentoring Relationships",
    "journal": "American Journal of Community Psychology",
    "doi": "10.1023/a:1014680827552",
-   "study_type": "RCT",
+   "study_type": "secondary analysis of RCT (exposure not randomized)",
    "population": "1,138 BBBS applicants (mean age 12.25)",
    "design_or_method": "Secondary analysis of RCT by match duration",
-   "key_finding": "Within the Big Brothers Big Sisters trial (N = 1,138, ages 10-16), benefits concentrated in matches lasting 12+ months; matches ending within 3 months were followed by declines in self-worth and perceived scholastic competence. Matches with 13-16 year olds were 65% more likely to end each period than with 10-12 year olds (2-year vs ~1.25-year expected length).",
+   "key_finding": "Within the Big Brothers Big Sisters trial (1,138 randomized, 959 followed up; ages 10-16), benefits concentrated in matches lasting 12+ months; matches ending within 3 months were followed by declines in self-worth and perceived scholastic competence. Matches with 13-16 year olds were 65% more likely to end each period than with 10-12 year olds; the authors illustrate that a match lasting two years for a younger…",
    "age_or_timing_relevant": "yes",
    "limitations": "Duration not randomized (2SLS used to address selection); program sample",
-   "evidence_level_read": "full_text"
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "christensen2020",
@@ -1156,7 +1156,7 @@ window.SITE_DATA = {
    "key_finding": "Youth-initiated programs associated with positive outcomes, g = 0.30 overall and g = 0.40 controlling for possible selection bias; moderated by gender and year of publication.",
    "age_or_timing_relevant": "partial",
    "limitations": "Few studies; age moderation not reported in abstract.",
-   "evidence_level_read": "abstract (europepmc)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "heller2017",
@@ -1216,7 +1216,7 @@ window.SITE_DATA = {
    "key_finding": "Reporting a natural mentor was associated with favorable education/work outcomes (high school completion, college attendance), less problem behavior, better well-being and health; risk exposure effects were generally larger than mentoring's protective effects.",
    "age_or_timing_relevant": "no",
    "limitations": "Correlational; retrospective mentor report; selection.",
-   "evidence_level_read": "abstract (crossref)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "vandam2018",
@@ -1231,7 +1231,7 @@ window.SITE_DATA = {
    "key_finding": "Presence of a natural mentor associated with outcomes r = .106; relationship quality r = .208; largest effects for social-emotional and academic/vocational functioning; risk status did not moderate.",
    "age_or_timing_relevant": "partial",
    "limitations": "Mostly correlational primary studies; age moderation not reported in abstract.",
-   "evidence_level_read": "abstract (crossref)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "erickson2009",
@@ -1366,7 +1366,7 @@ window.SITE_DATA = {
    "key_finding": "Low-income adolescents had reduced access to natural mentors; their mentors were more often family/friends providing practical support and less often role models or career advisors.",
    "age_or_timing_relevant": "partial",
    "limitations": "Observational; access not effect.",
-   "evidence_level_read": "abstract (crossref)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "bayer2015",
@@ -1375,7 +1375,7 @@ window.SITE_DATA = {
    "title": "USING VOLUNTEER MENTORS TO IMPROVE THE ACADEMIC OUTCOMES OF UNDERSERVED STUDENTS: THE ROLE OF RELATIONSHIPS",
    "journal": "Journal of Community Psychology",
    "doi": "10.1002/jcop.21693",
-   "study_type": "RCT",
+   "study_type": "secondary analysis of RCT (exposure not randomized)",
    "population": "1,139 students, 71 schools (BBBS SBM)",
    "design_or_method": "Secondary analysis of RCT; 2SLS for relationship closeness",
    "key_finding": "Modest significant improvements in teacher-rated academic performance and scholastic efficacy; emotional closeness appears key, across relationship lengths.",
@@ -1411,7 +1411,7 @@ window.SITE_DATA = {
    "key_finding": "Not summarized (no abstract retrieved).",
    "age_or_timing_relevant": "partial",
    "limitations": "Abstract not read.",
-   "evidence_level_read": "metadata_only"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "fredricks2004",
@@ -1576,7 +1576,7 @@ window.SITE_DATA = {
    "key_finding": "Parental involvement positively associated with achievement except homework help; academic socialization had the strongest association and fits the developmental stage of early adolescence.",
    "age_or_timing_relevant": "yes",
    "limitations": "Correlational primary studies.",
-   "evidence_level_read": "abstract (pubmed)"
+   "evidence_level_read": "full_text (open access)"
   },
   {
    "citation_key": "yeager2011",
@@ -1765,7 +1765,7 @@ window.SITE_DATA = {
    "title": "Estimating the Technology of Cognitive and Noncognitive Skill Formation",
    "journal": "Econometrica",
    "doi": "10.3982/ecta6551",
-   "study_type": "quasi-experimental",
+   "study_type": "structural econometric (observational)",
    "population": "US child panel data (per full text; verify)",
    "design_or_method": "Structural estimation of multistage production functions",
    "key_finding": "Substitutability decreases in later stages for cognitive skills but increases in later stages for noncognitive skills; for some configurations it is optimal to invest relatively more in later childhood.",
@@ -1780,7 +1780,7 @@ window.SITE_DATA = {
    "title": "Social capital I: measurement and associations with economic mobility",
    "journal": "Nature",
    "doi": "10.1038/s41586-022-04996-4",
-   "study_type": "observational longitudinal",
+   "study_type": "cross-sectional ecological",
    "population": "21 billion Facebook friendships, US ZIP codes",
    "design_or_method": "Ecological network analysis",
    "key_finding": "Economic connectedness (share of high-SES friends among low-SES people) is among the strongest predictors of upward mobility; other social capital measures less so.",
@@ -1927,7 +1927,7 @@ window.SITE_DATA = {
    "citation_key": "kuh2003",
    "authors_short": "Kuh et al.",
    "year": "2003",
-   "title": "Life course epidemiology: Figure 1",
+   "title": "Life course epidemiology",
    "journal": "Journal of Epidemiology and Community Health",
    "doi": "10.1136/jech.57.10.778",
    "study_type": "methods",
@@ -2017,7 +2017,7 @@ window.SITE_DATA = {
    "citation_key": "hernan2016",
    "authors_short": "Hernán & Robins",
    "year": "2016",
-   "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available: Table 1.",
+   "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available",
    "journal": "American Journal of Epidemiology",
    "doi": "10.1093/aje/kwv254",
    "study_type": "methods",
@@ -2035,13 +2035,13 @@ window.SITE_DATA = {
    "title": "Promoting Successful Youth Mentoring Relationships: A Preliminary Screening Questionnaire",
    "journal": "The Journal of Primary Prevention",
    "doi": "10.1007/s10935-005-1849-8",
-   "study_type": "observational longitudinal",
+   "study_type": "cross-sectional (measure development)",
    "population": "Big Brothers Big Sisters youth in a national evaluation (N = 347; ages 9.4-15.9, mean 12.1)",
    "design_or_method": "Youth-reported relationship-quality scales; 18-month follow-up",
    "key_finding": "Youth age (median split) was unrelated to relationship quality; longer matches (13-19 months) reported higher quality on all four scales than 1-6 month matches.",
    "age_or_timing_relevant": "yes",
    "limitations": "Duration not randomized; youth in longer matches may differ; program sample",
-   "evidence_level_read": "full_text"
+   "evidence_level_read": "full_text (PI-supplied copy)"
   }
  ],
  "methods": [
@@ -2094,7 +2094,7 @@ window.SITE_DATA = {
   {
    "title": "Accumulation",
    "state": "done",
-   "text": "NLSY97 four-year support histories: duration fits as well as timing."
+   "text": "NLSY97 four-year histories: cumulative, stability and loss-of-support models cannot be separated."
   },
   {
    "title": "Next: replication",
@@ -2123,7 +2123,7 @@ window.SITE_DATA = {
   },
   {
    "title": "Frozen analysis plan record",
-   "text": "Plan frozen by a timestamped commit with file hashes (not registered on OSF).",
+   "text": "Plans frozen by timestamped commits with file hashes in the project repository. Not an external preregistration.",
    "status": "Frozen",
    "statusKind": "evidence",
    "link": "../docs/PLAN_FREEZE.md",
@@ -2170,12 +2170,20 @@ window.SITE_DATA = {
    "linkText": "Read the results"
   },
   {
-   "title": "Working paper v2: evidence from three U.S. cohorts",
-   "text": "All four analyses (NLSY97, HSLS:09, NLSY79 Children and Young Adults, accumulation). Not peer reviewed.",
-   "status": "v2",
+   "title": "Working paper v3 (revised after independent review)",
+   "text": "All four analyses with corrected, more cautious conclusions. Not peer reviewed.",
+   "status": "v3",
    "statusKind": "evidence",
-   "link": "../manuscripts/working_paper_v2.md",
+   "link": "../manuscripts/working_paper_v3.md",
    "linkText": "Read the paper"
+  },
+  {
+   "title": "Independent review response and audit",
+   "text": "Every issue found, verification results, corrections, and remaining limitations.",
+   "status": "Nov 2026",
+   "statusKind": "evidence",
+   "link": "../docs/independent_review_response.md",
+   "linkText": "Read the audit"
   },
   {
    "title": "Results report (paper 2)",
@@ -2195,6 +2203,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-13",
-  "commit": "75c3510"
+  "commit": "0549cdc"
  }
 };

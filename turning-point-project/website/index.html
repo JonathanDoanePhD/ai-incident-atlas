@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Turning Point Project</title>
-<meta name="description" content="When, how, and for whom do supportive relationships and developmental experiences shape young people's future trajectories? A transparent, preregistration-first research program.">
+<meta name="description" content="When, how, and for whom do supportive relationships shape young people's educational trajectories? Observational analyses of three U.S. cohorts, with analysis plans frozen locally before data access (not externally preregistered).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,11 +35,12 @@
         <div class="eyebrow">Research program · Jonathan D. Doane, Ph.D.</div>
         <h1>When does adult support matter most?</h1>
         <p class="lede">When, how, and for whom do supportive relationships shape young people's educational trajectories?
-          Four pre-planned analyses of three national U.S. cohorts, spanning ages 6 to 17, put the idea of a single
-          turning-point age to the test.</p>
+          Four observational analyses of three national U.S. cohorts compare associations of adult support measured at
+          different ages (6 to 17). Each followed an analysis plan frozen in a public repository before its data were opened,
+          which is not the same as an external preregistration.</p>
         <p style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem">
           <a class="btn" href="#findings">See the findings</a>
-          <a class="btn ghost" href="../manuscripts/working_paper_v2.md">Read the working paper</a>
+          <a class="btn ghost" href="../manuscripts/working_paper_v3.md">Read the working paper (v3)</a>
         </p>
       </div>
       <canvas id="heroGeo" width="760" height="760" aria-hidden="true"></canvas>
@@ -51,17 +52,20 @@
       <div class="card">
         <h3>Latest updates</h3>
         <ul class="updates">
+          <li><time datetime="2026-11-13">Nov 2026</time><span><strong>Independent review:</strong> a methodological audit found the results reproducible after a seeding fix and led to more cautious conclusions (audit report in Publications).</span></li>
           <li><time datetime="2026-11-13">Nov 2026</time><span><strong>New full texts:</strong> the largest mentoring meta-analysis finds benefits at every age from under 8 to 18; older adolescents' matches end sooner.</span></li>
-          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Working paper v2</strong> brings all four analyses together.</span></li>
-          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Ages 6–9 vs 10–14</strong> (NLSY79 Children and Young Adults): no middle-childhood window.</span></li>
-          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Grade 9 vs grade 11</strong> (HSLS:09): freshman-year teacher support no more predictive.</span></li>
-          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Timing vs duration</strong> (NLSY97): consistent with accumulation.</span></li>
-          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Full-text check</strong> of mentoring meta-analyses: no significant age effects.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Working paper v3</strong> (revised after the independent review) brings all four analyses together with corrected conclusions.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Ages 6–9 vs 10–14</strong> (NLSY79 Children and Young Adults): estimates did not favor middle childhood; the difference is imprecise.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Grade 9 vs grade 11</strong> (HSLS:09): grade-9 math-teacher ratings were not more strongly associated with a BA than grade-11 ratings.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Timing vs duration</strong> (NLSY97): repeated reports of support go with more schooling, but cumulative, stability and loss-of-support explanations cannot be separated.</span></li>
+          <li><time datetime="2026-11-12">Nov 2026</time><span><strong>Full-text check</strong> of mentoring meta-analyses: no significant age moderation in between-study comparisons.</span></li>
         </ul>
       </div>
-      <div class="notice" id="topNotice" style="margin:0"><strong>Results from four planned analyses in three national cohorts are in.</strong>
-        None found reliable evidence that support earlier in childhood or adolescence carries more long-run weight.
-        These are adjusted associations from observational data, not causal effects. Charts labeled <em>illustrative</em> contain no data.</div>
+      <div class="notice" id="topNotice" style="margin:0"><strong>What the evidence shows so far.</strong> Reported support from parents
+        (and, in grade 11, math teachers) was modestly associated with later education. Comparisons across ages or grades were
+        imprecise. None showed earlier-measured support carrying more weight, but these data <em>cannot</em> show that timing
+        does not matter. They concern parents and teachers, not mentors, and age at measurement, not when relationships began.
+        Observational associations, not causal effects. Charts labeled <em>illustrative</em> contain no data.</div>
     </div>
     <div class="legend" aria-label="Label legend">
       <span><span class="pill evidence">Evidence</span> verified published research</span>
@@ -191,7 +195,7 @@
       <tbody>
         <tr><td>Critical period</td><td>Support only matters in one window</td><td>H1–H4</td></tr>
         <tr><td>Sensitive periods</td><td>Support matters in every window, more in some</td><td>H1–H4 (weaker form)</td></tr>
-        <tr><td>Accumulation</td><td>Each period of support adds equally; duration matters, not timing</td><td>H6</td></tr>
+        <tr><td>Accumulation</td><td>Each period of support adds equally</td><td>H6</td></tr>
         <tr><td>Mobility</td><td>Gaining or losing support matters</td><td>H7 (transitions)</td></tr>
         <tr><td>Saturated</td><td>Any pattern; the benchmark the others are tested against</td><td>—</td></tr>
       </tbody></table></div>
@@ -248,7 +252,7 @@ python scripts/build_site_data.py   # rebuild this site's data from docs/</code>
         <h3>Independence statement</h3>
         <p class="small">The researcher hopes to found an evidence-based youth mentoring organization. To keep that hope from
           shaping results, the primary analysis is specified before outcomes are examined, a smallest effect size of
-          interest makes null results informative, and all preregistered results will be reported.</p>
+          interest makes null results more informative, and all results specified in the frozen plans will be reported.</p>
       </div>
     </div>
   </div>

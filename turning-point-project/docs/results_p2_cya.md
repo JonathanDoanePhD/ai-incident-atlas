@@ -1,5 +1,7 @@
 # Results: paper 2 (maternal warmth at ages 6–9 vs 10–14, NLSY79 Children and Young Adults)
 
+> **Audit note (2026-11-13).** Numbers below are from the original (v2) run. Authoritative numbers are the seeded re-runs in `outputs/*.json` and `outputs/primary_estimands.csv`; interpretation is corrected in `docs/independent_review_response.md` and `manuscripts/working_paper_v3.md`. The windows are defined by age at measurement of mother-reported praise, not by when relationships began. A post-hoc check with one report per window (equal reliability) kept the same ordering.
+
 Status: first complete run of the frozen plan (`docs/sap_nlsy79cya_childhood.md`; `docs/PLAN_FREEZE_P2.md`,
 frozen before the data were opened). Run 2026-11-12; 20 imputations; cluster-robust variance by mother.
 **Adjusted associations from observational data**, not causal effects.

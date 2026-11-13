@@ -290,7 +290,8 @@
         1 SD more praise at <strong>ages 6–9</strong> went with <strong>${pp(P.beta_6_9.estimate)} points</strong> in the chance of a bachelor's degree
         (${pp(P.beta_6_9.ci_low)} to ${pp(P.beta_6_9.ci_high)}). At <strong>ages 10–14</strong>: <strong>${pp(P.beta_10_14.estimate)}</strong> (${pp(P.beta_10_14.ci_low)} to ${pp(P.beta_10_14.ci_high)}).</p>
         <p><span class="pill hypothesis">Verdict</span> ${esc(Q.equivalence.verdict)}: difference ${pp(P.delta_C_minus_D.estimate)} points (${pp(P.delta_C_minus_D.ci_low)} to ${pp(P.delta_C_minus_D.ci_high)}).
-        No support for a middle-childhood window. If anything, early adolescence carries more.</p>
+        Estimates did not favor middle childhood, but the difference is imprecise and does not rule out meaningful timing differences.
+        Mother-reported praise is measured, not when relationships began.</p>
         <p class="small">Closeness (secondary): 6–9 ${pp(Q.close.beta_6_9.estimate)}, 10–14 ${pp(Q.close.beta_10_14.estimate)} points. Both windows in one model; adjusted for mother's education and AFQT,
         childhood income and poverty, birth order, mother's age at birth, sex, race/ethnicity, birth year. ${Q.m} imputations; clustered by mother.
         Full report: <a href="../docs/results_p2_cya.md">results_p2_cya.md</a>.</p>
@@ -301,7 +302,9 @@
     return `<h3 style="margin-top:2rem">Does timing or duration matter? (NLSY97, exploratory)</h3>
       <div class="card"><p>Among ${A.n.toLocaleString()} youths aged 12–14 in 1996 with four yearly reports (1997–2000), each additional year with a
       <em>very supportive</em> mother went with <strong>${A.slope.estimate.toFixed(2)} more grades completed</strong> (95% CI ${A.slope.ci_low.toFixed(2)} to ${A.slope.ci_high.toFixed(2)}).
-      A test that every year counts equally did not reject that idea (p = ${A.wald.p.toFixed(2)}): consistent with <strong>accumulation</strong>.</p>
+      A test that every year counts equally did not reject that idea (p = ${A.wald.p.toFixed(2)}), but failing to reject is not evidence for it.
+      An audit found that "very supportive in all four years" or "any loss of support" describes the data as well or better. Stable family
+      characteristics and measurement error can produce the same pattern, so <strong>cumulative effects are not demonstrated</strong>.</p>
       <p class="small">Exploratory, complete cases. Full report: <a href="../docs/results_p1e_accumulation.md">results_p1e_accumulation.md</a>.</p></div>`;
   }
   function b2Block(B) {
@@ -325,7 +328,7 @@
         <strong>grade 9</strong> went with <strong>${pp(B.theta9.estimate)} points</strong> in the chance of a bachelor's degree by 2021
         (95% CI ${pp(B.theta9.ci_low)} to ${pp(B.theta9.ci_high)}). In <strong>grade 11</strong>: <strong>${pp(B.theta11.estimate)}</strong> (${pp(B.theta11.ci_low)} to ${pp(B.theta11.ci_high)}).</p>
         <p><span class="pill hypothesis">Verdict</span> ${esc(B.equivalence.verdict)}: the grade 11 − grade 9 difference is ${pp(B.diff.estimate)} points, inside ±${100 * B.sesoi}.
-        Grade 9 was not more predictive; if anything, slightly less.</p>
+        Grade-9 ratings were not more strongly associated with a BA, but the ±${100 * B.sesoi}-point margin is larger than either association, so this rules out only large differences. The grades refer to different teachers.</p>
         <p class="small">Exploratory: agreeing in grade 9 that "there is a teacher or other adult in school I can talk to about problems" went with
         ${pp(B.talk9.estimate)} points per SD (${pp(B.talk9.ci_low)} to ${pp(B.talk9.ci_high)}). No grade-11 version exists, so it cannot test timing.</p>
         <p class="small">Adjusted for grade-9 math score, SES, family structure, sex, race/ethnicity, locale. ${B.m} imputations; 200 BRR replicate weights.
@@ -355,6 +358,7 @@
           <p><strong>Did it depend on age?</strong> Estimated association at age 12: ${f2(t12.est)}; at age 16: ${f2(t16.est)}.
           Difference (16 vs 12): ${f2(d.estimate)} years (95% CI ${f2(d.ci_low)} to ${f2(d.ci_high)}), or ${f2(ds.estimate)} SD; Holm-adjusted p = ${holm.toFixed(2)}.</p>
           <p><span class="pill hypothesis">Verdict</span> ${esc(eq.verdict)} (equivalence bound ±${F.sesoi_sd} SD; 90% CI ${f2(eq.ci90_low)} to ${f2(eq.ci90_high)} SD).</p>
+          <p class="small">How to read this: the ±${F.sesoi_sd} SD margin is larger than the age-14 association itself (about ${(t14.est / P.sd).toFixed(2)} SD), so "equivalent" rules out only large <em>linear</em> differences between ages 12 and 16. It does not show that timing is irrelevant. A post-hoc audit test of any difference across the five ages gave p = .16 (mothers) and p = .08 (fathers), with an irregular pattern.</p>
           <p class="small">Adjusted associations from observational data. An unmeasured confounder would need associations of about ${P.e_values.theta_14.point.toFixed(2)} (risk-ratio scale) with both support and schooling to explain away the age-14 association (E-value; ${P.e_values.theta_14.ci.toFixed(2)} for the CI limit).</p>
         </div>
         <svg viewBox="0 0 560 300" role="img" aria-label="Estimated association by age at report with 95% confidence intervals">${chart(P)}</svg>

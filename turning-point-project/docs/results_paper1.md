@@ -1,5 +1,7 @@
 # Results: paper 1
 
+> **Audit note (2026-11-13).** Numbers below are from the original (v2) run. Authoritative numbers are the seeded re-runs in `outputs/*.json` and `outputs/primary_estimands.csv`; interpretation is corrected in `docs/independent_review_response.md` and `manuscripts/working_paper_v3.md`. Equivalence for fathers applies only to the linear age-16 vs age-12 contrast. The ±0.20 SD margin is larger than the age-14 association (≈0.15 SD), and a post-hoc test of any difference across the five ages gave p = .16 (mothers) and .08 (fathers). Statements below that the data "rule out" differences or show "no sign of a developmental window" overstate the evidence.
+
 **When does adult support matter most? Parental support across adolescence and educational attainment in the NLSY97**
 
 Status: first complete run of the frozen analysis plan (`docs/PLAN_FREEZE.md`, frozen at commit 970c8fc
@@ -31,7 +33,7 @@ These are **adjusted associations from observational data**, not causal effects.
 **Interpretation, within the plan's rules (SAP §9).** For parental support reported between ages 12 and
 16, these data give no sign of a developmental window. For fathers they rule out differences larger than
 the pre-set bound. For mothers they leave room for a modest *later* advantage, the opposite of an
-early-adolescent window. This fits the accumulation and individualised-timing hypotheses (H5/H6)
+early-adolescent window. This fits the accumulation and individualized-timing hypotheses (H5/H6)
 better than the age-specific window hypotheses (H2/H3). It says nothing about nonparental mentors, about
 ages outside 12–16, or about what would happen if support were changed (concepts A and C in
 `research_questions.md`).
