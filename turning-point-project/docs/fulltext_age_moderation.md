@@ -27,7 +27,7 @@ Prepared 2026-11-12 for the Turning Point Project. This file supplements `litera
 | herrera2011 | Article closed; **companion report read** | Herrera et al. (2007), P/PV report *Making a Difference in Schools* (ERIC record ED503245; copy at files.givewell.org) |
 | grossman1998 | Article closed; **companion report read** | Tierney & Grossman with Resch, P/PV *Making a Difference* (1995 study, 2000 re-issue), via the UNT web archive of ppv.org |
 | dubois2005 | Open full text | PubMed Central (PMC1449212) |
-| fruiht2013 | **Not accessible** | Closed. No author-posted copy was found. **No timing-category effect sizes could be extracted.** |
+| fruiht2013 | **Read 2026-11-13 (PI-supplied copy)** | See the second-batch addendum below for timing-category estimates. |
 | schwartz2013 | **Not accessible** | An author-lab URL (rhodeslab.org) is listed by Semantic Scholar but returned HTTP 401 |
 | rhodes2006 | **Not accessible** | Closed |
 | raposa2018 | Open full text | PubMed Central (PMC5837955) |
@@ -245,7 +245,7 @@ Only social studies differed between groups, and only at p < .10.
 
 ## fruiht2013: Fruiht and Wray-Lake (2013), mentor type and timing
 
-**Access.** Not accessible. It is closed per Unpaywall, OpenAlex and Semantic Scholar, and no author repository copy was found. **The effect sizes by timing category (before, during or after high school) could not be extracted.** The literature review's account rests on the abstract only and should stay labelled that way.
+**Access (updated 2026-11-13).** Originally not accessible; the PI later supplied a copy. Extraction is in the addendum at the end of this file.
 
 ---
 
@@ -489,3 +489,97 @@ These PDFs were supplied by the PI under `docs/article_retrieval_protocol.md`. T
   part of this.
 - **Programs:** the program studies again point to duration (Schwartz 2013) and to feasible interventions in grades 7–10
   (Heller) and at 16–18 (Schwartz). These are intervention opportunities, not evidence of developmental windows.
+
+## Addendum (2026-11-13, third batch): four PI-supplied articles
+
+These PDFs were supplied by the PI and are not redistributed or committed. With this batch, every article in the retrieval protocol
+has been read.
+
+### fruiht2013 — Fruiht & Wray-Lake (2013), *Journal of Youth and Adolescence*
+
+**Data and sample.** Add Health public-use Waves III and IV.
+
+- The sample is **only respondents who reported a mentor** and had transcript GPA (N = 2,409, ages 18–27 at Wave III).
+  - 1,072 mentored respondents were excluded for a missing or ungraded 12th-grade transcript.
+  - There is **no unmentored comparison group**.
+- **Timing** comes from "How old were you when {HE/SHE} first became important in your life?", coded into three groups:
+  - before high school (0–13; the reference group), 34.1% of mentors
+  - during high school (14–18), 47.4%
+  - after high school (19+), 18.5%
+- The **model** is a multilevel model with a school random intercept. Covariates are sex, age, race/ethnicity and 12th-grade GPA.
+  Survey weights are not used.
+- The **outcome** is a 1–9 attainment scale at Wave IV.
+
+**Timing results (Table 3, model 2):**
+
+- During vs before high school: b = −0.12 (SE 0.09), not significant.
+- After vs before high school: b = 0.23 (SE 0.11, p = .04).
+- Mentor type: kin, community and friend mentors each predicted about 0.5 points less attainment than teacher mentors.
+- Interactions: type × timing interactions together added ΔR² = .01.
+  - Teacher mentors after high school: b = 0.74.
+  - Kin mentors during high school: b = 0.43.
+  - Community mentors after high school: b = −0.50.
+- No three-way interaction with ethnicity was significant.
+
+**Problems the abstract does not show:**
+
+1. **Over-adjustment.** 12th-grade GPA is measured *after* the mentorship began for before- and during-high-school mentors. If
+   those mentors raised grades, the GPA control absorbs their association, which biases the comparison toward later mentors.
+2. **Reverse causation.** Post-high-school mentors, especially teachers (probably including college instructors), are met through
+   continued education.
+3. **No unmentored group.** The study compares timing among the mentored only, so it says nothing about mentoring vs none.
+4. **Internal inconsistency.** The reported ICC (.78) conflicts with the authors' own statement that 22% of the variance is at the
+   school level. The ICC is probably .22.
+5. **Weights.** Survey weights are not used. The authors also note that selected respondents differed by sex and ethnicity.
+
+**Takeaway and relevance to Study A3.**
+
+- **Our primary contrast:** the closest analog, before vs during high school, shows **no difference** (−0.12 on a 9-point
+  scale, 95% CI about −0.30 to 0.06). This is conditional on GPA.
+- **Prior claims corrected:** the headline "after high school predicts the most attainment" is a small effect (0.23 points) and
+  probably not developmental. Our earlier summaries, working paper v3 and the website text were corrected to say so.
+- **A3 design:** A3 already avoids problems 1–3. It includes unmentored respondents, uses Wave I covariates, uses the GSWGT134
+  weights, and treats onset at 18 or later as non-interpretable.
+- **Coding difference:** A3 cuts at 14 and at 18, whereas Fruiht & Wray-Lake used 19+ for after high school.
+
+### christensen2020 — Christensen et al. (2020), *Journal of Youth and Adolescence*
+
+- **Sample:** 48 program evaluations (535 effect sizes), mean youth age 12.25, analyzed as a three-level meta-analysis.
+- **Results:** the overall effect was g = 0.19 (95% CI 0.13–0.24). Targeted, skills-based programs had g = 0.25, compared with
+  g = 0.11 for non-specific relational programs (difference −0.14, p < .05).
+- **Age:** youth age was coded but **not tested as a moderator**. Targeted programs served somewhat older youth (mean 12.76 vs 11.70
+  years; Table 2), so approach and age are partly confounded.
+- **Takeaway:** concerns *what mentors do*, not *when*. Program content is a candidate explanation for why age effects are not
+  found: what is delivered may matter more than the age at which it is delivered.
+
+### allen2018 — Allen, Kern, Vella-Brodrick, Hattie & Waters (2018; online 2016), *Educational Psychology Review*
+
+- **Sample:** 51 studies (N = 67,378), **secondary school only** (mean ages 12–18).
+- **Results:** teacher support had the strongest association with school belonging (r = 0.46, 95% CI 0.37–0.54), above parent
+  support (r = 0.33) and peer support (r = 0.32). Associations were stronger in rural schools.
+- **Age:** "only some studies reported student age, such that it could not be assessed as a moderator" (Limitations).
+- **Takeaway:** no age evidence. Teacher support is a strong *correlate* of belonging throughout secondary school.
+
+### zhu2021 — Zhu et al. (2021), *American Journal of Epidemiology*
+
+- **Data:** confirmed as simulations based on ALSPAC (the ARIES subsample) and an empirical sample of n = 703.
+- **Results:** after life-course model selection, **naive p-values are anticonservative**. Selective inference and the max-|t| test
+  controlled familywise error.
+- **Measurement timing:** the authors recommend condensing closely spaced measurements into longer periods.
+- **Relevance to P1E:** our accumulation study ranks life-course models by AIC only descriptively. Its confirmatory tests (slope,
+  Wald and within-count) are pre-specified nested tests, not post-selection tests. This is consistent with Zhu et al.
+  - If we ever report inference *for the model chosen by AIC*, it needs selective inference or a max-|t| approach.
+  - Condensing rounds into age bands is how P1 and P1E already operate.
+
+### Updated synthesis (all protocol articles read)
+
+- **No age-graded sensitivity:** across all three batches, no study shows that supportive non-parental or school relationships
+  matter more at a particular age once methods are accounted for.
+- **The one direct timing study:** Fruiht & Wray-Lake (2013), read in full, finds no before- vs during-high-school difference
+  among mentored youth. Its post-high-school association is small and probably reflects continued education.
+- **Meta-analyses:**
+  - Roorda (2011) finds larger teacher–student associations in higher grades.
+  - DuBois et al. (2002, 2011) find no age moderation of program effects.
+  - Christensen (2020) and Allen (2018) did not test age.
+- **What predicts benefit:** across the literature, the recurring predictors are what is delivered (targeted vs non-specific) and
+  how long a relationship lasts, not when it begins.

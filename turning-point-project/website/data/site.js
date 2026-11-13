@@ -145,7 +145,7 @@ window.SITE_DATA = {
     {
      "label": "evidence",
      "cite": "Fruiht & Wray-Lake, 2013",
-     "text": "In Add Health, mentors who became important after high school were associated with the most attainment; teacher mentors were the strongest predictors (retrospective, observational)."
+     "text": "Among Add Health young adults who had a mentor, mentors from during high school were not linked to more attainment than earlier mentors; post-high-school mentors were linked to somewhat more (retrospective, observational, likely reverse causation)."
     },
     {
      "label": "evidence",
@@ -173,7 +173,7 @@ window.SITE_DATA = {
     {
      "label": "evidence",
      "cite": "Fruiht & Wray-Lake, 2013",
-     "text": "The same Add Health study found post-high-school mentors associated with the highest attainment."
+     "text": "The same Add Health study linked post-high-school mentors to somewhat more attainment, but those mentors are often met through continued education, so the outcome may partly cause the exposure."
     },
     {
      "label": "evidence",
@@ -1093,10 +1093,10 @@ window.SITE_DATA = {
    "study_type": "theory",
    "population": "n/a",
    "design_or_method": "Conceptual model",
-   "key_finding": "Presents a conceptual model of the mentoring process and research on what makes mentoring relationships more effective.",
-   "age_or_timing_relevant": "no",
-   "limitations": "Conceptual.",
-   "evidence_level_read": "abstract (crossref)"
+   "key_finding": "Conceptual model: mentoring works through socioemotional, cognitive and identity processes, moderated by relationship duration and quality; proposes (untested) that effects depend on age, e.g. youth choice may matter more for adolescents than younger children; notes older youth (13-16) at greater risk of early termination.",
+   "age_or_timing_relevant": "partial (theory only)",
+   "limitations": "Conceptual; age propositions not tested.",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "grossman2002",
@@ -1123,10 +1123,10 @@ window.SITE_DATA = {
    "study_type": "meta-analysis",
    "population": "48 mentoring program studies (mean age 12.25)",
    "design_or_method": "Follow-up meta-analysis (1975-2018)",
-   "key_finding": "Targeted, skills-based mentoring programs had an overall effect more than double that of non-specific relational programs, with moderator effects on academic, psychological and social functioning.",
+   "key_finding": "48 program evaluations, 535 effect sizes: overall g=0.19 (95% CI 0.13-0.24); targeted programs g=0.25 vs non-specific g=0.11 (difference -0.14, p<.05). Youth age was coded but not tested as a moderator; targeted-program samples were somewhat older (mean 12.76 vs 11.70 years).",
    "age_or_timing_relevant": "no",
-   "limitations": "Program-level comparison, confounded with other program features.",
-   "evidence_level_read": "abstract (pubmed)"
+   "limitations": "Program approach confounded with other features, including sample age; age moderation not tested; between-study comparison.",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "schwartz2013",
@@ -1138,10 +1138,10 @@ window.SITE_DATA = {
    "study_type": "observational longitudinal",
    "population": "National Guard Youth ChalleNGe participants (N=1,173; qualitative n=30)",
    "design_or_method": "Mixed methods, 3-year follow-up",
-   "key_finding": "More enduring youth-nominated mentoring relationships were associated with better retention of educational, vocational and behavioral outcomes at 3 years; relationships endured more when youth chose mentors themselves and with same-race mentors.",
+   "key_finding": "In National Guard Youth ChalleNGe (N=1,173; 38-month follow-up) longer youth-nominated mentoring relationships were associated with retention of educational, vocational and behavioral gains (propensity scores, 2SLS for duration >21 months); youth-selected mentors (OR 1.99 at 21 months) and same-race mentors (OR 3.44) more likely to remain in contact.",
    "age_or_timing_relevant": "yes",
-   "limitations": "Non-randomized relationship duration; dropout population.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Duration not randomized; single program; dropout population; no comparison by age.",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "vandam2021",
@@ -1168,10 +1168,10 @@ window.SITE_DATA = {
    "study_type": "RCT",
    "population": "Economically disadvantaged male youth in Chicago (BAM) and detention center",
    "design_or_method": "Three large RCTs",
-   "key_finding": "BAM reduced total arrests 28-35% and violent-crime arrests 45-50% during intervention, improved school engagement, and (study 1) increased graduation rates 12-19%; no positive evidence effects were due to a generic mentoring effect; suggestive support for slowing automatic thinking.",
+   "key_finding": "BAM reduced total arrests 28-35% and violent-crime arrests 45-50% during the program period (not persisting after); study 1 raised graduation 6-9 percentage points (12-19%); authors find no positive evidence that effects are due to a generic mentoring effect.",
    "age_or_timing_relevant": "partial",
-   "limitations": "Mechanism evidence limited per authors; Chicago males only.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Mechanism data not ideal per authors; Chicago males only; no age heterogeneity reported in the working paper. Read version is NBER WP 21178 (2015), not the QJE version.",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "sinclair1998",
@@ -1301,12 +1301,12 @@ window.SITE_DATA = {
    "journal": "Journal of Youth and Adolescence",
    "doi": "10.1007/s10964-012-9817-0",
    "study_type": "observational longitudinal",
-   "population": "Add Health Waves III-IV (N=2,409)",
+   "population": "Add Health public-use Waves III-IV; mentored respondents only with transcript GPA (N=2,409)",
    "design_or_method": "Retrospective timing of when mentor became important (before/during/after high school)",
-   "key_finding": "Teacher-mentors were more predictive of attainment than other mentor types; a mentor after high school predicted the most attainment; kin and community mentors appeared more important during and before high school respectively; consistent across ethnic groups.",
+   "key_finding": "Among mentored young adults only (no unmentored comparison), controlling for 12th-grade GPA: teacher mentors predicted more attainment than kin, community or friend mentors (b about -.5 on a 1-9 scale); vs mentors important before high school (0-13), during-high-school mentors b=-0.12 (SE 0.09, ns) and after-high-school (19+) b=0.23 (SE 0.11, p=.04). Type-by-timing interactions added 1% of variance; teacher mentors…",
    "age_or_timing_relevant": "yes",
-   "limitations": "Retrospective timing; selection and reverse causality (those continuing education meet post-HS mentors).",
-   "evidence_level_read": "abstract (pubmed)"
+   "limitations": "Retrospective timing; no unmentored group; 12th-grade GPA control is post-onset for before/during-HS mentors (may absorb their association); post-HS mentors partly reflect continued education…",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "fruiht2018",
@@ -1346,12 +1346,12 @@ window.SITE_DATA = {
    "journal": "American Journal of Community Psychology",
    "doi": "10.1002/ajcp.12031",
    "study_type": "observational longitudinal",
-   "population": "Nationally representative adolescents (Add Health per authors; verify)",
+   "population": "Add Health public-use (Waves I, III, IV); analytic n=2,495; 1,350 mentored",
    "design_or_method": "Longitudinal analyses plus qualitative taxonomy",
-   "key_finding": "Having a community mentor in adolescence related to higher educational attainment, lower criminal activity, higher well-being, and romantic relationship satisfaction in adulthood; abstract opens by stating adolescence may be when nonfamilial adults are most influential (asserted, not tested).",
+   "key_finding": "Reporting (at Wave III, retrospectively) a nonparental mentor important since age 14 was associated with higher Wave IV educational attainment (std b=.267), lower criminal activity (OR 0.81, 95% CI 0.65-1.00), and modestly with well-being and relationship satisfaction; not with job satisfaction. Opening claim that adolescence is when nonfamilial adults are most influential is asserted, not tested.",
    "age_or_timing_relevant": "partial",
-   "limitations": "Observational.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Observational; retrospective mentor report; mentor timing restricted to ages 12-22, not compared across ages; no controls for duration or closeness; survey weights not described; few covariates (no…",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "raposa2018",
@@ -1393,10 +1393,10 @@ window.SITE_DATA = {
    "study_type": "meta-analysis",
    "population": "99 studies, preschool to high school",
    "design_or_method": "Meta-analysis",
-   "key_finding": "Positive and negative teacher-student relationships associated with engagement (medium to large) and achievement (small to medium); stronger effects in higher grades overall, but negative relationships had stronger effects in primary than secondary school.",
+   "key_finding": "Positive and negative TSRs associated with engagement and achievement. Higher average grade level predicted larger associations for all links except negative TSR-engagement; but negative TSRs mattered more in primary than secondary school.",
    "age_or_timing_relevant": "yes",
-   "limitations": "Mostly correlational primary studies.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Correlational primary studies; authors note secondary studies mostly use student reports for both TSR and engagement (shared-informant inflation); grade range for negative-TSR links only preschool…",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "roorda2017",
@@ -1451,12 +1451,12 @@ window.SITE_DATA = {
    "journal": "Educational Psychology Review",
    "doi": "10.1007/s10648-016-9389-8",
    "study_type": "meta-analysis",
-   "population": "School belonging studies",
+   "population": "51 studies, N=67,378 secondary-school students (mean ages 12-18)",
    "design_or_method": "Meta-analysis",
-   "key_finding": "Not summarized (abstract elided by publisher in APIs consulted).",
+   "key_finding": "Teacher support had the strongest association with school belonging (r=0.46, 95% CI 0.37-0.54), above parent support (r=0.33) and peer support (r=0.32); associations moderated by geographic location (stronger in rural schools).",
    "age_or_timing_relevant": "no",
-   "limitations": "Abstract not read.",
-   "evidence_level_read": "metadata_only"
+   "limitations": "Mostly cross-sectional correlations; restricted to secondary school by design; age could not be tested as a moderator because few studies reported it (authors).",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "eccles1993",
@@ -1991,12 +1991,12 @@ window.SITE_DATA = {
    "journal": "American Journal of Epidemiology",
    "doi": "10.1093/aje/kwaa246",
    "study_type": "methods",
-   "population": "Simulations (n=700) and ALSPAC-type empirical sample (n=703; verify cohort)",
+   "population": "Simulations (n=700) based on ALSPAC (Avon Longitudinal Study of Parents and Children) ARIES subsample; empirical n=703",
    "design_or_method": "SLCMA inference comparison",
-   "key_finding": "Selective inference and max-|t| tests controlled familywise error with moderate power; SLCMA can examine time-dependent effects if applied appropriately.",
+   "key_finding": "Among post-selection inference methods for the structured life-course approach, selective inference and the max-|t| test controlled familywise error with moderate power; naive inference after model selection gave inflated p-values and familywise error.",
    "age_or_timing_relevant": "yes",
-   "limitations": "Omics context.",
-   "evidence_level_read": "abstract (crossref)"
+   "limitations": "Omics context with very many tests; relevance here is methodological (inference after life-course model selection).",
+   "evidence_level_read": "full_text (PI-supplied copy)"
   },
   {
    "citation_key": "smith2021",
@@ -2203,6 +2203,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-13",
-  "commit": "0549cdc"
+  "commit": "3bc6c95"
  }
 };

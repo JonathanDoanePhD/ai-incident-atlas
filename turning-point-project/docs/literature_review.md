@@ -108,9 +108,9 @@ Almost all natural-mentoring evidence is **correlational**, and much of it comes
 
 We searched specifically for studies of the *age at which* a supportive relationship began. Only one directly relevant study was found:
 
-- **Fruiht and Wray-Lake (2013)**, using Add Health Waves III–IV (N = 2,409, ages 18–27), classified *when the mentor became important*: before, during or after high school. Findings *(abstract)*:
+- **Fruiht and Wray-Lake (2013)**, using Add Health Waves III–IV (N = 2,409, ages 18–27), classified *when the mentor became important*: before (0–13), during (14–18) or after high school (19+). Findings *(abstract; full-text details in the 2026-11-13 addendum below)*:
   - Teacher-mentors were more predictive of attainment than other mentor types.
-  - **Having a mentor *after* high school predicted the most attainment.**
+  - **Having a mentor *after* high school predicted the most attainment.** (Full text: a small effect, b = 0.23 on a 9-point scale; during vs before high school showed no difference. See the final addendum.)
   - Kin mentors appeared more important *during* high school, and community mentors *before* high school.
   - Results were consistent across ethnic groups.
 
@@ -280,7 +280,7 @@ and locations: `fulltext_age_moderation.md` and `.csv`). Main points:
   trial report).
 - `roorda2017` (full text) finds only one of five teacher–student associations stronger in secondary school. This
   qualifies the age-graded pattern cited above from `roorda2011` (abstract only).
-- Not accessible as legal open full text: `christensen2020`, `fruiht2013`, `schwartz2013`, `rhodes2006`, `roorda2011`, `allen2018`.
+- Not accessible as legal open full text: `christensen2020`, `fruiht2013`, `schwartz2013`, `rhodes2006`, `roorda2011`, `allen2018`. All were later supplied by the PI and read (2026-11-13 addenda).
 - **Update 2026-11-13:** the PI supplied full texts of `dubois2011`, `grossman2002` and `rhodes2005`. DuBois et al. (2011) coded age as
   <8, 8–10, 11–14 and 15–18 and found age unrelated to effect size, with favorable effects in every age group. Grossman and Rhodes
   (2002) found that age predicts how long matches last (13–16 year olds' matches ended sooner) and that benefits concentrate in
@@ -300,5 +300,29 @@ Details are in `fulltext_age_moderation.md`.
 - **Miranda-Chan (2016):** used Add Health and did not compare timing.
 
 None changes the bottom line: the literature documents intervention opportunities across adolescence but does not establish an
-age-graded sensitivity to supportive adults. The highest-priority unread work remains Fruiht & Wray-Lake (2013), the only study of
-mentor timing.
+age-graded sensitivity to supportive adults.
+
+## Addendum (2026-11-13): final batch, including the mentor-timing study
+
+The PI supplied Fruiht & Wray-Lake 2013, Christensen 2020, Allen 2018 and Zhu 2021. Every article in the retrieval protocol has now
+been read; details are in `fulltext_age_moderation.md`.
+
+**Fruiht & Wray-Lake (2013).** The full text changes how this study should be read.
+
+- **Sample:** only young adults who had a mentor.
+- **Before vs during high school:** mentors who became important during high school were **not** associated with more attainment
+  than mentors from before high school (b = −0.12, SE 0.09, on a 9-point scale).
+- **After high school:** the "after high school" association is small (b = 0.23, SE 0.11).
+- **Design problems:**
+  - The models control for twelfth-grade GPA, which follows many earlier mentorships and may absorb their association.
+  - Survey weights are not used.
+  - Post-high-school mentors are likely met through continued education.
+- **Corrected reading:** it is evidence of *no* clear adolescent advantage, not evidence that later mentors matter more.
+
+**The other three studies:**
+
+- **Christensen (2020):** targeted, skills-based programs outperform non-specific ones (g = 0.25 vs 0.11); age was not tested.
+- **Allen (2018):** teacher support is the strongest correlate of school belonging in secondary school (r = 0.46); age could not
+  be tested.
+- **Zhu (2021):** inference after selecting a life-course model needs post-selection methods. Our accumulation study's AIC ranking
+  stays descriptive.

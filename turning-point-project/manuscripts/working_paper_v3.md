@@ -49,8 +49,10 @@ was not randomized (Grossman & Rhodes, 2002). Teacher–student relationship qua
 higher grades, except that negative relationships mattered more in primary school; the authors caution that secondary-school studies
 mostly relied on students reporting both measures (Roorda et al., 2011). In an updated meta-analysis, only the link between positive relationships and engagement was stronger in secondary than in primary school
 (Roorda et al., 2017). The transition to high school is a documented point of disruption (Benner & Graham, 2009), and ninth-grade outcomes predict dropout
-(Neild et al., 2008). One study of when natural mentors became important found the strongest association for mentors who became important after
-high school. Timing there was reported retrospectively, and post-high-school mentors partly reflect continued education (Fruiht & Wray-Lake, 2013).
+(Neild et al., 2008). One study of when natural mentors became important compared only young adults who had a mentor. Mentors who became important
+during high school were not associated with more attainment than mentors from before high school, and mentors from after high school
+were associated with somewhat more. Timing was reported retrospectively, the models adjusted for twelfth-grade grades that followed many
+of the earlier mentorships, and post-high-school mentors partly reflect continued education (Fruiht & Wray-Lake, 2013).
 
 The program literature tests age only between studies. The largest meta-analysis coded age as under 8, 8–10, 11–14 and 15–18, found
 favorable effects in every group and no association of age with effect size, and concluded that benefits are "not confined to a particular

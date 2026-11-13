@@ -29,7 +29,8 @@ Do not use unauthorized mirrors.
 
 **Received 2026-11-13 (PI-supplied) and extracted:** Schwartz 2013, Rhodes 2006, Roorda 2011 (accepted manuscript),
 Heller (NBER WP 21178, 2015 version), Miranda-Chan 2016 (data source confirmed: Add Health public-use Waves I, III, IV). See
-`fulltext_age_moderation.md`. Still outstanding: Fruiht & Wray-Lake 2013, Christensen 2020, Allen 2018, Zhu 2021.
+`fulltext_age_moderation.md`. Fruiht & Wray-Lake 2013, Christensen 2020, Allen 2018 (online-first 2016 version) and Zhu 2021 received and extracted the same day.
+**All articles in this protocol have now been read.**
 
 Already checked from free versions: Yeager et al. (2019) delivered the intervention to 12,490 ninth-graders in 65 U.S. public schools
 (PubMed Central PMC6786290).
