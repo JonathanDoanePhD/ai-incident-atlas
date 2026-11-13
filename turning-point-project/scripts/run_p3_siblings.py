@@ -95,8 +95,14 @@ def main():
     R["primary"]["identifying"] = {"families_discordant_BA": int(dd.loc[disc, "mid"].nunique()), "children_in_them": int(disc.sum())}
     within_sd = {k: float((dd[k] - dd.groupby("mid")[k].transform("mean")).std()) for k in ("zC", "zD")}
 
-    fb, Gb = between_fit(dd, "zC", "zD", p2.COVS)
-    R["B1_no_fixed_effect_same_sample"] = summarize(contrasts(fb, "zC", "zD", Gb - 1), Gb, int(len(dd)))
+    # Deviation D-045 (fixed before any estimate was seen): Paper 2's family-level covariates (mother's education, AFQT) are
+    # missing for some children, so B1 uses children complete on all covariates, and the fixed-effect model is re-fit on that
+    # same sample so that the with/without fixed-effect comparison is like-for-like.
+    db = dd.dropna(subset=p2.COVS)
+    fb, Gb = between_fit(db, "zC", "zD", p2.COVS)
+    R["B1_no_fixed_effect_same_sample"] = summarize(contrasts(fb, "zC", "zD", Gb - 1), Gb, int(len(db)))
+    fbf, dbf, Gbf = fe_fit(db, "zC", "zD", CHILD_COVS)
+    R["B1_fixed_effect_on_B1_sample"] = summarize(contrasts(fbf, "zC", "zD", Gbf - 1), Gbf, int(len(dbf)))
 
     sc = s[(s.n_closeC > 0) & (s.n_closeD > 0)].copy()
     sc["cC"] = p2.zstd(sc["closeC"]); sc["cD"] = p2.zstd(sc["closeD"])

@@ -17,3 +17,12 @@ bfb58f4cd527802751691b82ad2897084e3ccb56590f2c92aed1e9d568216fcf  src/turning_po
 ce43b1aac730f5d9a2cb124feda533fdb50d668dfecaa1f46611b4729cc82e57  config/mappings/nlsy79cya_p3_spec.json
 5ebc9ae8268dfdf27446f0b82a8db331c2b60f917c64ec6b69d1178f5f7eb017  scripts/extract_nls.py
 ```
+
+## Deviation 1 (D-045), before any estimate was seen
+
+Secondary analysis B1 crashed on missing family-level covariates. B1 now uses children complete on all covariates, and the
+fixed-effect model is re-fit on that sample for comparison. The primary analysis is unchanged. Script hash after the fix:
+
+```
+217c67300043aa90e5aef91dca68adfbe5b022e44a849a777607a8211a071833  scripts/run_p3_siblings.py
+```
