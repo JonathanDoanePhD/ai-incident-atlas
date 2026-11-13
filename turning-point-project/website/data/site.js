@@ -45,7 +45,7 @@ window.SITE_DATA = {
   {
    "title": "Findings",
    "state": "done",
-   "text": "Seven observational analyses in six cohorts: modest positive associations; no timing contrast significant. Audit accepted; reproduced in R; confirmed by a second analyst."
+   "text": "Nine observational analyses in six cohorts, including a sibling comparison: modest positive associations; no timing contrast significant. Audit accepted; reproduced in R; confirmed by a second analyst."
   }
  ],
  "stages": [
@@ -2170,12 +2170,20 @@ window.SITE_DATA = {
    "linkText": "Read the results"
   },
   {
-   "title": "Working paper v3.1 (approved after independent review)",
-   "text": "Seven analyses in six cohorts, including three run by the author outside AI tools. Not peer reviewed.",
-   "status": "v3.1",
+   "title": "Working paper v4",
+   "text": "Nine analyses in six cohorts, including a sibling comparison and four analyses run by the author outside AI tools. Not peer reviewed.",
+   "status": "v4",
    "statusKind": "evidence",
-   "link": "../manuscripts/working_paper_v3.md",
+   "link": "../manuscripts/working_paper_v4.md",
    "linkText": "Read the paper"
+  },
+  {
+   "title": "Results report (siblings)",
+   "text": "Maternal praise at 6–9 vs 10–14 within families, with a negative control.",
+   "status": "v1",
+   "statusKind": "evidence",
+   "link": "../docs/results_p3_siblings.md",
+   "linkText": "Read the results"
   },
   {
    "title": "Independent review response and audit",
@@ -2219,6 +2227,6 @@ window.SITE_DATA = {
  "recommendation": "<strong>Which data answer which question:</strong> NLSY97 asks the same parental-support question of youths aged 12–16 and follows attainment to about age 40 (paper 1). HSLS:09 compares school-adult support in grade 9 and grade 11. The NLSY79 Children and Young Adults compares mothers' warmth at ages 6–9 and 10–14 (paper 2). Add Health and PSID are excluded because their terms prohibit AI-assisted processing. Ages on the chart are approximate; grade-to-age conversions are ours.",
  "build": {
   "date": "2026-11-13",
-  "commit": "baf1ace"
+  "commit": "0af9c8c"
  }
 };

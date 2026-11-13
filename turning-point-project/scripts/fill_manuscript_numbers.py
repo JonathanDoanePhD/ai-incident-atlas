@@ -72,6 +72,22 @@ if ORIG.exists():
     for a, b in zip(o3["praise"]["primary"], P2["praise"]["primary"]):
         mx = max(mx, 100 * abs(a["estimate"] - b["estimate"]))
 V["MC_maxdiff"] = f"{mx:.2f} (years or percentage points)"
+# Study 8 (P3, NLSY79 Children and Young Adults siblings, mother fixed effects)
+if (O / "p3_results.json").exists():
+    P3 = J("p3_results.json")
+    for key, tag in (("primary", "P3"), ("B1_no_fixed_effect_same_sample", "P3B"), ("B1_fixed_effect_on_B1_sample", "P3BF"),
+                     ("C1_closeness_fixed_effect", "P3C"), ("S1_no_income_poverty", "P3S1")):
+        R3 = P3[key]; e = R3["estimates"]
+        V.update({f"{tag}_b69": pts(T(e, "beta_6_9")), f"{tag}_b1014": pts(T(e, "beta_10_14")),
+                  f"{tag}_d": pts(T(e, "delta_C_minus_D")), f"{tag}_d_ci": pts(T(e, "delta_C_minus_D"), True),
+                  f"{tag}_p": p_(T(e, "delta_C_minus_D")["p"]), f"{tag}_verdict": R3["verdict"]})
+        if "equivalence" in R3:
+            V[f"{tag}_eq_ci"] = f"{100*R3['equivalence']['ci90_low']:+.1f} to {100*R3['equivalence']['ci90_high']:+.1f}"
+            V[f"{tag}_tost"] = p_(R3["equivalence"]["p_tost"])
+    V.update(P3_n=f"{P3['primary']['n_children']:,}", P3_fam=f"{P3['primary']['n_families']:,}",
+             P3_disc=f"{P3['primary']['identifying']['families_discordant_BA']:,}",
+             P3B_n=f"{P3['B1_no_fixed_effect_same_sample']['n_children']:,}",
+             P3NC_p=p_(P3["NC_low_birth_weight"]["joint_wald_betaC_betaD"]["p"]))
 src, dst = sys.argv[1:3]
 text = Path(src).read_text()
 missing = sorted(set(re.findall(r"\{\{(\w+)\}\}", text)) - set(V) - {"REFERENCES"})

@@ -67,6 +67,16 @@ def main():
         T = lambda rows: {r["quantity"]: r for r in rows}  # noqa: E731
         site["p2"] = {"flow": Q["flow"], "praise": T(Q["praise"]["primary"]), "close": T(Q["S1_closeness"]["primary"]),
                       "equivalence": Q["praise"]["equivalence"], "sesoi": Q["sesoi"], "m": Q["m"]}
+    p3 = ROOT / "outputs" / "p3_results.json"
+    if p3.exists():
+        Z = json.loads(p3.read_text())
+        T3 = lambda rows: {r["quantity"]: r for r in rows}  # noqa: E731
+        site["p3"] = {k: {"est": T3(Z[k]["estimates"]), "n": Z[k]["n_children"], "fam": Z[k]["n_families"], "verdict": Z[k].get("verdict"),
+                          "eq": Z[k].get("equivalence")} for k in ("primary", "B1_no_fixed_effect_same_sample", "B1_fixed_effect_on_B1_sample",
+                                                                    "C1_closeness_fixed_effect")}
+        site["p3"]["nc_p"] = Z["NC_low_birth_weight"]["joint_wald_betaC_betaD"]["p"]
+        site["p3"]["disc"] = Z["primary"]["identifying"]["families_discordant_BA"]
+        site["p3"]["sesoi"] = Z["sesoi"]
     p1e = ROOT / "outputs" / "p1e_accumulation_results.json"
     if p1e.exists():
         A = json.loads(p1e.read_text())

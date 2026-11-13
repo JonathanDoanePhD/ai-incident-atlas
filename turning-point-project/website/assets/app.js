@@ -307,6 +307,23 @@
       characteristics and measurement error can produce the same pattern, so <strong>cumulative effects are not demonstrated</strong>.</p>
       <p class="small">Exploratory, complete cases. Full report: <a href="../docs/results_p1e_accumulation.md">results_p1e_accumulation.md</a>.</p></div>`;
   }
+  function p3Block(Z) {
+    const pp = (x) => (x >= 0 ? "+" : "−") + Math.abs(100 * x).toFixed(1);
+    const P = Z.primary.est, B = Z.B1_no_fixed_effect_same_sample.est;
+    return `<h3 style="margin-top:2rem">Comparing siblings: praise at 6–9 vs 10–14 within families (NLSY79 Children and Young Adults)</h3>
+      <div class="sim"><div class="card">
+        <p>Comparing each child with their own siblings removes everything stable within a family, including how warm a family is overall.
+        Among ${Z.primary.n.toLocaleString()} children in ${Z.primary.fam.toLocaleString()} families, 1 SD more praise at <strong>6–9</strong> went with
+        <strong>${pp(P.beta_6_9.estimate)}</strong> points in the chance of a bachelor's degree, and at <strong>10–14</strong> with <strong>${pp(P.beta_10_14.estimate)}</strong> (neither significant).</p>
+        <p><span class="pill evidence">Verdict</span> ${esc(Z.primary.verdict)}: difference ${pp(P.delta_C_minus_D.estimate)} points (${pp(P.delta_C_minus_D.ci_low)} to ${pp(P.delta_C_minus_D.ci_high)}), within ±${100 * Z.sesoi}.
+        The same children compared <em>across</em> families showed ${pp(B.delta_C_minus_D.estimate)} points, favoring the later window. That advantage reflects stable
+        family characteristics, not the child's age.</p>
+        <p class="small">Mother fixed effects; child-level covariates; standard errors clustered by family. Negative control (low birth weight): no association (p = ${Z.nc_p.toFixed(2)}).
+        Mainly identified by ${Z.disc} families whose siblings differ in degree attainment. Closeness: ${esc(Z.C1_closeness_fixed_effect.verdict)}.
+        Full report: <a href="../docs/results_p3_siblings.md">results_p3_siblings.md</a>.</p>
+      </div>${forest([["Ages 6–9 (siblings)", P.beta_6_9], ["Ages 10–14 (siblings)", P.beta_10_14], ["Diff., across families", B.delta_C_minus_D], ["Difference, siblings", P.delta_C_minus_D]], -0.06, 0.04,
+        "Percentage points of BA attainment per SD of maternal praise (shaded: ±" + 100 * Z.sesoi + " band)", Z.sesoi)}</div>`;
+  }
   function authorRunBlock() {
     return `<h3 style="margin-top:2rem">Analyses run by the author outside AI tools (Add Health, PSID, Future of Families)</h3>
       <div class="notice info">These data providers restrict AI processing, so the author ran the frozen analysis scripts on a personal computer and
@@ -324,6 +341,10 @@
         <div class="card"><h4>Closeness to mother at 9 vs 15 (Future of Families)</h4>
           <p>The association with postsecondary education or training by 22 was more positive at 9 than at 15. Not significant; equivalence within
           ±3 points not shown.</p>
+          <p><span class="pill uncertain">Inconclusive</span></p></div>
+        <div class="card"><h4>Did the mentoring relationship continue to 18? (Add Health)</h4>
+          <p>Attainment was higher when a mentoring relationship begun before 18 continued to 18 or later than when it ended earlier. Not significant;
+          equivalence within ±5 points not shown. Expected to be imprecise (few relationships ended early).</p>
           <p><span class="pill uncertain">Inconclusive</span></p></div>
       </div>`;
   }
@@ -396,6 +417,7 @@
       ${F.b2 ? b2Block(F.b2) : ""}
       ${F.p2 ? p2Block(F.p2) : ""}
       ${F.accum ? accumBlock(F.accum) : ""}
+      ${F.p3 ? p3Block(F.p3) : ""}
       ${authorRunBlock()}`;
     document.querySelectorAll('input[name="fWho"]').forEach((r) => r.addEventListener("change", () => { who = r.value; render(); }));
     $("#fCat").addEventListener("change", (e) => { cat = e.target.checked; render(); });
